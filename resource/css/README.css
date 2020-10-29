@@ -1,0 +1,38 @@
+h2{
+    /* border-bottom:2px  solid   rgb(66, 185, 131); */
+    margin-bottom:50px;
+    font-size: 1em;
+}
+h2 span{
+    display:inline-block;
+    background: #4f9ee3;
+    color:#ffffff !important;
+    padding:  10px  16px;
+    border-radius:5px;
+    box-shadow: 2px 2px 5px rgb(216, 216, 216);
+}
+/* .content{
+  width:1000px;
+  margin: 0 auto;
+  padding-top: 30px;
+} */
+.markdown-section{
+    padding: 30px 30px 40px 30px !important;
+}
+table{
+    box-sizing: border-box;
+}
+thead{
+    background-color:#fa3434;
+}
+.markdown-section th{
+    border:none;
+}
+.markdown-section td{
+    padding: 30px;
+}
+.markdown-section td:hover{
+    background-color: #d9d7d7;
+    box-sizing: border-box;
+    cursor: pointer;
+}
