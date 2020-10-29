@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72af4a60-6bf4-4393-a8db-34a7f4eb24dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_coverpage.md" beforeDir="false" afterPath="$PROJECT_DIR$/_coverpage.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource/css/myStyle-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/resource/css/myStyle-light.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/其他未分类笔记/Docsify框架使用/02-docsify基本操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/其他未分类笔记/Docsify框架使用/02-docsify基本操作.md" afterDir="false" />
@@ -71,7 +72,7 @@
       <workItem from="1603868877020" duration="5000" />
       <workItem from="1603869142524" duration="209000" />
       <workItem from="1603881422364" duration="1633000" />
-      <workItem from="1603936097633" duration="5477000" />
+      <workItem from="1603936097633" duration="6288000" />
     </task>
     <servers />
   </component>
