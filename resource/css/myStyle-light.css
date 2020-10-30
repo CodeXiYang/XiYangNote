@@ -16,9 +16,19 @@ body{
     display: none;
     padding: 10px 20px;
     margin-right: 10px;
-    color: #fff;
+    color: #ffffff;
     border-radius: 10px;
-    background-color: rgb(102, 126, 233);
+    background-color: rgb(66, 185, 163);
+    background: linear-gradient(right,rgb(66 185 163), rgb(102, 126, 233),rgb(66 185 163));
+    background: -ms-linear-gradient(right,rgb(66 185 163), rgb(102, 126, 233),rgb(66 185 163));
+    background: -webkit-linear-gradient(right,rgb(66 185 163), rgb(102, 126, 233),rgb(66 185 163));
+    background: -o-linear-gradient(right,rgb(66 185 163), rgb(102, 126, 233),rgb(66 185 163));
+    background: -moz-linear-gradient(right,rgb(66 185 163), rgb(102, 126, 233),rgb(66 185 163));
+    text-align: center;
+    vertical-align: middle;
+}
+.to-top:hover{
+    background: -webkit-linear-gradient(right,rgb(102, 126, 233),rgb(66 185 163),rgb(102, 126, 233));
 }
 /* 首页a标签置顶,不然无法点击 */
 section.cover .cover-main {
@@ -259,6 +269,7 @@ img{
 }
 .app-nav ul li a{
     font-weight: bold;
+    color:rgb(66, 185, 163);
 }
 .app-nav ul li a:hover{
     color:rgb(221,27,27);

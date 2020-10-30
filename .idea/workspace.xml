@@ -12,12 +12,28 @@
   <component name="ChangeListManager">
     <list default="true" id="72af4a60-6bf4-4393-a8db-34a7f4eb24dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PUSH.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_coverpage.md" beforeDir="false" afterPath="$PROJECT_DIR$/_coverpage.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/css/README.css" beforeDir="false" afterPath="$PROJECT_DIR$/resource/css/README.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/css/myStyle-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/resource/css/myStyle-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-王泽-SpringSecurity权限框架/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-王泽-SpringSecurity权限框架/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-韩顺平-Java数据结构和算法/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-韩顺平-Java数据结构和算法/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/狂神说系列笔记/【狂神说Java】MySQL最新教程通俗易懂/01-初识MySQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/狂神说系列笔记/【狂神说Java】MySQL最新教程通俗易懂/01-初识MySQL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔系列笔记/从零玩转HTML5+CSS3精讲1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔系列笔记/从零玩转HTML5+CSS3精讲1/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,6 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -69,7 +86,8 @@
       <workItem from="1603868877020" duration="5000" />
       <workItem from="1603869142524" duration="209000" />
       <workItem from="1603881422364" duration="1633000" />
-      <workItem from="1603936097633" duration="10460000" />
+      <workItem from="1603936097633" duration="14614000" />
+      <workItem from="1604024947565" duration="2987000" />
     </task>
     <servers />
   </component>

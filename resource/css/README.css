@@ -22,9 +22,6 @@ h2 span{
 table{
     box-sizing: border-box;
 }
-thead{
-    background-color:#fa3434;
-}
 .markdown-section th{
     border:none;
 }

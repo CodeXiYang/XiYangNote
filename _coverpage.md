@@ -1,4 +1,4 @@
-# 👣 XiYang WiKi 👣
+# 👣 XiYang Blog 👣
 
 <div style = "font-weight: 100; font-size: 1.2rem; 
     color: rgb(60, 60, 60); text-align: center;
@@ -14,7 +14,7 @@
 
 [Gitee](https://gitee.com/codexiyang) 
 [开始阅读](README.md) 
-[个人简历](其他未分类笔记/个人简历.md)
+[Github](https://github.com/codexiyang)
 
 
 
