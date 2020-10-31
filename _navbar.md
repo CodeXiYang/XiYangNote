@@ -8,4 +8,5 @@
     * [🗄 数据库篇](README?id=🗄%ef%b8%8f-数据库篇)
     * [💻 计算机基础](README?id=💻-计算机基础)
     * [🔨 Tool工具](README?id=🔨-tool工具)
-* [<i class="fa fa-calendar-o fa-1x"></i> 看板](https://gitee.com/codexiyang/xi-yang-note/board)
+
+* [<i class="fa fa-calendar-o fa-1x"></i> 关于]()

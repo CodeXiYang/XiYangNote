@@ -12,9 +12,36 @@
   <component name="ChangeListManager">
     <list default="true" id="72af4a60-6bf4-4393-a8db-34a7f4eb24dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_coverpage.md" beforeDir="false" afterPath="$PROJECT_DIR$/_coverpage.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_navbar.md" beforeDir="false" afterPath="$PROJECT_DIR$/_navbar.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其他未分类笔记/个人简历.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-王泽-SpringSecurity权限框架/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-王泽-SpringSecurity权限框架/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-ActiveMQ消息中间件/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Dubbo教程/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Eclipse&amp;IDEA配置maven和git/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Java11新特性/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Java12&amp;13新特性/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Java14新特性/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Java8新特性/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Java9新特性/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Java大厂面试题第二季/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Jenkins持续集成实战教程/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Maven视频/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-MyBatis实战教程/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Mycat分布式架构/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-NIO/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Netty网络通讯框架/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-RBAC权限实战/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-SSH整合项目案例/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-SSM框架实战/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-SVN操作详解/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-Shiro安全权限框架/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-git&amp;github/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-mybatis_plus框架精讲/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-古粒商场微服务实战/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-宋红康-JDBC2019/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-宋红康-JDBC2019/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-宋红康-JVM虚拟机/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-宋红康-JVM虚拟机/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-版本控制工具svn/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-谷粒学院微服务实战/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +109,7 @@
       <workItem from="1603936097633" duration="14614000" />
       <workItem from="1604024947565" duration="6312000" />
       <workItem from="1604117304315" duration="1061000" />
+      <workItem from="1604128566044" duration="3049000" />
     </task>
     <servers />
   </component>
