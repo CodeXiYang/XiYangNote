@@ -13,8 +13,8 @@
     <list default="true" id="72af4a60-6bf4-4393-a8db-34a7f4eb24dc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-王泽-SpringSecurity权限框架/01-SpringSecurity权限框架简介.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-王泽-SpringSecurity权限框架/01-SpringSecurity权限框架简介.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-王泽-SpringSecurity权限框架/02-SpringSecurity入门案例.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-王泽-SpringSecurity权限框架/02-SpringSecurity入门案例.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/个人简历.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-王泽-SpringSecurity权限框架/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷系列笔记/尚硅谷-王泽-SpringSecurity权限框架/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,8 @@
       <workItem from="1603869142524" duration="209000" />
       <workItem from="1603881422364" duration="1633000" />
       <workItem from="1603936097633" duration="14614000" />
-      <workItem from="1604024947565" duration="6258000" />
+      <workItem from="1604024947565" duration="6312000" />
+      <workItem from="1604117304315" duration="1061000" />
     </task>
     <servers />
   </component>
