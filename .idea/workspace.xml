@@ -11,13 +11,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72af4a60-6bf4-4393-a8db-34a7f4eb24dc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RUNBOOK.bat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_coverpage.md" beforeDir="false" afterPath="$PROJECT_DIR$/_coverpage.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_navbar.md" beforeDir="false" afterPath="$PROJECT_DIR$/_navbar.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-周阳-MySQL数据库优化/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-周阳-MySQL数据库优化/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-韩顺平Linux6.8/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/学相伴学习笔记/学相伴-秦疆-SpringBoot2.2.5最新教程IDEA版通俗易懂/01-SpringBoot入门及原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/学相伴学习笔记/学相伴-秦疆-SpringBoot2.2.5最新教程IDEA版通俗易懂/01-SpringBoot入门及原理.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-1-Java集合框架概述.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-1-Java集合框架概述.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-2-Collection接口方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-2-Collection接口方法.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-3-Iterator 代器接口.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-3-Iterator 代器接口.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-4-Collection子接口一：List.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-4-Collection子接口一：List.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-5-Collection子接口二：Set.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-5-Collection子接口二：Set.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-6-Map接口.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-6-Map接口.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-7-Collections工具类.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-7-Collections工具类.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-王泽-SpringSecurity权限框架/05-SpringSecurity原理总结.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot上/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot上/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot下/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot下/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/.nojekyll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/RUNBOOK.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-01从零玩转HTML5+CSS3精讲1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-01从零玩转HTML5+CSS3精讲1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-02从零玩转HTML5+CSS3项目实战2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-02从零玩转HTML5+CSS3项目实战2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-03从零玩转JavaScript核心+新特性3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-03从零玩转JavaScript核心+新特性3/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-04从零玩转CSS预处理器+项目实战4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-04从零玩转CSS预处理器+项目实战4/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-05从零玩转Ajax+jQuery原理5/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-05从零玩转Ajax+jQuery原理5/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-06从零玩转JS新特性+流行框架6/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-06从零玩转JS新特性+流行框架6/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-07从零玩转Bootstrap+项目实战7/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-07从零玩转Bootstrap+项目实战7/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-08从零玩转移动Web开发+项目实战8/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-08从零玩转移动Web开发+项目实战8/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-09从零玩转GitGithub-版本控制工具9/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-09从零玩转GitGithub-版本控制工具9/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-10从零玩转NodeJS核心+原理10/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-10从零玩转NodeJS核心+原理10/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-11从零玩转Webpack4+实现原理11/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-11从零玩转Webpack4+实现原理11/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-12从零玩转Vue全家桶+项目实战12/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-12从零玩转Vue全家桶+项目实战12/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-13从零玩转-手写Vue全家桶13/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-13从零玩转-手写Vue全家桶13/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-14从零玩转MySQL+数据迁移14/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-14从零玩转MySQL+数据迁移14/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-15从零玩转MongoDB4.X+新特性15/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-15从零玩转MongoDB4.X+新特性15/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-16从零玩转Redis核心+高可用16/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-16从零玩转Redis核心+高可用16/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-17从零玩转Express+KOA2+Egg17/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-17从零玩转Express+KOA2+Egg17/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-18从零玩转Express+Koa2实现原理18/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-18从零玩转Express+Koa2实现原理18/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-19从零玩转TypeScript核心基础19/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-19从零玩转TypeScript核心基础19/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-20从零打造''企业级''通用后端开发框架20/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-20从零打造''企业级''通用后端开发框架20/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-21从零玩转React全家桶核心21/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-21从零玩转React全家桶核心21/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-22-从零玩转TS+React项目实战22/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-22-从零玩转TS+React项目实战22/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +121,7 @@
       <workItem from="1604128566044" duration="4939000" />
       <workItem from="1604558569401" duration="1231000" />
       <workItem from="1604630588632" duration="2319000" />
+      <workItem from="1605151543559" duration="20000" />
     </task>
     <servers />
   </component>

@@ -9,9 +9,10 @@
     
 </div>
 
-![]( https://svg.hamm.cn/badge.svg?key=邮箱联系&value=CodeXiYang@163.com&color=FF0000&radius=3) &nbsp;&nbsp;
-![]( https://svg.hamm.cn/badge.svg?key=QQ联系&value=422761906&color=6cb54e&radius=3) &nbsp;&nbsp;
-![]( https://svg.hamm.cn/badge.svg?key=author&value=CodeXiYang&color=4faee2&radius=3) &nbsp;&nbsp;
+![]( https://img.shields.io/github/issues/CodeXiYang/XiYangNote) &nbsp;&nbsp;
+![]( https://img.shields.io/github/forks/CodeXiYang/XiYangNote) &nbsp;&nbsp;
+![]( https://img.shields.io/github/stars/CodeXiYang/XiYangNote) &nbsp;&nbsp;
+![]( https://img.shields.io/github/license/CodeXiYang/XiYangNote) &nbsp;&nbsp;
 
 [Gitee](https://gitee.com/codexiyang) 
 [Github](https://github.com/codexiyang)
