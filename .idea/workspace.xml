@@ -11,46 +11,99 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72af4a60-6bf4-4393-a8db-34a7f4eb24dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RUNBOOK.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_coverpage.md" beforeDir="false" afterPath="$PROJECT_DIR$/_coverpage.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/学相伴学习笔记/学相伴-秦疆-SpringBoot2.2.5最新教程IDEA版通俗易懂/01-SpringBoot入门及原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/学相伴学习笔记/学相伴-秦疆-SpringBoot2.2.5最新教程IDEA版通俗易懂/01-SpringBoot入门及原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-1-Java集合框架概述.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-1-Java集合框架概述.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-2-Collection接口方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-2-Collection接口方法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-3-Iterator 代器接口.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-3-Iterator 代器接口.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-4-Collection子接口一：List.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-4-Collection子接口一：List.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-5-Collection子接口二：Set.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-5-Collection子接口二：Set.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-6-Map接口.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-6-Map接口.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-7-Collections工具类.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/11-7-Collections工具类.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-王泽-SpringSecurity权限框架/05-SpringSecurity原理总结.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot上/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot上/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot下/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot下/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/.nojekyll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/RUNBOOK.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-01从零玩转HTML5+CSS3精讲1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-01从零玩转HTML5+CSS3精讲1/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-02从零玩转HTML5+CSS3项目实战2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-02从零玩转HTML5+CSS3项目实战2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-03从零玩转JavaScript核心+新特性3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-03从零玩转JavaScript核心+新特性3/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-04从零玩转CSS预处理器+项目实战4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-04从零玩转CSS预处理器+项目实战4/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-05从零玩转Ajax+jQuery原理5/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-05从零玩转Ajax+jQuery原理5/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-06从零玩转JS新特性+流行框架6/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-06从零玩转JS新特性+流行框架6/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-07从零玩转Bootstrap+项目实战7/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-07从零玩转Bootstrap+项目实战7/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-08从零玩转移动Web开发+项目实战8/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-08从零玩转移动Web开发+项目实战8/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-09从零玩转GitGithub-版本控制工具9/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-09从零玩转GitGithub-版本控制工具9/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-10从零玩转NodeJS核心+原理10/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-10从零玩转NodeJS核心+原理10/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-11从零玩转Webpack4+实现原理11/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-11从零玩转Webpack4+实现原理11/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-12从零玩转Vue全家桶+项目实战12/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-12从零玩转Vue全家桶+项目实战12/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-13从零玩转-手写Vue全家桶13/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-13从零玩转-手写Vue全家桶13/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-14从零玩转MySQL+数据迁移14/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-14从零玩转MySQL+数据迁移14/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-15从零玩转MongoDB4.X+新特性15/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-15从零玩转MongoDB4.X+新特性15/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-16从零玩转Redis核心+高可用16/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-16从零玩转Redis核心+高可用16/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-17从零玩转Express+KOA2+Egg17/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-17从零玩转Express+KOA2+Egg17/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-18从零玩转Express+Koa2实现原理18/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-18从零玩转Express+Koa2实现原理18/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-19从零玩转TypeScript核心基础19/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-19从零玩转TypeScript核心基础19/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-20从零打造''企业级''通用后端开发框架20/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-20从零打造''企业级''通用后端开发框架20/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-21从零玩转React全家桶核心21/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-21从零玩转React全家桶核心21/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-22-从零玩转TS+React项目实战22/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/知播渔学习笔记/知播渔-李南江-22-从零玩转TS+React项目实战22/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_navbar.md" beforeDir="false" afterPath="$PROJECT_DIR$/_navbar.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/css/myStyle-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/resource/css/myStyle-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/Docsify框架使用/01-doscify简介安装.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/Docsify框架使用/02-docsify基本操作.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/Docsify框架使用/assets/image-20201019145919405.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/Docsify框架使用/assets/image-20201019151439050.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/ECharts数据可视化/01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/ECharts数据可视化/02.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/ECharts数据可视化/03.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/ECharts数据可视化/04.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/ECharts数据可视化/05.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/ECharts数据可视化/README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/01-springcloud微服务简介.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/02-nacos-服务发现组件.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/03-ribbon-负载均衡组件.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/04-1-feign-调用组件.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/04-1-微服务编码规范.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/05-sentinel-流量控制组件.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/06-gateway-网关组件.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/08-1-gateway统一异常处理.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/08-2-gateway自定义过滤器.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/08-gateway.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/09-跨域解决方案.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/10-1-RocketMQ-消息队列组件基础理论.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/10-2-RocketMQ安装与启动.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/10-3-SpringBoot集成RocketMQ.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/JWT(json web token).md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/SpringBoot集成swagger接口文档.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/04-lrma.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/04-ribbon.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/04-ribbon随机策略.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200810200137037.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200810215630989.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200810220122620.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811002355911.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811003357653.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811005619235.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811011732980.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811011926165.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811012250168.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811012735009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811014149919.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811152834110.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811154426740.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811154811148.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811155538196.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811155707041.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811155934275.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811162747731.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811175451649.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811192402806.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811194610529.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811195713099.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811204824734.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811210936024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200811222637711.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200812141454740.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200812142925561.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200812152014473.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200812152036897.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200812153433846.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200812153505711.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200922193256233.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200922193816989.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200922201225218.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923120450091.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923141746443.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923142703912.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923150143860.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923150202120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923150403362.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923150852042.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923150901060.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923151147832.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923151352580.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923151654415.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923151744201.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923152306867.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923152911296.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923154304603.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200923233935764.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200924001425689.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200924001718083.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200924005132556.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200924011038093.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200924011637398.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/assets/image-20200924012120936.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/其他未分类笔记/SpringCloud-Alibaba/微服务项目搭建注意事项.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot上/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot下/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +175,7 @@
       <workItem from="1604558569401" duration="1231000" />
       <workItem from="1604630588632" duration="2319000" />
       <workItem from="1605151543559" duration="20000" />
+      <workItem from="1606900343633" duration="7652000" />
     </task>
     <servers />
   </component>
