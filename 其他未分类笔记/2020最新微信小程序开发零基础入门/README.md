@@ -8,18 +8,17 @@
 
 学习地址: 
 
-- 基础篇: https://www.bilibili.com/video/BV1WQ4y1T7D8
+- 小程序基础入门: https://www.bilibili.com/video/BV1WQ4y1T7D8
 
-- 云开发篇: https://www.bilibili.com/video/BV12z4y1R77r/?spm_id_from=333.788.b_636f6d6d656e74.4
+- 小程序云开发: https://www.bilibili.com/video/BV12z4y1R77r/?spm_id_from=333.788.b_636f6d6d656e74.4
 
 ## 文章
 
-### 基础篇
 [小程序入门](其他未分类笔记/2020最新微信小程序开发零基础入门/01-小程序入门.md)
 
 [组件丶框架丶API](其他未分类笔记/2020最新微信小程序开发零基础入门/02-组件丶框架丶API学习.md)
 
 [小程序案例](其他未分类笔记/2020最新微信小程序开发零基础入门/03-小程序案例.md)
 
-[云开发]()
-### 云开发篇
+[小程序云开发]()
+

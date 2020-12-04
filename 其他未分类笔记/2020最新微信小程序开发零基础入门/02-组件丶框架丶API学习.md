@@ -6,15 +6,13 @@
 
 ## 1. 组件
 
-*小程序中的组件就是标签,只是比较独立的标签,只能在小程序中去使用而已,起本质就是标签,学习小程序中的组件就相当于学习html中的标签而已; [组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/)* 
+*小程序中的组件就是标签,只是比较独立的标签,只能在小程序中去使用而已,起本质就是标签,学习小程序中的组件就相当于学习html中的标签而已; [文档](https://developers.weixin.qq.com/miniprogram/dev/component/)* 
 
 组件和标签一样,都有自己默认的一些属性,学习组件的时候不仅仅学习这个组件的作用,还需要知道组件里面自带了哪些属性,以及属性的作用
 
 ### view
 
-[view组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/view.html)
-
-view是一个容器标签,类似于html中的div标签;在微信小程序中可以使用view进行布局
+view是一个容器标签,类似于html中的div标签;在微信小程序中可以使用view进行布局 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/view.html)
 
 **常用属性:**
 
@@ -29,9 +27,7 @@ view是一个容器标签,类似于html中的div标签;在微信小程序中可�
 
 ### text
 
-[text组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/text.html)
-
-用来包裹文字的组件
+用来包裹文字的组件 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/text.html)
 
 **常用属性:**
 
@@ -43,9 +39,7 @@ view是一个容器标签,类似于html中的div标签;在微信小程序中可�
 
 ### image
 
-[image组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/image.html)
-
-用于做图片的组件
+用于做图片的组件 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/image.html)
 
 **常用属性:**
 
@@ -63,9 +57,7 @@ view是一个容器标签,类似于html中的div标签;在微信小程序中可�
 
 ### navigator
 
-[navigator组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html)
-
-这个组件是用于跳转的,其作用类似于html中的a标签
+这个组件是用于跳转的,其作用类似于html中的a标签 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html)
 
 **常用属性:**
 
@@ -78,9 +70,7 @@ view是一个容器标签,类似于html中的div标签;在微信小程序中可�
 
 ### scroll-view
 
-[scroll-view组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html)
-
-可滚动视图区域
+可滚动视图区域 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/scroll-view.html)
 
 **常用属性:**
 
@@ -91,11 +81,7 @@ view是一个容器标签,类似于html中的div标签;在微信小程序中可�
 
 ### swiper & swiper-item
 
-[swiper组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)
-
-[swiper-item组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/swiper-item.html)
-
-两个组件结合使用可以用于做轮播图
+两个组件结合使用可以用于做轮播图 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html)
 
 **常用属性:**
 
@@ -128,9 +114,7 @@ view是一个容器标签,类似于html中的div标签;在微信小程序中可�
 
 ### button
 
-[button组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)
-
-button组件就是微信小程序中的按钮,各种提交登录点击相关操作的按钮都使用这个组件
+button组件就是微信小程序中的按钮,各种提交登录点击相关操作的按钮都使用这个组件 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)
 
 **常用属性:**
 
@@ -145,23 +129,19 @@ button组件就是微信小程序中的按钮,各种提交登录点击相关操�
 
 ### checkbox
 
-[checkbox组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/checkbox.html)
-
-复选框
+复选框 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/checkbox.html)
 
 
 
 ### checkbox-group
 
-[checkbox-group组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/checkbox-group.html)
+[文档](https://developers.weixin.qq.com/miniprogram/dev/component/checkbox-group.html)
 
 
 
 ### input
 
-[input组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/input.html)
-
-用于做输入框,同html中的input
+用于做输入框,同html中的input [文档](https://developers.weixin.qq.com/miniprogram/dev/component/input.html)
 
 **常用属性:**
 
@@ -175,9 +155,7 @@ button组件就是微信小程序中的按钮,各种提交登录点击相关操�
 
 ### switch
 
-[switch组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/switch.html)
-
-开关滑块
+开关滑块 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/switch.html)
 
 **常用属性:**
 
@@ -190,9 +168,7 @@ button组件就是微信小程序中的按钮,各种提交登录点击相关操�
 
 ### textarea
 
-[textarea组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html)
-
-文本输入域
+文本输入域 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/textarea.html)
 
 **常用属性:**
 
@@ -202,9 +178,7 @@ button组件就是微信小程序中的按钮,各种提交登录点击相关操�
 
 ### icon
 
-[icon组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/icon.html)
-
-图标,这个组件一般用于做消息提示,例如支付成功
+图标,这个组件一般用于做消息提示,例如支付成功 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/icon.html)
 
 **常用属性:**
 
@@ -221,9 +195,7 @@ button组件就是微信小程序中的按钮,各种提交登录点击相关操�
 
 ### progress
 
-[progress组件官方文档](https://developers.weixin.qq.com/miniprogram/dev/component/progress.html)
-
-进度条
+进度条 [文档](https://developers.weixin.qq.com/miniprogram/dev/component/progress.html)
 
 **常用属性:**
 
@@ -259,9 +231,7 @@ button组件就是微信小程序中的按钮,各种提交登录点击相关操�
 
 #### 2.1.1 全局配置
 
-[全局配置官方文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html)
-
-小程序根目录下的 `app.json` 文件用来对微信小程序进行全局配置。在这里面配置后,所有的页面都有效,官方文档中所有的配置项都可以在和pages同级的json中进行配置
+小程序根目录下的 `app.json` 文件用来对微信小程序进行全局配置。在这里面配置后,所有的页面都有效,官方文档中所有的配置项都可以在和pages同级的json中进行配置 [文档](https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html)
 
 ##### 2.1.1.1 page配置
 

@@ -274,6 +274,8 @@ img{
 .app-nav ul li a:hover{
     color:rgb(221,27,27);
 }
+/*文章中的a链接标签样式*/
 #main p a{
     color:#F22F27;
+    text-decoration:underline wavy rgb(66, 185, 163) ;
 }
