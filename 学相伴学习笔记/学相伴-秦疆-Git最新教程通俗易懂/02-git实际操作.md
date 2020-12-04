@@ -1,4 +1,4 @@
-#  GIT实际操作
+#  GIT基本操作
 
 
 
@@ -56,7 +56,7 @@
 
 - .gitignore文件是用来设定你想提交哪些东西,不想提交哪些东西的
 
-  ```
+  ```bash
   # 不想提交所有的jar和war
   !*.war
   !*.jar
@@ -78,7 +78,7 @@
 
 然后我们就可以使用前面使用过的操作本地仓库的那3个命令了;增加一个新的命令就是每次先git pull一次,拉取最新的信息
 
-```visual basic
+```bash
 # 拉取远程仓库最新的信息到本地厂库
 git pull
 # 将工作区的代码提交到暂缓区
@@ -167,7 +167,7 @@ git push
 
 常用命令如下:
 
-```
+```bash
 
 # 列出所有本地分支
 git branch
@@ -207,3 +207,15 @@ $ git branch -dr [remote/branch]
 <span style="font-size:40px">git基本使用完结撒花!</span>
 
 <span style="font-size:40px">2020年7月31日00:49:41</span>
+
+
+
+## 拓展笔记
+
+1. 查看当前仓库的大小
+
+   ```bash
+   git count-objects -vH
+   ```
+
+   ![image-20201204115520108](assets/image-20201204115520108.png)
