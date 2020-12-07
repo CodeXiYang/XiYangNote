@@ -215,68 +215,7 @@ all in one的架构方式，我们把所有的功单元放在一个应用里面�
 
 ## 3. SpringBoot自动装配原理
 
-> 通过前面的学习,发现SpringBoot的构建过程是非常简单的,那么SpringBoot的启动原理是怎样的呢?
->
-> 其他博客参考: https://www.cnblogs.com/xiaopotian/p/11052917.html
 
-### 3.1 pom.xml文件
-
-其中它主要是依赖一个父项目，主要是管理项目的资源过滤及插件！
-
-![image-20201116153841530](assets/image-20201116153841530.png)
-
-点进去，发现还有一个父依赖
-
-![image-20201116154111628](assets/image-20201116154111628.png)
-
-*ps: 这里才是真正管理SpringBoot应用里面所有依赖版本的地方，SpringBoot的版本控制中心；以后我们导入依赖默认是不需要写版本；但是如果导入的包没有在依赖中管理着就需要手动配置版本了；*
-
-### 3.2 启动器Spring-boot-starter
-
-> 启动器: 指的就是SpringBoot的启动场景
-
-1. `spring-boot-starter-web`启动器会帮我们自动导入web环境所有的依赖,只需要在pom.xml中添加下面的依赖,就可以直接使用web相关的一些东西了
-
-   ```xml
-   <dependency>
-       <groupId>org.springframework.boot</groupId>
-       <artifactId>spring-boot-starter-web</artifactId>
-   </dependency>
-   ```
-
-2. springboot会将所有的功能场景，都变成一个个的<u>场景启动器</u>;我们要使用什么功能，就只需要引入对应的场景启动器就可以了 `starter`
-
-### 3.3 分析主启动程序
-
-> 由主程序入手,分析`@SpringBootApplication`这个注解干了些啥
-
-```java
-//@SpringBootApplication 标注这个类是一个springboot的应用,如果没有这里注解,是无法启动springboot的
-@SpringBootApplication
-public class Springboot01HellowrldApplication {
-
-    public static void main(String[] args) {
-        //run() 将springboot应用启动
-        SpringApplication.run(Springboot01HellowrldApplication.class, args);
-    }
-
-}
-```
-
-#### 3.3.1 @SpringBootApplication
-
-进入@SpringBootApplication注解里面,可以看到如下几个注解;我们需要关注两个核心注解
-
-```java
-@springBootConfiguration //springboot的配置
-	@confiquration //spring配置类
-	@component //说明这也是一个spring的组件
-
-@EnableAutoConfiguration // 自动配置
-	@AutoconfiqurationPackage // 自动配置句
-		@Import(AutoConfigurationPackages . Registrar.class) // 自动配置包注册
-	@Import(AutoconfigurationImportSelector.class)// 自动配置导入选择
-```
 
 
 

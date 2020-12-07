@@ -12,7 +12,7 @@
 
 **JavaWeb**
 
-- [ ] 尚硅谷-xx-JavaWeb
+- [ ] [尚硅谷-王振国-JavaWeb2020版](尚硅谷学习笔记/尚硅谷-王振国-JavaWeb2020/README.md)
 - [ ] 学相伴-秦疆-JavaWeb
 
 ### 高级部分
@@ -28,7 +28,7 @@
 
 **Java数据结构和算法**
 
-- [ ] 尚硅谷-韩顺平-Java数据结构和算法
+- [ ] [尚硅谷-韩顺平-Java数据结构和算法](尚硅谷学习笔记/尚硅谷-韩顺平-Java数据结构和算法/README.md)
 
 **Java设计模式**
 
@@ -61,22 +61,22 @@
 
 **JDBC**
 
-- [ ] 尚硅谷-宋红康-JDBC2020
+- [ ] 尚硅谷-宋红康-JDBC2020版
 
 ### Spring全家桶
 
 **Spring**
 
-- [ ] 学相伴-秦疆-Spring
+- [ ] [学相伴-秦疆-Spring5](学相伴学习笔记/学相伴-秦疆-Spring5最新完整教程IDEA版通俗易懂/README.md)
 - [ ] 尚硅谷-xx-Spring5
 
 **SpringMVC**
 
-- [ ] 学相伴-秦疆-SpringMVC
+- [ ] [学相伴-秦疆-SpringMVC](学相伴学习笔记/学相伴-秦疆-SpringMVC最新教程IDEA版通俗易懂/README.md)
 
 **SpringBoot**
 
-- [ ] [学相伴-秦疆-SpringBoot2.x](学相伴学习笔记/学相伴-秦疆-SpringBoot2.2.0最新教程IDEA版通俗易懂/README.md)
+- [ ] [学相伴-秦疆-SpringBoot2.2.5](学相伴学习笔记/学相伴-秦疆-SpringBoot2.2.5最新教程IDEA版通俗易懂/README.md)
 - [ ] 尚硅谷-雷丰阳-SpringBoot1.x
 
 **SpringCloud**
@@ -118,11 +118,13 @@
 
 **SpringSecurity**
 
-- [ ] 尚硅谷-xx-SpringSecurity
+- [ ] [尚硅谷-王泽-SpringSecurity](尚硅谷学习笔记/尚硅谷-王泽-SpringSecurity权限框架/README.md)
+
+
 
 **Shiro**
 
-- [ ] [百知-xx-shiro2020](其他为分类笔记/编程不良人Shiro/README.md)
+- [ ] [百知-编程不良人-shiro2020](其他为分类笔记/编程不良人Shiro/README.md)
 - [ ] 尚硅谷-佟刚-Shiro
 
 ### Java大数据
@@ -313,7 +315,7 @@
 
 ### 博客搭建
 
-- [ ] [doscify框架](其他未分类笔记/Docsify框架使用/README.md)
+- [x] [doscify框架](其他未分类笔记/Docsify文档框架/README.md)
 
 ### 使用MacBook
 
@@ -327,6 +329,7 @@
 - [x] [2021Java后端学习体系](其他未分类笔记/B站韩顺平/韩顺平2021Java后端开发路线.md)
 - [ ] [职业规划](其他未分类笔记/个人日常工具使用及职业规划/个人职业规划/职业发展规划大纲.md)
 - [ ] [2021计划书](其他未分类笔记/个人日常工具使用及职业规划/个人职业规划/2021年计划.md)
+- [x] [笔记整理大纲](https://www.processon.com/mindmap/5fcddb4e1e08536c5970cc7a)
 
 
 

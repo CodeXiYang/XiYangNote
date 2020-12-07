@@ -195,4 +195,5 @@ index.html中的插件配置
 ## 更多学习
 
 查看官网: https://docsify.js.org/#/zh-cn/
-guide文章: https://blog.csdn.net/qq_34337272/article/details/105511189
+
+Guide哥: https://blog.csdn.net/qq_34337272/article/details/105511189

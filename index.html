@@ -93,21 +93,24 @@
     $('.to-top').toTop();
   </script>
   <!--------------------------------Gitalk评论插件------------------------------->
-<!--  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<!--
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
   <script>
  var gitalkConfig = {
-    		clientID: '', //上面生成的clientID
-    		clientSecret: '',//上面生成的clientSecret
-    		repo: 'Blogs',//Github博客项目名
-    		owner: '',//github用户名
+    		clientID: '577942f4612618483174', //上面生成的clientID
+    		clientSecret: 'f52a3ee26b2b796006b5efe2713fb1927080c549',//上面生成的clientSecret
+    		repo: 'XiYangNote',//Github博客项目名
+    		owner: 'CodeXiYang',//github用户名
     		admin: [],//github用户名，可以添加多个
     		distractionFreeMode: false
 	   }
 	    window.$docsify = {
             loadSidebar: true,
             plugins: [
-            // 评论会自动同步成为项目的issue, //这些代码是给issue添加lable以及更改样式 //我的博客是取每个路由地址的第一级目录名称作为label，你可以自己操作路径// ，自己自定义
+              // 评论会自动同步成为项目的issue,
+              // 这些代码是给issue添加lable以及更改样式
+              // 我的博客是取每个路由地址的第一级目录名称作为label，你可以自己操作路径自己自定义
                 function (hook, vm) {
                     hook.doneEach(function () {
                         var label='', domObj, main, divEle, gitalk;
@@ -143,7 +146,8 @@
                 }
             ]
     }
-  </script>-->
+  </script>
+-->
 
 <!--  &lt;!&ndash;分页导航:不太好用&ndash;&gt;-->
 <!--  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>-->

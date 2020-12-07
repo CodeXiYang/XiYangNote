@@ -4,13 +4,7 @@
 
 ## 简介
 
-`docsify`是由现饿了么前端团队@elemeFE的cinwell.li编写的一套文档站点生成框
-
-架，github上已有3k+ star,
-
-Docsify 是一个动态生成文档网站的工具。不同于 GitBook、Hexo 的地方是它不会
-
-生成将 .md 转成 .html 文件，所有转换工作都是在运行时进行。
+`docsify`是由现饿了么前端团队@elemeFE的cinwell.li编写的一套文档站点生成框架，github上已有3k+ star,Docsify 是一个动态生成文档网站的工具。不同于 GitBook、Hexo 的地方是它不会生成将 .md 转成 .html 文件，所有转换工作都是在运行时进行。
 
 
 
@@ -38,13 +32,17 @@ Docsify 是一个动态生成文档网站的工具。不同于 GitBook、Hexo �
 
 ### 安装node.js
 
-<img src="assets/image-20201019145919405.png" alt="image-20201019145919405" style="zoom:67%;" />
+![](assets/image-20201019145919405.png)
 
 ### npm安装doscify框架
 
 推荐全局安装 `docsify-cli` 工具，可以方便地创建及在本地预览生成的文档。
 
-`npm i docsify-cli -g`
+```bash
+npm i docsify-cli -g
+```
+
+
 
 
 
