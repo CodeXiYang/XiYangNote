@@ -186,7 +186,7 @@ section.cover.has-mask .mask {
     background-size: 50px;
     background-repeat: no-repeat;
     background-color: #282c34;
-    margin-bottom: -7px;
+    margin-bottom: -50px;
     margin-top: 10px;
     margin-left: -3px;
     border-radius: 5px;
@@ -277,5 +277,12 @@ img{
 /*文章中的a链接标签样式*/
 #main p a{
     color:#F22F27;
-    text-decoration:underline wavy rgb(66, 185, 163) ;
+    /*text-decoration:underline wavy rgb(66, 185, 163) ;*/
+}
+/*复选框的样式,做任务列表的*/
+input[type=checkbox]{
+
+}
+input[type=checkbox]:checked{
+
 }
