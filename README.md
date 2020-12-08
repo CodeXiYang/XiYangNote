@@ -88,13 +88,13 @@
 
 **Netty**
 
-- [ ] 尚硅谷-xx-Netty
+- [ ] [尚硅谷-韩顺平-Netty](尚硅谷学习笔记/尚硅谷-韩顺平-Netty网络通讯框架/README.md)
 
 ### MQ中间件
 
 **RabbitMQ**
 
-- [ ] [百知教育-xx-RabbitMQ](其他未分类笔记/编程不良人消息中间件RabbitMQ/README.md)
+- [ ] [百知教育-编程不良人-RabbitMQ](其他未分类笔记/编程不良人消息中间件RabbitMQ/README.md)
 
 **ActiveMQ**
 
@@ -103,6 +103,10 @@
 **RocketMQ**
 
 - [ ] [黑马-xx-RocketMQ](其他未分类笔记/黑马RocketMQ/README.md)
+
+**kafka**
+
+- [ ] 尚硅谷-xx-kafka
 
 ### 容器技术
 
@@ -290,6 +294,10 @@
 **Linux7.x**
 
 - [ ] 韩顺平-linux7.x2021升级版
+
+**idea工具**
+
+- [ ] [IDEA工具使用记录](其他未分类笔记/IDEA使用记录/README.md)
 
 ### 其他语言
 

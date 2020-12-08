@@ -219,3 +219,25 @@ $ git branch -dr [remote/branch]
    ```
 
    ![image-20201204115520108](assets/image-20201204115520108.png)
+
+2. 当远程仓库的代码发生变化后进行强制更新到本地
+
+   ```bash
+   E:\魔法森林科技有限公司\device-admin>git fetch --all  #强制更新所有
+   Fetching origin
+   
+   E:\魔法森林科技有限公司\device-admin>git reset --hard origin/develop #重定向到本地仓库的develop分支
+   HEAD is now at e24fdf8 Delete 新建文本文档.txt
+   
+   E:\魔法森林科技有限公司\device-admin>git pull origin/develop 
+   fatal: 'origin/develop' does not appear to be a git repository
+   fatal: Could not read from remote repository.
+   
+   Please make sure you have the correct access rights
+   and the repository exists.
+   
+   E:\魔法森林科技有限公司\device-admin>git pull #刷新
+   Already up to date.
+   ```
+
+   
