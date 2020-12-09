@@ -254,13 +254,142 @@ jwt在没有经过base64编码的时候的组成如下图所示:
 
 ## 6. 封装工具类-JWTUtils
 
-```java
+为简化后续使用jwt的开发,将jwt封装一个工具类,该工具类中所包含的方法需要包含三个功能
 
+- 根据传入的信息封装生成token的方法
+- 验证token
+- 获取token中的payload信息
+
+```java
+/**
+ * @program: jwtdemo
+ * @description: JWTUtils工具类
+ * @author: XiYang
+ * @create: 2020-12-09 16:59
+ **/
+public class JWTUtils {
+    //自定义token签名
+    private static String tokenCode = "TOKEN!$#%@WRRET";
+
+    /**
+     * 生成token
+     * @param map 传入一个map,map存放外面传入的信息
+     * @return 返回token令牌
+     */
+    public static String getToken(Map<String,String> map){
+        JWTCreator.Builder builder = JWT.create(); //构建jwt对象
+        map.forEach((k,v)->{ //将传入的对象信息添加到JWT的payload中
+            builder.withClaim(k,v);
+        });
+        Calendar instance = Calendar.getInstance();//构建jwt的过期时间为7天
+        instance.add(Calendar.SECOND,7);
+        builder.withExpiresAt(instance.getTime());//设置token的过期时间
+        String token = builder.sign(Algorithm.HMAC256(tokenCode));//设置token的sign部分的算法和签名
+        return token;
+    }
+
+    /**
+     * 验证传入令牌的(算法和签名)
+     * @param token
+     */
+    public static void verify(String token){
+        //如果验签有问题,会直接爆出异常
+        JWT.require(Algorithm.HMAC256(tokenCode)).build().verify(token);//验证传入的token令牌的正确性
+    }
+
+    /**
+     * 获取token中的payload里面包含的信息
+     * @param token 传递token令牌
+     * @return payload包含的信息
+     */
+    public static DecodedJWT getTokenPayload(String token){
+        DecodedJWT verify = JWT.require(Algorithm.HMAC256(tokenCode)).build().verify(token);
+        return verify;
+    }
+}
+```
+
+工具类测试:
+
+```java
+    @Test
+    public void JwtUtilsTest(){
+        JWTUtils jwtUtils = new JWTUtils();
+        Map<String, String> user = new HashMap<>();
+        user.put("UserSex","男");
+        user.put("UserAge","18");
+        user.put("userName","张三");
+        //生成token
+        String token = JWTUtils.getToken(user);
+        //验证token
+        JWTUtils.verify(token);
+        //获取token中payload的内容
+        DecodedJWT tokenPayload = JWTUtils.getTokenPayload(token);
+        System.out.println(tokenPayload.getClaim("UserSex").asString());
+        System.out.println(tokenPayload.getClaim("UserAge").asString());
+        System.out.println(tokenPayload.getClaim("userName").asString());
+        /**
+         * 男
+         * 18
+         * 张三
+         */
+    }
 ```
 
 
 
-## 7. 整合SpringBoot
+## 7. SpringBoot整合JWT实现登录流程
+
+搭建SpringBoot+MyBatis+JWT环境
+
+pom.xml文件
+
+```xml
+        <!--sringboot启动器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!--springbootweb启动器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--jwt-->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+        <!--mybatis-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.2.7</version>
+        </dependency>
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!--druid连接池-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.10</version>
+        </dependency>
+        <!--引入mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+```
+
+application.yml文件编写
+
+```yml
+
+```
 
 
 
@@ -271,3 +400,6 @@ jwt在没有经过base64编码的时候的组成如下图所示:
 > 视频地址: https://www.bilibili.com/video/BV1i54y1m7cP
 >
 > 我是编程不良人， JWT前后端分离系统的认证方案、单点登录系统的认证方案！ JWT整合springboot完成认证、以及认证优化~ 基于客户端的存储认证标记的解决方案！
+
+
+
