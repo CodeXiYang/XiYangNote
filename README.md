@@ -277,7 +277,7 @@
 
 **oracle**
 
-- [ ] [尚硅谷-宋红康-SQL丶PLSQL丶Oracle](尚硅谷学习笔记/尚硅谷-宋红康-SQL丶PLSQL丶Oracle/README.md)
+- [ ] [尚硅谷-宋红康-SQL丶PLSQL丶Oracle](尚硅谷学习笔记/尚硅谷-宋红康-Oracle丶SQL丶PLSQL/README.md)
 
 ### NoSQL框架
 
