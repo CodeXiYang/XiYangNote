@@ -10,14 +10,7 @@
 
 - [ ] [尚硅谷-宋红康-JavaSE2020版](尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/README.md)
 
-### web开发
 
-**JavaWeb**
-
-- [ ] [尚硅谷-王振国-JavaWeb2020版](尚硅谷学习笔记/尚硅谷-王振国-JavaWeb2020/README.md)
-- [ ] 学相伴-秦疆-JavaWeb
-
-### 高级部分
 
 **Java8及以上新特性**
 
@@ -28,17 +21,34 @@
 - [ ] Java13新特性
 - [ ] Java14新特性
 
+### web开发
+
+**JavaWeb**
+
+- [ ] [尚硅谷-王振国-JavaWeb2020版](尚硅谷学习笔记/尚硅谷-王振国-JavaWeb2020/README.md)
+- [ ] 学相伴-秦疆-JavaWeb
+
+### 高级部分
+
+
+
 **Java数据结构和算法**
 
 - [ ] [尚硅谷-韩顺平-Java数据结构和算法](尚硅谷学习笔记/尚硅谷-韩顺平-Java数据结构和算法/README.md)
 
+
+
 **Java设计模式**
 
-- [ ] 尚硅谷-韩顺平-Java数据结构和算法
+- [ ] [尚硅谷-韩顺平-Java设计模式](尚硅谷学习笔记/尚硅谷-韩顺平-Java设计模式/README.md)
+
+
 
 **JVM**
 
-- [ ] 尚硅谷-宋红康-JVM虚拟机
+- [ ] [尚硅谷-宋红康-JVM虚拟机](尚硅谷学习笔记/尚硅谷-宋红康-JVM虚拟机2020/README.md)
+
+
 
 **网络编程**
 
@@ -70,7 +80,7 @@
 **Spring**
 
 - [ ] [学相伴-秦疆-Spring5](学相伴学习笔记/学相伴-秦疆-Spring5最新完整教程IDEA版通俗易懂/README.md)
-- [ ] 尚硅谷-xx-Spring5
+- [ ] 尚硅谷-王泽-Spring5
 
 **SpringMVC**
 
@@ -100,7 +110,7 @@
 
 **ActiveMQ**
 
-- [ ] 尚硅谷-XX-ActiveMQ
+- [ ] 尚硅谷-xx-ActiveMQ
 
 **RocketMQ**
 
@@ -261,8 +271,8 @@
 **MySQL**
 
 - [ ] 学相伴-秦疆-MySQL
-- [ ] 尚硅谷-李玉婷-MySQL基础
-- [ ] 尚硅谷-周阳-MySQL高级
+- [ ] [尚硅谷-李玉婷-MySQL核心基础](尚硅谷学习笔记/尚硅谷-李玉婷-MySQL核心基础/README.md)
+- [ ] [尚硅谷-周阳-MySQL高级](尚硅谷学习笔记/尚硅谷-周阳-MySQL高级/README.md)
 - [ ] 知播渔-李南江-MySQL8.0
 
 **oracle**
