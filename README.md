@@ -94,7 +94,7 @@
 **SpringCloud**
 
 - [ ] 学相伴-秦疆-SpringCloud(H版)
-- [ ] 尚硅谷-周阳-SpringCloudH版+alibaba版
+- [ ] [尚硅谷-周阳-SpringCloudH版+alibaba版](尚硅谷学习笔记/尚硅谷-周阳-SpringCloud2020/README.md)
 
 ### 通讯技术
 
@@ -270,14 +270,14 @@
 
 **MySQL**
 
-- [ ] 学相伴-秦疆-MySQL
+- [ ] [学相伴-秦疆-MySQL](学相伴学习笔记/学相伴-秦疆-MySQL最新教程通俗易懂/README.md)
 - [ ] [尚硅谷-李玉婷-MySQL核心基础](尚硅谷学习笔记/尚硅谷-李玉婷-MySQL核心基础/README.md)
 - [ ] [尚硅谷-周阳-MySQL高级](尚硅谷学习笔记/尚硅谷-周阳-MySQL高级/README.md)
 - [ ] 知播渔-李南江-MySQL8.0
 
 **oracle**
 
-- [ ] 尚硅谷-宋红康-oracle
+- [ ] [尚硅谷-宋红康-SQL丶PLSQL丶Oracle](尚硅谷学习笔记/尚硅谷-宋红康-SQL丶PLSQL丶Oracle/README.md)
 
 ### NoSQL框架
 
