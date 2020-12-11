@@ -12,21 +12,21 @@
 
 
 
-**Java8及以上新特性**
+**Java12及以上新特性**
 
-- [ ] Java8新特性
-- [ ] Java9新特性
-- [ ] Java11新特性
+*ps:java8丶9丶10丶11新特性包含在JavaSE基础中*
+
 - [ ] Java12新特性
 - [ ] Java13新特性
 - [ ] Java14新特性
+- [ ] Java15新特性
 
 ### web开发
 
 **JavaWeb**
 
 - [ ] [尚硅谷-王振国-JavaWeb2020版](尚硅谷学习笔记/尚硅谷-王振国-JavaWeb2020/README.md)
-- [ ] 学相伴-秦疆-JavaWeb
+- [ ] [学相伴-秦疆-JavaWeb](学相伴学习笔记/学相伴-秦疆-JavaWeb入门到实战/README.md)
 
 ### 高级部分
 
@@ -50,10 +50,6 @@
 
 
 
-**网络编程**
-
-- [ ] 学相伴-秦疆-网络编程
-
 
 
 ## 🍃 Java框架
@@ -70,10 +66,6 @@
 
 - [ ] 学相伴-秦疆-MyBatisPlus
 - [ ] 尚硅谷-MyBatisPlus
-
-**JDBC**
-
-- [ ] 尚硅谷-宋红康-JDBC2020版
 
 ### Spring全家桶
 
@@ -128,7 +120,7 @@
 
 **K8S**
 
-- [ ] 尚硅谷-xx-K8s
+- [ ] 尚硅谷-王泽-K8s
 
 ### 安全认证
 
@@ -142,6 +134,10 @@
 
 - [ ] [百知-编程不良人-shiro2020](其他为分类笔记/编程不良人Shiro/README.md)
 - [ ] 尚硅谷-佟刚-Shiro
+
+### 搜索引擎
+
+- [ ] [学相伴-秦疆-ElasticSearch7.6.x](学相伴学习笔记/学相伴-秦疆-ElasticSearch7.6.x最新完整教程通俗易懂/README.md)
 
 ### Java大数据
 
@@ -268,14 +264,15 @@
 
 ### 数据库基础
 
-**MySQL**
+**MySQL及连接技术** 
 
 - [ ] [学相伴-秦疆-MySQL](学相伴学习笔记/学相伴-秦疆-MySQL最新教程通俗易懂/README.md)
 - [ ] [尚硅谷-李玉婷-MySQL核心基础](尚硅谷学习笔记/尚硅谷-李玉婷-MySQL核心基础/README.md)
 - [ ] [尚硅谷-周阳-MySQL高级](尚硅谷学习笔记/尚硅谷-周阳-MySQL高级/README.md)
+- [ ] [尚硅谷-宋红康-JDBC](尚硅谷学习笔记/尚硅谷-宋红康-JDBC2019/README.md)
 - [ ] 知播渔-李南江-MySQL8.0
 
-**oracle**
+**oracle及连接技术**
 
 - [ ] [尚硅谷-宋红康-SQL丶PLSQL丶Oracle](尚硅谷学习笔记/尚硅谷-宋红康-Oracle丶SQL丶PLSQL/README.md)
 
