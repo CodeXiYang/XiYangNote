@@ -280,9 +280,37 @@ img{
     /*text-decoration:underline wavy rgb(66, 185, 163) ;*/
 }
 /*复选框的样式,做任务列表的*/
-input[type=checkbox]{
-
+input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 18px;
+    margin-right: 10px;
+    position: relative;
 }
-input[type=checkbox]:checked{
-
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(66, 185, 163);
+    border-radius: 3px;
+}
+input[type="checkbox"]:checked::before {
+    content: "✔️";
+    background-color: #F22F27;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 117%;
+    border: 1px solid #F22F27;
+    border-radius:3px;
+    color: green;
+    font-size: 10px;
+    font-weight: bold;
 }

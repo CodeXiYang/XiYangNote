@@ -1,9 +1,9 @@
-# Linux
+# Linux7.6
 
 ## 笔记
 
-- [ ] [Linux开山篇-内容介绍](其他未分类笔记/B站韩顺平/韩顺平2021linux升级版/01-Linux开山篇-内容介绍.md)
-- [ ] [Linux基础篇-Linux入门](其他未分类笔记/B站韩顺平/韩顺平2021linux升级版/02-Linux基础篇-Linux入门.md)
+- [x] [Linux开山篇-内容介绍](其他未分类笔记/B站韩顺平/韩顺平2021linux升级版/01-Linux开山篇-内容介绍.md)
+- [x] [Linux基础篇-Linux入门](其他未分类笔记/B站韩顺平/韩顺平2021linux升级版/02-Linux基础篇-Linux入门.md)
 - [ ] [Linux基础篇-VM和Linux的安装](其他未分类笔记/B站韩顺平/韩顺平2021linux升级版/03-Linux基础篇-VM和Linux的安装.md)
 - [ ] [Linux基础篇-目录结构](其他未分类笔记/B站韩顺平/韩顺平2021linux升级版/04-Linux基础篇-目录结构.md)
 - [ ] [Linux实操篇-远程登录到Linux服务器](其他未分类笔记/B站韩顺平/韩顺平2021linux升级版/05-Linux实操篇-远程登录到Linux服务器.md)
