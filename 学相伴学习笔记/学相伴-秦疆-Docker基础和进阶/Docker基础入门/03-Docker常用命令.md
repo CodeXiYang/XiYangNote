@@ -5,7 +5,10 @@
 ```shell
 docker version # 显示 Docker 版本信息。 
 docker info # 显示 Docker 系统信息，包括镜像和容器数。
-docker --help # 帮助
+docker --help # docker所有的帮助命令
+	# docker 命令 --help # docker指定命令的帮助命令
+	#例如
+	docker run --help # docker 的run帮助命令
 ```
 
 *[docker命令文档地址](https://docs.docker.com/engine/reference/commandline/)*
@@ -33,8 +36,8 @@ hello-world   latest    bf756fb1ae65   11 months ago   13.3kB
 
 # 同一个仓库源可以有多个 TAG，代表这个仓库源的不同版本，我们使用REPOSITORY：TAG 定义不同 的镜像，如果你不定义镜像的标签版本，docker将默认使用 lastest 镜像！ 
 # 可选项 
--a： 列出本地所有镜像 
--q： 只显示镜像id 
+-a： 显示出本地所有镜像 
+-q： 显示出本地所有镜像镜像id 
 --digests： 显示镜像的摘要信息
 ```
 
@@ -42,7 +45,7 @@ hello-world   latest    bf756fb1ae65   11 months ago   13.3kB
 
 ### 2.2 docker search
 
-`docker search 镜像名`用于搜索镜像的命令
+`docker search 镜像名`根据镜像名搜索远程仓库对应的镜像
 
 ```shell
 # 搜索镜像(搜索mysql的镜像)
@@ -69,7 +72,7 @@ mysql     MySQL is a widely used, open-source relation…   10269     [OK]
 
 ### 2.3 docker pull
 
-`docker pull 镜像名[:tag]`用于拉取某个镜像,从远程仓库下载下来
+`docker pull 镜像名[:tag]` 根据镜像名从远程仓库拉取指定的镜像
 
 ```shell
 # 下载mysql镜像 
@@ -120,6 +123,8 @@ docker.io/library/mysql:5.7
 
 `docker rmi 镜像名` 删除指定的镜像
 
+注意: 需要在容器停止后才可以删除镜像,否则会报错
+
 ```shell
 # 删除镜像 
 docker rmi -f 镜像id # 删除单个镜像 
@@ -163,11 +168,12 @@ hello-world   latest    bf756fb1ae65   11 months ago   13.3kB
 
 ```shell
 # 命令 
-docker run [OPTIONS] IMAGE [COMMAND][ARG...] 
+docker run [可选参数] IMAGE [COMMAND][ARG...] # docker run -it centos /bin/bash
+docker run [可选参数] CONTAINER ID # docker run -it 300e315adb2f
 # 常用参数说明 
 --name="Name" # 给容器指定一个名字 
 -d # 后台方式运行容器，并返回容器的id！ 
--i # 以交互模式运行容器，通过和 -t 一起使用 
+-i # 以交互模式运行容器，通常和 -t 一起使用 
 -t # 给容器重新分配一个终端，通常和 -i 一起使用 
 -P # 随机端口映射（大写） 
 -p # 指定端口映射（小结），一般可以有四种写法 
@@ -234,10 +240,10 @@ ctrl+P+Q
 
 ```shell
 # 命令
-docker start (容器id or 容器名) # 通过容器id或容器名 启动容器 
-docker restart (容器id or 容器名) # 通过容器id或容器名 重启容器 
-docker stop (容器id or 容器名) # 通过容器id或容器名 停止容器 
-docker kill (容器id or 容器名) # 通过容器id或容器名 强制停止容器
+docker start 容器id # 通过容器id 启动容器 
+docker restart 容器id # 通过容器id 重启容器 
+docker stop 容器id # 通过容器id 停止容器 
+docker kill 容器id # 通过容器id 强制停止容器
 ```
 
 
@@ -259,15 +265,26 @@ docker ps -a -q|xargs docker rm # 删除所有容器(通过linux中的管道来�
 
 ```shell
 # 命令 
-docker run -d 容器名 
+docker run -d 镜像名 
 ```
 
 ```shell
 # 例子 
-docker run -d centos # 启动centos，使用后台方式启动 
+# 使用后台方式启动 centos
+[root@xiyang ~]# docker run -d centos
+Unable to find image 'centos:latest' locally
+latest: Pulling from library/centos
+7a0437f04f83: Already exists 
+Digest: sha256:5528e8b1b1719d34604c87e11dcd1c0a20bedf46e83b5632cdeac91b8c04efc1
+Status: Downloaded newer image for centos:latest
+91f15d9eed0d91be80d2a2c79798d31da77fc277e7630e67c424aaae2a7497f3
+
 # 问题： 使用docker ps 查看，发现容器已经退出了！ 
+[root@xiyang ~]# docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
 # 解释：Docker容器后台运行，就必须有一个前台进程，容器运行的命令如果不是那些一直挂起的命 令，就会自动退出。 
-# 比如，你运行了nginx服务，但是docker前台没有运行应用，这种情况下，容器启动后，会立即自 杀，因为他觉得没有程序了，所以最好的情况是，将你的应用使用前台进程的方式运行启动。
+# 比如，你运行了nginx服务，但是docker前台没有运行应用，这种情况下，容器启动后，会立即自 杀，因为他觉得没有程序了，所以最好的情况是，将你的应用使用前台进程(-it)的方式运行启动。
 ```
 
 
@@ -276,34 +293,33 @@ docker run -d centos # 启动centos，使用后台方式启动
 
 ```shell
 # 命令 
-docker logs -f -t --tail 容器id 
-```
+docker logs -f -t [--tail 条数] 容器id # 不加--tail 条数会打印所有日志
 
-```shell
-# 例子：我们启动 centos，并编写一段脚本来测试玩玩！最后查看日志
-[root@kuangshen ~]# docker run -d centos /bin/sh -c "while true;do echo kuangshen;sleep 1;done" 
-[root@kuangshen ~]# docker ps 
-CONTAINER ID IMAGE 
-c8530dbbe3b4 centos 
 # -t 显示时间戳 
 # -f 打印最新的日志 
 # --tail 数字 显示多少条！ 
-[root@kuangshen ~]# docker logs -tf --tail 10 c8530dbbe3b4 
-2020-05-11T08:46:40.656901941Z kuangshen 
-2020-05-11T08:46:41.658765018Z kuangshen 
-2020-05-11T08:46:42.661015375Z kuangshen 
-2020-05-11T08:46:43.662865628Z kuangshen 
-2020-05-11T08:46:44.664571547Z kuangshen 
-2020-05-11T08:46:45.666718583Z kuangshen 
-2020-05-11T08:46:46.668556725Z kuangshen 
-2020-05-11T08:46:47.670424699Z kuangshen 
-2020-05-11T08:46:48.672324512Z kuangshen 
-2020-05-11T08:46:49.674092766Z kuangshen
+```
+
+```shell
+# 例子：启动 centos，并编写一段脚本来测试玩玩！最后查看日志
+[root@xiyang ~]# docker run -d centos /bin/bash -c "while true;do echo xiyang;sleep 3;done"
+[root@xiyang ~]# docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+58856b0cc808   centos    "/bin/bash -c 'while…"   4 seconds ago   Up 3 seconds             great_carver
+
+[root@xiyang ~]# docker logs -tf --tail 5 58856b0cc808
+2020-12-17T02:57:13.334676955Z xiyang
+2020-12-17T02:57:16.336714923Z xiyang
+2020-12-17T02:57:19.338698615Z xiyang
+2020-12-17T02:57:22.340680724Z xiyang
+2020-12-17T02:57:25.342643495Z xiyang
 ```
 
 
 
-### 4.3 查看容器中运行的进程信息，支持 ps 命令参数
+### 4.3 查看容器中运行的进程信息，
+
+*支持 ps 命令参数*
 
 ```shell
 # 命令 
@@ -312,8 +328,10 @@ docker top 容器id
 
 ```shell
 # 测试 
-[root@kuangshen ~]# docker top c8530dbbe3b4 
-UID PID PPID C STIME TTY TIME CMD root 27437 27421 0 16:43 ? 00:00:00 /bin/sh -c ....
+[root@xiyang ~]# docker top 58856b0cc808
+UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+root                16979               16960               0                   10:54               ?                   00:00:00            /bin/bash -c while true;do echo xiyang;sleep 3;done
+root                17209               16979               0                   11:01               ?                   00:00:00            /usr/bin/coreutils --coreutils-prog-shebang=sleep /usr/bin/sleep 3
 ```
 
 
@@ -325,50 +343,91 @@ UID PID PPID C STIME TTY TIME CMD root 27437 27421 0 16:43 ? 00:00:00 /bin/sh -c
 docker inspect 容器id
 ```
 
-
-
 ### 4.5 进入正在运行的容器
+
+*我们通常容器都是使用后台方式(-d)运行的,当而我们需要进入容器,修改一些配置时,可以使用下面的两个命令进入运行中的*
+
+`docker exec -it 容器id bashShell`
+
+`docker attach 容器id`
+
+**两种命令的区别:**
+
+`exec` 是在容器中打开新的终端，并且可以启动新的进程 
+
+`attach` 直接进入容器启动命令的终端，不会启动新的进程
 
 ```shell
 # 命令1 
 docker exec -it 容器id bashShell
 # 测试1 
-[root@kuangshen ~]# docker ps 
-CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES c8530dbbe3b4 centos "/bin/sh -c 'while t…" 12 minutes ago Up 12 minutes happy_chaum 
-[root@kuangshen ~]# docker exec -it c8530dbbe3b4 /bin/bash 
-[root@c8530dbbe3b4 /]# ps -ef 
-UID PID PPID C STIME TTY TIME CMD root 1 0 0 08:43 ? 00:00:00 /bin/sh -c while true;do echo kuangshen;sleep root 751 0 0 08:56 pts/0 00:00:00 /bin/bash root 769 1 0 08:56 ? 00:00:00 /usr/bin/coreutils -- coreutils-prog-shebang=s root 770 751 0 08:56 pts/0 00:00:00 ps -ef
+[root@xiyang ~]# docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
+58856b0cc808   centos    "/bin/bash -c 'while…"   21 minutes ago   Up 21 minutes             great_carver
+[root@xiyang ~]# docker exec -it 58856b0cc808 /bin/bash
+[root@58856b0cc808 /]# ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 02:54 ?        00:00:00 /bin/bash -c while true;do echo xiyang;sleep 3;done
+root       447     0  0 03:16 pts/0    00:00:00 /bin/bash
+root       466   447  0 03:16 pts/0    00:00:00 ps -ef
+root       467     1  0 03:16 ?        00:00:00 /usr/bin/coreutils --coreutils-prog-shebang=sleep /usr/bin/sleep 3
+```
+
+```shell
 # 命令2 
 docker attach 容器id
 # 测试2 
-[root@kuangshen ~]# docker exec -it c8530dbbe3b4 /bin/bash 
-[root@c8530dbbe3b4 /]# ps -ef 
-UID PID PPID C STIME TTY TIME CMD root 1 0 0 08:43 ? 00:00:00 /bin/sh -c while true;do echo kuangshen;sleep root 856 0 0 08:57 pts/0 00:00:00 /bin/bash root 874 1 0 08:57 ? 00:00:00 /usr/bin/coreutils -- coreutils-prog-shebang=s root 875 856 0 08:57 pts/0 00:00:00 ps -ef 
-# 区别 
-# exec 是在容器中打开新的终端，并且可以启动新的进程 
-# attach 直接进入容器启动命令的终端，不会启动新的进程
+[root@xiyang ~]# docker attach 58856b0cc808
+xiyang
+xiyang
+xiyang
+...#正在执行的代码
 ```
+
+
+
+
 
 
 
 ### 4.6 从容器内拷贝文件到主机上
 
+*拷贝是一个手动过程,后面可以使用-v卷的技术,可以实现docker容器与主机自动同步;例如可以将主机中的home目录与容器中的home目录打通,实现自动同步*
+
 ```shell
 # 命令 
 docker cp 容器id:容器内路径 目的主机路径 
-# 测试 
-# 容器内执行，创建一个文件测试 
-[root@c8530dbbe3b4 /]# cd /home 
-[root@c8530dbbe3b4 home]# touch f1 
-[root@c8530dbbe3b4 home]# ls
-f1
-[root@c8530dbbe3b4 home]# exit 
-exit
-# linux复制查看，是否复制成功 
-[root@kuangshen ~]# docker cp c8530dbbe3b4:/home/f1 /home 
-[root@kuangshen ~]# cd /home 
-[root@kuangshen home]# ls 
-f1
+```
+
+```shell
+# 测试 : 在centos容器中创建一个文件拷贝到主机上
+# 查看当前运行的容器
+[root@xiyang ~]# docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+# 运行centos容器
+[root@xiyang ~]# docker run -it centos
+# 进入centos容器的home目录
+[root@dad1f67965a4 /]# cd home
+# 在centos容器内的home目录创建一个SpringApplication.java文件
+[root@dad1f67965a4 home]# touch SpringApplication.java
+# 查看centos容器内的home目录下的文件
+[root@dad1f67965a4 home]# ls
+SpringApplication.java
+# 不关闭centos容器退出到主机
+[root@dad1f67965a4 home]# [root@xiyang ~]# cd /
+# 进入主机的home目录
+[root@xiyang /]# cd home
+# 查看主机home目录的文件
+[root@xiyang home]# ls
+# 查看运行的容器
+[root@xiyang home]# docker ps
+CONTAINER ID   IMAGE     COMMAND       CREATED          STATUS          PORTS     NAMES
+dad1f67965a4   centos    "/bin/bash"   53 seconds ago   Up 52 seconds             competent_williams
+# 将容器下的home目录中创建的java文件复制到主机上的home目录里面
+[root@xiyang home]# docker cp dad1f67965a4:/home/SpringApplication.java /home
+# 查看主机上当前目录下的文件
+[root@xiyang home]# ls
+SpringApplication.java
 ```
 
 
@@ -383,44 +442,50 @@ f1
 
 ## 5. 命令小结
 
+### 5.1 图解
+
+![image-20201217113855266](assets/image-20201217113855266.png)
+
+### 5.2 命令
+
 ```shell
-attach Attach to a running container # 当前 shell 下 attach 连接指定运行镜像 
-build Build an image from a Dockerfile # 通过 Dockerfile 定 制镜像 
-commit Create a new image from a container changes # 提交当前容器为新的镜像 
-cp Copy files/folders from the containers filesystem to the host path #从容器中拷贝指定文件或者目录到宿主机中 
-create Create a new container # 创建一个新的容器，同 run，但不启动容器 
-diff Inspect changes on a container's filesystem # 查看 docker 容器变化 
-events Get real time events from the server # 从 docker 服务获取容 器实时事件 
-exec Run a command in an existing container # 在已存在的容器上运行命 令
-export Stream the contents of a container as a tar archive # 导出容器的内 容流作为一个 tar 归档文件[对应 import ] 
+attach 	Attach to a running container # 当前 shell 下 attach 连接指定运行镜像 
+build 	Build an image from a Dockerfile # 通过 Dockerfile 定 制镜像 
+commit 	Create a new image from a container changes # 提交当前容器为新的镜像 
+cp 		Copy files/folders from the containers filesystem to the host path #从容器中拷贝指定文件或者目录到宿主机中 
+create 	Create a new container # 创建一个新的容器，同 run，但不启动容器 
+diff 	Inspect changes on a container's filesystem # 查看 docker 容器变化 
+events 	Get real time events from the server # 从 docker 服务获取容 器实时事件 
+exec 	Run a command in an existing container # 在已存在的容器上运行命 令
+export 	Stream the contents of a container as a tar archive # 导出容器的内 容流作为一个 tar 归档文件[对应 import ] 
 history Show the history of an image # 展示一个镜像形成历史 
-images List images # 列出系统当前镜像
-import Create a new filesystem image from the contents of a tarball # 从 tar包中的内容创建一个新的文件系统映像[对应export] 
-info Display system-wide information # 显示系统相关信息 
+images 	List images # 列出系统当前镜像
+import 	Create a new filesystem image from the contents of a tarball # 从 tar包中的内容创建一个新的文件系统映像[对应export] 
+info 	Display system-wide information # 显示系统相关信息 
 inspect Return low-level information on a container # 查看容器详细信息 
-kill Kill a running container # kill 指定 docker 容 器
-load Load an image from a tar archive # 从一个 tar 包中加载一 个镜像[对应 save] 
-login Register or Login to the docker registry server # 注册或者登陆一个 docker 源服务器 
-logout Log out from a Docker registry server # 从当前 Docker registry 退出 
-logs Fetch the logs of a container # 输出当前容器日志信息 
-port Lookup the public-facing port which is NAT-ed to PRIVATE_PORT # 查看映射端口对应的容器内部源端口 
-pause Pause all processes within a container # 暂停容器 
-ps List containers # 列出容器列表 
-pull Pull an image or a repository from the docker registry server # 从docker镜像源服务器拉取指定镜像或者库镜像 
-push Push an image or a repository to the docker registry server # 推送指定镜像或者库镜像至docker源服务器 
+kill 	Kill a running container # kill 指定 docker 容 器
+load 	Load an image from a tar archive # 从一个 tar 包中加载一 个镜像[对应 save] 
+login 	Register or Login to the docker registry server # 注册或者登陆一个 docker 源服务器 
+logout 	Log out from a Docker registry server # 从当前 Docker registry 退出 
+logs 	Fetch the logs of a container # 输出当前容器日志信息 
+port 	Lookup the public-facing port which is NAT-ed to PRIVATE_PORT # 查看映射端口对应的容器内部源端口 
+pause 	Pause all processes within a container # 暂停容器 
+ps 		List containers # 列出容器列表 
+pull 	Pull an image or a repository from the docker registry server # 从docker镜像源服务器拉取指定镜像或者库镜像 
+push 	Push an image or a repository to the docker registry server # 推送指定镜像或者库镜像至docker源服务器 
 restart Restart a running container # 重启运行的容器 
-rm Remove one or more containers # 移除一个或者多个容器 
-rmi Remove one or more images # 移除一个或多个镜像[无容器使用该 镜像才可删除，否则需删除相关容器才可继续或 -f 强制删除] 
-run Run a command in a new container # 创建一个新的容器并运行 一个命令 
-save Save an image to a tar archive # 保存一个镜像为一个 tar 包[对应 load] 
-search Search for an image on the Docker Hub # 在 docker hub 中搜 索镜像 
-start Start a stopped containers # 启动容器 
-stop Stop a running containers # 停止容器 
-tag Tag an image into a repository # 给源中镜像打标签 
-top Lookup the running processes of a container # 查看容器中运行的进程信 息
+rm 		Remove one or more containers # 移除一个或者多个容器 
+rmi 	Remove one or more images # 移除一个或多个镜像[无容器使用该 镜像才可删除，否则需删除相关容器才可继续或 -f 强制删除] 
+run 	Run a command in a new container # 创建一个新的容器并运行 一个命令 
+save 	Save an image to a tar archive # 保存一个镜像为一个 tar 包[对应 load] 
+search 	Search for an image on the Docker Hub # 在 docker hub 中搜 索镜像 
+start 	Start a stopped containers # 启动容器 
+stop 	Stop a running containers # 停止容器 
+tag 	Tag an image into a repository # 给源中镜像打标签 
+top 	Lookup the running processes of a container # 查看容器中运行的进程信 息
 unpause Unpause a paused container # 取消暂停容器 
 version Show the docker version information # 查看 docker 版本号 
-wait Block until a container stops, then print its exit code # 截取容 器停止时的退出状态值
+wait 	Block until a container stops, then print its exit code # 截取容 器停止时的退出状态值
 ```
 
 
@@ -430,6 +495,103 @@ wait Block until a container stops, then print its exit code # 截取容 器停�
 ### 6.1 使用Docker安装Nginx
 
 ```shell
+# 1. 搜索nginx镜像
+[root@xiyang ~]# docker search nginx --filter=stars=6000
+NAME      DESCRIPTION                STARS     OFFICIAL   AUTOMATED
+nginx     Official build of Nginx.   14163     [OK]   
+# 2. 拉取镜像
+[root@xiyang ~]# docker pull nginx
+Using default tag: latest
+latest: Pulling from library/nginx
+6ec7b7d162b2: Already exists 
+cb420a90068e: Pull complete 
+2766c0bf2b07: Pull complete 
+e05167b6a99d: Pull complete 
+70ac9d795e79: Pull complete 
+Digest: sha256:4cf620a5c81390ee209398ecc18e5fb9dd0f5155cd82adcbae532fec94006fb9
+Status: Downloaded newer image for nginx:latest
+docker.io/library/nginx:latest
+# 3. 启动容器
+[root@xiyang ~]# docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+nginx        latest    ae2feff98a0c   31 hours ago   133MB
+mysql        5.7       697daaecf703   5 days ago     448MB
+mysql        latest    ab2f358b8612   5 days ago     545MB
+redis        latest    ef47f3b6dc11   5 days ago     104MB
+centos       latest    300e315adb2f   9 days ago     209MB
+[root@xiyang ~]# docker run -d --name mynginx -p 3500:80 nginx
+6fc6fabb38bdc214b9df83a6e36033712cff3f774ee7410b9b9dcc614fd98daa
+[root@xiyang ~]# docker ps
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                  NAMES
+6fc6fabb38bd   nginx     "/docker-entrypoint.…"   6 seconds ago    Up 5 seconds    0.0.0.0:3500->80/tcp   mynginx
+dad1f67965a4   centos    "/bin/bash"              22 minutes ago   Up 22 minutes                          competent_williams
+# 4. 测试访问
+[root@xiyang ~]# curl localhost:3500
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+# 5. 进入容器
+[root@xiyang ~]# docker exec -it mynginx /bin/bash
+# 寻找nginx
+root@6fc6fabb38bd:/# whereis nginx 
+nginx: /usr/sbin/nginx /usr/lib/nginx /etc/nginx /usr/share/nginx
+# nginx的路径
+root@6fc6fabb38bd:/# cd /usr/share/nginx
+# 首页的路径
+root@6fc6fabb38bd:/usr/share/nginx# ls
+html
+# 进入首页路径
+root@6fc6fabb38bd:/usr/share/nginx# cd html 
+root@6fc6fabb38bd:/usr/share/nginx/html# ls
+50x.html  index.html
+root@6fc6fabb38bd:/usr/share/nginx/html# cat index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
 
 ```
 
@@ -438,7 +600,45 @@ wait Block until a container stops, then print its exit code # 截取容 器停�
 ### 6.2 使用docker安装 tomcat
 
 ```shell
+# 官方文档解释 
+# -it ：交互模式 
+# --rm：容器启动成功并退出以后容器就自动移除，一般在测试情况下使用！
+# docker run -it --rm tomcat:9.0
 
+# 搜索镜像
+[root@xiyang ~]# docker search tomcat --filter=stars=1000
+NAME      DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+tomcat    Apache Tomcat is an open source implementati…   2900      [OK]     
+
+# 1、下载tomcat镜像
+[root@xiyang ~]# docker pull tomcat
+Using default tag: latest
+latest: Pulling from library/tomcat
+6c33745f49b4: Pull complete 
+c87cd3c61e27: Pull complete 
+05a3c799ec37: Pull complete 
+a61c38f966ac: Pull complete 
+396b39798a69: Pull complete 
+576b6480761a: Pull complete 
+0d66e5d46fdf: Pull complete 
+c9a19e25684c: Pull complete 
+511576b95265: Pull complete 
+7cbc3d736630: Pull complete 
+Digest: sha256:f728ca177fee0851aea29499fbb2013737231a00264f517cc3d185f6f8bf09a8
+Status: Downloaded newer image for tomcat:latest
+docker.io/library/tomcat:latest
+
+# 2、启动tomcat
+[root@xiyang ~]# docker run -d -p 8080:8080 --name tomcat9 tomcat
+9ac377a8a379d06e00fe3c3d1b87a2f75d4d7977f5aabdae192ea0025f1fd145
+
+# 3、进入tomcat
+[root@xiyang ~]# docker exec -it tomcat9 /bin/bash
+root@9ac377a8a379:/usr/local/tomcat
+
+# 4、思考：
+	# 我们以后要部署项目，还需要进入容器中，是不是十分麻烦，要是有一种技术，可以将容器 内和我们Linux进行映射挂载就好了？
+	# 我们后面会将数据卷技术来进行挂载操作，也是一个核心内容，这 里大家先听听名词就好，我们很快就会讲到！
 ```
 
 
@@ -451,7 +651,46 @@ wait Block until a container stops, then print its exit code # 截取容 器停�
 
 
 
-## 7. 可视化
+## 7. Docker可视化安装
+
+*Docker可视化可使用Rancher(先使用),和Rancher(CI/CD)时使用*
+
+### 7.1 Portainer
+
+**介绍:**
+
+Portainer是Docker的图形化管理工具，提供状态显示面板、应用模板快速部署、容器镜像网络数据卷的基本操作（包括上传下载镜像，创建容器等操作）、事件日志显示、容器控制台操作、Swarm集群和服务等集中管理和操作、登录用户管理和控制等功能。功能十分全面，基本能满足中小型单位对容器管理的全部需求。
+
+**安装Portainer**
+
+```shell
+# 安装并运行docker
+docker run -d -p 9000:9000 --restart=always --name portainer -v /var/run/docker.sock:/var/run/docker.sock -v /Users/lee/dev/docker_file/portainer/data:/data docker.io/portainer/portainer
+
+docker run -d -p 8088:9000 \ 
+--restart=always -v /var/run/docker.sock:/var/run/docker.sock -- privileged=true portainer/portainer
+```
+
+**访问测试**
 
 
+
+### 7.2 Rancher
+
+```shell
+# 1.拉取 rancher 镜像
+ docker pull rancher:v2.4.4
+# 2.查看镜像列表是否存在
+ docker images
+# 3.在宿主机上创建Rancher的挂载目录：
+ mkdir -p /docker_volume/rancher_home/rancher
+ mkdir -p /docker_volume/rancher_home/auditlog
+# 4. 启动 rancher 容器
+ docker run -d --restart=unless-stopped -p 80:80 -p 443:443 \
+ -v /docker_volume/rancher_home/rancher:/var/lib/rancher \
+ -v /docker_volume/rancher_home/auditlog:/var/log/auditlog \
+ --name rancher rancher/rancher:v2.4.4  
+# 5. 登录配置
+ http://[宿主机IP]
+```
 

@@ -82,18 +82,20 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
 
 ## 3. 安装步骤
 
-> 安装前准备: 
->
-> - 官网安装参考手册：https://docs.docker.com/engine/install/centos/
->
-> - 确定你是CentOS7及以上版本
->
-> - yum安装gcc相关环境（需要确保 虚拟机可以上外网 ） 
->
->   ```shell
->   yum -y install gcc 
->   yum -y install gcc-c++
->   ```
+### 3.1 安装前准备
+
+- 官网安装参考手册：https://docs.docker.com/engine/install/centos/
+
+- 确定你是CentOS7及以上版本
+
+- yum安装gcc相关环境（需要确保 虚拟机可以上外网 ） 
+
+  ```shell
+  yum -y install gcc 
+  yum -y install gcc-c++
+  ```
+
+### 3.2 docker的安装&卸载
 
 1. 卸载旧版本(如果你之前安装了docker需要卸载)
 
@@ -172,10 +174,11 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
    # 查看docker的进程
    [root@xiyang ~]# docker ps
    CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-   
+   # 运行hello-world(检验docker是否安装成功)
+   docker run hello-world
+   # 查看hello-world的镜像
+   docker images
    ```
-
-   
 
 8. 卸载docker
 
@@ -186,15 +189,9 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
    yum -y remove docker-ce docker-ce-cli containerd.io 
    # 删除docker文件夹 /var/lib/docker: 是docker的默认工作路径
    rm -rf /var/lib/docker
-```
-   
+   ```
 
-```shell
-# 运行hello-world(检验docker是否安装成功)
-docker run hello-world
-# 查看hello-world的镜像
-docker images
-```
+
 
 
 
@@ -210,40 +207,24 @@ docker images
 
 ![image-20201216155317225](assets/image-20201216155317225.png)
 
+*配置镜像加速*
+
+```shell
+# 创建一个目录
+sudo mkdir -p /etc/docker
+# 在上面目录下的json中配置一个阿里云的地址
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://aldgqwxx.mirror.aliyuncs.com"]
+}
+EOF
+# 重启镜像
+sudo systemctl daemon-reload
+# 重启docker
+sudo systemctl restart docker
+```
 
 
-
-
-
-
-
-
-1. 介绍：https://www.aliyun.com/product/acr
-
-2. 注册一个属于自己的阿里云账户(可复用淘宝账号) 
-
-3. 进入管理控制台设置密码，开通
-
-4. 查看镜像加速器自己的
-
-5. 配置镜像加速
-
-   ```shell
-   # 创建一个目录
-   sudo mkdir -p /etc/docker
-   # 在上面目录下的json中配置一个阿里云的地址
-   sudo tee /etc/docker/daemon.json <<-'EOF'
-   {
-     "registry-mirrors": ["https://aldgqwxx.mirror.aliyuncs.com"]
-   }
-   EOF
-   # 重启镜像
-   sudo systemctl daemon-reload
-   # 重启docker
-   sudo systemctl restart docker
-   ```
-
-   
 
 
 

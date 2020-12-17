@@ -60,7 +60,7 @@
 
 **MyBatis**
 
-- [ ] [学相伴-秦疆-MyBatis](学相伴学习笔记/学相伴-秦疆-Redis最新超详细版教程通俗易懂/README.md)
+- [ ] [学相伴-秦疆-MyBatis](学相伴学习笔记/学相伴-秦疆-Mybatis最新完整教程IDEA版通俗易懂/README.md)
 - [ ] 尚硅谷-xx-MyBatis
 - [ ] 撩课-高新强-MyBatis
 
