@@ -2,7 +2,7 @@
 
 
 
-*[笔记整理进度脑图](https://www.processon.com/mindmap/5fcddb4e1e08536c5970cc7a)*
+*[本笔记本技术骨架](https://www.processon.com/mindmap/5fcddb4e1e08536c5970cc7a)*
 
 ## ☕ JavaSE
 
@@ -66,8 +66,8 @@
 
 **MyBatisPlus**
 
-- [ ] 学相伴-秦疆-MyBatisPlus
-- [ ] 尚硅谷-MyBatisPlus
+- [ ] [学相伴-秦疆-MyBatisPlus](学相伴学习笔记/学相伴-秦疆-MyBatisPlus最新完整教程通俗易懂/README.md)
+- [ ] 尚硅谷-xx-MyBatisPlus
 
 ### Spring全家桶
 
@@ -348,7 +348,7 @@
 
 
 
-## 🛠️Linux运维
+## 🛠️DevOps 运维
 
 ### Linux
 
