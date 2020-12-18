@@ -2,7 +2,7 @@
 
 
 
-*[本笔记本技术骨架](https://www.processon.com/mindmap/5fcddb4e1e08536c5970cc7a)*
+*[技术大纲](https://www.processon.com/mindmap/5fcddb4e1e08536c5970cc7a)*
 
 ## ☕ JavaSE
 

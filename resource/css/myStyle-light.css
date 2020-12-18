@@ -1,6 +1,7 @@
 /**
 =================IT`S ME 定制!===============
- */
+=================XiYang======================
+*/
 a {
     text-decoration: none;
 }
@@ -313,4 +314,17 @@ input[type="checkbox"]:checked::before {
     color: green;
     font-size: 10px;
     font-weight: bold;
+}
+/*侧边栏样式*/
+body.sticky .sidebar, body.sticky .sidebar-toggle {
+    position: fixed;
+    background-color: #f4f4f4;
+}
+/*搜索框圆角*/
+.search input {
+    border-radius: 1rem;
+}
+/*首页*/
+.app-nav a.active{
+	border-bottom:none;
 }
