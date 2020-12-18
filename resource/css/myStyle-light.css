@@ -328,3 +328,9 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 .app-nav a.active{
 	border-bottom:none;
 }
+/*文章一级标题*/
+.markdown-section h1 {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+    text-align: center;
+}
