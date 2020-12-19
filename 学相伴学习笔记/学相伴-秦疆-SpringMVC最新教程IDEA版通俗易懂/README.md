@@ -11,8 +11,8 @@
 - [ ] [结果跳转方式](学相伴学习笔记/学相伴-秦疆-SpringMVC最新教程IDEA版通俗易懂/05-结果跳转方式.md)
 - [ ] [数据处理](学相伴学习笔记/学相伴-秦疆-SpringMVC最新教程IDEA版通俗易懂/06-数据处理.md)
 - [ ] [整合SSM](学相伴学习笔记/学相伴-秦疆-SpringMVC最新教程IDEA版通俗易懂/07-整合SSM.md)
-- [ ] [Ajax](学相伴学习笔记/学相伴-秦疆-SpringMVC最新教程IDEA版通俗易懂/08-Ajax.md)
-- [ ] [Json](学相伴学习笔记/学相伴-秦疆-SpringMVC最新教程IDEA版通俗易懂/09-JSON.md)
+- [ ] [Json](学相伴学习笔记/学相伴-秦疆-SpringMVC最新教程IDEA版通俗易懂/08-JSON.md)
+- [ ] [Ajax](学相伴学习笔记/学相伴-秦疆-SpringMVC最新教程IDEA版通俗易懂/09-Ajax.md)
 - [ ] [拦截器](学相伴学习笔记/学相伴-秦疆-SpringMVC最新教程IDEA版通俗易懂/10-拦截器.md)
 - [ ] [文件上传和下载](学相伴学习笔记/学相伴-秦疆-SpringMVC最新教程IDEA版通俗易懂/11-文件上传和下载.md)
 

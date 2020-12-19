@@ -2,7 +2,7 @@
 
 
 
-*[技术大纲](https://www.processon.com/mindmap/5fcddb4e1e08536c5970cc7a)*
+*[低头敲代码,抬头看方向](https://www.processon.com/mindmap/5fcddb4e1e08536c5970cc7a)*
 
 ## ☕ JavaSE
 
@@ -27,8 +27,8 @@
 
 **JavaWeb**
 
-- [ ] [尚硅谷-王振国-JavaWeb2020版](尚硅谷学习笔记/尚硅谷-王振国-JavaWeb2020/README.md)
 - [ ] [学相伴-秦疆-JavaWeb](学相伴学习笔记/学相伴-秦疆-JavaWeb入门到实战/README.md)
+- [ ] [尚硅谷-王振国-JavaWeb2020版](尚硅谷学习笔记/尚硅谷-王振国-JavaWeb2020/README.md)
 
 ### 高级部分
 
