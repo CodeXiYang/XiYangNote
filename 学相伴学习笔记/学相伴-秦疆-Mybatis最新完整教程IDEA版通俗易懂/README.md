@@ -2,8 +2,8 @@
 
 ## 笔记
 
-- [ ] [MyBatis简介](学相伴学习笔记/学相伴-秦疆-Mybatis最新完整教程IDEA版通俗易懂/01-MyBatis简介.md)
-- [ ] [MyBatis第一个程序](学相伴学习笔记/学相伴-秦疆-Mybatis最新完整教程IDEA版通俗易懂/02-MyBatis第一个程序.md)
+- [x] [MyBatis简介](学相伴学习笔记/学相伴-秦疆-Mybatis最新完整教程IDEA版通俗易懂/01-MyBatis简介.md)
+- [x] [MyBatis第一个程序](学相伴学习笔记/学相伴-秦疆-Mybatis最新完整教程IDEA版通俗易懂/02-MyBatis第一个程序.md)
 - [ ] [MyBatis进行CRUD操作](学相伴学习笔记/学相伴-秦疆-Mybatis最新完整教程IDEA版通俗易懂/03-MyBatis进行CRUD操作.md)
 - [ ] [配置解析](学相伴学习笔记/学相伴-秦疆-Mybatis最新完整教程IDEA版通俗易懂/04-配置解析.md)
 - [ ] [ResultMap](学相伴学习笔记/学相伴-秦疆-Mybatis最新完整教程IDEA版通俗易懂/05-ResultMap.md)
