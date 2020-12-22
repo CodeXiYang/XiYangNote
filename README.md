@@ -88,8 +88,9 @@
 
 **SpringBoot**
 
-- [ ] [学相伴-秦疆-SpringBoot2.2.5](学相伴学习笔记/学相伴-秦疆-SpringBoot2.2.5最新教程IDEA版通俗易懂/README.md)
 - [ ] 尚硅谷-雷丰阳-SpringBoot1.x
+- [ ] [尚硅谷-雷丰阳-SpringBoot2.x](尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot2/README.md)
+- [ ] [学相伴-秦疆-SpringBoot2.x](学相伴学习笔记/学相伴-秦疆-SpringBoot2.2.5最新教程IDEA版通俗易懂/README.md)
 
 **SpringCloud**
 
