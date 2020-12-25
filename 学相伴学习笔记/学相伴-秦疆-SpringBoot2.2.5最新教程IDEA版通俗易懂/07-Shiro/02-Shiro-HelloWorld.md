@@ -1,2 +1,0 @@
-# Shiro-Hello World
-
