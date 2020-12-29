@@ -6,5 +6,3 @@
   * [🗄️  数据库技术](README?id=🗄%ef%b8%8f-数据库技术)
   * [🛠️  DevOps运维](README?id=🛠%ef%b8%8fdevops-运维)
   * [🎇 拓展学习](README?id=🎇-拓展学习)
-
-- [<i class="fa fa-calendar-o fa-1x"></i> 首页]()

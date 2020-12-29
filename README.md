@@ -14,25 +14,15 @@
 
 **JavaSE**
 
-- [ ] [尚硅谷-宋红康-JavaSE2020版](尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/README.md)
-
-
-
-**Java12及以上新特性**
-
-*ps:java8丶9丶10丶11新特性包含在JavaSE基础中*
-
-- [ ] Java12新特性
-- [ ] Java13新特性
-- [ ] Java14新特性
-- [ ] Java15新特性
+- [ ] 尚硅谷-宋红康-JavaSE2020版
+- [ ] 尚硅谷-宋红康-JavaSE新特性
 
 ### web开发
 
 **JavaWeb**
 
 - [ ] [学相伴-秦疆-JavaWeb](学相伴学习笔记/学相伴-秦疆-JavaWeb入门到实战/README.md)
-- [ ] [尚硅谷-王振国-JavaWeb2020版](尚硅谷学习笔记/尚硅谷-王振国-JavaWeb2020/README.md)
+- [ ] [尚硅谷-王振国-JavaWeb2020版](尚硅谷学习笔记/第2阶段-JavaWEB/尚硅谷-王振国-JavaWeb2020/README.md)
 
 ### 高级部分
 
@@ -40,19 +30,19 @@
 
 **Java数据结构和算法**
 
-- [ ] [尚硅谷-韩顺平-Java数据结构和算法](尚硅谷学习笔记/尚硅谷-韩顺平-Java数据结构和算法/README.md)
+- [ ] [尚硅谷-韩顺平-Java数据结构和算法](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-韩顺平-Java数据结构和算法/README.md)
 
 
 
 **Java设计模式**
 
-- [ ] [尚硅谷-韩顺平-Java设计模式](尚硅谷学习笔记/尚硅谷-韩顺平-Java设计模式/README.md)
+- [ ] [尚硅谷-韩顺平-Java设计模式](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-韩顺平-Java设计模式/README.md)
 
 
 
 **JVM**
 
-- [ ] [尚硅谷-宋红康-JVM虚拟机](尚硅谷学习笔记/尚硅谷-宋红康-JVM虚拟机2020/README.md)
+- [ ] [尚硅谷-宋红康-JVM虚拟机](尚硅谷学习笔记/第4阶段-JavaEE高级/尚硅谷-宋红康-JVM虚拟机2020/README.md)
 
 
 
@@ -64,20 +54,20 @@
 
 **MyBatis**
 
-- [ ] [学相伴-秦疆-MyBatis](学相伴学习笔记/学相伴-秦疆-Mybatis最新完整教程IDEA版通俗易懂/README.md)
+- [ ] [学相伴-秦疆-MyBatis](学相伴学习笔记/学相伴-秦疆-Mybatis最新完整教程IDEA版通俗易懂/Mybatis.md)
 - [ ] 尚硅谷-xx-MyBatis
 - [ ] 撩课-高新强-MyBatis
 
 **MyBatisPlus**
 
-- [ ] [学相伴-秦疆-MyBatisPlus](学相伴学习笔记/学相伴-秦疆-MyBatisPlus最新完整教程通俗易懂/README.md)
+- [ ] [学相伴-秦疆-MyBatisPlus](学相伴学习笔记/学相伴-秦疆-MyBatisPlus最新完整教程通俗易懂/MybatisPlus.md)
 - [ ] 尚硅谷-xx-MyBatisPlus
 
 ### Spring全家桶
 
 **Spring**
 
-- [ ] [学相伴-秦疆-Spring5](学相伴学习笔记/学相伴-秦疆-Spring5最新完整教程IDEA版通俗易懂/README.md)
+- [ ] [学相伴-秦疆-Spring5](学相伴学习笔记/学相伴-秦疆-Spring5最新完整教程IDEA版通俗易懂/Spring5.md)
 - [ ] 尚硅谷-王泽-Spring5
 - [ ] 尚硅谷-雷丰阳-Spring注解驱动开发
 
@@ -87,7 +77,7 @@
 
 **SpringMVC**
 
-- [ ] [学相伴-秦疆-SpringMVC](学相伴学习笔记/学相伴-秦疆-SpringMVC最新教程IDEA版通俗易懂/README.md)
+- [ ] 学相伴-秦疆-SpringMVC
 - [ ] 尚硅谷-佟刚-SpringMVC
 
 **SpringBoot**
@@ -105,13 +95,13 @@
 
 **Netty**
 
-- [ ] [尚硅谷-韩顺平-Netty](尚硅谷学习笔记/尚硅谷-韩顺平-Netty网络通讯框架/README.md)
+- [ ] [尚硅谷-韩顺平-Netty](尚硅谷学习笔记/第4阶段-JavaEE高级/尚硅谷-韩顺平-Netty网络通讯框架/Netty4.md)
 
 ### 消息中间件
 
 **RabbitMQ**
 
-- [ ] [百知教育-编程不良人-RabbitMQ](其他未分类笔记/编程不良人消息中间件RabbitMQ/README.md)
+- [ ] 百知教育-编程不良人-RabbitMQ
 
 **ActiveMQ**
 
@@ -119,7 +109,7 @@
 
 **RocketMQ**
 
-- [ ] [黑马-xx-RocketMQ](其他未分类笔记/黑马RocketMQ/README.md)
+- [ ] 黑马-xx-RocketMQ
 
 **kafka**
 
@@ -129,18 +119,18 @@
 
 **SpringSecurity**
 
-- [ ] [尚硅谷-王泽-SpringSecurity](尚硅谷学习笔记/尚硅谷-王泽-SpringSecurity权限框架/README.md)
+- [ ] 尚硅谷-王泽-SpringSecurity
 
 
 
 **Shiro**
 
-- [ ] [百知-编程不良人-shiro2020](其他为分类笔记/编程不良人Shiro/README.md)
+- [ ] [B站-编程不良人-shiro](哔哩哔学习笔记/B站-编程不良人/Shrio安全认证/Shiro实战教程.md)
 - [ ] 尚硅谷-佟刚-Shiro
 
 ### 搜索引擎
 
-- [ ] [学相伴-秦疆-ElasticSearch7.6.x](学相伴学习笔记/学相伴-秦疆-ElasticSearch7.6.x最新完整教程通俗易懂/README.md)
+- [ ] 学相伴-秦疆-ElasticSearch7.6.x
 
 
 
@@ -155,10 +145,11 @@
 - [ ] 尚硅谷-xx-就业面试第一季
 - [ ] 尚硅谷-xx-就业面试第二季
 - [ ] 尚硅谷-xx-就业面试第三季
-- [ ] 尚硅谷-xx-面试技巧
 
 ## 🤔 Java大数据
 
+*大数据相关的知识待定~~*
+```
 ### 大数据技术生态
 
 **Flink**
@@ -216,6 +207,7 @@
 - [ ] 尚硅谷-xx-电商数仓3.0
 - [ ] 尚硅谷-xx-阿里云离线数仓(阿里云委托录制)
 - [ ] 尚硅谷-xx-阿里云实时数仓(阿里云委托录制)
+```
 
 ## 🎨 前端技术
 
@@ -374,7 +366,8 @@
 
 **Docker**
 
-- [ ] [学相伴-秦疆-Docker](学相伴学习笔记/学相伴-秦疆-Docker基础和进阶/README.md)
+- [ ] [B站-遇见狂神说-Docker](学相伴学习笔记/学相伴-秦疆-Docker基础和进阶/README.md)
+- [ ] [B站-编程不良人-Docker](哔哩哔学习笔记/B站-编程不良人/Docker/Docker.md)
 
 **K8S**
 
@@ -384,20 +377,20 @@
 
 ### 技术专题
 
-- [ ] [秦疆-技术专题](学相伴学习笔记/学相伴-秦疆-真实开发技术专题/README.md)
+- [ ] [秦疆-技术专题](学相伴学习笔记/学相伴-秦疆-其他分享/README.md)
 - [ ] 编程不良人技术专题
-  - [x] [JWT实现登录认证流程](其他未分类笔记/B站编程不良人/JWT实现登录认证流程.md)
+  - [x] [JWT实现登录认证流程](哔哩哔学习笔记/B站-编程不良人/JWT实现登录认证流程.md)
 
 ### 开发必会
 
 **GIT**
 
-- [x] [学相伴-秦疆-Git](学相伴学习笔记/学相伴-秦疆-Git最新教程通俗易懂/README.md)
+- [x] [学相伴-秦疆-Git](学相伴学习笔记/学相伴-秦疆-Git最新教程通俗易懂/git.md)
 - [ ] 知播渔-李南江-Git
 
 **idea工具**
 
-- [ ] [IDEA工具使用记录](其他未分类笔记/IDEA使用记录/README.md)
+- [ ] [IDEA工具使用记录](其他笔记及记录/IDEA使用记录/IDEA使用记录.md)
 
 ### 其他语言
 
@@ -417,14 +410,14 @@
 
 ### 博客搭建
 
-- [x] [doscify框架](其他未分类笔记/Docsify文档框架/README.md)
+- [x] [doscify框架](哔哩哔学习笔记/B站-全栈小刘/Docsify编写开源文档.md)
 
 
 
 ### 个人职业发展
 
 
-- [x] [2021Java后端学习体系](其他未分类笔记/B站韩顺平/韩顺平2021Java后端开发路线.md)
+- [x] [2021Java后端学习体系](哔哩哔学习笔记/B站-韩顺平/韩顺平2021Java后端开发路线.md)
 
 
 

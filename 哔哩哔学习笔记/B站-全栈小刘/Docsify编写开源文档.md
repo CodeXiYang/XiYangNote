@@ -256,8 +256,8 @@ index.html中的插件配置
 
 Guide哥: https://blog.csdn.net/qq_34337272/article/details/105511189
 
-## 参考
 
-> 视频地址: https://www.bilibili.com/video/BV1jD4y1d7uF?from=search&seid=15932470396305688800
->
-> 
+
+> 参考: 
+> - 说明: 学习的目的是用于记录笔记,比较喜欢docsify的文档风格
+> - 视频地址: https://www.bilibili.com/video/BV1jD4y1d7uF?from=search&seid=15932470396305688800
