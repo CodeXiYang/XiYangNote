@@ -151,55 +151,29 @@
 *大数据相关的知识待定~~*
 ```
 ### 大数据技术生态
-
 **Flink**
-
 - [ ] 尚硅谷-xx-Flink
-
 **Hive**
-
 - [ ] 尚硅谷-xx-Hive
-
 **Spark3.0**
-
 - [ ] 尚硅谷-xx-spark3.0
-
 **Hadoop**
-
 - [ ] 尚硅谷-xx-hadoop
-
 **zookeeper**
-
 - [ ] 尚硅谷-xx-zookeeper
-
 **HA**
-
 - [ ] 尚硅谷-xx-HA
-
 **Flume**
-
 - [ ] 尚硅谷-xx-Flume
-
 **Oozie**
-
 - [ ] 尚硅谷-xx-Oozie
-
 **Scala**
-
 - [ ] 尚硅谷-xx-Scala
-
 **Azkaban**
-
 - [ ] 尚硅谷-xx-Azkaban
-
 **HBase**
-
 - [ ] 尚硅谷-xx-HBase
-
-
-
 ### 大数据项目实战
-
 - [ ] 尚硅谷-xx-电信客服
 - [ ] 尚硅谷-xx-机器学习与推荐系统
 - [ ] 尚硅谷-xx-电商推荐系统
@@ -414,7 +388,7 @@
 
 
 
-### 个人职业发展
+### 学习路线
 
 
 - [x] [2021Java后端学习体系](哔哩哔学习笔记/B站-韩顺平/韩顺平2021Java后端开发路线.md)
