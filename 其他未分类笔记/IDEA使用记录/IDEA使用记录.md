@@ -10,38 +10,38 @@
 
 ## ☕ JavaSE
 
-### JavaSE基础
+### 基础知识
 
 **JavaSE**
 
-- [ ] 尚硅谷-宋红康-JavaSE
+- [ ] [尚硅谷-宋红康-JavaSE2020版](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-宋红康-JavaSE核心基础/README.md)
 
-### JavaWeb开发
+### web开发
 
 **JavaWeb**
 
-- [ ] B站-遇见狂神说-JavaWeb
-- [ ] 尚硅谷-王振国-JavaWeb2020版
+- [ ] [学相伴-秦疆-JavaWeb](学相伴学习笔记/学相伴-秦疆-JavaWeb入门到实战/README.md)
+- [ ] [尚硅谷-王振国-JavaWeb2020版](尚硅谷学习笔记/第2阶段-JavaWEB/尚硅谷-王振国-JavaWeb2020/README.md)
 
-### JavaSE高级
+### 高级部分
 
 
 
 **Java数据结构和算法**
 
-- [ ] 尚硅谷-韩顺平-Java数据结构和算法
+- [ ] [尚硅谷-韩顺平-Java数据结构和算法](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-韩顺平-Java数据结构和算法/README.md)
 
 
 
 **Java设计模式**
 
-- [ ] 尚硅谷-韩顺平-Java设计模式
+- [ ] [尚硅谷-韩顺平-Java设计模式](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-韩顺平-Java设计模式/README.md)
 
 
 
 **JVM**
 
-- [ ] 尚硅谷-宋红康-JVM虚拟机
+- [ ] [尚硅谷-宋红康-JVM虚拟机](尚硅谷学习笔记/第4阶段-JavaEE高级/尚硅谷-宋红康-JVM虚拟机2020/README.md)
 
 
 
@@ -53,23 +53,20 @@
 
 **MyBatis**
 
-- [ ] B站-遇见狂神说-MyBatis
-- [ ] B站-编程不良人-MyBatis
+- [ ] [学相伴-秦疆-MyBatis](学相伴学习笔记/学相伴-秦疆-Mybatis最新完整教程IDEA版通俗易懂/Mybatis.md)
 - [ ] 尚硅谷-xx-MyBatis
 - [ ] 撩课-高新强-MyBatis
 
 **MyBatisPlus**
 
-- [ ] B站-遇见狂神说-MyBatisPlus
-- [ ] B站-编程不良人-MyBatisPlus
+- [ ] [学相伴-秦疆-MyBatisPlus](学相伴学习笔记/学相伴-秦疆-MyBatisPlus最新完整教程通俗易懂/MybatisPlus.md)
 - [ ] 尚硅谷-xx-MyBatisPlus
 
 ### Spring全家桶
 
 **Spring**
 
-- [ ] B站-遇见狂神说-Spring5
-- [ ] B站-编程不良人-Spring5
+- [ ] [学相伴-秦疆-Spring5](学相伴学习笔记/学相伴-秦疆-Spring5最新完整教程IDEA版通俗易懂/Spring5.md)
 - [ ] 尚硅谷-王泽-Spring5
 - [ ] 尚硅谷-雷丰阳-Spring注解驱动开发
 
@@ -79,19 +76,19 @@
 
 **SpringMVC**
 
-- [ ] B站-遇见狂神说-SpringMVC
+- [ ] 学相伴-秦疆-SpringMVC
 - [ ] 尚硅谷-佟刚-SpringMVC
 
 **SpringBoot**
 
 - [ ] 尚硅谷-雷丰阳-SpringBoot1.x
-- [ ] 尚硅谷-雷丰阳-SpringBoot2.x
-- [ ] B站-遇见狂神说-SpringBoot2.x
+- [ ] [尚硅谷-雷丰阳-SpringBoot2.x](尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot2/README.md)
+- [ ] [学相伴-秦疆-SpringBoot2.x](学相伴学习笔记/学相伴-秦疆-SpringBoot2.2.5最新教程IDEA版通俗易懂/README.md)
 
 **SpringCloud**
 
-- [ ] B站-遇见狂神说-SpringCloud(H版)
-- [ ] 尚硅谷-周阳-SpringCloudH版+alibaba版
+- [ ] 学相伴-秦疆-SpringCloud(H版)
+- [ ] [尚硅谷-周阳-SpringCloudH版+alibaba版](尚硅谷学习笔记/尚硅谷-周阳-SpringCloud2020/README.md)
 
 ### 通讯技术
 
@@ -101,11 +98,19 @@
 
 ### 消息中间件
 
-- [ ] B站-编程不良人-RabbitMQ
+**RabbitMQ**
+
+- [ ] 百知教育-编程不良人-RabbitMQ
+
+**ActiveMQ**
 
 - [ ] 尚硅谷-周阳-ActiveMQ
 
+**RocketMQ**
+
 - [ ] 黑马-xx-RocketMQ
+
+**kafka**
 
 - [ ] 尚硅谷-xx-kafka
 
@@ -124,8 +129,7 @@
 
 ### 搜索引擎
 
-- [ ] B站-遇见狂神说-ElasticSearch7.6.x
-- [ ] B站-编程不良人-ElasticSearch
+- [ ] 学相伴-秦疆-ElasticSearch7.6.x
 
 
 
@@ -188,7 +192,7 @@
 
 **JavaScript**
 
-- [ ] 知播渔-李南江-JavaScript
+- [ ] [知播渔-李南江-JavaScript](知播渔学习笔记/知播渔-李南江-03从零玩转JavaScript核心+新特性3/README.md)
 
 **TypeScript**
 
@@ -200,7 +204,7 @@
 
 **JavaScrip常用框架**
 
-- [ ] 知播渔-李南江-JavaScript新特性+常用框架
+- [ ] [知播渔-李南江-JavaScript新特性+常用框架](知播渔学习笔记/知播渔-李南江-06从零玩转JS新特性+流行框架6/README.md)
 
 **Jquery**
 
@@ -239,8 +243,9 @@
 
 **微信小程序开发**
 
-- [ ] 尚硅谷-闫志勇-微信小程序开发
-- [ ] 知播渔-李南江-微信小程序云开发
+- [ ] [新视觉-王进-2020微信小程序云开发](其他未分类笔记/2020最新微信小程序开发零基础入门/README.md)
+- [ ] 尚硅谷-闫志勇-2021微信小程序开发
+- [ ] 知播渔-李南江-2021微信小程序云开发
 
 ### 其他前端开发技术
 
@@ -298,10 +303,10 @@
 
 **MySQL及连接技术** 
 
-- [ ] B站-遇见狂神说-MySQL
-- [ ] 尚硅谷-李玉婷-MySQL核心基础
-- [ ] 尚硅谷-周阳-MySQL高级
-- [ ] 尚硅谷-宋红康-JDBC
+- [ ] [学相伴-秦疆-MySQL](学相伴学习笔记/学相伴-秦疆-MySQL最新教程通俗易懂/README.md)
+- [ ] [尚硅谷-李玉婷-MySQL核心基础](尚硅谷学习笔记/尚硅谷-李玉婷-MySQL核心基础/README.md)
+- [ ] [尚硅谷-周阳-MySQL高级](尚硅谷学习笔记/尚硅谷-周阳-MySQL高级/README.md)
+- [ ] [尚硅谷-宋红康-JDBC](尚硅谷学习笔记/尚硅谷-宋红康-JDBC2019/README.md)
 - [ ] 知播渔-李南江-MySQL8.0
 
 **oracle及连接技术**
@@ -312,49 +317,49 @@
 
 **Redis**
 
-- [ ] B站-遇见狂神说-Redis5.0
+- [ ] [学相伴-秦疆-Redis5.0](学相伴学习笔记/学相伴-秦疆-Redis最新超详细版教程通俗易懂/README.md)
 - [ ] 尚硅谷-周阳-Redis
-- [ ] B站-编程不良人-Redis
 - [ ] 知播渔-李南江-Redis
 
 
 **MongoDB**
 
-- [ ] B站-编程不良人-MongoDB
 - [ ] 知播渔-李南江-MongoDB
 
 
 
-## 🛠️DevOps
+## 🛠️DevOps 运维
 
 ### Linux
 
-- [ ] B站-遇见狂神说-LinuxCentOS7
-- [ ] 韩顺平-linux2021升级版
+- [ ] [学相伴-秦疆-LinuxCentOS7](学相伴学习笔记/学相伴-秦疆-Linux最通俗易懂的教程阿里云真实环境学习/README.md)
+- [ ] [韩顺平-linux2021升级版](其他未分类笔记/B站韩顺平/韩顺平2021linux升级版/README.md)
 
 ### 容器技术
 
 **Docker**
 
-- [ ] B站-遇见狂神说-Docker
-- [ ] B站-编程不良人-Docker
+- [ ] [B站-遇见狂神说-Docker](学相伴学习笔记/学相伴-秦疆-Docker基础和进阶/README.md)
+- [ ] [B站-编程不良人-Docker](哔哩哔学习笔记/B站-编程不良人/Docker/Docker.md)
 
 **K8S**
 
-- [ ] 尚硅谷-王泽-K8s
-
-**GIT**
-
-- [x] [B站-遇见狂神说-Git](B站学习笔记/B站-遇见狂神说-Git最新教程通俗易懂/git.md)
-- [ ] 知播渔-李南江-Git
+- [ ] [尚硅谷-王泽-K8s](尚硅谷学习笔记/尚硅谷-王泽-k8s教程由浅入深/READEME.md)
 
 ## 🎇 拓展学习
 
 ### 技术专题
 
-- [x] [JWT实现登录认证流程](哔哩哔学习笔记/B站-编程不良人/JWT实现登录认证流程.md)
+- [ ] [秦疆-技术专题](学相伴学习笔记/学相伴-秦疆-其他分享/README.md)
+- [ ] 编程不良人技术专题
+  - [x] [JWT实现登录认证流程](哔哩哔学习笔记/B站-编程不良人/JWT实现登录认证流程.md)
 
+### 开发必会
 
+**GIT**
+
+- [x] [学相伴-秦疆-Git](学相伴学习笔记/学相伴-秦疆-Git最新教程通俗易懂/git.md)
+- [ ] 知播渔-李南江-Git
 
 **idea工具**
 
