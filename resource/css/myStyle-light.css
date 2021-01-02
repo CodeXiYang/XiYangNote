@@ -168,9 +168,10 @@ section.cover.has-mask .mask {
 }
 /* 引用块 */
 .markdown-section blockquote{
-    background: rgb(220, 220, 255);
+    background: #F4F4C8;
     padding:10px;
     border-radius:10px;
+	border-left: 4px solid var(--theme-color,#858585)!important;
 }
 /* 代码块 */
 /* .markdown-section pre {
@@ -334,3 +335,16 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
     margin: 0 0 1rem;
     text-align: center;
 }
+/*完成*/
+#ok{
+	display:block;
+	margin-top:5rem;
+	margin-bottom:5rem;
+	font-size:5rem;
+	text-align:center;
+}
+.markdown-section hr {
+    border: none;
+    border-bottom: 5px solid #4f9ee3 !important;
+}
+
