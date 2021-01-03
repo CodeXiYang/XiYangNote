@@ -1,4 +1,8 @@
-# Redis
+# Redis5.x
+
+> 视频: https://www.bilibili.com/video/BV1S54y1R7SB
+>
+>  从Nosql聊起，深入redis基本类型使用，拓展特殊类型 连接jedis，使用springboot集成，上手实战开发 事务、配置文件详解、发布订阅、持久化机制、主从复制、哨兵模式、缓存穿透和雪崩处理 给你带来最全面的Redis讲解
 
 ## 1. NoSQL概述
 
@@ -141,7 +145,7 @@ redis.conf  # 自己创建的目录中有redis.conf文件了,启动redis时都�
 
 修改自己的配置文件中的一些内容如下:
 
-#### 3.6.1 修改ip
+##### 3.6.1 修改ip
 
 默认是127.0.0.1 修改为0.0.0.0 表示所有
 
@@ -149,7 +153,7 @@ redis.conf  # 自己创建的目录中有redis.conf文件了,启动redis时都�
 
 ![image-20200804175256112](assets/image-20200804175256112.png)
 
-#### 3.6.2 修改daemonize 为yes
+##### 3.6.2 修改daemonize 为yes
 
 redis默认不是后台启动的,需要修改配置文件,值为yes就是以后台方式启动
 
@@ -160,7 +164,7 @@ daemonize:yes和daemonize:no
 - redis采用的是单进程多线程的模式。当redis.conf中选项daemonize设置成yes时，代表开启守护进程模式。在该模式下，redis会在后台运行，并将进程pid号写入redis.conf选项pidfifile设置的文件中，此时redis将一直运行，除非手动kill该进程。
 - 当daemonize选项设置成no时，当前界面将进入redis的命令行界面，exit强制退出或者关闭连接工具(putty,xshell等)都会导致redis进程退出。
 
-#### 3.6.3 启动reids服务端
+##### 3.6.3 启动reids服务端
 
 ```bash
 #查看当前目录
@@ -173,7 +177,7 @@ daemonize:yes和daemonize:no
 
 ![image-20200804175802159](assets/image-20200804175802159.png)
 
-#### 3.6.4 启动redis客户端
+##### 3.6.4 启动redis客户端
 
 ```bash
 [root@iZwz964jzdqku9gecmp58bZ bin]# pwd
@@ -190,7 +194,7 @@ Warning: Using a password with '-a' or '-u' option on the command line interface
 
 ![image-20200804185825192](assets/image-20200804185825192.png)
 
-#### 3.6.5 查看redis的进程是否开启
+##### 3.6.5 查看redis的进程是否开启
 
 ```bash
 [root@iZwz964jzdqku9gecmp58bZ ~]# ps -ef | grep redis
@@ -199,7 +203,7 @@ root     21910 21814  0 18:56 pts/2    00:00:00 redis-cli -h 120.25.155.46 -p 63
 root     22706 21693  0 19:09 pts/0    00:00:00 grep --color=auto redis
 ```
 
-#### 3.6.6 关闭redis
+##### 3.6.6 关闭redis
 
 ```bash
 # 【redis】关闭连接 
@@ -425,12 +429,6 @@ OK
 
 
 
-
-## 参考
-
-> 学习地址: https://www.bilibili.com/video/BV1S54y1R7SB
->
-> 秦疆老师Java全栈系列课程之Redis讲解 从Nosql聊起，深入redis基本类型使用，拓展特殊类型 连接jedis，使用springboot集成，上手实战开发 事务、配置文件详解、发布订阅、持久化机制、主从复制、哨兵模式、缓存穿透和雪崩处理 给你带来最全面的Redis讲解，学Redis，这一套课就够了！ 狂神说Java系列，努力打造通俗易懂的教程 QQ交流群 : 664386224
 
 
 
