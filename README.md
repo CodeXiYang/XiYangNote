@@ -21,23 +21,17 @@
 **JavaWeb**
 
 - [ ] [B站-遇见狂神说-JavaWeb](哔哩哔学习笔记/B站-遇见狂神说/JavaWeb入门到实战/JavaWeb.md)
-- [ ] 尚硅谷-王振国-JavaWeb2020版
+- [ ] 尚硅谷-王振国-JavaWeb
 
 ### JavaSE高级
-
-
 
 **Java数据结构和算法**
 
 - [ ] 尚硅谷-韩顺平-Java数据结构和算法
 
-
-
 **Java设计模式**
 
 - [ ] 尚硅谷-韩顺平-Java设计模式
-
-
 
 **JVM**
 
@@ -56,7 +50,6 @@
 - [ ] B站-遇见狂神说-MyBatis
 - [ ] B站-编程不良人-MyBatis
 - [ ] 尚硅谷-xx-MyBatis
-- [ ] 撩课-高新强-MyBatis
 
 **MyBatisPlus**
 
@@ -92,6 +85,7 @@
 
 - [ ] B站-遇见狂神说-SpringCloud(H版)
 - [ ] 尚硅谷-周阳-SpringCloudH版+alibaba版
+- [ ] B站-编程不良人-SpringCloud
 
 ### 通讯技术
 
