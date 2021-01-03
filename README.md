@@ -20,7 +20,7 @@
 
 **JavaWeb**
 
-- [ ] B站-遇见狂神说-JavaWeb
+- [ ] [B站-遇见狂神说-JavaWeb](哔哩哔学习笔记/B站-遇见狂神说/JavaWeb入门到实战/JavaWeb.md)
 - [ ] 尚硅谷-王振国-JavaWeb2020版
 
 ### JavaSE高级
