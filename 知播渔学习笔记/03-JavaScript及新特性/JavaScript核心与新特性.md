@@ -2,7 +2,7 @@
 
 > 视频: https://www.it666.com/my/course/183
 
-## 第 1 章: ECMAScript
+## 第 1 章: ECMAScript 🚩
 
 ### 1. JavaScript快速入门
 

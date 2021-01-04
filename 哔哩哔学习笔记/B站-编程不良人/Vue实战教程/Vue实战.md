@@ -4,7 +4,7 @@
 
 > 视频: https://www.bilibili.com/video/BV1SE411H7CY
 
-## 1. Vue 引言
+## 1. Vue 引言 🚩
 
 > `渐进式` JavaScript 框架   --摘自官网
 

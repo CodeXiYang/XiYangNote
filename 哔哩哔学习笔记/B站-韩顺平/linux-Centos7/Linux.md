@@ -1,11 +1,11 @@
-# Linux CentOS7.6
+# Linux CentOS7.6 
 
 >  视频: https://www.bilibili.com/video/BV1Sv411r7vd
 >
 > 本套课程在韩顺平<<一周学会Linux>>经典视频基础上（此套课程已经成为传奇之作，学习人次已超千万，国内80%的Linux初学者都学习过本课程，粉丝众多，好评如潮），做了全面的升级和加强，课程内容分为七部分，涵盖Linux方方面面。包括基础篇,实操篇,高级篇,java定制篇,大数据定制篇, python定制篇, 企业面试题讲解篇。, 既让初学者快速掌握Linux，也能让Linux老手更全面、系统的学习到技术细节, 是 java c c++ php python 程序员学linux优质资源
 
 ```
-## 第 1 章: 内容介绍
+## 第 1 章: 内容介绍 🚩
 
 
 

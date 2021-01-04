@@ -445,7 +445,7 @@ public class MybatisTest {
 
 ## 3. CRUD
 
-
+*使用mybatis框架进行数据库的CURD操作~*
 
 ### 3.1 namespace属性
 
@@ -455,7 +455,7 @@ public class MybatisTest {
 
 **注意:** 配置文件中namespace中的名称为对应Mapper接口或者Dao接口的<u>完整包名,必须一致</u>！ 否则报错
 
-### 3.2 select标签
+### 3.2 select标签 🚩
 
 *select标签是mybatis中最常用的标签之一*
 
@@ -2090,8 +2090,6 @@ public class Teacher {
 
 
 ## 12. 动态SQL
-
-
 
 > [官方文文档](http://www.mybatis.org/mybatis-3/zh/dynamic-sql.html)
 
