@@ -21,7 +21,7 @@
 
 ---
 
-## 第一章: Spring与SpringBoot2
+## 第 1 章: Spring与SpringBoot2
 
 ### 1. Spring能做什么
 
@@ -190,7 +190,7 @@ https://github.com/spring-projects/spring-boot/wiki#release-notes
 
 ---
 
-## 第二章: SpringBoot2入门
+## 第 2 章: SpringBoot2入门
 
 
 
@@ -386,7 +386,7 @@ idea打jar包操作:
 
 ---
 
-## 第三章: 了解自动装配原理
+## 第 3 章: 了解自动装配原理
 
 ### 1. SpringBoot特点
 
@@ -1718,7 +1718,7 @@ ps:
 
 ---
 
-## 第四章:  配置文件
+## 第 4 章:  配置文件
 
 
 
@@ -1915,7 +1915,7 @@ person:
 
 ---
 
-## 第五章: Web开发
+## 第 5 章: Web开发
 
 
 
@@ -2067,7 +2067,7 @@ person:
 
 ---
 
-## 第六章: 数据访问
+## 第 6 章: 数据访问
 
 ### 1. SQL
 
@@ -2095,7 +2095,7 @@ person:
 
 ---
 
-## 第七章: 单元测试
+## 第 7 章: 单元测试
 
 
 
@@ -2151,7 +2151,7 @@ person:
 
 ---
 
-## 第八章: 指标监控
+## 第 8 章: 指标监控
 
 ### 1. SpringBoot Actuator
 
@@ -2167,7 +2167,7 @@ person:
 
 ---
 
-## 第九章: 原理解析
+## 第 9 章: 原理解析
 
 
 

@@ -1,10 +1,8 @@
-# MyBatis
+# MyBatis3
 
-
+>  视频: https://www.bilibili.com/video/BV1NE411Q7Nx  
 
 ## 1. 简介
-
-
 
 ### 1.1 什么是MyBatis
 
@@ -2848,11 +2846,4 @@ MyBatis系统中默认定义了两级缓存：**一级缓存和二级缓存**
 
 
 
-
-
-
-> 参考: 
->
-> - 学习地址: https://www.bilibili.com/video/BV1NE411Q7Nx 
-> - 
 

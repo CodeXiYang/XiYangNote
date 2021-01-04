@@ -14,7 +14,7 @@
 
 **JavaSE**
 
-- [ ] 尚硅谷-宋红康-JavaSE
+- [ ] [尚硅谷-宋红康-JavaSE](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-宋红康-JavaSE核心基础/Java核心技术.md)
 
 ### JavaWeb开发
 
@@ -27,15 +27,15 @@
 
 **Java数据结构和算法**
 
-- [ ] 尚硅谷-韩顺平-Java数据结构和算法
+- [ ] [尚硅谷-韩顺平-Java数据结构和算法](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-韩顺平-Java数据结构和算法/Java数据结构和算法.md)
 
 **Java设计模式**
 
-- [ ] 尚硅谷-韩顺平-Java设计模式
+- [ ] [尚硅谷-韩顺平-Java设计模式](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-韩顺平-Java设计模式/Java设计模式.md)
 
 **JVM**
 
-- [ ] 尚硅谷-宋红康-JVM虚拟机
+- [ ] [尚硅谷-宋红康-JVM虚拟机](尚硅谷学习笔记/第4阶段-JavaEE高级/尚硅谷-宋红康-JVM虚拟机/JVM虚拟机.md)
 
 
 
@@ -47,13 +47,13 @@
 
 **MyBatis**
 
-- [ ] B站-遇见狂神说-MyBatis
+- [ ] [B站-遇见狂神说-MyBatis](哔哩哔学习笔记/B站-遇见狂神说/Mybatis最新完整教程IDEA版通俗易懂/Mybatis3.md)
 - [ ] B站-编程不良人-MyBatis
 - [ ] 尚硅谷-xx-MyBatis
 
 **MyBatisPlus**
 
-- [ ] B站-遇见狂神说-MyBatisPlus
+- [ ] [B站-遇见狂神说-MyBatisPlus](哔哩哔学习笔记/B站-遇见狂神说/MyBatisPlus最新完整教程通俗易懂/MybatisPlus.md)
 - [ ] B站-编程不良人-MyBatisPlus
 - [ ] 尚硅谷-xx-MyBatisPlus
 
@@ -61,7 +61,7 @@
 
 **Spring**
 
-- [ ] B站-遇见狂神说-Spring5
+- [ ] [B站-遇见狂神说-Spring5](哔哩哔学习笔记/B站-遇见狂神说/Spring5最新完整教程IDEA版通俗易懂/Spring5.md)
 - [ ] B站-编程不良人-Spring5
 - [ ] 尚硅谷-王泽-Spring5
 - [ ] 尚硅谷-雷丰阳-Spring注解驱动开发
@@ -72,18 +72,18 @@
 
 **SpringMVC**
 
-- [ ] B站-遇见狂神说-SpringMVC
+- [ ] B站-遇见狂神说-SpringMVC](哔哩哔学习笔记/B站-遇见狂神说//.md)
 - [ ] 尚硅谷-佟刚-SpringMVC
 
 **SpringBoot**
 
 - [ ] 尚硅谷-雷丰阳-SpringBoot1.x
 - [ ] 尚硅谷-雷丰阳-SpringBoot2.x
-- [ ] B站-遇见狂神说-SpringBoot2.x
+- [ ] [B站-遇见狂神说-SpringBoot2.x](哔哩哔学习笔记/B站-遇见狂神说/SpringMVC最新教程IDEA版通俗易懂/SpringMVC.md)
 
 **SpringCloud**
 
-- [ ] B站-遇见狂神说-SpringCloud(H版)
+- [ ] [B站-遇见狂神说-SpringCloud(H版)](哔哩哔学习笔记/B站-遇见狂神说/SpringCloud最新教程IDEA版/SpringCloud.md)
 - [ ] 尚硅谷-周阳-SpringCloudH版+alibaba版
 - [ ] B站-编程不良人-SpringCloud
 
@@ -93,15 +93,21 @@
 
 - [ ] [尚硅谷-韩顺平-Netty](尚硅谷学习笔记/第4阶段-JavaEE高级/尚硅谷-韩顺平-Netty网络通讯框架/Netty4.md)
 
+
+
+
+
 ### 消息中间件
 
-- [ ] B站-编程不良人-RabbitMQ
 
+- [ ] [B站-编程不良人-RabbitMQ](哔哩哔学习笔记/B站-编程不良人/RaabitMQ消息中间件/RibbitMQ实战教程.md)
 - [ ] 尚硅谷-周阳-ActiveMQ
-
 - [ ] 黑马-xx-RocketMQ
-
 - [ ] 尚硅谷-xx-kafka
+
+
+
+
 
 ### 安全认证
 
@@ -118,8 +124,8 @@
 
 ### 搜索引擎
 
-- [ ] B站-遇见狂神说-ElasticSearch7.6.x
-- [ ] B站-编程不良人-ElasticSearch
+- [ ] [B站-遇见狂神说-ElasticSearch7.6.x](哔哩哔学习笔记/B站-遇见狂神说/ElasticSearch7.6.x最新完整教程通俗易懂/ElasticSearch7.6.x.md)
+- [ ] B站-编程不良人-ElasticSearch6.x
 
 
 
@@ -306,11 +312,10 @@
 
 **Redis**
 
-- [ ] B站-遇见狂神说-Redis5.0
+- [ ] [B站-遇见狂神说-Redis5.0](哔哩哔学习笔记/B站-遇见狂神说/Redis最新超详细版教程通俗易懂/Redis.md)
 - [ ] 尚硅谷-周阳-Redis
-- [ ] B站-编程不良人-Redis
+- [ ] [B站-编程不良人-Redis](哔哩哔学习笔记/B站-编程不良人/Redis缓存/Redis.md)
 - [ ] 知播渔-李南江-Redis
-
 
 **MongoDB**
 
@@ -330,12 +335,14 @@
 
 **Docker**
 
-- [ ] B站-遇见狂神说-Docker
-- [ ] B站-编程不良人-Docker
+- [ ] [B站-遇见狂神说-Docker](哔哩哔学习笔记/B站-遇见狂神说/Docker基础和进阶/Docker.md)
+- [ ] [B站-编程不良人-Docker](哔哩哔学习笔记/B站-编程不良人/Docker/Docker.md)
 
 **K8S**
 
 - [ ] 尚硅谷-王泽-K8s
+
+### 版本控制
 
 **GIT**
 
