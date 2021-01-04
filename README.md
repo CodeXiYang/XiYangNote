@@ -1,4 +1,4 @@
- <link rel="stylesheet" href="resource/css/README.css">
+<link rel="stylesheet" href="resource/css/README.css">
 
 
 
@@ -48,13 +48,11 @@
 **MyBatis**
 
 - [ ] [B站-遇见狂神说-MyBatis](哔哩哔学习笔记/B站-遇见狂神说/Mybatis最新完整教程IDEA版通俗易懂/Mybatis3.md)
-- [ ] B站-编程不良人-MyBatis
 - [ ] 尚硅谷-xx-MyBatis
 
 **MyBatisPlus**
 
 - [ ] [B站-遇见狂神说-MyBatisPlus](哔哩哔学习笔记/B站-遇见狂神说/MyBatisPlus最新完整教程通俗易懂/MybatisPlus.md)
-- [ ] B站-编程不良人-MyBatisPlus
 - [ ] 尚硅谷-xx-MyBatisPlus
 
 ### Spring全家桶
@@ -72,7 +70,7 @@
 
 **SpringMVC**
 
-- [ ] B站-遇见狂神说-SpringMVC](哔哩哔学习笔记/B站-遇见狂神说//.md)
+- [ ] [B站-遇见狂神说-SpringMVC](哔哩哔学习笔记/B站-遇见狂神说/SpringMVC最新教程IDEA版通俗易懂/SpringMVC.md)
 - [ ] 尚硅谷-佟刚-SpringMVC
 
 **SpringBoot**
@@ -144,8 +142,8 @@
 ## 🤔 Java大数据
 
 *大数据相关的知识待定~~*
-```
-### 大数据技术生态
+
+<div>##  # 大数据技术生态
 **Flink**
 - [ ] 尚硅谷-xx-Flink
 **Hive**
@@ -175,8 +173,7 @@
 - [ ] 尚硅谷-xx-电商数仓2.0
 - [ ] 尚硅谷-xx-电商数仓3.0
 - [ ] 尚硅谷-xx-阿里云离线数仓(阿里云委托录制)
-- [ ] 尚硅谷-xx-阿里云实时数仓(阿里云委托录制)
-```
+- [ ] 尚硅谷-xx-阿里云实时数仓(阿里云委托录制)</div>
 
 ## 🎨 前端技术
 
@@ -220,6 +217,8 @@
 
 - [ ] 知播渔-李南江-Vue2.x
 - [ ] 尚硅谷-xx-Vue3.0
+- [ ] B站-编程不良人-Vue
+- [ ] B站-编程不良人-VueCli
 
 **NodeJS**
 
