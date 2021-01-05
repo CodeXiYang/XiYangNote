@@ -185,7 +185,7 @@
 
 **JavaScript**
 
-- [ ] 知播渔-李南江-JavaScript
+- [ ] [知播渔-李南江-JavaScript及新特性](知播渔学习笔记/03-JavaScript及新特性/JavaScript核心与新特性.md)
 
 **TypeScript**
 
@@ -201,7 +201,7 @@
 
 **Jquery**
 
-- [ ] 知播渔-李南江-Jquery
+- [ ] [知播渔-李南江-JQuery](知播渔学习笔记/05-JQuery/JQuery核心技术.md)
 
 **BootStrap4**
 
@@ -213,7 +213,7 @@
 
 **Vue**
 
-- [ ] 知播渔-李南江-Vue2.x
+- [ ] [知播渔-李南江-Vue2.x](知播渔学习笔记/12-Vue全家桶及项目实战/Vue全家桶及项目实战.md)
 - [ ] 尚硅谷-xx-Vue3.0
 - [ ] [B站-编程不良人-Vue实战](哔哩哔学习笔记/B站-编程不良人/Vue实战教程/Vue实战.md)
 
