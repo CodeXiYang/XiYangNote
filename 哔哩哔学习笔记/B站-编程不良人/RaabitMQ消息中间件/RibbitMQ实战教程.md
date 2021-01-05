@@ -14,26 +14,25 @@
 
 ### 1.3 不同MQ特点
 
-```markdown
-# 1.ActiveMQ
-		ActiveMQ 是Apache出品，最流行的，能力强劲的开源消息总线。它是一个完全支持JMS规范的的消息中间件。丰富的API,多种集群架构模式让ActiveMQ在业界成为老牌的消息中间件,在中小型企业颇受欢迎!
+**ActiveMQ**
 
-# 2.Kafka
-		Kafka是LinkedIn开源的分布式发布-订阅消息系统，目前归属于Apache顶级项目。Kafka主要特点是基于Pull的模式来处理消息消费，
-		追求高吞吐量，一开始的目的就是用于日志收集和传输。0.8版本开始支持复制，不支持事务，对消息的重复、丢失、错误没有严格要求，
-		适合产生大量数据的互联网服务的数据收集业务。
+- ActiveMQ 是Apache出品，最流行的，能力强劲的开源消息总线。它是一个完全支持JMS规范的的消息中间件。丰富的API,多种集群架构模式让ActiveMQ在业界成为老牌的消息中间件,在中小型企业颇受欢迎!
 
-# 3.RocketMQ
-		RocketMQ是阿里开源的消息中间件，它是纯Java开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。RocketMQ思路起
-		源于Kafka，但并不是Kafka的一个Copy，它对消息的可靠传输及事务性做了优化，目前在阿里集团被广泛应用于交易、充值、流计算、消
-		息推送、日志流式处理、binglog分发等场景。
+**Kafka**
 
-# 4.RabbitMQ
-		RabbitMQ是使用Erlang语言开发的开源消息队列系统，基于AMQP协议来实现。AMQP的主要特征是面向消息、队列、路由（包括点对点和
-		发布/订阅）、可靠性、安全。AMQP协议更多用在企业系统内对数据一致性、稳定性和可靠性要求很高的场景，对性能和吞吐量的要求还在
-		其次。
-		
-```
+- Kafka是LinkedIn开源的分布式发布-订阅消息系统，目前归属于Apache顶级项目。Kafka主要特点是基于Pull的模式来处理消息消费，
+- 追求高吞吐量，一开始的目的就是用于日志收集和传输。0.8版本开始支持复制，不支持事务，对消息的重复、丢失、错误没有严格要求，
+- 适合产生大量数据的互联网服务的数据收集业务。
+
+**RocketMQ**
+
+- RocketMQ是阿里开源的消息中间件，它是纯Java开发，具有高吞吐量、高可用性、适合大规模分布式系统应用的特点。RocketMQ思路起
+- 源于Kafka，但并不是Kafka的一个Copy，它对消息的可靠传输及事务性做了优化，目前在阿里集团被广泛应用于交易、充值、流计算、消息推送、日志流式处理、binglog分发等场景。
+
+**RabbitMQ**
+
+- RabbitMQ是使用Erlang语言开发的开源消息队列系统，基于AMQP协议来实现。AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。AMQP协议更多用在企业系统内对数据一致性、稳定性和可靠性要求很高的场景，对性能和吞吐量的要求还在其次。
+  		
 
 > RabbitMQ比Kafka可靠，Kafka更适合IO高吞吐的处理，一般应用在大数据日志处理或对实时性（少量延迟），可靠性（少量丢数据）要求稍低的场景使用，比如ELK日志收集。
 
@@ -51,12 +50,11 @@
 
 `官方教程`: https://www.rabbitmq.com/#getstarted
 
-```markdown
- # AMQP 协议
- 		AMQP（advanced message queuing protocol）`在2003年时被提出，最早用于解决金融领不同平台之间的消息传递交互问题。顾名思义，AMQP是一种协议，更准确的说是一种binary wire-level protocol（链接协议）。这是其和JMS的本质差别，AMQP不从API层进行限定，而是直接定义网络交换的数据格式。这使得实现了AMQP的provider天然性就是跨平台的。以下是AMQP协议模型:
-```
+**AMQP 协议**
 
-![image-20200311182438041](assets/image-20200311182438041.png)
+- AMQP（advanced message queuing protocol）`在2003年时被提出，最早用于解决金融领不同平台之间的消息传递交互问题。顾名思义，AMQP是一种协议，更准确的说是一种binary wire-level protocol（链接协议）。这是其和JMS的本质差别，AMQP不从API层进行限定，而是直接定义网络交换的数据格式。这使得实现了AMQP的provider天然性就是跨平台的。以下是AMQP协议模型:
+
+  ![image-20200311182438041](assets/image-20200311182438041.png)
 
 ### 2.2 RabbitMQ 的安装
 
@@ -66,7 +64,9 @@
 
 > `最新版本`: 3.7.18
 
-#### 2.2.2 下载的安装包![image-20190925220343521](assets/image-20190925220343521.png)
+#### 2.2.2 下载的安装包
+
+![image-20190925220343521](assets/image-20190925220343521.png)
 
 > `注意`:这里的安装包是centos7安装的包
 
@@ -283,7 +283,7 @@
 - C：消费者：消息的接受者，会一直等待消息到来。
 - queue：消息队列，图中红色部分。类似一个邮箱，可以缓存消息；生产者向其中投递消息，消费者从其中取出消息。
 
-##### 1. 开发生产者
+#### 1. 开发生产者
 
 ```java
   //创建连接工厂
@@ -303,7 +303,7 @@
   connection.close();
 ```
 
-##### 2. 开发消费者
+#### 2. 开发消费者
 
 ```java
   //创建连接工厂
@@ -324,7 +324,7 @@
   });
 ```
 
-##### 3. 参数的说明
+#### 3. 参数的说明
 
 ```java
   channel.queueDeclare("hello",true,false,false,null);
@@ -349,7 +349,7 @@
 - C1：消费者-1，领取任务并且完成任务，假设完成速度较慢
 - C2：消费者-2：领取任务并完成任务，假设完成速度快
 
-##### 1. 开发生产者
+#### 1. 开发生产者
 
 ```java
 channel.queueDeclare("hello", true, false, false, null);
@@ -358,7 +358,7 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-##### 2.开发消费者-1
+#### 2.开发消费者-1
 
 ```java
 channel.queueDeclare("hello",true,false,false,null);
@@ -370,7 +370,7 @@ channel.basicConsume("hello",true,new DefaultConsumer(channel){
 });
 ```
 
-##### 3.开发消费者-2
+#### 3.开发消费者-2
 
 ```java
 channel.queueDeclare("hello",true,false,false,null);
@@ -387,7 +387,7 @@ channel.basicConsume("hello",true,new DefaultConsumer(channel){
 });
 ```
 
-##### 4.测试结果
+#### 4.测试结果
 
 ![image-20200314223242058](assets/image-20200314223242058.png)
 
@@ -395,7 +395,7 @@ channel.basicConsume("hello",true,new DefaultConsumer(channel){
 
 > `总结:默认情况下，RabbitMQ将按顺序将每个消息发送给下一个使用者。平均而言，每个消费者都会收到相同数量的消息。这种分发消息的方式称为循环。`
 
-##### 5.消息自动确认机制
+#### 5.消息自动确认机制
 
 > Doing a task can take a few seconds. You may wonder what happens if one of the consumers starts a long task and dies with it only partly done. With our current code, once RabbitMQ delivers a message to the consumer it immediately marks it for deletion. In this case, if you kill a worker we will lose the message it was just processing. We'll also lose all the messages that were dispatched to this particular worker but were not yet handled.
 >
@@ -438,7 +438,7 @@ channel.basicConsume("hello",false,new DefaultConsumer(channel){
 -  交换机把消息发送给绑定过的所有队列
 -  队列的消费者都能拿到消息。实现一条消息被多个消费者消费
 
-##### 1. 开发生产者
+#### 1. 开发生产者
 
 ```java
 //声明交换机
@@ -447,7 +447,7 @@ channel.exchangeDeclare("logs","fanout");//广播 一条消息多个消费者同
 channel.basicPublish("logs","",null,"hello".getBytes());
 ```
 
-##### 2. 开发消费者-1
+#### 2. 开发消费者-1
 
 ```java
 //绑定交换机
@@ -465,7 +465,7 @@ channel.basicConsume(queue,true,new DefaultConsumer(channel){
 });
 ```
 
-##### 3. 开发消费者-2
+#### 3. 开发消费者-2
 
 ```java
 //绑定交换机
@@ -483,7 +483,7 @@ channel.basicConsume(queue,true,new DefaultConsumer(channel){
 });
 ```
 
-##### 4.开发消费者-3
+#### 4.开发消费者-3
 
 ```java
 //绑定交换机
@@ -501,7 +501,7 @@ channel.basicConsume(queue,true,new DefaultConsumer(channel){
 });
 ```
 
-##### 5. 测试结果
+#### 5. 测试结果
 
 ![image-20200315180653207](assets/image-20200315180653207.png)
 
