@@ -1,6 +1,10 @@
 # SpringBoot2.X核心技术与响应式编程
 
-> 视频: https://www.bilibili.com/video/BV19K4y1L7MT 文档: https://www.yuque.com/atguigu/springboot 代码:https://gitee.com/leifengyang/springboot2
+> 视频: https://www.bilibili.com/video/BV19K4y1L7MT 
+>
+> 文档: https://www.yuque.com/atguigu/springboot 
+>
+> 代码:https://gitee.com/leifengyang/springboot2
 
 ## 前置知识和环境说明
 

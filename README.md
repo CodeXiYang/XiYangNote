@@ -76,7 +76,7 @@
 **SpringBoot**
 
 - [ ] 尚硅谷-雷丰阳-SpringBoot1.x
-- [ ] 尚硅谷-雷丰阳-SpringBoot2.x
+- [ ] [尚硅谷-雷丰阳-SpringBoot2.x](尚硅谷学习笔记/第4阶段-JavaEE高级/尚硅谷-雷丰阳-SpringBoot2/SpringBoot2核心技术与响应式编程.md)
 - [ ] [B站-遇见狂神说-SpringBoot2.x](哔哩哔学习笔记/B站-遇见狂神说/SpringMVC最新教程IDEA版通俗易懂/SpringMVC.md)
 
 **SpringCloud**
