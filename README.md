@@ -306,7 +306,7 @@
 
 **oracle及连接技术**
 
-- [ ] [尚硅谷-宋红康-SQL丶PLSQL丶Oracle](尚硅谷学习笔记/尚硅谷-宋红康-Oracle丶SQL丶PLSQL/README.md)
+- [ ] [尚硅谷-宋红康-SQL丶PLSQL丶Oracle](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-宋红康-Oracle丶SQL丶PLSQL/README.md)
 
 ### NoSQL框架
 
@@ -359,7 +359,7 @@
 
 **idea工具**
 
-- [ ] [IDEA工具使用记录](其他笔记及记录/IDEA使用记录/IDEA使用记录.md)
+- [ ] [IDEA工具使用记录](其他未分类笔记/IDEA使用记录/IDEA使用记录.md)
 
 ### 其他语言
 
@@ -386,7 +386,7 @@
 ### 学习路线
 
 
-- [x] [2021Java后端学习体系](哔哩哔学习笔记/B站-韩顺平/韩顺平2021Java后端开发路线.md)
+- [x] [2021Java后端学习体系](哔哩哔学习笔记/B站-韩顺平/Java后端开发路线.md)
 
 
 
@@ -403,8 +403,10 @@
 2. 如果是 🚩 表示笔记已经做到这里来了
 
    ![image-20210104174806242](resource/images/assets/image-20210104174806242.png)
+   
+3. 如果是 💡 表示这里没有搞懂,需要反复掌握
 
-
+   ![image-20210105100818081](resource/images/assets/image-20210105100818081.png)
 
 
 
