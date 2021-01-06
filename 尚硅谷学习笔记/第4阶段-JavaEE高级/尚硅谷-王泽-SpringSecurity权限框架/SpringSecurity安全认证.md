@@ -1,14 +1,28 @@
-# SpringSecurity权限框架
+# SpringSecurity安全认证
 
-> 前置知识
+> 课程名称:  尚硅谷SpringSecurity框架教程（spring security源码剖析从入门到精通）
 >
-> 1、掌握Spring框架
+> 课程概述: 教程分为五大部分：Spring Security框架概述、Spring Security入门和基本原理、Spring Security基于Web的权限方案、Spring Security基于微服务的权限方案、Spring Security源码剖析，详细讲解了Spring Security框架，内容由浅入深，理论实践相结合，更深入源码级学习。
 >
-> 2、掌握SpringBoot使用
+> 课程地址: https://www.bilibili.com/video/BV15a411A7kP
 >
-> 3、掌握JavaWEB技术
+> 讲述人: 王泽
+>
+> 前置知识: 
+>
+> 1. 掌握Spring框架
+>
+> 2. 掌握SpringBoot使用
+>
+> 3. 掌握JavaWEB技术
 
-## 1. 概要
+## 第 1 章: 权限框架简介
+
+
+
+
+
+### 1.1 概要
 
 Spring 是非常流行和成功的 Java 应用开发框架，Spring Security 正是 Spring 家族中的成员。Spring Security 基于 Spring 框架，提供了一套 Web 应用安全性的完整解决方案。
 
@@ -20,7 +34,7 @@ Spring 是非常流行和成功的 Java 应用开发框架，Spring Security 正
 
 
 
-## 2. Security历史
+### 1.2 Security历史
 
 "Spring Security开始于2003年年底"spring的acegi安全系统"。起因是Spring开发者邮件列表中的一个问题，有人提问是否考虑提供一个基于spring的安全实现。
 
@@ -46,9 +60,9 @@ Acegi安全2007年底正式成为了Spring组合项目，更名为"Spring Securi
 
 
 
-## 3. 权限类框架产品对比
+### 1.3 权限类框架产品对比
 
-### 3.1 Spring Security
+#### 1.3.1 Spring Security
 
 SpringSecurity权限框架是Spring 技术栈的组成部分。通过提供完整可扩展的认证和授权支持保护你的应用程序。官网: https://spring.io/projects/spring-security
 
@@ -57,13 +71,13 @@ SpringSecurity权限框架是Spring 技术栈的组成部分。通过提供完�
 1. 和Spring无缝整合。
 2. 全面的权限控制。
 3. 专门为Web开发而设计。
-	- 旧版本不能脱离Web环境使用。
-	- 新版本对整个框架进行了分层抽取，分成了核心模块和Web模块。单独引入核心模块就可以脱离Web环境。
+   - 旧版本不能脱离Web环境使用。
+   - 新版本对整个框架进行了分层抽取，分成了核心模块和Web模块。单独引入核心模块就可以脱离Web环境。
 4. 重量级。
 
 
 
-### 3.2 Shiro
+#### 1.3.2 Shiro
 
 Shiro权限框架是Apache 旗下的轻量级权限控制框架。
 
@@ -71,10 +85,10 @@ Shiro权限框架是Apache 旗下的轻量级权限控制框架。
 
 1. 轻量级。Shiro主张的理念是把复杂的事情变简单。针对对性能有更高要求的互联网应用有更好表现。
 2. 通用性。
-	- 好处：不局限于Web环境，可以脱离Web环境使用。
-	- 缺陷：在Web环境下一些特定的需求需要手动编写代码定制。
+   - 好处：不局限于Web环境，可以脱离Web环境使用。
+   - 缺陷：在Web环境下一些特定的需求需要手动编写代码定制。
 
-### 3.3 SpringSecurity与Shiro的选择
+#### 1.3.3 SpringSecurity与Shiro的选择
 
 Spring Security是Spring家族中的一个安全管理框架，实际上，在Spring Boot出现之前， Spring Security就已经发展了多年了，但是使用的并不多，安全管理这个领域，一直是Shiro的天下。
 
@@ -94,6 +108,71 @@ Spring Security是Spring家族中的一个安全管理框架，实际上，在Sp
 
 
 
-## 4. 模块划分
+### 1.4 模块划分
 
 ![image-20201030165421757](assets/image-20201030165421757.png)
+
+## 第 2 章: 入门案例
+
+### 2.1 创建一个项目
+
+
+
+
+
+### 2.2 运行这个项目
+
+
+
+### 2.3 权限管理相关概念
+
+
+
+### 2.4 添加一个控制器进行访问
+
+
+
+### 2.5 SpringSecurity基本原理
+
+
+
+### 2.6 UserDetailsService接口讲解
+
+
+
+### 2.7 PasswordEncoder接口讲解
+
+
+
+
+
+### 2.8 SpringBoot对Security的自动配置
+
+https://docs.spring.io/spring-security/site/docs/5.3.4.RELEASE/reference/html5/#servlet-hello
+
+
+
+## 第 3 章: Web权限方案
+
+
+
+## 第 4 章: 微服务权限方案
+
+
+
+## 第 5 章: 源码解析
+
+
+
+
+
+
+
+
+
+>  学习地址: 
+>
+>  本视频为1024专属视频，需提前学习请前往尚硅谷官网：www.atguigu.com，B站预计11中旬完结。 
+
+
+
