@@ -5,7 +5,11 @@
     text-shadow: 0.3rem 0.3rem 0.4rem rgba(0,0,0,.15);
     line-height: 1.2;">
 
-    🚴‍♂️ 一本涵盖Java丶数据库丶前端...等网站开发知识的笔记本！
+    一本涵盖Java丶数据库丶前端...等网站开发知识的笔记本！
+    
+    本笔记知识主要来源于各大视频网站所学
+    
+    感谢这些分享知识的人
 
 </div>
 
@@ -14,8 +18,10 @@
 ![]( https://img.shields.io/github/stars/CodeXiYang/XiYangNote) &nbsp;&nbsp;
 ![]( https://img.shields.io/github/license/CodeXiYang/XiYangNote) &nbsp;&nbsp;
 
-[Gitee](https://gitee.com/codexiyang) 
-[Github](https://github.com/codexiyang)
+
+
+
+
 [📖 开始阅读](README.md)
 
 
