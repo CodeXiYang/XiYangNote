@@ -2,9 +2,11 @@
 
  
 
-> 视频: https://www.bilibili.com/video/BV14K4y177Qk
+> 课程名称: [找不到java后端开发工作? 按这个学,找工作没问题 (超全超详细的Java企业级学习路线)](https://www.bilibili.com/video/BV14K4y177Qk)
 >
-> 补充: 超全超详细的java学习路线 包括 java javascript html css spring springboot springmvc mybatis redis linux springcloud 数据结构 设计模式 算法等
+> 课程概述: 超全超详细的java学习路线 包括 java javascript html css spring springboot springmvc mybatis redis linux springcloud 数据结构 设计模式 算法等
+>
+> 讲述人: B站-韩顺平
 
 ## 第一阶段:Java基础
 

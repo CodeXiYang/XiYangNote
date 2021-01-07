@@ -1,8 +1,18 @@
 # Docker
 
+> 课程名称: 
+>
+> - [【狂神说Java】Docker最新超详细版教程通俗易懂](https://www.bilibili.com/video/BV1og4y1q7M4)
+> - [【狂神说Java】Docker进阶篇超详细版教程通俗易懂](https://www.bilibili.com/video/BV1kv411q7Qc)
+>
+> 课程概述: 
+>
+> - 从Docker历史，概念，到命令的详解 从使用到深入原理和网络，大量的实战
+> - Docker Compose 、DockerSwarm及学习方法的分享。
+>
+> 讲述人: B站-遇见狂神说
+
 ## 1. Docker概述
-
-
 
 ### 1.1 Docker为什么出现
 
@@ -129,8 +139,6 @@ Docker中文网站：https://www.docker-cn.com
 Docker Hub官网：https://hub.docker.com （仓库）
 
 ## 2. Docker安装
-
-
 
 ### 1. Docker的基本组成
 
@@ -1645,11 +1653,3 @@ ONBUILD # 当构建一个被继承的DockerFile时运行命令，父镜像在被
 *进阶部分~~~*
 
 
-
-
-
-> 基础入门视频地址: https://www.bilibili.com/video/BV1og4y1q7M4
->
-> 高级进阶视频地址: https://www.bilibili.com/video/BV1kv411q7Qc
->
-> 秦疆老师Java全栈系列课程之Docker讲解 从Docker历史，概念，到命令的详解 从使用到深入原理和网络，大量的实战，带你彻底掌握Docker！ 给你带来最全面的Docker讲解，学Docker，这一套课就够了！ 狂神说Java系列，努力打造通俗易懂的教程 QQ交流群 : 664386224
