@@ -1,6 +1,13 @@
 # JDBC核心技术
 
-> 视频: https://www.bilibili.com/video/BV1eJ411c7rf
+> 课程名称: [尚硅谷JDBC核心技术(新版jdbc)](https://www.bilibili.com/video/BV1eJ411c7rf)
+>
+> 课程概述: 
+>
+> - 本套教程涵盖JDBC的方方面面，包括手动获取数据库连接的多种方式、使用数据库连接池获取连接、Statement与PreparedStatement的对比使用、sql注入问题讲解、Blob字段的操作、高效的批量插入、DAO设计模式、使用dbutils提供的相关工具类等。
+> - 此外还对数据库事务进行详解，利用反射及JDBC元数据编写通用的查询方法等企业级开发内容。
+>
+> 讲述人: 宋红康
 
 
 
@@ -12,37 +19,42 @@
 
 - 持久化的主要应用是将内存中的数据存储在关系型数据库中，当然也可以存储在磁盘文件、XML数据文件中。
 
-  ![1566741430592](assets/1566741430592.png) 
+  ![1566741430592](assets/1566741430592.png)
 
 ### 1.2 Java中的数据存储技术
 
 - 在Java中，数据库存取技术可分为如下几类：
+
   - **JDBC**直接访问数据库
+
   - JDO (Java Data Object )技术
 
   - **第三方O/R工具**，如Hibernate, Mybatis 等
 
 - JDBC是java访问数据库的基石，JDO、Hibernate、MyBatis等只是更好的封装了JDBC。
 
+
+
 ### 1.3 JDBC介绍
 
 - JDBC(Java Database Connectivity)是一个**独立于特定数据库管理系统、通用的SQL数据库存取和操作的公共接口**（一组API），定义了用来访问数据库的标准Java类库，（**java.sql,javax.sql**）使用这些类库可以以一种**标准**的方法、方便地访问数据库资源。
+
 - JDBC为访问不同的数据库提供了一种**统一的途径**，为开发者屏蔽了一些细节问题。
+
 - JDBC的目标是使Java程序员使用JDBC可以连接任何**提供了JDBC驱动程序**的数据库系统，这样就使得程序员无需对特定的数据库系统的特点有过多的了解，从而大大简化和加快了开发过程。
-- 如果没有JDBC，那么Java程序访问数据库时是这样的：
+
+  
+
+**如果没有JDBC，那么Java程序访问数据库时是这样的：**
 
 ![1555575760234](assets/1555575760234.png)
 
-***
-
-- 有了JDBC，Java程序访问数据库时是这样的：
+**有了JDBC，Java程序访问数据库时是这样的：**
 
 
 ![1555575981203](assets/1555575981203.png)
 
-***
-
-- 总结如下：
+**总结如下：**
 
 ![1566741692804](assets/1566741692804.png)
 
@@ -50,7 +62,7 @@
 
 - JDBC接口（API）包括两个层次：
   - **面向应用的API**：Java API，抽象接口，供应用程序开发人员使用（连接数据库，执行SQL语句，获得结果）。
-  -  **面向数据库的API**：Java Driver API，供开发商开发数据库驱动程序用。
+  - **面向数据库的API**：Java Driver API，供开发商开发数据库驱动程序用。
 
 > **JDBC是sun公司提供一套用于数据库操作的接口，java程序员只需要面向这套接口编程即可。**
 >
@@ -78,17 +90,21 @@
 
 ![1555576170074](assets/1555576170074.png)
 
-- 将上述jar包拷贝到Java工程的一个目录中，习惯上新建一个lib文件夹。
+将上述jar包拷贝到Java工程的一个目录中，习惯上新建一个lib文件夹。
 
- ![1566134718955](assets/1566134718955.png)
+![1566134718955](assets/1566134718955.png)
+
+ 
 
 在驱动jar上右键-->Build Path-->Add to Build Path
 
- ![1566134781682](assets/1566134781682.png)
+![1566134781682](assets/1566134781682.png)
 
 注意：如果是Dynamic Web Project（动态的web项目）话，则是把驱动jar放到WebContent（有的开发工具叫WebRoot）目录中的WEB-INF目录中的lib目录下即可
 
- ![1566135290460](assets/1566135290460.png)
+![1566135290460](assets/1566135290460.png)
+
+
 
 #### 2.1.2 加载与注册JDBC驱动
 
@@ -97,6 +113,7 @@
   - **Class.forName(“com.mysql.jdbc.Driver”);**
 
 - 注册驱动：DriverManager 类是驱动程序管理器类，负责管理驱动程序
+
   - **使用DriverManager.registerDriver(com.mysql.jdbc.Driver)来注册驱动**
 
   - 通常不用显式调用 DriverManager 类的 registerDriver() 方法来注册驱动程序类的实例，因为 Driver 接口的驱动程序类**都**包含了静态代码块，在这个静态代码块中，会调用 DriverManager.registerDriver() 方法来注册自身的一个实例。下图是MySQL的Driver实现类的源码：
@@ -108,6 +125,7 @@
 - JDBC URL 用于标识一个被注册的驱动程序，驱动程序管理器通过这个 URL 选择正确的驱动程序，从而建立到数据库的连接。
 
 - JDBC URL的标准由三部分组成，各部分间用冒号分隔。 
+
   - **jdbc:子协议:子名称**
   - **协议**：JDBC URL中的协议总是jdbc 
   - **子协议**：子协议用于标识一个数据库驱动程序
@@ -326,6 +344,7 @@ driverClass=com.mysql.jdbc.Driver
 - 数据库连接被用于向数据库服务器发送命令和 SQL 语句，并接受数据库服务器返回的结果。其实一个数据库连接就是一个Socket连接。
 
 - 在 java.sql 包中有 3 个接口分别定义了对数据库的调用的不同方式：
+
   - Statement：用于执行静态 SQL 语句并返回它所生成结果的对象。 
   - PrepatedStatement：SQL 语句被预编译并存储在此对象中，可以使用此对象多次高效地执行该语句。
   - CallableStatement：用于执行 SQL 存储过程
@@ -601,7 +620,6 @@ public class StatementTest {
 ```
 
 > 说明：使用PreparedStatement实现的查询操作可以替换Statement实现的查询操作，解决Statement拼串和SQL注入问题。
->
 
 ### 3.4 ResultSet与ResultSetMetaData
 
@@ -610,15 +628,18 @@ public class StatementTest {
 - 查询需要调用PreparedStatement 的 executeQuery() 方法，查询结果是一个ResultSet 对象
 
 - ResultSet 对象以逻辑表格的形式封装了执行数据库操作的结果集，ResultSet 接口由数据库厂商提供实现
+
 - ResultSet 返回的实际上就是一张数据表。有一个指针指向数据表的第一条记录的前面。
 
 - ResultSet 对象维护了一个指向当前数据行的**游标**，初始的时候，游标在第一行之前，可以通过 ResultSet 对象的 next() 方法移动到下一行。调用 next()方法检测下一行是否有效。若有效，该方法返回 true，且指针下移。相当于Iterator对象的 hasNext() 和 next() 方法的结合体。
+
 - 当指针指向一行时, 可以通过调用 getXxx(int index) 或 getXxx(int columnName) 获取每一列的值。
 
   - 例如: getInt(1), getString("name")
   - **注意：Java与数据库交互涉及到的相关Java API中的索引都从1开始。**
 
 - ResultSet 接口的常用方法：
+
   - boolean next()
 
   - getString()
@@ -639,7 +660,7 @@ public class StatementTest {
   - getColumnDisplaySize(int column)：指示指定列的最大标准宽度，以字符为单位。 
   - **isNullable**(int column)：指示指定列中的值是否可以为 null。 
 
-  -  isAutoIncrement(int column)：指示是否自动为指定列进行编号，这样这些列仍然是只读的。 
+  - isAutoIncrement(int column)：指示是否自动为指定列进行编号，这样这些列仍然是只读的。 
 
 ![1555579494691](assets/1555579494691.png)
 
@@ -666,6 +687,7 @@ public class StatementTest {
 ### 3.6 JDBC API小结
 
 - 两种思想
+
   - 面向接口编程的思想
 
   - ORM思想(object relational mapping)
@@ -676,6 +698,7 @@ public class StatementTest {
   > sql是需要结合列名和表的属性名来写。注意起别名。
 
 - 两种技术
+
   - JDBC结果集的元数据：ResultSetMetaData
     - 获取列数：getColumnCount()
     - 获取列的别名：getColumnLabel()
@@ -835,11 +858,13 @@ if(rs.next()){
 当需要成批插入或者更新记录时，可以采用Java的批量**更新**机制，这一机制允许多条语句一次性提交给数据库批量处理。通常情况下比单独提交处理更有效率
 
 JDBC的批量处理语句包括下面三个方法：
+
 - **addBatch(String)：添加需要批量处理的SQL语句或是参数；**
 - **executeBatch()：执行批量处理语句；**
 - **clearBatch():清空缓存的数据**
 
 通常我们会遇到两种批量执行SQL语句的情况：
+
 - 多条SQL语句的批量处理；
 - 一个SQL语句的批量传参；
 
@@ -991,9 +1016,12 @@ public void testInsert2() throws Exception{
 ### 6.2 JDBC事务处理
 
 - 数据一旦提交，就不可回滚。
+
 - 数据什么时候意味着提交？
+
   - **当一个连接对象被创建时，默认情况下是自动提交事务**：每次执行一个 SQL 语句时，如果执行成功，就会向数据库自动提交，而不能回滚。
   - **关闭数据库连接，数据就会自动的提交。**如果多个操作，每个操作使用的是自己单独的连接，则无法保证事务。即同一个事务的多个操作必须在同一个连接下。
+
 - **JDBC程序中为了让多个 SQL 语句作为一个事务执行：**
 
   - 调用 Connection 对象的 **setAutoCommit(false);** 以取消自动提交事务
@@ -1075,16 +1103,16 @@ public void update(Connection conn ,String sql, Object... args) {
 ### 6.3 事务的ACID属性    
 
 1. **原子性（Atomicity）**
-    原子性是指事务是一个不可分割的工作单位，事务中的操作要么都发生，要么都不发生。 
+   原子性是指事务是一个不可分割的工作单位，事务中的操作要么都发生，要么都不发生。 
 
 2. **一致性（Consistency）**
-    事务必须使数据库从一个一致性状态变换到另外一个一致性状态。
+   事务必须使数据库从一个一致性状态变换到另外一个一致性状态。
 
 3. **隔离性（Isolation）**
-    事务的隔离性是指一个事务的执行不能被其他事务干扰，即一个事务内部的操作及使用的数据对并发的其他事务是隔离的，并发执行的各个事务之间不能互相干扰。
+   事务的隔离性是指一个事务的执行不能被其他事务干扰，即一个事务内部的操作及使用的数据对并发的其他事务是隔离的，并发执行的各个事务之间不能互相干扰。
 
 4. **持久性（Durability）**
-    持久性是指一个事务一旦被提交，它对数据库中数据的改变就是永久性的，接下来的其他操作和数据库故障不应该对其有任何影响。
+   持久性是指一个事务一旦被提交，它对数据库中数据的改变就是永久性的，接下来的其他操作和数据库故障不应该对其有任何影响。
 
 #### 6.3.1 数据库的并发问题
 
@@ -1915,7 +1943,7 @@ filters=wall
 - QueryRunner类的主要方法：
   - **更新**
     - public int update(Connection conn, String sql, Object... params) throws SQLException:用来执行一个更新（插入、更新或删除）操作。
-    -  ......
+    - ......
   - **插入**
     - public <T> T insert(Connection conn,String sql,ResultSetHandler<T> rsh, Object... params) throws SQLException：只支持INSERT语句，其中 rsh - The handler used to create the result object from the ResultSet of auto-generated keys.  返回值: An object generated by the handler.即自动生成的键值
     - ....
@@ -1972,13 +2000,21 @@ public void testDelete() throws Exception {
 - 接口的主要实现类：
 
   - ArrayHandler：把结果集中的第一行数据转成对象数组。
+
   - ArrayListHandler：把结果集中的每一行数据都转成一个数组，再存放到List中。
+
   - **BeanHandler：**将结果集中的第一行数据封装到一个对应的JavaBean实例中。
+
   - **BeanListHandler：**将结果集中的每一行数据都封装到一个对应的JavaBean实例中，存放到List里。
+
   - ColumnListHandler：将结果集中某一列的数据存放到List中。
+
   - KeyedHandler(name)：将结果集中的每一行数据都封装到一个Map里，再把这些map再存到一个map里，其key为指定的key。
+
   - **MapHandler：**将结果集中的第一行数据封装到一个Map里，key是列名，value就是对应的值。
+
   - **MapListHandler：**将结果集中的每一行数据都封装到一个Map里，然后再存放到List
+
   - **ScalarHandler：**查询单个值对象
 
     
