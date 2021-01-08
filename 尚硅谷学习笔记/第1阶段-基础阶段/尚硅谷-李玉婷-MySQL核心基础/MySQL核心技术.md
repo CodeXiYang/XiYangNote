@@ -109,17 +109,17 @@ MySQL提供两种版本
 
 ### 2.2 MySQL的卸载与安装
 
-*由于我安装了,所以跳过...对应视频:*
-
-- *07-MySQL软件的安装*
-
 #### MySQL的卸载
+
+https://www.bilibili.com/video/BV1xW411u7ax?p=6
 
 - 卸载服务
 
 - 删除安装路径
 
 #### MySQL的安装
+
+https://www.bilibili.com/video/BV1xW411u7ax?p=7
 
 - next...next...
 
@@ -153,37 +153,37 @@ max_connection=100
 
 #### 方式一
 
-1. 按住win+Q后输入服务
+按住win+Q后输入服务
 
-   ![image-20201212125159475](assets/image-20201212125159475.png)
+![image-20201212125159475](assets/image-20201212125159475.png)
 
-2. 然后根据选项进行停止和启动服务
+然后根据选项进行停止和启动服务
 
-   ![image-20201212125302758](assets/image-20201212125302758.png)
+![image-20201212125302758](assets/image-20201212125302758.png)
 
 ####  方式二:命令行(推荐使用)
 
-1. 按住win+q输入cmd,然后 <u>以管理员身份打开</u> 进行开启服务
+按住win+q输入cmd,然后 <u>以管理员身份打开</u> 进行开启服务
 
-   ![image-20201212125559730](assets/image-20201212125559730.png)
+![image-20201212125559730](assets/image-20201212125559730.png)
 
-2. 停止mysql服务
+停止mysql服务
 
-   ```shell
-   # 这里的mysql是自己的服务名,不一定就是mysql,需要看你自己的mysql的服务名字
-   net stop mysql
-   ```
+```shell
+# 这里的mysql是自己的服务名,不一定就是mysql,需要看你自己的mysql的服务名字
+net stop mysql
+```
 
-   ![image-20201212125720786](assets/image-20201212125720786.png)
+![image-20201212125720786](assets/image-20201212125720786.png)
 
-3. 启动服务
+启动服务
 
-   ```bash
-   # 同理,启动的服务是名字为mysql的服务
-   net start mysql
-   ```
+```bash
+# 同理,启动的服务是名字为mysql的服务
+net start mysql
+```
 
-   ![image-20201212130024886](assets/image-20201212130024886.png)
+![image-20201212130024886](assets/image-20201212130024886.png)
 
 
 
@@ -406,10 +406,7 @@ mysql -V
 
 ### 2.9 图形界面安装
 
-*已经安装navicate15,所以没有安装sqlyong,视频对应:*
-
-- *16-图形化用户界面客户端的安装*
-- *17-图形化用户界面客户端的介绍*
+https://www.bilibili.com/video/BV1xW411u7ax?p=16
 
 
 
