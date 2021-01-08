@@ -1,6 +1,10 @@
 # MyBatis3
 
->  视频: https://www.bilibili.com/video/BV1NE411Q7Nx  
+>  课程名称: [【狂神说Java】Mybatis最新完整教程IDEA版通俗易懂](https://www.bilibili.com/video/BV1NE411Q7Nx  )
+>
+>  课程概述: 使用mybatis进行crud操作,动态sql,对应关系,缓存
+>
+>  讲述人: B站-遇见狂神说
 
 ## 1. 简介
 

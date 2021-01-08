@@ -63,7 +63,7 @@ JavaScript起源于Netscape公司的LiveScript语言
 
 ![image-20210108165912789](assets/image-20210108165912789.png)
 
-## 第 2 章: ECMAScript 🚩
+## 第 2 章: ECMAScript 
 
 ### 2.1 ECMAScript快速入门
 
@@ -259,6 +259,10 @@ console.log(NUM);
 
 `变量名称`
 
+###### 如何修改变量中存储的数据
+
+在JavaScript中想要修改变量中存储的数据, 只需要再次给变量直接赋值即可
+
 ```javascript
 // 定义一个变量
 var num;
@@ -266,53 +270,512 @@ var num;
 num = 123;
 // 从变量中获取存储的数据
 console.log(num);
+// 修改num的值
+num = 666;
+console.log(num);
 ```
+
+
 
 ##### 变量的初始化
 
+在JavaScript中第一次给变量赋值, 我们称之为"变量的初始化"
 
+```javascript
+var num;
+num = 321; // "变量的初始化"
+num = 888; // 不是"变量的初始化"
+```
+
+如果一个变量没有进行初始化, 那么变量中存储的是什么呢? 在JavaScript中如果定义了一个变量,但是没有进行初始化, 那么变量中存储的是undefined
+
+```javascript
+var num;
+console.log(num);
+```
+
+给变量初始化有很多种形式
+
+- 先定义变量, 再对变量进行初始化
+
+  ```javascript
+  var num;
+  num = 321; // 先定义再初始化
+  ```
+
+- 可以在定义变量的同时对变量进行初始化
+
+  ```javascript
+  var value = 666; // 定义的同时初始化
+  ```
 
 ##### 定义变量的其它格式
 
+- 同时定义多个变量的格式
+
+  ```javascript
+  //格式: var 变量名称1, 变量名称2, .... ;
+  // var num;
+  // var value;
+  var num, value; // 同时定义两个变量
+  var num, value, value2, value3; // 同时定义四个变量
+  ```
+
+  
+
 ##### 初始化变量的其它格式
+
+如果在企业开发中对多个变量初始化的值都是一样的, 那么我们可以通过`变量名称1 = 变量名称2 = 变量名称... = 初始化值;`
+
+```javascript
+var num;
+var value;
+// num = 123;
+// value = 123;
+num = value = 123; // 同时对num和value进行初始化, num和value中存储的数据都是123
+console.log(num);
+console.log(value);
+```
+
+定义多个变量的同时给多个变量分别初始化
+
+```javascript
+// var num, value;
+// num = 123;
+// value = 666;
+var num = 123, value = 666;
+console.log(num);
+console.log(value);
+```
+
+##### 变量的注意点
+
+1. 在JavaScript中变量之间是可以相互赋值的
+
+   ```javascript
+   var num;
+   var value;
+   num = 123;
+   value = num; // 将Num中的值拷贝一份给value
+   console.log(num);
+   console.log(value);
+   ```
+
+2. 在JavaScript中如果定义了同名的变量, 那么后定义的变量会覆盖先定义的变量
+
+   ```javascript
+   var num = 666;
+   // num = 888; // 如果num前面没有var, 那么就是修改变量中存储的值
+   var num = 888;// 如果num前面有var, 那么就不是修改变量中存储的值, 而是重新定义一个新的变量
+   console.log(num);
+   ```
+
+3. 在老版本的标准的(ES6之前)JavaScript中可以先使用变量, 再定义变量, 并不会报错
+   由于JavaScript是一门解释型的语言, 会边解析边执行, 浏览器在解析JavaScript代码之前还会进行一个操作"预解析(预处理)"
+   预解析(预处理)步骤:
+   将当前JavaScript代码中所有变量的定义和函数的定义放到所有代码的最前面
+
+   ```javascript
+   console.log(num);
+   var num = 123;
+   /*
+   预处理之后的代码
+   var num;
+   console.log(num); // undefined
+   num = 123;
+   */
+   ```
+
+##### ES6定义变量
+
+为了解决老板标准的的两个注意点
+
+- 在JavaScript中如果定义了同名的变量, 那么后定义的变量会覆盖先定义的变量
+- 在老版本的标准的(ES6之前)JavaScript中可以先使用变量, 再定义变量, 并不会报错
+
+在ES6中就推出了一种新的定义变量的方式
+
+```javascript
+// ES6前后定义变量的语法格式如下
+var 变量名称; //ES6之前
+let 变量名称; //ES6开始
+```
+
+ES6变量使用方式
+
+```javascript
+// 定义一个变量
+let num;
+// 给变量初始化
+num = 666;
+// 取出存储的数据
+console.log(num);
+// 修改变量中存储的数据
+num = 888;
+// 取出存储的数据
+console.log(num);
+```
+
+ES6定义变量解决了ES6之前存在的两个问题
+
+```javascript
+// var num = 123;
+// var num = 888;
+let num = 123;
+let num = 888; //会明确的报错
+console.log(num);
+```
+
+```javascript
+// console.log(num);
+// var num = 123;
+```
 
 
 
 #### 2.1.5 关键字和保留字
 
+什么是关键字？
+
+- 被JavaScript语言赋予了特殊含义的单词
+
+- 关键字在开发工具中会显示特殊颜色
+
+  ```javascript
+  var num;
+  let num;
+  ```
+
+- 关键字不能用作变量名、函数名等
+
+  ```javascript
+  var num = 666;
+  console.log(num);
+  
+  var break = 888; //break是关键字,定义变量会报错
+  console.log(break); 
+  ```
+
+- 关键字严格区分大小写, var和Var前者是关键字, 后者不是
+
+  ```javascript
+  var num = 123;
+  console.log(num);
+  VAR value = 666; //VAR不可定义变量
+  console.log(value);
+  //只需要记住一点: 在JavaScript中所有的关键字都是小写的
+  ```
+
+保留字: 
+
+- 使用特点和关键字都差不多,只是保留下来的可能作为关键字使用
+
 #### 2.1.6 标识符
+
+**什么是标识符?** 用于标识变量函数名称的
+
+标识符命名规则(必须遵守)
+
+- 只能由26个英文字母的大小写、10个阿拉伯数字0~9、下划线_、美元符号$组成
+
+  ```javascript
+  var abc123_$ = 678;
+  console.log(abc123_$);
+  
+  var abc#123 = 666; //报错
+  console.log(abc#123);
+  
+  var abc123 = 888;
+  console.log(abc123);
+  ```
+
+- 不能以数字开头
+
+  ```javascript
+  var 123abc = 888; //报错
+  console.log(123abc);
+  ```
+
+- 严格区分大小写，比如test和Test是2个不同的标识符
+
+  ```javascript
+  /*涨停, 张婷*/
+  var test = 123;
+  var tEst = 321;
+  console.log(test);
+  console.log(tEst);
+  ```
+
+- 不可以使用关键字、保留字作为标识符
+
+  ```javascript
+  let fjdsklfjslk = "lnj";
+  let name = "lnj"; //报错 name在javascript中是关键字
+  let lastname = "Lee";
+  let lastName = "Lee";
+  ```
+
+- 可以使用中文,但是没人会这么去干!
+
+  ```javascript
+  let 哈哈_text = "abc";
+  console.log(哈哈_text);
+  ```
+
+  
 
 #### 2.1.7 注释
 
+**什么是JS的注释?** 和HTML/CSS的注释一样, 都是用来注解解释某一段程序的含义的, 都是用来提升代码的阅读性的, 都是为了方便程序员之间沟通的
+
+**JS注释的格式**
+
+- 单行注释: `// 被注释的内容`
+
+  注意点: 单行注释的有效范围是从第二个斜杠开始一直直到这一行的末尾, 也就是被注释的内容不能换行
+
+- 多行注释: `/* 被注释的内容 */` 
+
+  多行注释的有效范围是从第一颗`*`开始直到第二颗`*`结束, 也就是说被注释的内容可以换行的
+
+**JS中注释的嵌套规则**
+
+- 单行注释可以嵌套单行注释, 但是必须在一行
+
+  ```javascript
+  // 被注释的内容   // 被注释的内容
+  ```
+
+- 单行注释可以嵌套多行注释, 但是必须在一行
+
+  ```javascript
+   // 被注释的内容 /* 被注释的内容 */
+  ```
+
+- 多行注释可以嵌套单行注释
+
+  ```javascript
+  /*
+  被注释的内容
+  // 被注释的内容
+  */
+  ```
+
+- 多行注释不可以嵌套多行注释
+
+  ```javascript
+  /*
+  被注释的内容
+  /*
+  */
+  */
+  ```
+
+  
+
 ### 2.2 数据类型
 
-#### 2.2.1 基本数据类型
+#### typeof
 
-#### 2.2.2 引用数据类型
+在JavaScript中为了方便我们检测某一种数据是属于哪一种数据类型的, JavaScript提供了一个名称叫做typeof的操作符
+
+格式: `typeof 需要检测的数据;`
+
+#### 基本数据类型
+
+*javascript中的基本数据类型有5种: Number,String,Boolean,Undefined,NUll*
+
+**Number 数值类型** 在JavaScript中无论是整数还是小数都是属于数值类型的
+
+```javascript
+let num = 42;
+let num1 = 21.2;
+
+// 利用typeof检测123这个常量是属于哪一种数据类型的, 并且将检测的结果保存到res这个变量中
+// let res = typeof 123;
+let res = typeof 3.14;
+console.log(res);
+```
+
+**String 字符串类型** 在JavaScript中无论是通过单引号还是通过双引号括起来的内容都是属于字符串类型的
+
+```javascript
+let str = "hello";
+let str1 = 'hello';
+
+// let res = typeof 'abc';
+let res = typeof "def";
+console.log(res);
+```
+
+**Boolean 布尔类型** 在JavaScript中布尔类型比较特殊, 只有两个取值true/false
+
+```javascript
+let flag = true;
+let falg1 = false;
+
+// let res = typeof true;
+let res = typeof false;
+console.log(res);
+```
+
+**Undefined 未定义类型** 在JavaScript中未定义类型比较特殊, 只有一个取值undefined
+
+```javascript
+let num;
+// 以下代码的含义是输出num变量中保存的数据
+// 由于没有给num这个变量进行初始化, 所以这个变量中保存的数据默认是undefined
+console.log(num);
+// 利用typeof检查num中保存的数据是什么类型的
+// 也就是说利用typeof检查undefined是属于什么类型的
+let res = typeof num;
+console.log(res);
+```
+
+**Null 空类型**
+
+```javascript
+let n = null;
+```
+
+
+
+#### 引用数据类型
+
+Object 对象类型
+
+#### 数据类型和常量的关系
+
+猫科动物和狮子老虎豹子的关系
+
+- 今天学习的数据类型就是猫科动物
+- 前面学习的常量就是狮子老虎豹子
+
+
 
 ### 2.3 数据类型转换
 
-#### 2.3.1 转换为字符串类型
+javascript中的数据类型可以通过不同的手段来进行相互转换的
 
-#### 2.3.2 转换为数值类型
+#### 转换为字符串类型
 
-#### 2.3.3 转换为布尔类型
+将`Number,Boolean,undefined,null`类型转换为字符串类型
+在JavaScript中如果想将以上的四种基本数据类型转换为字符串类型, 常用的方法有三种
+
+1. 对于Number类型和Boolean类型来说, 可以通过 变量名称.toString()的方式来转换
+
+   ```javascript
+   let value = 123;
+   console.log(value); // 在谷歌浏览器的控制台中如果是Number类型是蓝色的
+   console.log(typeof value);
+   // 以下代码的含义: 将value变量中存储的数据拷贝一份, 然后将拷贝的数据转换为字符串之后返回
+   let str = value.toString();
+   console.log(str); // 在谷歌浏览器的控制台中如果是String类型是灰色的
+   console.log(typeof str);
+   // 注意点: 变量名称.toString是对拷贝的数据进行转换, 所以不会影响到原有的数据
+   console.log(value);
+   console.log(typeof value);
+   // 注意点: 不能使用常量直接调用toString方法, 因为常量是不能改变的
+   let str2 = 123.toString();
+   ```
+
+   ```javascript
+   let value = true;
+   console.log(value);
+   console.log(typeof value);
+   let str = value.toString();
+   console.log(str);
+   console.log(typeof str);
+   ```
+
+2. 可以通过String(常量or变量);转换为字符串
+
+   ```javascript
+   let value = undefined;
+   console.log(value);
+   console.log(typeof value);
+   // 以下代码的含义: 根据传入的数据重新生成一个新的字符串
+   let str = String(value);
+   console.log(str);
+   console.log(typeof str);
+   ```
+
+   ```javascript
+   let value = null;
+   console.log(value);
+   console.log(typeof value);
+   let str = String(value);
+   console.log(str);
+   console.log(typeof str);
+   ```
+
+   ```javascript
+   let value = 123;
+   console.log(value);
+   console.log(typeof value);
+   let str = String(value);
+   console.log(str);
+   console.log(typeof str);
+   ```
+
+   ```javascript
+   // 注意点: 变量名称.toString()的方式前面不能是常量, 因为常量不能被改变
+   //          String(常量or变量), 因为是根据传入的值重新生成一个新的值, 并不是修改原有的值
+   let str = String(123);
+   console.log(str);
+   console.log(typeof str);
+   ```
+
+   ```javascript
+   let value = true;
+   console.log(value);
+   console.log(typeof value);
+   let str = String(value);
+   console.log(str);
+   console.log(typeof str);
+   ```
+
+   
+
+3. 还可以通过 变量or常量 + `"" `/ 变量or常量 +` ''`转换为字符串
+
+   ```javascript
+   let value = 123;
+   // let str = value + '';
+   let str = value + "";
+   console.log(str);
+   console.log(typeof str);
+   ```
+
+   ```javascript
+   let str = 123 + ''; // +''或者+""底层的本质其实就是调用String()函数
+   console.log(str);
+   console.log(typeof str);
+   ```
+
+   
+
+#### 转换为数值类型 🚩
+
+
+
+#### 转换为布尔类型
 
 ### 2.4 运算符
 
-#### 4.1 算数运算符
+#### 算数运算符
 
-#### 4.2 赋值运算符
+#### 赋值运算符
 
-#### 4.3 自增自减运算符
+#### 自增自减运算符
 
-#### 4.4 关系运算符
+#### 关系运算符
 
-#### 4.5 逻辑运算符
+#### 逻辑运算符
 
-#### 4.6 逗号运算符
+#### 逗号运算符
 
-#### 4.7 三目运算符
+#### 三目运算符
 
 
 
