@@ -12,6 +12,12 @@ windows用户下载release: https://github.com/gohugoio/hugo/releases
 
 https://blog.csdn.net/weixin_33816047/article/details/112363465
 
+https://blog.csdn.net/kikajack/article/details/80413052
+
+https://blog.csdn.net/qq_30682027/article/details/83536577
+
+https://dp2px.com/2019/08/30/go-hugo1/
+
 
 
 ## 1. 安装hugo
