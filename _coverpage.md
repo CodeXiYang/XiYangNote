@@ -4,14 +4,14 @@
     color: rgb(60, 60, 60); text-align: center;
     text-shadow: 0.3rem 0.3rem 0.4rem rgba(0,0,0,.15);
     line-height: 1.2;">
-
+    
     一本涵盖Java丶数据库丶前端...等网站开发知识的笔记本！
     
     本笔记知识主要来源于各大视频网站所学
     
-    感谢这些分享知识的人
-
 </div>
+
+
 
 ![]( https://img.shields.io/github/issues/CodeXiYang/XiYangNote) &nbsp;&nbsp;
 ![]( https://img.shields.io/github/forks/CodeXiYang/XiYangNote) &nbsp;&nbsp;

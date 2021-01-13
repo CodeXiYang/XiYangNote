@@ -1772,8 +1772,10 @@ INSERT INTO `student` (`id`, `name`, `tid`) VALUES ('5', '小王', '1');
    ```
 
    ```java
-   @Data public class Student { 
-       private int id; private String name; //多个学生可以是同一个老师，即多对一 
+   @Data 
+   public class Student { 
+       private int id; 
+       private String name; //多个学生可以是同一个老师，即多对一 
        private Teacher teacher; 
    }
    ```
@@ -2060,15 +2062,16 @@ public class Teacher {
 4. 测试
 
    ```java
-   @Test public void testGetTeacher2(){ 
+   @Test 
+   public void testGetTeacher2(){ 
        SqlSession session = MybatisUtils.getSession(); 
        TeacherMapper mapper = session.getMapper(TeacherMapper.class); 
        Teacher teacher = mapper.getTeacher2(1); 
        System.out.println(teacher.getName()); 
        System.out.println(teacher.getStudents()); 
    }
-   ```
-
+```
+   
    
 
 ### 11.4 小结
@@ -2238,7 +2241,7 @@ CREATE TABLE `blog` (
 
 
 
-### 12.3 if语句
+### 12.3 if
 
 **【需求】：**根据作者名字和博客名字来查询博客！如果作者名字为空，那么只根据博客名字查询，反之，则根据作者名来查询
 
@@ -2355,7 +2358,7 @@ CREATE TABLE `blog` (
 
 
 
-### 12.6 choose语句
+### 12.6 choose
 
 有时候，我们不想用到所有的查询条件，只想选择其中的一个，查询条件有一个满足即可，使用 choose标签可以解决此类问题，类似于 Java 的 switch 语句
 
