@@ -2,7 +2,7 @@
 
 > 课程名称: [从零玩转MySQL+数据迁移(14)](https://www.it666.com/my/course/193)
 >
-> 课程概述: 
+> 课程概述: MySQL基础部分以及高级
 >
 > 讲述人: 李南江
 
@@ -73,7 +73,7 @@
 
 ### 1.5 数据库的连接和断开
 
-#### 1.5.1 连接mysql服务器
+#### 连接mysql服务器
 
 **基本语法:**
 
@@ -101,7 +101,7 @@ mysql -uroot -p  密码采用暗文形式
 
 `mysql -h127.0.0.1  -uroot -p ` 链接远程MySQL服务器, 使用默认端口3306
 
-#### 1.5.2 退出链接
+#### 退出链接
 
 `exit;`
 
@@ -109,7 +109,7 @@ mysql -uroot -p  密码采用暗文形式
 
 `\q`
 
-#### 1.5.3 显示数据库
+#### 显示数据库
 
 语法格式: `show databases; ` 注意: 后面有s
 **初始表介绍**
@@ -126,7 +126,7 @@ mysql -uroot -p  密码采用暗文形式
 
 ### 1.6 数据库SQL简介
 
-#### 1.6.1 如何使用MySQL
+#### 如何使用MySQL
 
 1. 学习MySQL和学习Excel差不多
    - 使用Excel步骤: 安装Excel-创建Excel文件-创建表-在表中存储数据
@@ -139,7 +139,7 @@ mysql -uroot -p  密码采用暗文形式
 
 *MySQL中可以有0~N个数据库, 数据库中可以有0~N个表, 表中可以有0~N个数据*
 
-#### 1.6.2 什么是SQL？
+#### 什么是SQL？
 
 结构化查询语言(Structured Query Language)简称
 是用来操作关系型数据库的一门语言
@@ -153,7 +153,7 @@ mysql -uroot -p  密码采用暗文形式
 - Oracle      使用PL/SQL
 - MySQL       使用MySQL
 
-#### 1.6.3 SQL语句功能划分
+#### SQL语句功能划分
 
 - DDL:数据定义语句
 	用来定义数据库对象：创建库，表，列等。
@@ -164,7 +164,7 @@ mysql -uroot -p  密码采用暗文形式
 - DCL：数据控制语句
 	用来定义访问权限和安全级别
 
-#### 1.6.4 SQL数据类型
+#### SQL数据类型
 
 和常见的编程语言一样, 数据库中存储的数据也是区分类型的
 
@@ -417,7 +417,7 @@ alter table person change age addr text;
 
 ### 3.4 MySQL存储引擎
 
-#### 3.4.1 什么是存储引擎
+#### 什么是存储引擎
 
 MySQL中的存储引擎就好比我们现实生活中的银行, 不同的银行提供的安全级别、服务水平、存储功能不一样
 
@@ -431,7 +431,7 @@ MySQL中的存储引擎就好比我们现实生活中的银行, 不同的银行�
 + InnoDB(默认): 安全性高, 支持事务和外键, 适合对安全性, 数据完整性要求较高的应用
 + Memory: 访问速度极快, 但不会永久存储数据, 适合对读写速度要求较高的应用
 
-#### 3.4.2 指定存储引擎
+#### 指定存储引擎
 
 ```sql
 -- 创建表时指定
@@ -447,7 +447,7 @@ alter table stu engine=MyISAM;
 
 
 
-#### 3.4.3 不同引擎的本质
+#### 不同引擎的本质
 
 - 前面我们说过数据库的本质就是文件, 所以我们可以先观察一下
 - 通过我们的观察, 我们发现只要创建一个数据库就会自动创建一个文件夹
@@ -620,6 +620,7 @@ BIGINT	        8 字节	(-9,223,372,036,854,775,808，9 223 372 036 854 775 807)
                          +   
                  我们应该使用TINYINT类型, 因为人最多活到255岁已经上天了, 所以使用最小的整型即可
                  
+             
                  如果使用其它的整型, 就会造成资源浪费, 数据库体积变大, 效率变低...
 
 3. 在保存数据的时候, 如果超出了当前数据类型的范围, 那么就会报错
@@ -1777,9 +1778,36 @@ select [查询选项] 字段名称 [from 表名]
 
 ### 7.2 多表查询
 
-多表查询只需要在单表查询基础上增加一张表即可
+创建两个表`stu` 和 `gradle`,并插入数据
 
-`select * from 表名1, 表名2;`
+```sql
+CREATE TABLE stu(
+	id INT,
+	name text
+);
+INSERT INTO `stu`(`id`, `name`) VALUES (1, 'zs');
+INSERT INTO `stu`(`id`, `name`) VALUES (2, 'ls');
+INSERT INTO `stu`(`id`, `name`) VALUES (3, 'ww');
+
+CREATE TABLE grade(
+	id INT,
+	score INT,
+	stuId INT
+);
+INSERT INTO `grade`(`id`, `score`, `stuId`) VALUES (1, 100, 3);
+INSERT INTO `grade`(`id`, `score`, `stuId`) VALUES (2, 99, 2);
+INSERT INTO `grade`(`id`, `score`, `stuId`) VALUES (3, 88, 1);
+
+CREATE TABLE person(
+	id INT,
+	name text
+);
+INSERT INTO `stu`(`id`, `name`) VALUES (1, 'zs');
+INSERT INTO `stu`(`id`, `name`) VALUES (2, 'ls');
+INSERT INTO `stu`(`id`, `name`) VALUES (3, 'ww');
+```
+
+多表查询只需要在单表查询基础上增加一张表即可 `select * from 表名1, 表名2;`
 
 ```sql
 select * from stu, grade;
@@ -1787,11 +1815,13 @@ select * from stu, grade;
 
 注意点: 默认情况下多表查询的结果是笛卡尔集
 
-#### 联合查询(union)
+笛卡尔集: 表A的每一列的数据依次和表B的数据组合
 
-在纵向上将多张表的结果结合起来返回给我们
+![image-20210114144726588](assets/image-20210114144726588.png)
 
-`select * from 表名1 union select * from 表名2;`
+#### 合纵查询 union
+
+在<span style="color:red">纵向</span>上将多张表的结果结合起来返回给我们 `select * from 表名1 union select * from 表名2;`
 
 ```sql
 select id, name from stu union select id, score from grade;
@@ -1799,34 +1829,38 @@ select id, name from stu union select id, score from grade;
 
 注意点:
 
-- 使用union进行多表查询, 返回的结果集的表头的名称是第一张表的名称
+- 使用union进行多表查询, 返回的结果集的表头的名称是第一张表的名称;例如上面的查语句,返回的结果集表头是`id,name`而不是`id,score`
 
-- 使用union进行多表查询, 必须保证多张表查询的字段个数一致
+- 使用union进行多表查询, 必须保证多张表查询的字段个数一致;如果不保证表的字段个数不一致会报错
 
   ```sql
-  #select id, name from stu union select id, score, stuId from grade;
-  #The used SELECT statements have a different number of columns
+  select id, name from stu union select id, score, stuId from grade;
+  -- The used SELECT statements have a different number of columns
   ```
 
 - 使用union进行多表查询, 默认情况下会自动去重
 
   ```sql
-  #select id, name from stu union select id, name from person;
+  select id, name from stu union select id, name from person;
   ```
 
 - 使用union进行多表查询, 如果不想自动去重, 那么可以在union后面加上all
 
   ```sql
-  #select id, name from stu union all select id, name from person;
+  select id, name from stu union all select id, name from person;
   ```
 
 
 
-#### 表的连接查询(join)
+#### 连接查询 join
 
 - 将多张表中'关联的字段''连接'在一起查询我们称之为'表的连接查询'
+
 - 大白话: 查询多张表中满足条件的数据
+
 - 表的连接分为: 内连接,外连接,交叉连接,全连接
+
+  
 
 ##### 内连接 inner join
 
