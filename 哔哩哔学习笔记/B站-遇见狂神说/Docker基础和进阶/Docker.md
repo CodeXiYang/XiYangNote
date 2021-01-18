@@ -1,9 +1,6 @@
-# Docker
+# Docker基础
 
-> 课程名称: 
->
-> - [【狂神说Java】Docker最新超详细版教程通俗易懂](https://www.bilibili.com/video/BV1og4y1q7M4)
-> - [【狂神说Java】Docker进阶篇超详细版教程通俗易懂](https://www.bilibili.com/video/BV1kv411q7Qc)
+> 课程名称:  [【狂神说Java】Docker最新超详细版教程通俗易懂](https://www.bilibili.com/video/BV1og4y1q7M4)
 >
 > 课程概述: 
 >
@@ -1646,10 +1643,12 @@ ONBUILD # 当构建一个被继承的DockerFile时运行命令，父镜像在被
 2. 配置docker连接集成
 3. 集成了docker插件就可以在IDEA中操作Docker内部的容器和镜像了，但是很鸡肋这个功能，对于我们开发人员来说！之后学习的CI/CD才是真正在企业中的王道！
 
+# Docker进阶
 
-
-## 9. Docker进阶
-
-*进阶部分~~~*
+> 课程名称: [【狂神说Java】Docker进阶篇超详细版教程通俗易懂](https://www.bilibili.com/video/BV1kv411q7Qc)
+>
+> 课程概述: Docker进阶
+>
+> 讲述人: B站-遇见狂神说
 
 
