@@ -367,8 +367,9 @@ For more examples and ideas, visit:
     -d							启动守护式容器（在后台启动容器）
     -p 							映射端口号：原始端口号		 指定端口号启动
 
-	例：docker run -it --name myTomcat -p 8888:8080 tomcat
-   	 docker run -d --name myTomcat -P tomcat
+	例：
+		docker run -it --name myTomcat -p 8888:8080 tomcat
+   		docker run -d --name myTomcat -P tomcat
 
 # 2.查看运行的容器
 	docker ps					--------------------------	列出所有正在运行的容器
@@ -409,8 +410,8 @@ For more examples and ideas, visit:
 # 10.数据卷(volum)实现与宿主机共享目录
 	docker run -v 宿主机的路径|任意别名:/容器内的路径 镜像名
 		注意: 
-				1.如果是宿主机路径必须是绝对路径,宿主机目录会覆盖容器内目录内容
-				2.如果是别名则会在docker运行容器时自动在宿主机中创建一个目录,并将容器目录文件复制到宿主机中
+        	1.如果是宿主机路径必须是绝对路径,宿主机目录会覆盖容器内目录内容
+            2.如果是别名则会在docker运行容器时自动在宿主机中创建一个目录,并将容器目录文件复制到宿主机中
 
 # 11.打包镜像
 		docker save 镜像名 -o  名称.tar
@@ -424,7 +425,7 @@ For more examples and ideas, visit:
 
 ----
 
-## 9.docker的镜像原理
+## 9.Docker的镜像原理
 
 ### 9.1 镜像是什么？
 
@@ -740,7 +741,7 @@ Dockerfile可以认为是**Docker镜像的描述文件，是由一系列命令�
 | 保留字         | 作用                                                         |
 | -------------- | ------------------------------------------------------------ |
 | **FROM**       | **当前镜像是基于哪个镜像的** `第一个指令必须是FROM`          |
-| MAINTAINER     | 镜像维护者的姓名和邮箱地址                                   |
+| **MAINTAINER** | 镜像维护者的姓名和邮箱地址                                   |
 | **RUN**        | **构建镜像时需要运行的指令**                                 |
 | **EXPOSE**     | **当前容器对外暴露出的端口号**                               |
 | **WORKDIR**    | **指定在创建容器后，终端默认登录进来的工作目录，一个落脚点** |
