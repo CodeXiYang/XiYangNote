@@ -30,9 +30,7 @@ https://blog.csdn.net/luoyifan_33/article/details/111576218
 
 
 
-
-
-
+## 全家桶账号
 
 ```
 教育邮箱: patricia.dodd@muskegoncc.edu—Aassdd123456 //使用outlook进行登录
