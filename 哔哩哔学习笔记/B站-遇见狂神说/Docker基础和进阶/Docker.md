@@ -8,8 +8,13 @@
 > - Docker Compose 、DockerSwarm及学习方法的分享。
 >
 > 讲述人: B站-遇见狂神说
+>
+> 学前准备:
+>
+> 1. 会一点Linux基础
+> 2. 最好会springboot,会有项目做部署
 
-## 1. Docker概述
+## 第 1 章: Docker概述
 
 ### 1.1 Docker为什么出现
 
@@ -37,13 +42,17 @@ Docker镜像的设计，使得Docker得以打破过去「程序即应用」的�
 
 ---
 
+![image-20210121150615136](assets/image-20210121150615136.png)
+
 Docker的思想来自于集装箱，集装箱解决了什么问题？在一艘大船上，可以把货物规整的摆放起来。并且各种各样的货物被集装箱标准化了，集装箱和集装箱之间不会互相影响。那么我就不需要专门运送水果的船和专门运送化学品的船了。只要这些货物在集装箱里封装的好好的，那我就可以用一艘大船把他们都运走。Docker的思想来自于集装箱，集装箱解决了什么问题？在一艘大船上，可以把货物规整的摆放起来。并且各种各样的货物被集装箱标准化了，集装箱和集装箱之间不会互相影响。那么我就不需要专门运送水果的船和专门运送化学品的船了。只要这些货物在集装箱里封装的好好的，那我就可以用一艘大船把他们都运走。
 
 
 
+*本质: 所有的技术都是因为出了一些问题,我们需要去解决,才去学习!!*
+
 ### 1.2 Docker的历史
 
-2010年，几个搞IT的年轻人，在美国旧金山成立了一家名叫“dotCloud”的公司。这家公司主要提供基于PaaS的云计算技术服务。具体来说，是和LXC有关的容器技术。后来，dotCloud公司将自己的容器技术进行了简化和标准化，并命名为——**Docker**。Docker技术诞生之后，并没有引起行业的关注。而dotCloud公司，作为一家小型创业企业，在激烈的竞争之下，也步履维艰。正当他们快要坚持不下去的时候，脑子里蹦出了“开源”的想法。什么是“开源”？开源，就是开放源代码。也就是将原来内部保密的程序源代码开放给所有人，然后让大家一起参与进来，贡献代码和意见。有的软件是一开始就开源的。也有的软件，是混不下去，创造者又不想放弃，所以选择开源。自己养不活，就吃“百家饭”嘛。
+2010年，几个搞IT的年轻人，在美国旧金山成立了一家名叫 **dotCloud** 的公司。这家公司主要提供基于PaaS的云计算技术服务。具体来说，是和LXC有关的容器技术。后来，dotCloud公司将自己的容器技术进行了简化和标准化，并命名为——**Docker**。Docker技术诞生之后，并没有引起行业的关注。而dotCloud公司，作为一家小型创业企业，在激烈的竞争之下，也步履维艰。正当他们快要坚持不下去的时候，脑子里蹦出了“开源”的想法。什么是“开源”？开源，就是开放源代码。也就是将原来内部保密的程序源代码开放给所有人，然后让大家一起参与进来，贡献代码和意见。有的软件是一开始就开源的。也有的软件，是混不下去，创造者又不想放弃，所以选择开源。自己养不活，就吃“百家饭”嘛。
 
 ---
 
@@ -59,11 +68,13 @@ Docker的思想来自于集装箱，集装箱解决了什么问题？在一艘�
 
 ---
 
-虚拟机属于虚拟化技术。而Docker这样的容器技术，也是虚拟化技术，属于**轻量级的虚拟化**。虚拟机虽然可以隔离出很多“子电脑”，但占用空间更大，启动更慢，虚拟机软件可能还要花钱（例如VMWare）。而容器技术恰好没有这些缺点。它不需要虚拟出整个操作系统，只需要虚拟一个小规模的环境（类似“沙 箱”）。
+Docker为什么这么火?虚拟机属于虚拟化技术。而Docker这样的容器技术，也是虚拟化技术，Docker属于**轻量级的虚拟化**。虚拟机虽然可以隔离出很多“子电脑”，但占用空间更大，启动更慢，虚拟机软件可能还要花钱（例如VMWare）。而容器技术恰好没有这些缺点。它不需要虚拟出整个操作系统，只需要虚拟一个小规模的环境（类似“沙 箱”）。
 
 ---
 
 它启动时间很快，几秒钟就能完成。而且，它对资源的利用率很高（一台主机可以同时运行几千个Docker容器）。此外，它占的空间很小，虚拟机一般要几GB到几十GB的空间，而容器只需要MB级甚至KB级。正因为如此，容器技术受到了热烈的欢迎和追捧，发展迅速。
+
+
 
 ### 1.3 Docker的理念
 
@@ -73,35 +84,33 @@ Docker的主要目标是“Build，Ship and Run Any App , Anywhere”，也就�
 
 ### 1.4 Docker能干嘛
 
-#### 1.4.1 之前的虚拟机技术
+#### 之前的虚拟机技术
 
 虚拟机（virtual machine）就是带环境安装的一种解决方案。它可以在一种操作系统里面运行另一种操作系统，比如在Windows 系统里面运行Linux 系统。应用程序对此毫无感知，因为虚拟机看上去跟真实系统一模一样，而对于底层系统来说，虚拟机就是一个普通文件，不需要了就删掉，对其他部分毫无影响。这类虚拟机完美的运行了另一套系统，能够使应用程序，操作系统和硬件三者之间的逻辑不变。
 
-![image-20201215225714687](assets/image-20201215225714687.png)
+![image-20210121152305790](assets/image-20210121152305790.png)
 
-**虚拟机的缺点：**
+**虚拟机的缺点：** ①资源占用多 ②冗余步骤多 ③启动慢
 
-1、资源占用多
+#### 容器虚拟化技术
 
-2、冗余步骤多
-
-3 、启动慢
-
-#### 1.4.2 容器虚拟化技术
+*容器化技术不是模拟的一个完整的操作系统!*
 
 由于前面虚拟机存在这些缺点，Linux 发展出了另一种虚拟化技术：Linux 容器（Linux Containers，缩写为 LXC）。Linux 容器不是模拟一个完整的操作系统，而是对进程进行隔离。有了容器，就可以将软件运行所需的所有资源打包到一个隔离的容器中。容器与虚拟机不同，不需要捆绑一整套操作系统，只需要软件工作所需的库资源和设置。系统因此而变得高效轻量并保证部署在任何环境中的软件都能始终如一地运行。
 
-![image-20201215225815914](assets/image-20201215225815914.png)
+![image-20210121152609682](assets/image-20210121152609682.png)
 
 **比较了 Docker 和传统虚拟化方式的不同之处：**
 
 1. 传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程；
 2. 而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。
-3. 每个容器之间互相隔离，每个容器有自己的文件系统 ，容器之间进程不会相互影响，能区分计算资源。
+3. 每个容器之间互相隔离，<span style="color:red">每个容器有自己的文件系统 ，容器之间进程不会相互影响，能区分计算资源</span>。
 
 
 
 ### 1.5 开发/运维（DevOps）
+
+*DevOps表示开发运维一体了,开发项目,运维项目,部署项目!*
 
 **更快速的应用交付和部署：**
 
@@ -123,6 +132,8 @@ Docker的主要目标是“Build，Ship and Run Any App , Anywhere”，也就�
 
 **更高效的计算资源利用：**
 
+*Docker可以将服务器的性能压榨到极致!*
+
 Docker是内核级虚拟化，其不像传统的虚拟化技术一样需要额外的Hypervisor [管理程序] 支持，所以在一台物理机上可以运行很多个容器实例，可大大提升物理服务器的CPU和内存的利用率。
 
 
@@ -135,31 +146,50 @@ Docker中文网站：https://www.docker-cn.com
 
 Docker Hub官网：https://hub.docker.com （仓库）
 
-## 2. Docker安装
+Docker文档地址: https://docs.docker.com
 
-### 1. Docker的基本组成
+*Docker官方文档在官网底部的docs,如下图:*
 
-#### 1.1 Docker的架构图
+![image-20210121152016155](assets/image-20210121152016155.png)
 
-![image-20201215231920450](assets/image-20201215231920450.png)
+## 第 2 章: Docker安装
 
-#### 1.2 镜像(image)
+### 2.1 Docker的基本组成
 
-Docker 镜像（Image）就是一个**只读的模板**。镜像可以用来创建 Docker 容器，一个镜像可以创建很多容器。 就好似 Java 中的 类和对象，类就是镜像，容器就是对象！
+docker由 镜像, 容器,仓库
 
-#### 1.3 容器(container)
+#### Docker的架构图
+
+![image-20210121153536382](assets/image-20210121153536382.png)
+
+#### 镜像(image)
+
+Docker 镜像（Image）就是一个**只读的模板**。
+
+镜像可以用来创建 Docker 容器，一个镜像可以创建很多容器。 
+
+最终的服务运行或者项目运行就是在容器中进行的.
+
+#### 容器(container)
 
 Docker 利用容器（Container）独立运行的一个或一组应用。容器是用镜像创建的运行实例。 它可以被启动、开始、停止、删除。每个容器都是相互隔离的，保证安全的平台。 
 
 可以把容器看做是一个简易版的 Linux 环境（包括root用户权限、进程空间、用户空间和网络空间等） 和运行在其中的应用程序。 容器的定义和镜像几乎一模一样，也是一堆层的统一视角，唯一区别在于容器的最上面那一层是可读可写 的。
 
+**Docker镜像与容器的关系就像java中类与对象的关系:**
 
+- 镜像可以理解为Java 中的 类(模板)
+- 容器可以理解为对象
 
-#### 1.4 仓库(repository)
+#### 仓库(repository)
 
 仓库（Repository）是集中存放镜像文件的场所。 
 
-仓库(Repository)和仓库注册服务器（Registry）是有区别的。仓库注册服务器上往往存放着多个仓 库，每个仓库中又包含了多个镜像，每个镜像有不同的标签（tag）。 仓库分为公开仓库（Public）和私有仓库（Private）两种形式。 
+仓库(Repository)和仓库注册服务器（Registry）是有区别的。
+
+仓库注册服务器上往往存放着多个仓 库，每个仓库中又包含了多个镜像，每个镜像有不同的标签（tag）。
+
+仓库分为公开仓库（Public）和私有仓库（Private）两种形式。 
 
 最大的公开仓库是 Docker Hub(https://hub.docker.com/)，存放了数量庞大的镜像供用户下载。 
 
@@ -171,16 +201,18 @@ Docker 利用容器（Container）独立运行的一个或一组应用。容器�
 
 
 
-#### 1.5 小结
+#### 小结
 
 1. Docker 本身是一个容器运行载体或称之为管理引擎。我们把应用程序和配置依赖打包好形成一个可交付的运行环境，这个打包好的运行环境就似乎 image镜像文件。只有通过这个镜像文件才能生成 Docker 容器。image 文件可以看作是容器的模板。Docker 根据 image 文件生成容器的实例。同一个 image 文件，可以生成多个同时运行的容器实例。
 2. image 文件生成的容器实例，本身也是一个文件，称为镜像文件。
 3. 一个容器运行一种服务，当我们需要的时候，就可以通过docker客户端创建一个对应的运行实例，也就是我们的容器
 4. 至于仓库，就是放了一堆镜像的地方，我们可以把镜像发布到仓库中，需要的时候从仓库中拉下来就可以了。
 
-### 2. 环境说明
+### 2.2 环境说明
 
-> 我们使用的是 CentOS 7 (64-bit)目前，CentOS 仅发行版本中的内核支持 Docker。Docker 运行在 CentOS 7 上，要求系统为64位、系统内核版本为 3.10 以上。
+> 我们使用的是 CentOS 7 (64-bit)目前，CentOS 仅发行版本中的内核支持 Docker。
+>
+> Docker 运行在 CentOS 7 上，要求系统为64位、系统内核版本为 3.10 以上。
 
 **查看自己的内核：**
 
@@ -217,9 +249,9 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
 
 
 
-### 3. 安装步骤
+### 2.3 安装步骤
 
-#### 3.1 安装前准备
+#### 安装前准备
 
 - 官网安装参考手册：https://docs.docker.com/engine/install/centos/
 
@@ -232,7 +264,7 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
   yum -y install gcc-c++
   ```
 
-#### 3.2 docker的安装&卸载
+#### docker的安装&卸载
 
 1. 卸载旧版本(如果你之前安装了docker需要卸载)
 
@@ -254,7 +286,16 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
    yum install -y yum-utils
    ```
 
-3. 设置阿里镜像仓库
+3. 设置镜像仓库
+
+   *这里我们使用的是阿里仓库,也可以使用其他的*
+
+   ```shell
+   # 正确推荐使用国内的阿里云镜像
+   sudo yum-config-manager \
+       --add-repo \
+       http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+   ```
 
    ```shell
    # 不推荐使用国外的镜像,较慢
@@ -263,12 +304,7 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
    	https://download.docker.com/linux/centos/docker-ce.repo 
    ## 报错 [Errno 14] curl#35 - TCP connection reset by peer [Errno 12] curl#35 - Timeout 
    
-   ## -----------------
    
-   # 正确推荐使用国内的阿里云镜像
-   sudo yum-config-manager \
-       --add-repo \
-       http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
    ```
 
 4. 更新yum软件包索引
@@ -280,7 +316,7 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
 5. 安装docker相关的内容( Docker CE社区版的Docker)
 
    ```shell
-   # docker-ce: 社区, ee是企业版的
+   # docker-ce: 社区版, ee是企业版的 , 官方推荐使用社区版
    sudo yum install docker-ce docker-ce-cli containerd.io
    # 后续安装需要输入几次y
    ```
@@ -293,12 +329,16 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
 
 7. 测试命令
 
+   *docker安装成功后,测试docker是否可以运行*
+
    ```shell
-   # 查看docker版本
+   # 方式一: 查看docker版本
    docker version 
-   # 使用docker运行hello-world
+   
+   # 方式二: 使用docker运行hello-world
    docker run hello-world 
-   # docker的镜像
+   
+   # docker的镜像 这里会有hellop-world的镜像
    docker images
    ```
 
@@ -313,18 +353,19 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
    CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
    # 运行hello-world(检验docker是否安装成功)
    docker run hello-world
-   # 查看hello-world的镜像
+   # 查看hello-world的镜像,会有一个hello-word镜像
    docker images
    ```
 
 8. 卸载docker
 
    ```shell
+   # 卸载docker之前先关闭docker
    # 停止docker
    systemctl stop docker 
    # 删除docker相关内容
    yum -y remove docker-ce docker-ce-cli containerd.io 
-   # 删除docker文件夹 /var/lib/docker: 是docker的默认工作路径
+   # 删除docker文件夹  docker的默认工作路径:/var/lib/docker
    rm -rf /var/lib/docker
    ```
 
@@ -332,42 +373,48 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
 
 
 
-### 4. 阿里云镜像加速
+### 2.4 阿里云镜像加速
 
 *阿里云控制台配置后更快*
 
+1. 进入阿里云控制台找到镜像加速器
+
+   ![image-20201216155035937](assets/image-20201216155035937.png)
+
+   ![image-20201216155317225](assets/image-20201216155317225.png)
+
+2. *配置镜像加速*
+
+   ```shell
+   # 创建一个目录
+   sudo mkdir -p /etc/docker
+   # 在上面目录下的json中配置一个阿里云的地址
+   sudo tee /etc/docker/daemon.json <<-'EOF'
+   {
+     "registry-mirrors": ["https://aldgqwxx.mirror.aliyuncs.com"]
+   }
+   EOF
+   # 重启镜像
+   sudo systemctl daemon-reload
+   # 重启docker
+   sudo systemctl restart docker
+   ```
+
+   
 
 
-进入阿里云控制台找到镜像加速器
-
-![image-20201216155035937](assets/image-20201216155035937.png)
-
-![image-20201216155317225](assets/image-20201216155317225.png)
-
-*配置镜像加速*
-
-```shell
-# 创建一个目录
-sudo mkdir -p /etc/docker
-# 在上面目录下的json中配置一个阿里云的地址
-sudo tee /etc/docker/daemon.json <<-'EOF'
-{
-  "registry-mirrors": ["https://aldgqwxx.mirror.aliyuncs.com"]
-}
-EOF
-# 重启镜像
-sudo systemctl daemon-reload
-# 重启docker
-sudo systemctl restart docker
-```
 
 
 
-
-
-### 5. 镜像执行流程
+### 2.5 镜像执行流程
 
 通过前面的docker image查看到了hello-world镜像,以此为例子,了解docker运行镜像的大致流程
+
+```shell
+docker run hello-world
+```
+
+![image-20210121160313397](assets/image-20210121160313397.png)
 
 docker运行镜像的流程分析图: 
 
@@ -375,13 +422,17 @@ docker运行镜像的流程分析图:
 
 
 
-### 6. docker运行原理
+### 2.6 docker运行原理
 
 *Docker是如何工作的?*
 
+Docker是一个Client-Server结构的系统,Docker的守护进程运行在主机上,通过Socket从客户端访问
+
+DockerServer接收到Docker-Client的指令,就会执行这个命令
+
 ![image-20201216161215394](assets/image-20201216161215394.png)
 
-### 7. Docker为什么比虚拟机快
+### 2.7 Docker为什么比虚拟机快
 
 1. Docker有着比虚拟机更少的抽象层。
 
@@ -389,28 +440,47 @@ docker运行镜像的流程分析图:
 
 2. docker利用的是宿主机的内核，vm需要是Guest OS.
 
-   所以说，新建一个容器的时候，docker不需要想虚拟机一样重新加载一个操作系统内核，避免一些引导操作。虚拟机是加载Guest OS，<u>分钟</u>级别的，而docker是利用宿主机的操作系统吗，省略了这个复杂的过程，<u>秒级</u>！
+   所以说，新建一个容器的时候，docker不需要想虚拟机一样重新加载一个操作系统内核，避免一些引导操作。
+   
+   虚拟机是加载Guest OS，<u>分钟</u>级启动
+   
+   而docker是利用宿主机的操作系统，省略了这个复杂的过程，<u>秒级</u>启动
 
-## 3. Docker常用命令
+
+
+**docker与虚拟机对比**
+
+![image-20210121162108520](assets/image-20210121162108520.png)
 
 
 
-### 1. Docker帮助命令
+## 第 3 章: Docker常用命令
+
+
+
+### 3.1 Docker帮助命令
 
 ```shell
-docker version # 显示 Docker 版本信息。 
-docker info # 显示 Docker 系统信息，包括镜像和容器数。
-docker --help # docker所有的帮助命令
-	# docker 命令 --help # docker指定命令的帮助命令
-	#例如
-	docker run --help # docker 的run帮助命令
+# 显示 Docker 版本信息。 
+docker version 
+
+# 显示 Docker 系统信息，包括镜像和容器数量。
+docker info 
+
+# docker所有的帮助命令
+docker --help 
+
+# docker某个指定命令的帮助命令
+docker 命令 --help 
+#例如
+docker run --help # docker 的run帮助命令
 ```
 
 *[docker命令文档地址](https://docs.docker.com/engine/reference/commandline/)*
 
-### 2. 镜像命令
+### 3.2 镜像(类)命令
 
-#### 2.1 docker images
+#### docker images
 
 `docker images`用于显示本地镜像
 
@@ -423,24 +493,34 @@ hello-world   latest    bf756fb1ae65   11 months ago   13.3kB
 
 ```shell
 # 解释 
-# REPOSITORY 镜像的仓库源 
+# REPOSITORY 镜像的仓库源 ; 下载与运行都可以通过这个名字进行 
 # TAG 镜像的标签 
 # IMAGE ID 镜像的ID 
 # CREATED 镜像创建时间 
 # SIZE 镜像大小 
 
 # 同一个仓库源可以有多个 TAG，代表这个仓库源的不同版本，我们使用REPOSITORY：TAG 定义不同 的镜像，如果你不定义镜像的标签版本，docker将默认使用 lastest 镜像！ 
+```
+
+`docker images [可选项]`
+
+```shell
 # 可选项 
--a： 显示出本地所有镜像 
--q： 显示出本地所有镜像镜像id 
---digests： 显示镜像的摘要信息
+# -a： 显示出本地所有镜像 
+docker images -a
+# -q： 显示出本地所有镜像镜像id 
+docker images -q
+# -a和-q可以一起使用 表示显示本地所有镜像的id
+docker images -aq
+# --digests： 显示镜像的摘要信息
+docker images --digests
 ```
 
 
 
-#### 2.2 docker search
+#### docker search
 
-`docker search 镜像名`根据镜像名搜索远程仓库对应的镜像
+`docker search 镜像名` 根据镜像名搜索远程仓库对应的镜像
 
 ```shell
 # 搜索镜像(搜索mysql的镜像)
@@ -455,9 +535,13 @@ centos/mysql-57-centos7           MySQL 5.7 SQL database server                 
 ...
 ```
 
+
+
+`docker search [可选项]` 可以跟一些可选项
+
 ```shell
 # 可选项 
---filter=stars=50 ： 列出收藏数不小于指定值的镜像。
+# --filter=stars=5000 ： 列出收藏数不小于指定值的镜像。
 [root@xiyang ~]# docker search mysql --filter=stars=5000;
 NAME      DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 mysql     MySQL is a widely used, open-source relation…   10269     [OK]  
@@ -465,16 +549,16 @@ mysql     MySQL is a widely used, open-source relation…   10269     [OK]
 
 
 
-#### 2.3 docker pull
+#### docker pull
 
-`docker pull 镜像名[:tag]` 根据镜像名从远程仓库拉取指定的镜像
+`docker pull 镜像名` 根据镜像名从远程仓库拉取指定的镜像到本地仓库
 
 ```shell
 # 下载mysql镜像 
 [root@xiyang ~]# docker pull mysql
 Using default tag: latest # 如果不写tag(版本),会下载所有,默认使用最后一个latest
 latest: Pulling from library/mysql
-6ec7b7d162b2: Pull complete # 分层下载,docker images的核心 
+6ec7b7d162b2: Pull complete # 分层下载,docker images的核心 ,只会下载不存在的镜像
 fedd960d3481: Pull complete 
 7ab947313861: Pull complete 
 64f92f19e638: Pull complete 
@@ -486,11 +570,15 @@ ffe10de703ea: Pull complete
 98bfb480322c: Pull complete 
 9f2c4202ac29: Pull complete 
 a369b92bfc99: Pull complete 
-Digest: sha256:365e891b22abd3336d65baefc475b4a9a1e29a01a7b6b5be04367fcc9f373bb7 # 签名防伪
+Digest: sha256:365e891b22abd3336d65baefc475b4a9a1e29a01a7b6b5be04367fcc9f373bb7 # 签名信息防伪标志
 Status: Downloaded newer image for mysql:latest
 docker.io/library/mysql:latest # 真实地址
 # docker pull mysql <==等价于==> docker pull docker.io/library/mysql:latest
 ```
+
+
+
+`docker pull 镜像名[:tag]` 指定版本下载镜像
 
 ```shell
 # 指定版本下载 
@@ -514,7 +602,7 @@ docker.io/library/mysql:5.7
 
 
 
-#### 2.4 docker rmi
+#### docker rmi
 
 `docker rmi 镜像名` 删除指定的镜像
 
@@ -524,7 +612,7 @@ docker.io/library/mysql:5.7
 # 删除镜像 
 docker rmi -f 镜像id # 删除单个镜像 
 docker rmi -f 镜像名:tag 镜像名:tag # 删除多个 
-docker rmi -f $(docker images -qa) # 删除全部(递归删除)
+docker rmi -f $(docker images -aq) # 删除全部(递归删除)
 ```
 
 ```shell
@@ -548,9 +636,18 @@ mysql         latest    ab2f358b8612   4 days ago      545MB
 hello-world   latest    bf756fb1ae65   11 months ago   13.3kB
 ```
 
+```shell
+# 删除所有的镜像
+[root@xiyang ~]# docker rmi -f $(docker images -aq)
+...
+...
+[root@xiyang ~]# docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+```
 
 
-### 3. 容器命令
+
+### 3.3 容器(对象)命令
 
  **说明**：有镜像才能创建容器，我们这里使用 centos 的镜像来测试，就是虚拟一个 centos ！
 
@@ -559,7 +656,13 @@ hello-world   latest    bf756fb1ae65   11 months ago   13.3kB
 [root@xiyang ~]# docker pull centos
 ```
 
-#### 3.1 新建容器并启动
+
+
+#### docker run
+
+先有镜像,然后通过docker run 镜像之后,此时就是容器了;
+
+docker run的意思就是新建容器并启动
 
 ```shell
 # 命令 
@@ -570,12 +673,13 @@ docker run [可选参数] CONTAINER ID # docker run -it 300e315adb2f
 -d # 后台方式运行容器，并返回容器的id！ 
 -i # 以交互模式运行容器，通常和 -t 一起使用 
 -t # 给容器重新分配一个终端，通常和 -i 一起使用 
--P # 随机端口映射（大写） 
--p # 指定端口映射（小结），一般可以有四种写法 
+-P # 指定端口映射（大写） 
 	ip:hostPort:containerPort # 主机端口映射到容器端口
-	ip::containerPort 
-	hostPort:containerPort (常用) 
-	containerPort 
+	ip::containerPort # 主机端口与容器端口对应
+	hostPort:containerPort # (常用) 
+	containerPort #(直接指定容器端口)
+-p # 随机端口映射（小结），一般可以有四种写法 
+
 ```
 
 ```shell
@@ -595,13 +699,15 @@ exit
 
 
 
-#### 3.2 列出所有运行的容器
+#### docker ps
+
+`docker ps ` 列出所有正在运行中的容器
 
 ```shell
 # 命令 
 docker ps [OPTIONS] 
 # 常用参数说明 
--a # 列出当前所有正在运行的容器 + 历史运行过的容器 
+-a # 列出当前所有正在运行的容器 + 历史运行过的容器  a表示all,所有的意思
 -l # 显示最近创建的容器 
 -n=? # 显示最近n个创建的容器;其中?表示个数,例如-n=2,显示的就是最近创建的2个容器 
 -q # 静默模式，只显示容器编号。
@@ -618,7 +724,7 @@ CONTAINER ID   IMAGE          COMMAND       CREATED          STATUS             
 
 
 
-#### 3.3 退出容器
+#### 退出容器
 
 ```shell
 # 命令
@@ -629,39 +735,37 @@ exit
 ctrl+P+Q 
 ```
 
+#### docker rm
 
-
-#### 3.4 启动停止容器
+`docker rm 容器id` 用于删除容器的
 
 ```shell
 # 命令
-docker start 容器id # 通过容器id 启动容器 
-docker restart 容器id # 通过容器id 重启容器 
+docker rm 容器id # 删除指定容器;注意不能删除正在运行的容器,如果要强制删除需要使用 docker rm -f 容器id
+docker rm -f $(docker ps -aq) # 删除所有容器(递归删除)
+docker ps -a -q|xargs docker rm # 删除所有容器(通过linux中的管道来删除)
+```
+
+#### docker start / stop
+
+`docker start / stop 容器id`通过容器id进行启动或停止容器
+
+```shell
+# 命令
+docker start 容器id # 通过容器id 启动容器 可以启动历史运行(docker ps -a)过的容器
 docker stop 容器id # 通过容器id 停止容器 
+
+docker restart 容器id # 通过容器id 重启容器 
 docker kill 容器id # 通过容器id 强制停止容器
 ```
 
 
 
-#### 3.5 删除容器
+### 3.4 常用其他命令
 
-```shell
-# 命令
-docker rm 容器id # 删除指定容器;注意不能删除正在运行的容器,如果要强制删除需要使用 rm -f 
-docker rm -f $(docker ps -a -q) # 删除所有容器(递归删除)
-docker ps -a -q|xargs docker rm # 删除所有容器(通过linux中的管道来删除)
-```
+#### 后台启动容器
 
-
-
-### 4. 常用其他命令
-
-#### 4.1 后台启动容器
-
-```shell
-# 命令 
-docker run -d 镜像名 
-```
+`docker run -d 镜像名 ` 表示镜像通过后台的方式启动; 一般通过`-d`可以用来部署项目 
 
 ```shell
 # 例子 
@@ -684,7 +788,9 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
 
 
-#### 4.2 查看日志
+#### docker logs
+
+`docker logs`是用于查看日志的	
 
 ```shell
 # 命令 
@@ -696,7 +802,7 @@ docker logs -f -t [--tail 条数] 容器id # 不加--tail 条数会打印所有�
 ```
 
 ```shell
-# 例子：启动 centos，并编写一段脚本来测试玩玩！最后查看日志
+# 例子：启动 centos，并编写一段脚本来测试玩玩！最后查看日志  死循环        打印xiyang   3s一次  固定
 [root@xiyang ~]# docker run -d centos /bin/bash -c "while true;do echo xiyang;sleep 3;done"
 [root@xiyang ~]# docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
@@ -712,14 +818,11 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS        
 
 
 
-#### 4.3 查看容器中运行的进程信息，
+#### docker top
+
+`docker top 容器id` 查看容器中运行的进程信息，
 
 *支持 ps 命令参数*
-
-```shell
-# 命令 
-docker top 容器id 
-```
 
 ```shell
 # 测试 
@@ -731,30 +834,234 @@ root                17209               16979               0                   
 
 
 
-#### 4.4 查看容器/镜像的元数据
+#### docker inspect
+
+`docker inspect 容器id` 查看容器/镜像的元数据
 
 ```shell
-# 命令 
-docker inspect 容器id
+[root@xiyang ~]# docker inspect 3b494c3b1e20
+[
+    {
+        "Id": "3b494c3b1e20d90ed4fb718a27b013e778b6bee3806e3640dc890d03a98366bd",
+        "Created": "2021-01-21T09:27:12.821609965Z",
+        "Path": "/bin/bash",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 13516,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2021-01-21T09:27:13.21019113Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:300e315adb2f96afe5f0b2780b87f28ae95231fe3bdd1e16b9ba606307728f55",
+        "ResolvConfPath": "/var/lib/docker/containers/3b494c3b1e20d90ed4fb718a27b013e778b6bee3806e3640dc890d03a98366bd/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/3b494c3b1e20d90ed4fb718a27b013e778b6bee3806e3640dc890d03a98366bd/hostname",
+        "HostsPath": "/var/lib/docker/containers/3b494c3b1e20d90ed4fb718a27b013e778b6bee3806e3640dc890d03a98366bd/hosts",
+        "LogPath": "/var/lib/docker/containers/3b494c3b1e20d90ed4fb718a27b013e778b6bee3806e3640dc890d03a98366bd/3b494c3b1e20d90ed4fb718a27b013e778b6bee3806e3640dc890d03a98366bd-json.log",
+        "Name": "/thirsty_newton",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/2a0e74031b71e3362126ac756d1f56e098035f87d15cc23a6fdeefd53e07c114-init/diff:/var/lib/docker/overlay2/732f649fdc50441235f177a71f5932af6eddf7b6df1fa845fb75fb09a243a001/diff",
+                "MergedDir": "/var/lib/docker/overlay2/2a0e74031b71e3362126ac756d1f56e098035f87d15cc23a6fdeefd53e07c114/merged",
+                "UpperDir": "/var/lib/docker/overlay2/2a0e74031b71e3362126ac756d1f56e098035f87d15cc23a6fdeefd53e07c114/diff",
+                "WorkDir": "/var/lib/docker/overlay2/2a0e74031b71e3362126ac756d1f56e098035f87d15cc23a6fdeefd53e07c114/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "3b494c3b1e20",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": true,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "Tty": true,
+            "OpenStdin": true,
+            "StdinOnce": true,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "/bin/bash"
+            ],
+            "Image": "centos",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {
+                "org.label-schema.build-date": "20201204",
+                "org.label-schema.license": "GPLv2",
+                "org.label-schema.name": "CentOS Base Image",
+                "org.label-schema.schema-version": "1.0",
+                "org.label-schema.vendor": "CentOS"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "e6662474a8a7bc2b270e054f676c32fa9cbe3171e1ff8f9ebc9f329beb3896b4",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {},
+            "SandboxKey": "/var/run/docker/netns/e6662474a8a7",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "80415a3cac8e37f6d0818ebbbe78b80db85eb696e2d6dca21f5f337745ef1d56",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:02",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "85a86abb26d93c19566eeec1b4a41b72095fd46a61341785368fb67a75f01465",
+                    "EndpointID": "80415a3cac8e37f6d0818ebbbe78b80db85eb696e2d6dca21f5f337745ef1d56",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:02",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
 ```
 
-#### 4.5 进入正在运行的容器
+#### docker exec / attach 
 
-*我们通常容器都是使用后台方式(-d)运行的,当而我们需要进入容器,修改一些配置时,可以使用下面的两个命令进入运行中的*
+`docker exec / attach 容器id`进入正在运行的容器
 
-`docker exec -it 容器id bashShell`
+*我们通常容器都是使用后台方式(-d)运行的,而当我们需要进入容器,修改一些配置时,可以使用下面的两个命令进入运行中的*
 
-`docker attach 容器id`
+- `docker exec -it 容器id bashShell`
+
+- `docker attach 容器id`
 
 **两种命令的区别:**
 
 `exec` 是在容器中打开新的终端，并且可以启动新的进程 
 
-`attach` 直接进入容器启动命令的终端，不会启动新的进程
+`attach` 进入容器正在执行的终端，不会启动新的进程
 
 ```shell
-# 命令1 
-docker exec -it 容器id bashShell
+# 命令1  docker exec -it 容器id bashShell
 # 测试1 
 [root@xiyang ~]# docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS     NAMES
@@ -769,8 +1076,7 @@ root       467     1  0 03:16 ?        00:00:00 /usr/bin/coreutils --coreutils-p
 ```
 
 ```shell
-# 命令2 
-docker attach 容器id
+# 命令2  docker attach 容器id
 # 测试2 
 [root@xiyang ~]# docker attach 58856b0cc808
 xiyang
@@ -785,14 +1091,11 @@ xiyang
 
 
 
-#### 4.6 从容器内拷贝文件到主机上
+#### docker cp
+
+`docker cp 容器ld:容器内路径 目的主机路径`从容器内拷贝文件到主机上
 
 *拷贝是一个手动过程,后面可以使用-v卷的技术,可以实现docker容器与主机自动同步;例如可以将主机中的home目录与容器中的home目录打通,实现自动同步*
-
-```shell
-# 命令 
-docker cp 容器id:容器内路径 目的主机路径 
-```
 
 ```shell
 # 测试 : 在centos容器中创建一个文件拷贝到主机上
@@ -835,13 +1138,13 @@ SpringApplication.java
 
 
 
-### 5. 命令小结
+### 3.5 命令小结
 
-#### 5.1 图解
+#### 图解
 
 ![image-20201217113855266](assets/image-20201217113855266.png)
 
-#### 5.2 命令
+#### 命令
 
 ```shell
 attach 	Attach to a running container # 当前 shell 下 attach 连接指定运行镜像 
@@ -885,9 +1188,9 @@ wait 	Block until a container stops, then print its exit code # 截取容 器停
 
 
 
-### 6. Docker安装实战
+### 3.6 Docker安装实战
 
-#### 6.1 使用Docker安装Nginx
+#### 使用Docker安装Nginx
 
 ```shell
 # 1. 搜索nginx镜像
@@ -914,6 +1217,9 @@ mysql        5.7       697daaecf703   5 days ago     448MB
 mysql        latest    ab2f358b8612   5 days ago     545MB
 redis        latest    ef47f3b6dc11   5 days ago     104MB
 centos       latest    300e315adb2f   9 days ago     209MB
+# -d 后台运行
+# --name 给容器命名
+# -p 宿主机端口 : 容器内部端口 - p 8080:8943 真实主机端口映射docker容器内部端口 可以看看下面的图示
 [root@xiyang ~]# docker run -d --name mynginx -p 3500:80 nginx
 6fc6fabb38bdc214b9df83a6e36033712cff3f774ee7410b9b9dcc614fd98daa
 [root@xiyang ~]# docker ps
@@ -990,9 +1296,13 @@ Commercial support is available at
 
 ```
 
+`-p 宿主机端口 : docker容器端口` 容器端口暴露
 
+以阿里云为例,外网地址是120.25.155.46 ,需要先在阿里云控制台开通安全组3344,然后linux开启防火墙,3344,-p 3344:80就是打通linux和docker容器内部的连接的
 
-#### 6.2 使用docker安装 tomcat
+![image-20210122103108603](assets/image-20210122103108603.png)
+
+#### 使用docker安装 tomcat
 
 ```shell
 # 官方文档解释 
@@ -1024,6 +1334,7 @@ Status: Downloaded newer image for tomcat:latest
 docker.io/library/tomcat:latest
 
 # 2、启动tomcat
+# docker run -it --rm tomcat:9.0 官方推荐命令; --rm表示用完之后删除容器,使用 docker ps -a也无法查看到这个容器
 [root@xiyang ~]# docker run -d -p 8080:8080 --name tomcat9 tomcat
 9ac377a8a379d06e00fe3c3d1b87a2f75d4d7977f5aabdae192ea0025f1fd145
 
@@ -1033,20 +1344,45 @@ root@9ac377a8a379:/usr/local/tomcat
 
 # 4、思考：
 	# 我们以后要部署项目，还需要进入容器中，是不是十分麻烦，要是有一种技术，可以将容器 内和我们Linux进行映射挂载就好了？
-	# 我们后面会将数据卷技术来进行挂载操作，也是一个核心内容，这 里大家先听听名词就好，我们很快就会讲到！
+	# 我们后面会将数据卷技术来进行挂载操作，也是一个核心内容，这 里大家先听听名词就好，我们很快就会讲到！-v 数据卷
 ```
 
 
 
-#### 6.3 使用docker 部署 es + kibana
+#### 使用docker 部署 es + kibana
 
 ```shell
+# 我们启动es这种容器需要考虑几个问题 
+# 1、端口暴露问题 9200、9300 
+# 2、数据卷的挂载问题 data、plugins、conf 
+# 3、吃内存 - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
 
+# 扩展命令  
+docker stats 容器id # 查看容器的cpu内存和网络状态
+
+
+# 1、启动es测试 
+docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:7.6.2
+
+# 2、启动之后很卡，使用 docker stats 容器id 查看下cpu状态 ，发现占用的很大 
+
+
+# 3、测试访问 curl表示发起请求
+[root@kuangshen data]# curl localhost:9200
+
+# 4、增加上内存限制启动 
+docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e ES_JAVA_OPTS="-Xms64m -Xmx512m" elasticsearch:7.6.2
+
+# 5、启动之后，使用 docker stats 查看下cpu状态
+
+# 6、测试访问，效果一样，ok！
+
+# 思考：如果我们要使用 kibana , 如果配置连接上我们的es呢？网络该如何配置呢？
 ```
 
+![image-20210122102218806](assets/image-20210122102218806.png)
 
-
-### 7. Docker可视化安装
+### 3.7 Docker可视化安装
 
 *Docker可视化可使用Rancher(先使用),和Rancher(CI/CD)时使用*
 
@@ -1651,4 +1987,9 @@ ONBUILD # 当构建一个被继承的DockerFile时运行命令，父镜像在被
 >
 > 讲述人: B站-遇见狂神说
 
+Docker Compose
+
+Docker Swarm (简化版的k8s)
+
+CI / CD
 

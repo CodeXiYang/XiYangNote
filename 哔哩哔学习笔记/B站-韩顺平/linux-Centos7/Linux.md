@@ -149,7 +149,7 @@ Ubuntu(乌班图)、RedHat(红帽)、CentOS、Debain[蝶变]、Fedora、SuSE、O
 
 ### 3. VM的安装步骤(VM15.5)
 
-> 首先需要去 BIOS 里修改设置开启虚拟化设备支持 [参考](https://jingyan.baidu.com/article/ab0b56305f2882c15afa7dda.html);包装vm虚拟机的正常安装
+> 首先需要去 BIOS 里修改设置开启虚拟化设备支持 [参考](https://jingyan.baidu.com/article/ab0b56305f2882c15afa7dda.html);保证vm虚拟机的正常安装
 >
 > ![image-20201215141108996](assets/image-20201215141108996.png)
 >
