@@ -1,3 +1,4 @@
+* [<i class="fa fa-paper-plane-o fa-1x"></i> ✍️博客](http://120.25.155.46:8090/)
 * [<i class="fa fa-paper-plane-o fa-1x"></i> 主页](README?id=☕-Java基础)
   * [☕ JavaSE](README?id=☕-javase)
   * [🍃 JavaEE](README?id=🍃-javaee)
@@ -6,4 +7,3 @@
   * [🗄️  数据库技术](README?id=🗄%ef%b8%8f-数据库技术)
   * [🛠️  DevOps运维](README?id=🛠%ef%b8%8fdevops-运维)
   * [🎇 拓展学习](README?id=🎇-拓展学习)
-* [<i class="fa fa-paper-plane-o fa-1x"></i> ✍️博客](http://120.25.155.46:8090/)
