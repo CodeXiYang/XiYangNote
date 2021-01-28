@@ -1,4 +1,4 @@
-# Git版本控制
+#  Git版本控制
 
 > 课程名称: https://www.it666.com/my/course/188
 >
@@ -230,10 +230,164 @@ See 'git help git' for an overview of the system.
 
 ```
 
-`git help 其他指令` 如果你某个指令忘了如何使用,可以使用这种方式查看某个命令的具体使用
+`git help 其他指令` 如果你某个指令忘了如何使用,可以使用这种方式查看某个命令的具体使用; 使用后会弹到对应的网页,里面记录了详细命令
 
 ```shell
-git help add
+$ git help config
+```
+
+#### git init
+
+`git init` 是用来做仓库的初始化操作的 
+
+```shell
+ASUS@DESKTOP-6S61DQD MINGW64 ~/Desktop/新建文件夹
+$ git init
+Initialized empty Git repository in C:/Users/ASUS/Desktop/新建文件夹/.git/
+
+# Initialized empty Git repository: 初始化了一个repository
+```
+
+
+
+
+
+#### git config
+
+`git config user.name "姓名"` 在git中配置你的用户名,因为在做记录追踪的时候需要信息,还需要邮箱
+
+`git config -user.email "邮箱"` 在git中配置你的邮箱,因为在做记录追踪的时候需要信息,还需要姓名
+
+`git config -l` 查看当前git的配置信息
+
+```shell
+ASUS@DESKTOP-6S61DQD MINGW64 ~/Desktop/新建文件夹 (master)
+$ git config -l
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=D:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+user.name=CodeXiYang
+user.email=CodeXiYang@163.com
+core.autocrlf=false
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+```
+
+#### git status
+
+`git status` 查看文件当前的状态,被git管理了吗?提交到展缓区了吗?push成功了吗?
+
+如果文件名的颜色是红色(index.txt是红色),表示当前文件并没有被git管理,只是存在于工作区中
+
+```shell
+ASUS@DESKTOP-6S61DQD MINGW64 ~/Desktop/product (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+将index.txt交给git管理,提交到暂缓区 `git add 文件名称`
+
+```shell
+ASUS@DESKTOP-6S61DQD MINGW64 ~/Desktop/product (master)
+$ git add index.txt
+```
+
+重新查看当前文件的状态,文件名是绿色的就表示受git管理
+
+```shell
+ASUS@DESKTOP-6S61DQD MINGW64 ~/Desktop/product (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.txt
+```
+
+#### git commit
+
+当工作区中的文件通过git add提交到了git的暂缓区后,还没完
+
+需要将暂缓区中的文件提交到 **HEAD指针所指向的分支上** 默认HEAD指针指向的就是master分支上
+
+`git commit -m "提交信息"` 将暂缓区中的代码提交到分支上
+
+```shell
+ASUS@DESKTOP-6S61DQD MINGW64 ~/Desktop/product (master)
+$ git commit -m "初始化项目,新建了一个index.txt文件"
+[master (root-commit) 12efd8b] 初始化项目,新建了一个index.txt文件
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.txt
+```
+
+然后我们在通过git status查看状态,发现暂缓区中的文件被提交到了master分支上了
+
+```shell
+ASUS@DESKTOP-6S61DQD MINGW64 ~/Desktop/product (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+```
+
+#### git diff
+
+git satus还可以查看哪些文件做了内容修改 ; modified: 修改的;只能查看哪些文件做了修改,而不清楚文件里面具体做了什么操作
+
+```shell
+ASUS@DESKTOP-6S61DQD MINGW64 ~/Desktop/product (master)
+$ git status
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+`git diff 文件名` 可以查看指定文件名修改了哪些内容;例如将index.txt文件中编写一点内容后;最近一次修改的内容会呈绿色文字
+
+注意点: 当文件发生了修改后,他只是在工作区中发生的,并没有受到版本库的管理,需要就修改后的文件受到git管理,就需要像之前一样提交暂缓区`git add` 然后提交到分支`git commit`
+
+```shell
+ASUS@DESKTOP-6S61DQD MINGW64 ~/Desktop/product (master)
+$ git diff index.txt
+diff --git a/index.txt b/index.txt
+index e69de29..63ddc8f 100644
+--- a/index.txt
++++ b/index.txt
+@@ -0,0 +1,2 @@
++写入一点内容
++
 ```
 
 
