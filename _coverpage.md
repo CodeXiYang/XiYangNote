@@ -1,15 +1,7 @@
-# 📚  XiYang  Note
+#  XiYang  Note
 
-<div style = "font-weight: 100; font-size: 1.2rem; 
-    color: rgb(60, 60, 60); text-align: center;
-    text-shadow: 0.3rem 0.3rem 0.4rem rgba(0,0,0,.15);
-    line-height: 1.2;">
 
-    一本涵盖Java丶数据库丶前端...等网站开发知识的笔记本！
-    
-    本笔记知识主要白嫖于B站~
-    
-</div>
+> 业精于勤，荒于嬉 ; 行成于思，毁于随
 
 
 
@@ -22,7 +14,9 @@
 
 
 
+
 [📖 开始阅读](README.md)
 
 
 
+![](./resource/images/dc608723216504c55420b9f72a75e506-fe2943320ca34d3d8dab173b61acd136.jpg)

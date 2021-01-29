@@ -1389,5 +1389,8 @@ footer{
 	position: fixed;
 	font-weight: bold;
 }
+section.cover.has-mask .mask {
+	background-color: #101012!important;
+}
 ```
 
