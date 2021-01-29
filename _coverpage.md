@@ -4,10 +4,10 @@
     color: rgb(60, 60, 60); text-align: center;
     text-shadow: 0.3rem 0.3rem 0.4rem rgba(0,0,0,.15);
     line-height: 1.2;">
-    
+
     一本涵盖Java丶数据库丶前端...等网站开发知识的笔记本！
     
-    本笔记知识主要来源于各大视频网站所学
+    本笔记知识主要白嫖于B站~
     
 </div>
 

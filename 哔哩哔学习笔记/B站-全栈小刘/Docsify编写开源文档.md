@@ -1,6 +1,6 @@
 # Docsify文档框架(完结)
 
-> 视频: https://www.bilibili.com/video/BV1jD4y1d7uF?from=search&seid=15932470396305688800
+> 视频: https://www.bilibili.com/video/BV1jD4y1d7uF
 >
 > 说明: 学习的目的是用于记录笔记,比较喜欢docsify的文档风格
 
@@ -277,7 +277,8 @@ Guide哥: https://blog.csdn.net/qq_34337272/article/details/105511189
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <!--默认主题-->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
-  <link rel="stylesheet" href="resource/css/myStyle-light.css"> <!--本主题在vue.css基础上进行了自定义-->
+  <!-- <link rel="stylesheet" href="resource/css/myStyle-light.css">--> <!--本主题在vue.css基础上进行了自定义-->
+  <!----><link rel="stylesheet" href="resource/css/xiyang.css">
   <!--评论样式-->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
   <!--网站icon图标-->
@@ -290,8 +291,6 @@ Guide哥: https://blog.csdn.net/qq_34337272/article/details/105511189
   </div>
   <!--回到顶部-->
   <a class="to-top"> 🚀 </a>
-
-
   <script>
     window.$docsify = {
       //开启参数
@@ -430,7 +429,10 @@ Guide哥: https://blog.csdn.net/qq_34337272/article/details/105511189
   <!--  </script>-->
 
 
-  <!--代码高亮-->
+  <!--代码高亮
+  高亮网址: https://cdn.jsdelivr.net/npm/prismjs/components/
+  -->
+  
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script> <!--bash-->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script> <!--java-->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script> <!--python-->
@@ -445,12 +447,22 @@ Guide哥: https://blog.csdn.net/qq_34337272/article/details/105511189
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-ini.min.js"></script> <!--ini-->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-json.min.js"></script> <!--json-->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-jsonp.min.js"></script> <!--jsonp-->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-nginx.min.js"></script> <!--nginx-->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-mongodb.min.js"></script> <!--mongodb-->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-markdown.min.js"></script> <!--markdown-->
   <script src="resource/js/jquery-1.11.3.min.js"></script>
   <script src="resource/js/jquery.toTop.min.js"></script>
-  <!--自定义js-->
   <script src="resource/js/xiyangnote.js"></script>
+
+
+
 </body>
 </html>
+
+<!--
+其他编写式例
+1. https://github.com/Sanarous/Sanarous.github.io/blob/master/index.html
+-->
 ```
 
 
@@ -837,5 +849,107 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
     margin: 0 0 1rem;
     text-align: center;
 }
+```
+
+## 5. 其他个性化设置
+
+*由于之前弄的,好像有一些bug,然后就采用了github上的其他人样式了!!~~*
+
+然后[参考](https://github.com/Sanarous/Sanarous.github.io/blob/master/index.html)结合之前的做了一些修改
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XiYang Note</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/vue.css">
+    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+    <!-- 自定义样式 -->
+	<link rel="stylesheet" href="resource/css/xiyang.css">
+	<!--网站icon图标-->
+    <link rel="shortcut icon" href="resource/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<div id="app">Loading...</div>
+<!--回到顶部-->
+<a class="to-top" style="font-size: 20px"> 🚀 </a>
+
+<script>
+    window.$docsify = {
+        maxAge: 100,
+        name: 'XiYang Note',
+        coverpage: true,
+        repo: 'https://github.com/CodeXiYang/XiYangNote',
+        search: {
+            paths: 'auto',
+            placeholder: '🔍 搜索 ',
+            noData: '😞 找不到相关内容呢！',
+            depth: 6
+        },
+        subMaxLevel: 2,
+        // 加载 _navbar.md
+        loadNavbar: true,
+    };
+</script>
+<!--docsify框架-->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+<script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/docsify-copy-code.min.js"></script>
+<script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/prism-java.min.js"></script>
+<script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/prism-c.min.js"></script>
+<script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/prism-bash.min.js"></script>
+<script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/prism-sql.min.js"></script>
+<script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+<script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
+<script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/zoom-image.min.js"></script>
+<script src="https://unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<!--代码高亮
+高亮网址: https://cdn.jsdelivr.net/npm/prismjs/components/
+-->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script> <!--bash-->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script> <!--java-->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script> <!--python-->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script> <!--c-->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script> <!--javascript-->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script> <!--css-->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-powershell.min.js"></script> <!--shell-->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script> <!--sql-->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script> <!--yaml-->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script> <!--properties-->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-ini.min.js"></script> <!--ini-->
+<script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-json.min.js"></script> <!--json-->
+<script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-jsonp.min.js"></script> <!--jsonp-->
+<script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-nginx.min.js"></script> <!--nginx-->
+<script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-mongodb.min.js"></script> <!--mongodb-->
+<script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-markdown.min.js"></script> <!--markdown-->
+
+
+<!-- 回到顶部插件 -->
+<script src="resource/js/jquery-1.11.3.min.js"></script>
+<script src="resource/js/jquery.toTop.min.js"></script>
+<script>
+    const gitalk = new Gitalk({
+        clientID: '577942f4612618483174',
+        clientSecret: 'f52a3ee26b2b796006b5efe2713fb1927080c549',
+        repo: 'XiYangNote',
+        owner: 'CodeXiYang',
+        admin: ['CodeXiYang'],
+        id: location.pathname,
+        distractionFreeMode: false
+    });
+
+    //回到顶部
+    $('.to-top').toTop();
+</script>
+</body>
+</html>
 ```
 
