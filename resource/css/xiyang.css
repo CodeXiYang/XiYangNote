@@ -425,3 +425,7 @@ pre .line-highlight {
 footer{
 	display: none !important;
 }
+.app-nav{
+	position: fixed;
+	font-weight: bold;
+}
