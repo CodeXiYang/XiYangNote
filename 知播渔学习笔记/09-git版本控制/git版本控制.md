@@ -122,6 +122,8 @@ GIT是一款自由和开源的分布式版本控制系统，用于敏捷高效�
 
 ### ppt演示git是如何做版本管理
 
+*这里一定需要特别理解,让你更明白后面的命令`git add`  `git commit` `gitpush`的含义!*  
+
 1. 首先是在工作区中进行文件处理,例如你增加一个index.html文件
 
    ![image-20210122154613495](assets/image-20210122154613495.png)
@@ -144,7 +146,7 @@ git下载地址: https://git-scm.com/downloads
 
 ![image-20210122155429942](assets/image-20210122155429942.png)
 
-而且git安装成功后,你在某一个文件夹下左击,会出现两个git的特殊图标也表示安装成功了
+git安装成功后,你在某一个文件夹下左击,会出现两个git的特殊图标也表示安装成功了
 
 ![image-20210122155605553](assets/image-20210122155605553.png)
 
@@ -238,7 +240,7 @@ $ git help config
 
 #### git init
 
-`git init` 是用来做仓库的初始化操作的 
+`git init` 是用来做仓库的初始化操作,让这个文件夹被仓库所管理
 
 ```shell
 ASUS@DESKTOP-6S61DQD MINGW64 ~/Desktop/新建文件夹
@@ -275,8 +277,8 @@ core.fscache=true
 core.symlinks=false
 pull.rebase=false
 credential.helper=manager
-user.name=CodeXiYang
-user.email=CodeXiYang@163.com
+user.name=CodeXiYang  # 配置了用户名
+user.email=CodeXiYang@163.com # 配置了用户邮箱
 core.autocrlf=false
 core.repositoryformatversion=0
 core.filemode=false
