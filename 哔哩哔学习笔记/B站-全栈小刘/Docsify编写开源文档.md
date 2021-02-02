@@ -880,25 +880,37 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 <div id="app">Loading...</div>
 <!--回到顶部-->
 <a class="to-top" style="font-size: 20px"> 🚀 </a>
-
+<!--docsify配置js-->
 <script>
     window.$docsify = {
         maxAge: 100,
+        //名字配置
         name: 'XiYang Note',
         coverpage: true,
-        repo: 'https://github.com/CodeXiYang/XiYangNote',
+        //右上角github图标仓库地址配置
+        repo: 'https://gitee.com/codexiyang/XiYangNote',
+        //搜索配置
         search: {
+            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
             paths: 'auto',
             placeholder: '🔍 搜索 ',
             noData: '😞 找不到相关内容呢！',
             depth: 6
         },
         subMaxLevel: 2,
-        // 加载 _navbar.md
+        // 加载 _navbar.md配置
         loadNavbar: true,
+		//字数统计配置
+		count:{
+			countable:true,
+			fontsize:'0.9em',
+			color:'rgb(90,90,90)',
+			language:'chinese'
+		},
     };
 </script>
-<!--docsify框架-->
+
+<!--docsify框架所需要的一些配置js-->
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
 <script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/docsify-copy-code.min.js"></script>
 <script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/prism-java.min.js"></script>
@@ -906,15 +918,14 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 <script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/prism-bash.min.js"></script>
 <script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/prism-sql.min.js"></script>
 <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
-<script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
 <script src="https://cyc-1256109796.cos.ap-guangzhou.myqcloud.com/zoom-image.min.js"></script>
 <script src="https://unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
 <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
 <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="//unpkg.com/docsify-count/dist/countable.js"></script><!--字数统计插件-->
+<script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script> <!--搜索插件-->
 
-<!--代码高亮
-高亮网址: https://cdn.jsdelivr.net/npm/prismjs/components/
--->
+<!--代码高亮网址: https://cdn.jsdelivr.net/npm/prismjs/components/-->
 <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script> <!--bash-->
 <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script> <!--java-->
 <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script> <!--python-->
@@ -932,24 +943,26 @@ body.sticky .sidebar, body.sticky .sidebar-toggle {
 <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-nginx.min.js"></script> <!--nginx-->
 <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-mongodb.min.js"></script> <!--mongodb-->
 <script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-markdown.min.js"></script> <!--markdown-->
+<script src="//cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-markdown.min.js"></script> <!--markdown-->
 
-
-<!-- 回到顶部插件 -->
 <script src="resource/js/jquery-1.11.3.min.js"></script>
-<script src="resource/js/jquery.toTop.min.js"></script>
-<script>
-    const gitalk = new Gitalk({
-        clientID: '577942f4612618483174',
-        clientSecret: 'f52a3ee26b2b796006b5efe2713fb1927080c549',
-        repo: 'XiYangNote',
-        owner: 'CodeXiYang',
-        admin: ['CodeXiYang'],
-        id: location.pathname,
-        distractionFreeMode: false
-    });
+<script src="resource/js/jquery.toTop.min.js"></script><!-- 回到顶部插件,需要jQuery的支持 -->
 
-    //回到顶部
-    $('.to-top').toTop();
+
+<!--其他外部js-->
+<script>
+	//gitalk评论
+	const gitalk = new Gitalk({
+		clientID: '577942f4612618483174',
+		clientSecret: 'f52a3ee26b2b796006b5efe2713fb1927080c549',
+		repo: 'XiYangNote',
+		owner: 'CodeXiYang',
+		admin: ['CodeXiYang'],
+		id: location.pathname,
+		distractionFreeMode: false
+	});
+	//回到顶部
+	$('.to-top').toTop();
 </script>
 </body>
 </html>
