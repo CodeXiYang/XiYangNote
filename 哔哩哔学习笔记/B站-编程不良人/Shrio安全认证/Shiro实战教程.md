@@ -1,17 +1,21 @@
 # Shiro 实战教程
 
-> 视频: https://www.bilibili.com/video/BV1uz4y197Zm?from=search&seid=13289011321010158639
+> 课程名称:[Shiro实战教程](https://www.bilibili.com/video/BV1uz4y197Zm)
 >
-> 参考: 
+> 课程概述: 
 >
 > - 2020最新版Shiro教程,整合SpringBoot项目实战教程
 > - Apache Shiro 是目前使用率较高的一个 Java 安全框架。
 > - 本视频基于 Shiro 的最新版本进行录制。 内容涵盖 Shiro 认证、加密、授权、安全标签、安全注解、会话管理、缓存等内容，并整合主流微框架springboot框架，以及redis相关技术的使用。 
 > - JavaEE 企业级开发的核心技术。视频讲授过程中通过分析源代码使学员知其然更知其所以然。
+>
+> 讲述人: B站-编程不良人
 
 ![image-20200520220106539](assets/image-20200520220106539.png)
 
-## 1.权限的管理
+*需要的基础知识: SpringBoot+mybaits*
+
+## 第 1 章: 权限的管理
 
 ### 1.1 什么是权限管理
 
@@ -29,7 +33,7 @@
 
 ----
 
-## 2.什么是shiro
+## 第 2 章: 什么是shiro
 
 > **Apache Shiro™** is a powerful and easy-to-use Java security framework that performs authentication, authorization, cryptography, and session management. With Shiro’s easy-to-understand API, you can quickly and easily secure any application – from the smallest mobile applications to the largest web and enterprise applications.  
 >
@@ -37,9 +41,16 @@
 
 `Shiro是apache旗下一个开源框架，它将软件系统的安全认证相关的功能抽取出来，实现用户身份认证，权限授权、加密、会话管理等功能，组成了一个通用的安全认证框架。`
 
+
+
+*PS: 市面上目前有许多的权限框架;例如非常主流的shiro和spring security框架*
+
+- shiro学习成本低一些,简单,容易上手
+- spring security相对于shiro来说学习成本会高一点,但是随着大多数公司选用spring系列的框架来做一站式开发,所以spring security现在也比较火!
+
 ----
 
-## 3.shiro的核心架构
+## 第 3 章: shiro的核心架构
 
 ![image-20200520220413190](assets/image-20200520220413190.png)
 
@@ -85,7 +96,7 @@
 
 ----
 
-## 4. shiro中的认证
+## 第 4 章: shiro中的认证
 
 ### 4.1 认证
 
@@ -344,7 +355,7 @@ public class TestAuthenticatorCusttomerRealm {
 
 -----
 
-## 5. shiro中的授权
+## 第 5 章: shiro中的授权
 
 ### 5.1 授权
 
@@ -433,11 +444,10 @@ public class TestAuthenticatorCusttomerRealm {
   注意: Thymeleaf 中使用shiro需要额外集成!
   ```
 
-- 
 
 ### 5.7 开发授权
 
-##### 1.realm的实现
+#### 1.realm的实现
 
 ```java
 public class CustomerRealm extends AuthorizingRealm {
@@ -474,7 +484,7 @@ public class CustomerRealm extends AuthorizingRealm {
 }
 ```
 
-##### 2.授权
+#### 2.授权
 
 ```java
 public class TestAuthenticatorCusttomerRealm {
@@ -520,7 +530,7 @@ public class TestAuthenticatorCusttomerRealm {
 }
 ```
 
-## 6.整合SpringBoot项目实战
+## 第 6 章: 整合SpringBoot项目实战
 
 ### 6.0 整合思路
 
@@ -542,11 +552,11 @@ public class TestAuthenticatorCusttomerRealm {
 
 ### 6.3 配置shiro环境
 
-##### 0.创建配置类
+#### 0.创建配置类
 
 ![image-20200523101256446](assets/image-20200523101256446.png)
 
-##### 1.配置shiroFilterFactoryBean
+#### 1.配置shiroFilterFactoryBean
 
 ```java
 @Bean
@@ -560,7 +570,7 @@ public ShiroFilterFactoryBean getShiroFilterFactoryBean(SecurityManager security
 }
 ```
 
-##### 2.配置WebSecurityManager
+#### 2.配置WebSecurityManager
 
 ```java
 @Bean
@@ -571,7 +581,7 @@ public DefaultWebSecurityManager getSecurityManager(Realm realm){
 }
 ```
 
-##### 3.创建自定义realm
+#### 3.创建自定义realm
 
 ![image-20200523101402213](assets/image-20200523101402213.png)
 
@@ -591,7 +601,7 @@ public class CustomerRealm extends AuthorizingRealm {
 }
 ```
 
-##### 4.配置自定义realm
+#### 4.配置自定义realm
 
 ```java
 //创建自定义realm
@@ -601,7 +611,7 @@ public Realm getRealm(){
 }
 ```
 
-##### 5.编写控制器跳转至index.html
+#### 5.编写控制器跳转至index.html
 
 ```java
 @Controller
@@ -618,14 +628,14 @@ public class IndexController {
 
 ![image-20200523101857528](assets/image-20200523101857528.png)
 
-##### 6.启动springboot应用访问index
+#### 6.启动springboot应用访问index
 
 ![image-20200523101955121](assets/image-20200523101955121.png)
 
 - 注意:
   - **默认在配置好shiro环境后默认环境中没有对项目中任何资源进行权限控制,所有现在项目中所有资源都可以通过路径访问**
 
-##### 7.加入权限控制
+#### 7.加入权限控制
 
 - 修改ShiroFilterFactoryBean配置
 
@@ -642,7 +652,7 @@ public class IndexController {
 
   - **/\**** 代表拦截项目中一切资源  **authc** 代表shiro中的一个filter的别名,详细内容看文档的shirofilter列表
 
-##### 8.重启项目访问查看
+#### 8.重启项目访问查看
 
 ![image-20200523102831750](assets/image-20200523102831750.png)
 
@@ -666,7 +676,7 @@ public class IndexController {
 
 ### 6.5 认证实现
 
-##### 1. 在login.jsp中开发认证界面
+#### 1. 在login.jsp中开发认证界面
 
 ![image-20200526082345776](assets/image-20200526082345776.png)
 
@@ -678,7 +688,7 @@ public class IndexController {
 </form>
 ```
 
-##### 2. 开发controller
+#### 2. 开发controller
 
 ```java
 @Controller
@@ -711,7 +721,7 @@ public class UserController {
 
 - **在认证过程中使用subject.login进行认证**
 
-##### 3.开发realm中返回静态数据(未连接数据库)
+#### 3.开发realm中返回静态数据(未连接数据库)
 
 ```java
 @Override
@@ -726,7 +736,7 @@ public class UserController {
 }
 ```
 
-##### 4.启动项目以realm中定义静态数据进行认证
+#### 4.启动项目以realm中定义静态数据进行认证
 
 ![image-20200526082550343](assets/image-20200526082550343.png)
 
@@ -738,11 +748,11 @@ public class UserController {
 
 ### 6.6 退出认证
 
-##### 1.开发页面退出连接
+#### 1.开发页面退出连接
 
 ![image-20200526082851800](assets/image-20200526082851800.png)
 
-##### 2.开发controller
+#### 2.开发controller
 
 ```java
 @Controller
@@ -761,11 +771,11 @@ public class UserController {
 }
 ```
 
-##### 3.修改退出连接访问退出路径
+#### 3.修改退出连接访问退出路径
 
 ![image-20200526083056062](assets/image-20200526083056062.png)
 
-##### 4.退出之后访问受限资源立即返回认证界面
+#### 4.退出之后访问受限资源立即返回认证界面
 
 ![image-20200526083148253](assets/image-20200526083148253.png)
 
@@ -1095,7 +1105,7 @@ public Realm getRealm(){
 
 ### 6.8 授权实现
 
-##### 0.页面资源授权
+#### 0.页面资源授权
 
 ```jsp
 <%@taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
@@ -1125,7 +1135,7 @@ public Realm getRealm(){
         </shiro:hasRole>
 ```
 
-##### 1.代码方式授权
+#### 1.代码方式授权
 
 ```java
 @RequestMapping("save")
@@ -1147,7 +1157,7 @@ public String save(){
 
 ![image-20200527203343928](assets/image-20200527203343928.png)
 
-##### 2.方法调用授权
+#### 2.方法调用授权
 
 - @RequiresRoles               用来基于角色进行授权
 - @RequiresPermissions    用来基于权限进行授权
@@ -1166,7 +1176,7 @@ public String save(){
 
 ----
 
-##### 3.授权数据持久化
+#### 3.授权数据持久化
 
 ![image-20200527204839080](assets/image-20200527204839080.png)
 
@@ -1235,7 +1245,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 ----
 
-##### 4.创建dao方法
+#### 4.创建dao方法
 
 ```java
  //根据用户名查询所有角色
@@ -1244,7 +1254,7 @@ User findRolesByUserName(String username);
 List<Perms> findPermsByRoleId(String id);
 ```
 
-##### 5.mapper实现
+#### 5.mapper实现
 
 ```xml
 <resultMap id="userMap" type="User">
@@ -1277,7 +1287,7 @@ List<Perms> findPermsByRoleId(String id);
 </select>
 ```
 
-##### 6.Service接口
+#### 6.Service接口
 
 ```java
 //根据用户名查询所有角色
@@ -1286,7 +1296,7 @@ User findRolesByUserName(String username);
 List<Perms> findPermsByRoleId(String id);
 ```
 
-##### 7.Service实现
+#### 7.Service实现
 
 ```java
 @Override
@@ -1300,7 +1310,7 @@ public User findRolesByUserName(String username) {
 }
 ```
 
-##### 8.修改自定义realm
+#### 8.修改自定义realm
 
 ```java
 public class CustomerRealm extends AuthorizingRealm {
@@ -1334,7 +1344,7 @@ public class CustomerRealm extends AuthorizingRealm {
 
 ![image-20200527213821611](assets/image-20200527213821611.png)
 
-##### 9.启动测试
+#### 9.启动测试
 
 ---
 
@@ -1720,7 +1730,7 @@ public class RedisCache<K,V> implements Cache<K,V> {
 
   ----
 
-## 7.Shiro整合springboot之thymeleaf权限控制
+## 第 7 章: Shiro整合springboot之thymeleaf权限控制
 
 ### 1.引入扩展依赖
 
@@ -1823,7 +1833,7 @@ public ShiroDialect shiroDialect(){
 
 
 
-## SQL脚本
+## 附: SQL脚本
 
 ```sql
 /*
