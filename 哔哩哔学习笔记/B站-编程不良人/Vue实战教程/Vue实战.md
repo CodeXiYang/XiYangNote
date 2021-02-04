@@ -6,6 +6,7 @@
 >
 > 课程概述: 
 >
+> - 基于Vue2.x版本的教程; 新的vue3教程基于TypeScript进行了重构!
 > - 需要有html和css和javascript基础就可以学习Vue
 > - 适合学java的开发者学习的vue教程
 > - 包含了一些vue基础的知识以及前后端数据提交的axios技术,还有工程化开发的vue-cli脚手架
@@ -265,7 +266,10 @@ vue中可以通过`v-on`来绑定事件
 
 ### 4.1 绑定事件基本语法
 
-语法格式: `v-on:事件类型=方法名` 方法名就是定义在vue的**methods**区中的自定义方法!
+语法格式: `v-on:事件类型=方法名` 
+
+- 事件类型: 原生的javascript中的事件去掉on就ok了
+- 方法名就是定义在vue的**methods**区中的自定义方法!
 
 *需求: 一个按钮,一个年龄显示区域;初始年龄为23,每次点击按钮就会触发下面显示区域增加1岁*
 
@@ -508,51 +512,81 @@ funName(){
 
 ```html
 <div id="app">
-    <!--v-show: 用来控制标签展示还是隐藏的-->
-    <h2 v-show="false">百知教育欢迎你的加入!</h2>
-    <h2 v-show="show">百知教育欢迎你的加入这是vue中定义变量true!</h2>
-    <input type="button" value="展示隐藏标签" @click="showmsg">
-
+    <span v-show="true">true可以看到</span>
+    <span v-show="false">false无法看到</span>
+    <p v-show="show1">能看到</p>
+    <p v-show="show2">不能看到</p>
 </div>
-<!--引入vue.js-->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app",
+        data:{
+            show1:true,
+            show2:false,
+        },
+    });
+</script>
+```
+
+![image-20210204095405682](assets/image-20210204095405682.png)
+
+**小结:**
+
+1. 在使用v-show时可以直接通过书写boolean值(`true/false`)控制元素显示与隐藏,也可以通过data中定义的变量来控制标签展示和隐藏
+2. 在v-show中可以通过boolean表达式控制标签的展示和隐藏
+
+**需求** : 一个按钮,一个显示区域,通过按钮触发显示区域的展开与折叠功能
+
+![](assets/2021年2月3日4.gif)
+
+```html
+<div id="app">
+    <button v-on:click="showFun">{{oBtnValue}}</button>
+    <ul v-show="show">
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+    </ul>
+</div>
 <script>
     const app = new Vue({
         el:"#app",
         data:{
             show:false,
+            oBtnValue:"展开"
         },
         methods:{
-            //定义时间
-            showmsg(){
-                this.show =  !this.show;
-            }
+            showFun:function (){
+                this.show=!this.show;
+                if(this.show){
+                    this.oBtnValue="折叠"
+                }else{
+                    this.oBtnValue="展开"
+                }
+            },
         }
-    })
+    });
 </script>
 ```
 
-**小结:**
 
-1. 在使用v-show时可以直接书写boolean值控制元素展示,也可以通过变量控制标签展示和隐藏
-2. 在v-show中可以通过boolean表达式控制标签的展示课隐藏
 
 ### 5.2 v-if 
 
-> `v-if`: 用来控制页面元素是否展示   底层控制是DOM元素    操作DOM
+> `v-if`: 用来控制页面元素是否展示   底层控制是DOM元素    操作DOM ; 当v-if的值为false的时候,对应的节点会从DOM模型中删除
 
 ```html
 <div id="app">
-    <h2 v-if="false">百知教育</h2>
-    <h2 v-if="show">百知教育欢迎你的加入</h2>
+    <span v-if="show">显示</span>
+    <span v-if="false">隐藏</span>
 </div>
-<!--引入vue.js-->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/vue.js"></script>
 <script>
     const app = new Vue({
         el:"#app",
         data:{
-            show:false
+            show:true,
         },
         methods:{
 
@@ -561,9 +595,11 @@ funName(){
 </script>
 ```
 
+![image-20210204100355042](assets/image-20210204100355042.png)
+
 ### 5.3 v-bind
 
-> `v-bind`: 用来绑定标签的属性从而通过vue动态修改标签的属性
+> `v-bind`: 用来绑定标签的属性的    从而通过vue动态修改标签的属性 ;  例如像img标签的src属性,这种属性的值也应该是放到data中动态传递,而不是直接在src中写死的,那么就可以通过src来进行值的绑定
 
 ```html
 <div id="app">
@@ -627,57 +663,39 @@ funName(){
 
 ```html
 <div id="app">
-    
-    <span>{{ user.name }} {{ user.age }}</span>
-    <br>
-    <!--
-       通过v-for遍历对象
-    -->
-    <span v-for="(value,key,index) in user">
-        {{index}} : {{key}} : {{value}}
-    </span>
-
-    <!--
-        通过v-for遍历数组
-    -->
+    <!--遍历对象-->
+    <span v-for="(value,key,index) in user">{{index}} === {{key}} === {{value}}<br></span>
+    <!--遍历数组-->
+    <p v-for="value,index in arr">{{index}}---{{value}}</p>
+    <!--遍历数组中的对象 :key 便于vue内部做重用和排序-->
     <ul>
-        <li v-for="a,index in arr" >
-            {{index}} {{a}}
-        </li>
-    </ul>
-
-    <!--
-        通过v-for遍历数组中对象
-        :key 便于vue内部做重用和排序
-    -->
-    <ul>
-        <li v-for="user,index in users" :key="user.id">
+        <li v-for="user, index in users" v-bind:key="user.id">
             {{index+1}} {{ user.name }}  === {{ user.age }} ==== {{ user.content }}
         </li>
     </ul>
 
 </div>
-<!--引入vue-->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/vue.js"></script>
 <script>
     const app = new Vue({
-        el: "#app",
-        data: {
-            user:{name:"小陈",age:23},
-            arr:["北京校区", "天津校区", "河南校区"],
+        el:"#app",
+        data:{
+            user:{usrName:"CodeXiYang@163.com",usrPwd:"123456",usrSex:"男"},
+            arr:["北京","上海","广州","深圳"],
             users:[
-                {id:"1",name:"xiaochen",age:23,content:"我曾经也是一个单纯的少年!"},
-                {id:"2",name:"小白",age:23,content:"我曾经是一个邪恶的少年!"},
+                {id:"1",name:"小黎",age:23,content:"我曾经也是一个单纯的少男!"},
+                {id:"2",name:"小冯",age:22,content:"我曾经也是一个单纯的少女!"},
             ]
-        },
-        methods: {}
-    });
+        }
+    })
 </script>
 ```
 
-**小结:**
+![image-20210204110723213](assets/image-20210204110723213.png)
 
-1. 在使用v-for的时候一定要注意加入:key 用来给vue内部提供重用和排序的唯一key 
+**小结:** 在使用v-for的时候一定要注意加入`:key `用来给vue内部提供重用和排序的唯一key 
+
+
 
 ----
 
@@ -687,27 +705,31 @@ funName(){
 
 ```html
 <div id="app">
-    <input type="text" v-model="message">
-    <span>{{message}}</span>
-    <hr>
-    <input type="button" value="改变Data中值" @click="changeValue">
+    <input type="text" v-model="msg">
+    <span style="color: red">{{msg}}</span>
+    <br>
+    <button @click="changeValue">重置</button>
 </div>
-<!--引入vue-->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
     const app = new Vue({
-        el: "#app",
-        data: {
-            message:""
+        el:"#app",
+        data:{
+            msg:""
         },
-        methods: {
-            changeValue(){
-                this.message='百知教育!';
+        methods:{
+            changeValue:function (){
+                this.msg = "随便输入一些数据"
             }
         }
-    });
+    })
 </script>
+<!--
+所谓的数据单向绑定就是 页面上的标签数据与data中的数据进行绑定 通过{{}}来进行数据渲染的
+所谓的数据双向绑定就是 页面上的a标签的数据通过v-model进行数据绑定的,当v-model中的值发生变化后,数据中的值就立即发生变化,例如典型的input输入框
+-->
 ```
+
+![img](assets/2021年2月3日5.gif)
 
 **小结:**
 
@@ -718,54 +740,167 @@ funName(){
 	- VM:   ViewModel  监听器
 	- View:  页面  页面展示的数据
 
+
+
+## 案例 :  记事本效果
+
+结合前面学的一些基础语法的一个小案例
+
+需求分析: 
+
+- 输入框中输入数据,添加记录后形成流水记录,最下面有数量统计
+- 每条流水记录可以删除
+- 提供一个按钮,可以删除所有流水记录,并且,没有流水记录的时候不显示这个按钮,有记录才显示
+
+思路分析: 基于数组进行实现的
+
+- 新增一个流水记录: 输入框中的数据串到data中
+- 删除一个记录: 通过索引删除
+- 删除所有记录: 数组置空
+
+```html
+<div id="app">
+    <!--便签记录-->
+    <p>
+        <input type="text" v-model="content">
+        <button @click="addMemo">添加到记事本</button>
+    </p>
+    <!--历史便签显示与操作-->
+    <div>
+        <ul>
+            <li v-for="memo,index in memos">
+                {{index+1}} {{memo}} <a href="javascript:;" @click="delMemo(index)">删除</a>
+            </li>
+        </ul>
+    </div>
+    <!--数量统计-->
+    <p>
+        总数量: <span style="color:red">{{count}}</span> 条
+        <a href="javascript:;" @click="delAllMemo" v-if="memos.length!=0">删除所有</a>
+    </p>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#app",
+        data:{
+            //便签数量统计
+            count:2,
+            //便签内容存储
+            memos:[
+                "今天中午吃了3两面条",
+                "完成智慧浇灌的植物档案任务"
+            ],
+            //定义一个变量保存
+            content:""
+        },
+        methods:{
+            //添加一个记录
+            addMemo:function (){
+                this.memos.push(this.content);
+                this.content="" //每次添加数据后置空
+                this.count++;
+            },
+            //删除一个记录
+            delMemo:function (index){
+                //通过index来删除
+                this.memos.splice(index,1);//参数1:从哪个下标开始删除  参数2:删除几个元素
+                this.count--;
+            },
+            //删除所有记录
+            delAllMemo:function (){
+                this.memos  = []; //数组置空操作
+                this.count = 0;
+            }
+        }
+    })
+</script>
+```
+
+![](assets/2021年2月3日6.gif)
+
 -----
 
 ## 8. 事件修饰符
 
 > `修饰符`: 作用是用来和事件连用,用来决定事件触发条件或者是阻止事件的触发机制
+>
+> 事件修饰符的格式是: `@事件类型.修饰符=方法`
 
 ```markdown
 # 1.常用的事件修饰符
-	.stop
-	.prevent
-	.capture
-	.self
-	.once
-	.passive
+.stop 阻止事件冒泡
+.prevent 阻止事件的默认行为
+.capture
+.self 只触发标签自己的事件
+.once 只触发一次事件
+.passive
 ```
 
 ### 8.1 stop事件修饰符
 
-> stop时间修饰符是用来阻止事件冒泡
+> stop事件修饰符是用来阻止事件冒泡
+>
+> 所谓的事件冒泡就是嵌套的元素里面,子元素触发事件后,会触发父元素中的事件
 
 ```html
+<style>
+    .father{
+        background: red;
+        width: 200px;
+        height: 200px;
+    }
+    .son{
+        background-color: green;
+        width: 100px;
+        height: 100px;
+    }
+</style>
 <div id="app">
-    <div class="aa" @click="divClick">
-        <!--用来阻止事件冒泡-->
-        <input type="button" value="按钮" @click.stop="btnClick">
+    <div class="father" @click="fatherDivClick">
+        <div class="son" v-on:click="sonDivClick"></div>
     </div>
 </div>
-<!--引入vue-->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/vue.js"></script>
 <script>
-    const app = new Vue({
-        el: "#app",
-        data: {},
-        methods: {
-            btnClick(){
-                alert('button被点击了');
+    let app = new Vue({
+        el:"#app",
+        data:{
+
+        },
+        methods:{
+            fatherDivClick(){
+                alert("父亲触发事件");
             },
-            divClick(){
-                alert('div被点击了');
+            sonDivClick(){
+                alert("儿子触发事件")
             }
         }
     });
 </script>
 ```
 
+看下面的结果: 只是用鼠标触发了绿色部分的元素的事件,但是红色的父元素绑定的事件也执行了 ; 这种重下往上就是事件冒泡
+
+![img](assets/2021年2月3日7.gif)
+
+vue中提供了`.stop`事件修饰符阻止事件冒泡,直接添加在子元素绑定的事件上即可,就不会触发父元素的事件了
+
+```html
+<div id="app">
+    <div class="father" @click="fatherDivClick">
+        <div class="son" v-on:click.stop="sonDivClick"></div>
+    </div>
+</div>
+```
+
+![img](assets/2021年2月3日8.gif)
+
 ### 8.2 prevent 事件修饰符
 
 > prevent事件修饰符是用来阻止标签的默认行为
+>
+> 事件的默认行为: 例如a标签,没有添加事件的时候,点击它也会自动跳转;vue中提供`.prevent`修饰符用来阻止事件的默认行为
 
 ```html
 <!--用来阻止事件的默认行为-->
@@ -1187,15 +1322,15 @@ const app = new Vue({
 
 ## 13.Vue中路由(VueRouter)
 
-#### 13.1 路由
+### 13.1 路由
 
 `路由:根据请求的路径按照一定的路由规则进行请求的转发从而帮助我们实现统一请求的管理`
 
-#### 13.2 作用
+### 13.2 作用
 
 `用来在vue中实现组件之间的动态切换`
 
-#### 13.3 使用路由
+### 13.3 使用路由
 
 1. 引入路由
 
