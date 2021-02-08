@@ -428,7 +428,7 @@ funName(){
 
 
 
-### 4.5 案例: 购物车商品数量选择
+### 案例: 购物车商品数量选择
 
 一个购物车案例,通过事件,实现`+` 和`-`按钮改变数量和总价
 
@@ -903,9 +903,41 @@ vue中提供了`.stop`事件修饰符阻止事件冒泡,直接添加在子元素
 > 事件的默认行为: 例如a标签,没有添加事件的时候,点击它也会自动跳转;vue中提供`.prevent`修饰符用来阻止事件的默认行为
 
 ```html
-<!--用来阻止事件的默认行为-->
-<a href="http://www.baizhibest.com/" @click.prevent="aClick">百知教育</a>
+<div id="app">
+    <a href="https://www.baidu.com" @click="oAclick">百度一下</a>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        data:{
+            msg:""
+        },
+        methods:{
+            oAclick: function (){
+                alert("a标签被触发了")
+            },
+        }
+    });
+</script>
 ```
+
+![img](assets/2021年2月5日1.gif)
+
+可以看到当a链接被点击之后,首先触发的是标签上绑定的事件,然后触发了标签默认跳转的行为;
+
+vue中提供了`.prevent`事件修饰符就是用来阻止跳转的默认行为的!
+
+```html
+<div id="app">
+    <!--.prevent用来阻止事件的默认行为-->
+    <a href="https://www.baidu.com" @click.prevent="oAclick">百度一下</a>
+</div>
+```
+
+阻止了事件的默认行为后,就不会进行跳转了!
+
+![img](assets/2021年2月5日2.gif)
 
 ### 8.3 self 事件修饰符
 
@@ -914,25 +946,116 @@ vue中提供了`.stop`事件修饰符阻止事件冒泡,直接添加在子元素
 > 只关心自己标签上触发的事件 不监听事件冒泡
 
 ```html
-<!--只触发标签自身的事件-->
-<div class="aa" @click.self="divClick">
-    <!--用来阻止事件冒泡-->
-    <input type="button" value="按钮" @click.stop="btnClick">
-    <input type="button" value="按钮1" @click="btnClick1">
+<div id="app">
+    <div @click="oDivClick" style="width: 100px;height: 100px;background: red">
+        <button @click="oBtn1">按钮1</button>
+        <button @click="oBtn2">按钮2</button>
+    </div>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        data:{
+            msg:""
+        },
+        methods:{
+            oDivClick:function (){
+                alert("父元素div事件触发")
+            },
+            oBtn1:function (){
+                alert("按钮1事件触发");
+            },
+            oBtn2:function (){
+                alert("按钮2事件触发")
+            }
+        }
+    });
+</script>
+```
+
+![img](assets/2021年2月5日3.gif)
+
+例如上述例子,点击每个按钮都会触发事件冒泡,我们可以通过`.stop`添加到每个按钮上使起不会触发冒泡
+
+```html
+<div id="app">
+    <div @click="oDivClick" style="width: 100px;height: 100px;background: red">
+        <button @click.stop="oBtn1">按钮1</button>
+        <button @click.stop="oBtn2">按钮2</button>
+    </div>
 </div>
 ```
 
+![img](assets/2021年2月5日4.gif)
+
+这有存在个问题;如果有非常多的子元素都会触发事件冒泡,那么是不是每个元素都要去添加`.stop`事件呢?答案是否定的,vue给我们提供了`.self`修饰符,就是专门用来处理这种情况的;只要在父元素上添加了`.self`事件修饰符,那么当且仅当父元素自己本身触发事件才会生效,子元素冒泡来的事件不会生效!
+
+```html
+<div id="app">
+    <div @click.self="oDivClick" style="width: 100px;height: 100px;background: red">
+        <button @click="oBtn1">按钮1</button>
+        <button @click="oBtn2">按钮2</button>
+    </div>
+</div>
+```
+
+![img](assets/2021年2月5日5.gif)
+
+
+
 ### 8.4 once 事件修饰符
 
-> once事件修饰符的作用是让指定事件只触发一次
+> once事件修饰符的作用是让指定事件只触发一次  后面点击后就无效了
+
+```html
+<div id="app">
+    <button @click.once="oBtn">按钮</button>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        methods:{
+            oBtn:function (){
+                alert("触发了!")
+            }
+        }
+    });
+</script>
+```
+
+![img](assets/2021年2月5日6.gif)
+
+
+
+### 8.5 事件修饰符串联
+
+> 事件修饰符可以进行串联使用,其格式就是`事件类型.修饰符1.修饰符2....`
 
 ```html
 <!--
 .prevent : 用来阻止事件的默认行为
 .once    : 用来只执行一次特定的事件
 -->
-<a href="http://www.baizhibest.com/" @click.prevent.once="aClick">百知教育</a>
+<div id="app">
+    <!--阻止a标签事件的默认行为,并且只会执行一次-->
+    <a href="https://www.baidu.com/" @click.prevent.once="aClick">百度一下</a>
+</div>
+<script src="js/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        methods:{
+            aClick(){
+                alert("a标签的事件执行了!")
+            }
+        }
+    });
+</script>
 ```
+
+![img](assets/2021年2月5日7.gif)
 
 ----
 
@@ -953,13 +1076,54 @@ vue中提供了`.stop`事件修饰符阻止事件冒泡,直接添加在子元素
 	.right
 ```
 
+### keyup事件类型
+
+> keyup事件是键盘抬起的时候就会触发的事件
+>
+> 事件修饰符可以限定键盘抬起的时候哪些键才会触发
+
+```html
+<div id="app">
+    <input type="text" @keyup="keyClick">
+</div>
+<script src="js/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        methods:{
+            keyClick(){
+                alert("触发了吗?")
+            }
+        }
+    });
+</script>
+```
+
+![img](assets/2021年2月5日8.gif)
+
 ### 9.1 enter 回车键
 
 > enter用来在触发回车按键之后触发的事件
 
 ```html
- <input type="text" v-model="msg" @keyup.enter="keyups">
+<!--事件类型keyup: 表示键盘抬起就会触发的事件-->
+<div id="app">
+    <input type="text" @keyup.enter="keyClick">
+</div>
+<script src="js/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        methods:{
+            keyClick(){
+                alert("触发了吗?")
+            }
+        }
+    });
+</script>
 ```
+
+![img](assets/2021年2月5日9.gif)
 
 ### 9.2 tab 键
 
@@ -969,127 +1133,468 @@ vue中提供了`.stop`事件修饰符阻止事件冒泡,直接添加在子元素
 <input type="text" @keyup.tab="keytabs">
 ```
 
+
+
+### 9.3 space 键
+
+> 当点击键盘的空格键后触发
+
+```html
+<div id="app">
+    <input type="text" @keyup.space="keyClick">
+</div>
+<script src="js/vue.js"></script>
+<script>
+    let app = new Vue({
+        el:"#app",
+        methods:{
+            keyClick(){
+                alert("触发了吗?")
+            }
+        }
+    });
+</script>
+```
+
+
+
 ----
 
 ## 10. Axios 基本使用
+
+> axios不属于vue中的内容;但是vue不再提倡操作dom元素,所以就不要在vue中使用jquery了
+>
+> 我们知道通过原生的js来发送ajax数据比较麻烦.选用的是jquery中封装的ajax来进行前后端数据
+>
+> 当不在推荐使用jquery后,vue官方推荐使用 `Axios`来进行前后端数据交互了~
 
 ### 10.1 引言
 
 > `Axios` 是一个异步请求技术,核心作用就是用来在页面中发送异步请求,并获取对应数据在页面中渲染       页面局部更新技术  Ajax
 
+#### 后台项目准备
+
+在学习axios技术的时候,需要有一定的后端知识,例如我是学java的,我使用了springboot来搭建了后台服务!
+
+##### 创建springboot项目
+
+![image-20210205130718873](assets/image-20210205130718873.png)
+
+##### 项目结构
+
+![image-20210205135837968](assets/image-20210205135837968.png)
+
+###### UserController
+
+*usercontroller中的代码*
+
+```java
+@RestController
+@RequestMapping("/user")
+public class UserController {
+    //删除数据
+    @CrossOrigin
+    @DeleteMapping("delete")
+    public Map<String,Object> delete(String id){
+        HashMap<String, Object> map = new HashMap<>();
+        System.out.println("id = " + id);
+        map.put("success",true);
+        return map;
+    }
+
+    //保存数据
+    @CrossOrigin
+    @PostMapping("save")
+    public Map<String,Object> save(@RequestBody User user){
+        HashMap<String, Object> map = new HashMap<>();
+        System.out.println("user = " + user);
+        map.put("success",true);
+        return map;
+    }
+    //展示所有
+    @CrossOrigin //用于解决跨域的
+    @GetMapping("findAll")
+    public List<User> findAll(){
+        ArrayList<User> users = new ArrayList<>();
+        users.add(new User("21","陈艳男","609937647egg.com",23,"12123124"));
+        users.add(new User("22","陈冠希","609937647egg.com",41,"12123124"));
+        users.add(new User("23","胡歌","609937647egg.com",33,"12123124"));
+        return users;
+    }
+    //根据名字查询用户数据
+    @CrossOrigin
+    @GetMapping("findByuserName")
+    public User findAll(String userName){
+        //System.out.println(userName);
+        //伪造数据
+        ArrayList<User> users = new ArrayList<>();
+        users.add(new User("21","陈艳男","609937647egg.com",23,"12123124"));
+        users.add(new User("22","陈冠希","609937647egg.com",41,"12123124"));
+        users.add(new User("23","胡歌","609937647egg.com",33,"12123124"));
+        for (User user:
+             users) {
+            if(user.getUserName().equals("胡歌")){
+                return user;
+            }
+        }
+        return null;
+    }
+}
+```
+
+###### User
+
+*实体类中的user代码*
+
+```java
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class User {
+    private String id;
+    private String UserName;
+    private String email;
+    private Integer age;
+    private String phone;
+}
+```
+
+###### application.properties
+
+*项目配置文件*
+
+```properties
+server.port=8080
+```
+
+###### pom.xml依赖
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.12</version>
+    </dependency>
+</dependencies>
+```
+
+
+
 ### 10.2 Axios 第一个程序
 
 中文网站:https://www.kancloud.cn/yunye/axios/234845
 
-安装: https://unpkg.com/axios/dist/axios.min.js
+引入axios.js文件: https://unpkg.com/axios/dist/axios.js
+
+**注意: 请启动上面搭建的后台项目!!!**
 
 #### 10.2.1 GET方式的请求
 
+##### 发送get请求
+
+语法格式:`axios.get("请求地址")`
+
+```html
+<script src="js/axios.js"></script> <!--axios-->
+<script>
+    //axios发送GET请求
+    axios.get("http://localhost:8080/user/findAll")
+</script>
+```
+
+![image-20210205140409403](assets/image-20210205140409403.png)
+
+##### 操作get请求中的数据
+
+> 当请求成功之后,可以通过axios中提供的`then(参数)`回调函数进行成功后的后续操作 ; 这里的参数就是后端响应到前端成功之后的数据!
+>
+> 当请求失败之后,可以通过axios中提供的`catch()` 回调函数进行失败后的后续操作
+>
+>  **response** 就是后台响应到前端的数据!
+
 ```js
 //发送GET方式请求
-axios.get("http://localhost:8989/user/findAll?name=xiaochen").then(function(response){
-    console.log(response.data);
-}).catch(function(err){
-    console.log(err);
-});
+<script>
+    //axios发送GET请求
+    axios
+        .get("http://localhost:8080/user/findAll")
+        //响应成功之后的操作
+        .then(function(resp){
+            console.log("success");
+            console.log(resp);
+		    console.log(resp.data);
+        })
+        //响应失败之后的操作
+        .catch(function (){
+            console.log("err");
+        })
+</script>
 ```
+
+*浏览器中控制台打印的数据*
+
+![image-20210205143829739](assets/image-20210205143829739.png)
+
+##### 有参数
+
+当请求中有参数的时候,前端可以使用`?`来进行数据拼接
+
+例如: 显示用户名为胡歌的数据
+
+```html
+<script>
+    //axios发送GET请求
+    axios
+        .get("http://localhost:8080/user/findByuserName?userName=胡歌")
+        //响应成功之后的操作
+        .then(function(resp){
+            console.log("success");
+            console.log(resp);
+            console.log(resp.data);
+        })
+        //响应失败之后的操作
+        .catch(function (){
+            console.log("err");
+        })
+</script>
+```
+
+![image-20210205145516173](assets/image-20210205145516173.png)
+
+
 
 #### 10.2.2 POST方式请求
 
 ```javascript
-//发送POST方式请求
-axios.post("http://localhost:8989/user/save",{
-    username:"xiaochen",
-    age:23,
-    email:"xiaochen@zparkhr.com",
-    phone:13260426185
-}).then(function(response){
-    console.log(response.data);
-}).catch(function(err){
-    console.log(err);
-});
+<script>
+    //发送post请求 post(url,{json数据})
+    axios.post("http://localhost:8080/user/save",{
+        username:"张无忌",
+        age:23,
+        email:"CodeXiYang@163.com",
+        phone:13260426185}).then(function (resp){
+    }).catch(function (err){
+        console.log("请求失败"+err);
+    })
+</script>
 ```
+
+后台打印下前端发送到后端的数据:
+
+![image-20210205150612956](assets/image-20210205150612956.png)
 
 #### 10.2.3 axios并发请求
 
 > `并发请求`:  将多个请求在同一时刻发送到后端服务接口,最后在集中处理每个请求的响应结果
+>
+> 语法格式: `axios.all([方法1(),方法2()]).then(function(resp1,resp2){}).catch(function(err1,err2){})`
 
 ```js
-//1.创建一个查询所有请求
-function findAll(){
-    return axios.get("http://localhost:8989/user/findAll?name=xiaochen");
-}
+<script>
+    //1.创建一个查询所有请求
+    function findAll(){
+        return axios.get("http://localhost:8080/user/findByuserName?userName=胡歌");
+    }
 
-//2.创建一个保存的请求
-function save(){
-    return axios.post("http://localhost:8989/user/save",{
-        username:"xiaochen",
-        age:23,
-        email:"xiaochen@zparkhr.com",
-        phone:13260426185
-    });
-}
-
-//3.并发执行
-axios.all([findAll(),save()]).then(
-    axios.spread(function(res1,res2){  //用来将一组函数的响应结果汇总处理
-        console.log(res1.data);
-        console.log(res2.data);
-    })
-);//用来发送一组并发请求
+    //2.创建一个保存的请求
+    function save(){
+        return axios.post("http://localhost:8080/user/save",{
+            username:"xiaochen",
+            age:23,
+            email:"xiaochen@zparkhr.com",
+            phone:13260426185
+        });
+    }
+    //3.并发执行
+    axios.all([findAll(),save()]).then(
+        axios.spread(function(resp1,resp2){  //用来将一组函数的响应结果汇总处理
+            console.log(resp1.data);
+            console.log(resp2.data);
+        })
+    );//用来发送一组并发请求
+</script>
 ```
+
+
+
+![image-20210205151502767](assets/image-20210205151502767.png)
+
+![image-20210205151545618](assets/image-20210205151545618.png)
 
 ------
 
+### 案例: axios数据交互渲染
+
+*将要结合前面学习的vue的基础知识以及axios和springboot后台项目将后端数据渲染到前端*
+
+#### 需求分析
+
+- 搜索城市;显示城市名和该城市的天气信息
+- 点击城市按钮;显示城市名和该城市天气信息
+
+![img](assets/2021年2月8日1.gif)
+
+#### 后台准备
+
+在之前的后台项目上添加一个CityController控制层进行测试!
+
+```java
+@RestController
+@RequestMapping("/city")
+public class CityControler {
+    @CrossOrigin
+    @GetMapping("/findcity") //根据城市名称查询天气信息
+    public Map<String,String> findWeatherByCity(String cityName){
+        Map<String, String> map = new HashMap<>();
+        String weather = getWeathers(cityName);
+        map.put("message",weather);
+        return map;
+    }
+
+    //返回对应城市天气(模拟数据)
+    public String getWeathers(String name){
+        Map<String, String> map = new HashMap<>();
+        map.put("北京","晴转多云，空气清新！");
+        map.put("上海","多云转睛，空气质量不错！");
+        map.put("深圳","中到暴雨，空气也很好！");
+        map.put("广州","局部地区大风，空气也算不错！");
+        map.put("天津","离北京比较近，和北京差不过");
+        return map.get(name);
+    }
+}
+```
+
+后台接口测试数据
+
+![image-20210208153156236](assets/image-20210208153156236.png)
+
+#### 前台功能
+
+```html
+<div id="app">
+    <input type="text" v-model="name" @keyup.enter="search" @keyup.delete="show"> <button  @click="search">搜索</button>
+    <br>
+    <span v-for="city in hotCitys">
+        <a href="" @click.prevent="hotCigyMsg(city)">{{city}}</a>
+        &nbsp;
+    </span>
+    <hr>
+    <span v-show="isShow">
+        城市: <span style="color: red">{{name}}</span> <br>
+        天气信息：<span style="color:red">{{message}}</span>
+    </span>
+</div>
+<script src="js/vue.js"></script>
+<script src="js/axios.js"></script>
+<script>
+    const ip = "http://localhost:8080/city";
+
+    const app = new Vue({
+        el:"#app",
+        data:{
+            hotCitys: ["北京","上海","广州","深圳","天津"],
+            name:"", //用于输入时候的数据绑定,方便函数传参
+            message:"", //天气信息
+            isShow:false //控制天气信息是否显示
+        },
+        methods:{
+            //搜索
+            search: function (){
+                //console.log(this.name); //获取城市名称
+                let _this = this; //vue中有独立的this,axios中也有独立的this,想要在axios中使用this需要将this重新命名! 否者会造成vue中的this和axios中的this冲突;防止你所以为的this并不是vue中的this,而是axios中的this
+                //axios异步请求
+                axios.get(ip+"/findcity/?cityName="+_this.name).then(function (resp){
+                    //console.log(resp.data); //获取到后端数据
+                    //console.log(resp.data.message); //获取到城市名对应的天气信息
+
+                    //将后端返回的resp数据赋值到vue中;方便渲染出来
+                    _this.message = resp.data.message
+                    //没有输入天气框就不显示天气信息
+                    _this.isShow = true;
+                }).catch(function (err){
+                    console.log(err);
+                })
+            },
+            //输入框没有数据时,天气信息不显示
+            show(){
+                this.isShow=false;
+            },
+            //热门城市点击,显示天气信息
+            hotCigyMsg(name){
+                this.name = name;
+                //函数中调用函数
+                this.search();
+            }
+        }
+    })
+</script>
+```
+
 ## 11. Vue 生命周期
 
-> `生命周期钩子`   ==>  `生命周期函数`
+> Vue生命周期指的就是Vue实例从创建到结束的整个过程
+>
+> 我们可以根据这个生命周期来触发对应的程序执行;
+
+### Vue生命周期图
 
 ![img](assets/lifecycle.png)
 
-**Vue生命周期总结**
-1. 初始化阶段
+### Vue生命周期三个阶段
 
-     ```javascript
-     	beforeCreate(){ //1.生命周期中第一个函数,该函数在执行时Vue实例仅仅完成了自身事件的绑定和生命周期函数的初始化工作,Vue实例中还没有 Data el methods相关属性
-            console.log("beforeCreate: "+this.msg);
-        	},  
-        	created(){ //2.生命周期中第二个函数,该函数在执行时Vue实例已经初始化了data属性和methods中相关方法
-            console.log("created: "+this.msg);
-        	},  
-       	beforeMount(){//3.生命周期中第三个函数,该函数在执行时Vue将El中指定作用范围作为模板编译
-            console.log("beforeMount: "+document.getElementById("sp").innerText);
-        	},
-        	mounted(){//4.生命周期中第四个函数,该函数在执行过程中,已经将数据渲染到界面中并且已经更新页面
-            console.log("Mounted: "+document.getElementById("sp").innerText);
-        	}
-     ```
+#### 初始化阶段
 
-2. 运行阶段
+```javascript
+	beforeCreate(){ //1.生命周期中第一个函数,该函数在执行时Vue实例仅仅完成了自身事件的绑定和生命周期函数的初始化工作,Vue实例中还没有 Data el methods相关属性
+       console.log("beforeCreate: "+this.msg);
+   	},  
+   	created(){ //2.生命周期中第二个函数,该函数在执行时Vue实例已经初始化了data属性和methods中相关方法
+       console.log("created: "+this.msg);
+   	},  
+  	beforeMount(){//3.生命周期中第三个函数,该函数在执行时Vue将El中指定作用范围作为模板编译
+       console.log("beforeMount: "+document.getElementById("sp").innerText);
+   	},
+   	mounted(){//4.生命周期中第四个函数,该函数在执行过程中,已经将数据渲染到界面中并且已经更新页面
+       console.log("Mounted: "+document.getElementById("sp").innerText);
+   	}
+```
 
-     ```javascript
-     	beforeUpdate(){//5.生命周期中第五个函数,该函数是data中数据发生变化时执行 这个事件执行时仅仅是Vue实例中data数据变化页面显示的依然是原始数据
-         	console.log("beforeUpdate:"+this.msg);
-         	console.log("beforeUpdate:"+document.getElementById("sp").innerText);
-     	},
-         updated(){    //6.生命周期中第六个函数,该函数执行时data中数据发生变化,页面中数据也发生了变化  页面中数据已经和data中数据一致
-             console.log("updated:"+this.msg);
-             console.log("updated:"+document.getElementById("sp").innerText);
-         },
-     ```
+#### 运行阶段
 
-3. 销毁阶段
+```javascript
+	beforeUpdate(){//5.生命周期中第五个函数,该函数是data中数据发生变化时执行 这个事件执行时仅仅是Vue实例中data数据变化页面显示的依然是原始数据
+    	console.log("beforeUpdate:"+this.msg);
+    	console.log("beforeUpdate:"+document.getElementById("sp").innerText);
+	},
+    updated(){    //6.生命周期中第六个函数,该函数执行时data中数据发生变化,页面中数据也发生了变化  页面中数据已经和data中数据一致
+        console.log("updated:"+this.msg);
+        console.log("updated:"+document.getElementById("sp").innerText);
+    },
+```
 
-     ```javascript
-     	beforeDestory(){//7.生命周期第七个函数,该函数执行时,Vue中所有数据 methods componet 都没销毁
-     
-     	},
-         destoryed(){ //8.生命周期的第八个函数,该函数执行时,Vue实例彻底销毁
-     
-         }
-     ```
+#### 销毁阶段
 
-     
+```javascript
+	beforeDestory(){//7.生命周期第七个函数,该函数执行时,Vue中所有数据 methods componet 都没销毁
+
+	},
+    destoryed(){ //8.生命周期的第八个函数,该函数执行时,Vue实例彻底销毁
+
+    }
+```
+
+
 
 ----
 
