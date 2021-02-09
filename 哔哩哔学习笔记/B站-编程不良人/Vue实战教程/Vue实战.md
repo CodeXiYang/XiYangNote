@@ -1547,52 +1547,77 @@ public class CityControler {
 >
 > 我们可以根据这个生命周期来触发对应的程序执行;
 
-### Vue生命周期图
+### 11.1 Vue生命周期图
 
 ![img](assets/lifecycle.png)
 
-### Vue生命周期三个阶段
+### 11.2 Vue生命周期三个阶段
 
 #### 初始化阶段
 
-```javascript
-	beforeCreate(){ //1.生命周期中第一个函数,该函数在执行时Vue实例仅仅完成了自身事件的绑定和生命周期函数的初始化工作,Vue实例中还没有 Data el methods相关属性
-       console.log("beforeCreate: "+this.msg);
-   	},  
-   	created(){ //2.生命周期中第二个函数,该函数在执行时Vue实例已经初始化了data属性和methods中相关方法
-       console.log("created: "+this.msg);
-   	},  
-  	beforeMount(){//3.生命周期中第三个函数,该函数在执行时Vue将El中指定作用范围作为模板编译
-       console.log("beforeMount: "+document.getElementById("sp").innerText);
-   	},
-   	mounted(){//4.生命周期中第四个函数,该函数在执行过程中,已经将数据渲染到界面中并且已经更新页面
-       console.log("Mounted: "+document.getElementById("sp").innerText);
-   	}
+##### `beforeCreate()` 
+
+- 生命周期中第 **1** 个函数,该函数在执行时Vue实例仅仅完成了自身事件的绑定和生命周期函数的初始化工作,Vue实例中还没有 Data el methods相关属性
+- 在这个函数里面,无法使用data el methods属性中定义的内容!
+
+```html
+<script>
+    let app = new Vue({
+        el:"#app",
+        data:{
+            msg:"生命周期信息"
+        },
+        methods:{
+            changeData(){
+                console.log(Math.random());
+            }
+        },
+        beforeCreate(){
+            console.log(this.msg);
+            console.log(this.changeData());
+        }
+    });
+</script>
 ```
+
+##### `created()`
+
+- 生命周期中第 **2** 个函数,该函数在执行时Vue实例已经初始化了data属性和methods中相关方法
+- 该方法中,可以使用data,methods属性中定义的内容
+
+##### `beforeMount()`
+
+- 生命周期中第 **3** 个函数,该函数在执行时Vue将El中指定作用范围作为模板编译
+
+##### `mounted()`
+
+- 生命周期中第 **4** 个函数,该函数在执行过程中,已经将数据渲染到界面中并且已经更新页面
+
+
 
 #### 运行阶段
 
-```javascript
-	beforeUpdate(){//5.生命周期中第五个函数,该函数是data中数据发生变化时执行 这个事件执行时仅仅是Vue实例中data数据变化页面显示的依然是原始数据
-    	console.log("beforeUpdate:"+this.msg);
-    	console.log("beforeUpdate:"+document.getElementById("sp").innerText);
-	},
-    updated(){    //6.生命周期中第六个函数,该函数执行时data中数据发生变化,页面中数据也发生了变化  页面中数据已经和data中数据一致
-        console.log("updated:"+this.msg);
-        console.log("updated:"+document.getElementById("sp").innerText);
-    },
-```
+##### `beforeUpdate()`
+
+- 生命周期中第 **5** 个函数,该函数是data中数据发生变化时执行 这个事件执行时仅仅是Vue实例中data数据变化页面显示的依然是原始数据
+
+##### `updated()`
+
+- 生命周期中第 **6** 个函数,该函数执行时data中数据发生变化,页面中数据也发生了变化  页面中数据已经和data中数据一致
+
+
 
 #### 销毁阶段
 
-```javascript
-	beforeDestory(){//7.生命周期第七个函数,该函数执行时,Vue中所有数据 methods componet 都没销毁
+##### `beforeDestory()`
 
-	},
-    destoryed(){ //8.生命周期的第八个函数,该函数执行时,Vue实例彻底销毁
+- 生命周期第 **7** 个函数,该函数执行时,Vue中所有数据 methods componet 都没销毁
 
-    }
-```
+##### `destoryed()`
+
+- 生命周期的第 **8** 个函数,该函数执行时,Vue实例彻底销毁
+
+
 
 
 

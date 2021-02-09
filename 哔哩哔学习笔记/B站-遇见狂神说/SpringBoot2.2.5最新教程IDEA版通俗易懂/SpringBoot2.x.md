@@ -1,6 +1,6 @@
 # SpringBoot2.2.5
 
-> 视频: https://www.bilibili.com/video/BV1PE411i7CV?from=search&seid=6853131319374438557
+> 课程名称: [] https://www.bilibili.com/video/BV1PE411i7CV?from=search&seid=6853131319374438557
 >
 > 从初识SpringBoot，然后进入web开发，原理探究，再到数据库连接，然后集成一些常用的框架，由易到难，层层递进
 

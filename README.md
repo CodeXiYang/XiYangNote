@@ -74,7 +74,8 @@
 
 - [ ] 尚硅谷-雷丰阳-SpringBoot1.x
 - [ ] [尚硅谷-雷丰阳-SpringBoot2.x](尚硅谷学习笔记/第4阶段-JavaEE高级/尚硅谷-雷丰阳-SpringBoot2/SpringBoot2核心技术与响应式编程.md)
-- [ ] [B站-遇见狂神说-SpringBoot2.x](哔哩哔学习笔记/B站-遇见狂神说/SpringMVC最新教程IDEA版通俗易懂/SpringMVC.md)
+- [ ] [B站-遇见狂神说-SpringBoot2.x](哔哩哔学习笔记/B站-遇见狂神说/SpringBoot2.2.5最新教程IDEA版通俗易懂/SpringBoot2.x.md)
+- [ ] [B站-编程不良人-SpringBoot2.2.5](哔哩哔学习笔记/B站-编程不良人/springboot2.2.5笔记/SpringBoot2.2.5.md)
 
 **SpringCloud**
 
@@ -326,7 +327,7 @@
 ### Linux
 
 - [ ] B站-遇见狂神说-LinuxCentOS7
-- [ ] 韩顺平-linux2021升级版
+- [ ] [韩顺平-linux2021升级版](哔哩哔学习笔记/2021韩顺平一周学会Linux/Linux.md)
 
 ### 容器技术
 
