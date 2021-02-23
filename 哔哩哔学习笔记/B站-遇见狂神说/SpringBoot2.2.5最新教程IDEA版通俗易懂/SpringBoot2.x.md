@@ -10,7 +10,7 @@
 
 
 
-### 1. 微服务前的网站开发技术栈
+### 1.1 微服务前的网站开发技术栈
 
 微服务前开发网站使用由前期的javaweb+jdbc+html+css+js就可以开发简单的应用了;这时的项目就是传统的MVC原始架构
 
@@ -22,11 +22,11 @@
 
 
 
-### 2. 微服务网站开发技术栈
+### 1.2 微服务网站开发技术栈
 
 >  微服务阶段需要学习的大体方向有两个框架,一个是SpringBoot,本比较使用的SpringBoot版本是`2.2.5` ;SpringBoot框架是用来做后端web开发的,每个SrpingBoot项目就是一个服务,当服务太多不好管理的时,SpringCloud应运而生,也就是说SpringCloud就是专门用来管理SpringBoot编写的独立的项目,就是大家常说的微服务开发
 
-#### 2.1 SpringBoot学习目标
+#### 1.2.1 SpringBoot学习目标
 
 1.SpringBoot是什么
 
@@ -44,7 +44,7 @@
 
 8.分布式开发:Dubbo+zookeeper(微服务中简单的一套,必须掌握)
 
-#### 2.3 SpringCloud入门学习目标
+#### 1.2.2 SpringCloud入门学习目标
 
 1.微服务
 
@@ -72,9 +72,9 @@
 
 
 
-### 1. SpringBoot简介
+### 2.1 SpringBoot简介
 
-#### 1.1 什么是Spring
+#### 2.1.1 什么是Spring
 
 Spring是一个开源框架，2003 年兴起的一个轻量级的Java 开发框架，作者：Rod Johnson 。
 
@@ -82,7 +82,7 @@ Spring是一个开源框架，2003 年兴起的一个轻量级的Java 开发框�
 
 
 
-#### 1.2 Spring如何简化开发的
+#### 2.1.2 Spring如何简化开发的
 
 *为了降低Java开发的复杂性，Spring采用了以下4种关键策略：*
 
@@ -94,7 +94,7 @@ Spring是一个开源框架，2003 年兴起的一个轻量级的Java 开发框�
 
 4、通过切面和模版减少样式代码，RedisTemplate，xxxTemplate；
 
-#### 1.3 什么是SpringBoot
+#### 2.1.3 什么是SpringBoot
 
 学过javaweb的同学就知道，开发一个web应用，从最初开始接触Servlet结合Tomcat, 跑出一个HelloWolrld程序，是要经历特别多的步骤； 后来就用了框架Struts，再后来是SpringMVC，到了现在的SpringBoot，过一两年又会有其他web框架出现；你们有经历过框架不断的演进，然后自己开发项目所有的技术也再不断的变化、改造吗？建议都可以去经历一遍；
 
@@ -137,11 +137,11 @@ Spring Boot的主要优点：
 
 
 
-### 2. SpringBoot-HelloWorld
+### 2.2 SpringBoot-HelloWorld
 
 *使用SpringBoot框架编写一个hello-world程序*
 
-#### 2.1 准备工作
+#### 2.2.1 准备工作
 
 我们将学习如何快速的创建一个Spring Boot应用，并且实现一个简单的Http请求处理。通过这个例子对Spring Boot有一个初步的了解，并体验其结构简单、开发快速的特性。
 
@@ -155,11 +155,11 @@ Spring Boot的主要优点：
 
 - IDEA
 
-#### 2.2 创建基础项目
+#### 2.2.2 创建基础项目
 
 *Spring官方提供了非常方便的工具让我们快速构建应用 , Spring Initializr： https://start.spring.io/*
 
-##### 2.2.1 方式一: **：**使用Spring Initializr 的 Web页面创建项目
+##### 方式一: **：**使用Spring Initializr 的 Web页面创建项目
 
 1、打开 https://start.spring.io/
 
@@ -171,7 +171,7 @@ Spring Boot的主要优点：
 
 5、如果是第一次使用，可能速度会比较慢，包比较多、需要耐心等待一切就绪。
 
-##### 2.2.2 方式二: 使用 IDEA 直接创建项目
+##### 方式二: 使用 IDEA 直接创建项目
 
 1、创建一个新项目
 
@@ -197,7 +197,7 @@ Spring Boot的主要优点：
 
 4、一个 pom.xml
 
-#### 2.3 pom.xml 分析
+#### 2.2.3 pom.xml 分析
 
 打开 pom.xml ，看看Spring Boot项目的依赖：
 
@@ -207,7 +207,7 @@ Spring Boot的主要优点：
 
 
 
-#### 2.4 编写HTTP接口
+#### 2.2.4 编写HTTP接口
 
 1、在主程序的同级目录下，新建一个controller包，<u>一定要在同级目录下，否则识别不到</u>
 
@@ -223,7 +223,7 @@ Spring Boot的主要优点：
 
 *简单几步，就完成了一个web接口的开发，SpringBoot就是这么简单。所以我们常用它来建立我们的微服务项目！*
 
-#### 2.5 将项目打成jar包
+#### 2.2.5 将项目打成jar包
 
 *将项目打成jar包，点击 maven的 package*
 
@@ -241,7 +241,7 @@ Spring Boot的主要优点：
 
 
 
-#### 2.6 SpringBoot彩蛋
+#### 2.2.6 SpringBoot彩蛋
 
 如何更改启动时显示的字符拼成的字母，SpringBoot呢？ 也就是 banner 图案
 
@@ -255,15 +255,15 @@ Spring Boot的主要优点：
 
 
 
-### 3. 运行原理探究
+### 2.3 运行原理探究
 
 *我们之前写的HelloSpringBoot，到底是怎么运行的呢，Maven项目，我们一般从pom.xml文件探究起;*
 
 
 
-#### 3.1 SpringBoot依赖
+#### 2.3.1 SpringBoot依赖
 
-##### 3.1.1 pom.xml父依赖
+##### pom.xml父依赖
 
 ```xml
 <parent> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-parent</artifactId> <version>2.2.5.RELEASE</version> <relativePath/> <!-- lookup parent from repository --> </parent>
@@ -279,7 +279,7 @@ Spring Boot的主要优点：
 
 **以后我们导入依赖默认是不需要写版本；但是如果导入的包没有在依赖中管理着就需要手动配置版本了；**
 
-##### 3.1.2 启动器 spring-boot-starter
+##### 启动器 spring-boot-starter
 
 ```xml
 <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-web</artifactId> </dependency>
@@ -295,19 +295,19 @@ SpringBoot将所有的功能场景都抽取出来，做成一个个的starter �
 
 
 
-#### 3.2 主启动类程序分析
+#### 2.3.2 主启动类程序分析
 
 分析完了 pom.xml 来看看这个启动类
 
-##### 3.2.1 启动类中涉及到的注解
+##### 启动类中涉及到的注解
 
-##### 3.2.2 启动类的作用
+##### 启动类的作用
 
-##### 3.2.3 run()方法干了什么
+##### run()方法干了什么
 
 
 
-#### 3.3 SpringBoot运行原理小结
+#### 2.3.3 SpringBoot运行原理小结
 
 1. SpringBoot在启动的时候从类路径下的META-INF/spring.factories中获取EnableAutoConfifiguration指定的值
 2. 将这些值作为自动配置类导入容器 ， 自动配置类就生效 ， 帮我们进行自动配置工作；
@@ -315,75 +315,75 @@ SpringBoot将所有的功能场景都抽取出来，做成一个个的starter �
 4. 它会给容器中导入非常多的自动配置类 （xxxAutoConfifiguration）, 就是给容器中导入这个场景需要的所有组件 ， 并配置好这些组件 ； 
 5. 有了自动配置类 ， 免去了我们手动编写配置注入功能组件等的工作；
 
-### 4. Yaml语法学习
+### 2.4 Yaml语法学习
 
 
 
-#### 4.1 SpringBoot的两种配置文件
+#### 2.4.1 SpringBoot的两种配置文件
 
 
 
-#### 4.2 yaml概述
+#### 2.4.2 yaml概述
 
 
 
 
 
-#### 4.3 yaml基础语法
+#### 2.4.3 yaml基础语法
 
-### 5. 注入配置文件
+### 2.2.5 注入配置文件
 
-#### 5.1 yaml注入配置文件
-
-
-
-#### 5.2 加载指定配置文件
+#### yaml注入配置文件
 
 
 
-#### 5.3 回顾properties配置文件
+#### 加载指定配置文件
 
 
 
-#### 5.4 properties和yaml的对比
+#### 回顾properties配置文件
 
 
 
-#### 5.5 JSR303数据校验
+#### properties和yaml的对比
 
 
 
-### 6. 多环境切换
-
-#### 6.1yml的多文档块
+#### JSR303数据校验
 
 
 
-#### 6.2 配置文件加载位置
+### 2.2.6 多环境切换
 
-### 7. 自动配置原理
-
-#### 7.1 分析自动装配原理
+#### yml的多文档块
 
 
 
-#### 7.2 自动装配的精髓
+#### 配置文件加载位置
+
+### 2.2.7 自动配置原理
+
+#### 分析自动装配原理
 
 
 
-#### 7.3 @Conditional
-
-### 8. 自定义starter
-
-#### 8.1 说明
+#### 自动装配的精髓
 
 
 
-#### 8.2 编写启动器
+#### @Conditional
+
+### 2.2.8 自定义starter
+
+#### 说明
 
 
 
-#### 8.3 新建项目测试手写的启动器
+#### 编写启动器
+
+
+
+#### 新建项目测试手写的启动器
 
 
 
@@ -393,7 +393,7 @@ SpringBoot将所有的功能场景都抽取出来，做成一个个的starter �
 
 
 
-###  1. SpringData简介
+###  3.1 SpringData简介
 
 对于数据访问层，无论是 SQL(关系型数据库) 还是 NOSQL(非关系型数据库)，Spring Boot 底层都是采用 Spring Data 的方式进行统一处理。
 
@@ -407,9 +407,9 @@ Sping Data 官网：https://spring.io/projects/spring-data
 
 ---
 
-###  2. 集成JDBC
+###  3.2 集成JDBC
 
-#### 2.1 导入测试数据库
+#### 3.2.1 导入测试数据库
 
 ```sql
 CREATE DATABASE /*!32312 IF NOT EXISTS*/`springboot` /*!40100 DEFAULT CHARACTER SET utf8 */;
@@ -438,7 +438,7 @@ insert into `employee`(`id`,`last_name`,`email`,`gender`,`department`,`birth`) v
 
 
 
-#### 2.2 创建测试项目测试数据源
+#### 3.2.2 创建测试项目测试数据源
 
 1. 我去新建一个项目测试：springboot-data-jdbc ; 引入相应的模块！基础模块
 
@@ -511,7 +511,7 @@ insert into `employee`(`id`,`last_name`,`email`,`gender`,`department`,`birth`) v
 
    关于数据源我们并不做介绍，有了数据库连接，显然就可以 CRUD 操作数据库了。但是我们需要先了解一个对象 `JdbcTemplate`
 
-#### 2.3 JdbcTemplate
+#### 3.2.3 JdbcTemplate
 
 1. 有了数据源(com.zaxxer.hikari.HikariDataSource)，然后可以拿到数据库连接(java.sql.Connection)，有了连接，就可以使用原生的 JDBC 语句来操作数据库；
 2. 即使不使用第三方第数据库操作框架，如 MyBatis等，Spring 本身也对原生的JDBC 做了轻量级的封装，即 JdbcTemplate 。 
@@ -531,7 +531,7 @@ insert into `employee`(`id`,`last_name`,`email`,`gender`,`department`,`birth`) v
 
 
 
-#### 2.4 测试
+#### 3.2.4 测试
 
 编写一个Controller，注入 jdbcTemplate，编写测试方法进行访问测试；
 
@@ -602,9 +602,9 @@ public class JdbcController {
 
 ---
 
-###  3. 集成Druid
+###  3.3 集成Druid
 
-#### 3.1 Druid 简介
+#### 3.3.1 Druid 简介
 
 Java程序很大一部分要操作数据库，为了提高性能操作数据库的时候，又不得不使用数据库连接池。
 
@@ -649,7 +649,7 @@ Github地址：https://github.com/alibaba/druid/
 
 
 
-#### 3.2 配置数据源
+#### 3.3.2 配置数据源
 
 1. 添加上 Druid 数据源依赖。
 
@@ -767,7 +767,7 @@ Github地址：https://github.com/alibaba/druid/
 
    
 
-#### 3.3 配置 Druid 数据源监控
+#### 3.3.3 配置 Druid 数据源监控
 
 Druid 数据源具有监控的功能，并提供了一个 web 界面方便用户查看，类似安装 路由器 时，人家也提供了一个默认的 web 页面。
 
@@ -827,7 +827,7 @@ public FilterRegistrationBean webStatFilter() {
 
 ---
 
-###  4. 集成MyBatis
+###  3.4 集成MyBatis
 
 > 官方文档：http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfifigure/
 >
@@ -1095,7 +1095,7 @@ public class DepartmentController {
 
 
 
-###  1. Web开发探究
+###  4.1 Web开发探究
 
 **简介**
 
@@ -1124,9 +1124,9 @@ public class DepartmentController {
 
 
 
-###  2. 静态资源处理
+###  4.2 静态资源处理
 
-#### 2.1 静态资源映射规则
+#### 4.2.1 静态资源映射规则
 
 首先，我们搭建一个普通的SpringBoot项目，回顾一下HelloWorld程序！【演示】
 
@@ -1150,7 +1150,7 @@ SpringBoot中，SpringMVC的web配置都在 WebMvcAutoConfifiguration 这个配�
 
 
 
-#### 2.2 那什么是webjars呢？
+#### 4.2.2 那什么是webjars呢？
 
 Webjars本质就是以jar包的方式引入我们的静态资源 ， 我们以前要导入一个静态资源文件，直接导入即可。
 
@@ -1168,7 +1168,7 @@ Webjars本质就是以jar包的方式引入我们的静态资源 ， 我们以�
 
 访问：只要是静态资源，SpringBoot就会去对应的路径寻找资源，我们这里访问 ：`http://localhost:8080/webjars/jquery/3.4.1/jquery.js`
 
-#### 2.3 第二种静态资源映射规则
+#### 4.2.3 第二种静态资源映射规则
 
 那我们项目中要是使用自己的静态资源该怎么导入呢？我们看下一行代码；
 
@@ -1190,7 +1190,7 @@ ResourceProperties 可以设置和我们静态资源有关的参数；这里面�
 
 比如我们访问 http://localhost:8080/1.js , 他就会去这些文件夹中寻找对应的静态资源文件;
 
-#### 2.4 自定义静态资源路径
+#### 4.2.4 自定义静态资源路径
 
 我们也可以自己通过配置文件来指定一下，哪些文件夹是需要我们放静态资源文件的，在application.properties中配置；
 
@@ -1200,7 +1200,7 @@ spring.resources.static-locations=classpath:/coding/,classpath:/kuang/
 
 一旦自己定义了静态文件夹的路径，原来的自动配置就都会失效了！
 
-###  3. 首页处理
+###  4.3 首页处理
 
 静态资源文件夹说完后，我们继续向下看源码！可以看到一个欢迎页的映射，就是我们的首页！
 
@@ -1234,9 +1234,9 @@ private Optional<Resource> getWelcomePage() { String[] locations = getResourceLo
 
 3. 清除浏览器缓存！刷新网页，发现图标已经变成自己的了！
 
-###  4. Thymeleaf
+###  4.4 Thymeleaf
 
-#### 4.1 模板引擎
+#### 4.4.1 模板引擎
 
 前端交给我们的页面，是html页面。如果是我们以前开发，我们需要把他们转成jsp页面，jsp好处就是当我们查出一些数据转发到JSP页面以后，我们可以用jsp轻松实现数据的显示，及交互等。
 
@@ -1254,7 +1254,7 @@ jsp支持非常强大的功能，包括能写Java代码，但是呢，我们现�
 
 我们呢，就来看一下这个模板引擎，那既然要看这个模板引擎。首先，我们来看SpringBoot里边怎么用。
 
-#### 4.2 引入Thymeleaf
+#### 4.4.2 引入Thymeleaf
 
 怎么引入呢，对于springboot来说，什么事情不都是一个start的事情嘛，我们去在项目中引入一下。给大家三个网址：
 
@@ -1272,7 +1272,7 @@ Spring官方文档： 找到我们对应的版本https://docs.spring.io/spring-b
 
 Maven会自动下载jar包，我们可以去看下下载的东西；
 
-#### 4.3 thymeleaf 分析
+#### 4.4.3 thymeleaf 分析
 
 前面呢，我们已经引入了Thymeleaf，那这个要怎么使用呢？
 
@@ -1302,7 +1302,7 @@ Maven会自动下载jar包，我们可以去看下下载的东西；
 
 3. 启动项目请求测试
 
-#### 4.4 Thymeleaf 语法学习
+#### 4.4.4 Thymeleaf 语法学习
 
 要学习语法，还是参考官网文档最为准确，我们找到对应的版本看一下；Thymeleaf 官网：https://www.thymeleaf.org/ ， 简单看一下官网！我们去下载Thymeleaf的官方文档！
 
@@ -1373,93 +1373,93 @@ Simple expressions:（表达式语法） Variable Expressions: ${...}：获取�
 
 
 
-###  5. MVC自动配置原理
+###  4.5 MVC自动配置原理
 
-#### 5.1 官网阅读
+#### 4.5.1 官网阅读
 
-#### 5.2 ContentNegotiatingViewResolver 内容协商视图解析器
+#### 4.5.2 ContentNegotiatingViewResolver 内容协商视图解析器
 
-#### 5.3 转换器和格式化器
+#### 4.5.3 转换器和格式化器
 
-#### 5.4 修改SpringBoot的默认配置
+#### 4.5.4 修改SpringBoot的默认配置
 
-#### 5.5 全面接管SpringMVC
-
-
-
-### 6. 员工管理系统
-
-####  6.1 配置项目环境及首页
-
-6.1.1 把昨天的 mybatis 整合代码拿过来
-
-6.1.2 导入静态资源
-
-6.1.3 首页实现
-
-####  6.2 页面国际化
-
-6.2.1 准备工作
-
-6.2.2 配置文件编写
-
-6.2.3 配置文件生效探究
-
-6.2.4 配置页面国际化值
-
-6.2.5 配置国际化解析
-
-####  6.3 登录和拦截器
-
-6.3.1 禁用模板缓存
-
-6.3.2 登录
-
-6.2.3 登录拦截器
-
-####  6.4 员工列表实现
-
-6.4.1 RestFul 风格
-
-6.4.2 员工列表页面跳转
-
-6.4.3 Thymeleaf 公共页面元素抽取
-
-6.4.4 员工信息页面展示
+#### 4.5.5 全面接管SpringMVC
 
 
 
+### 4.6 员工管理系统
+
+####  4.6.1 配置项目环境及首页
+
+把昨天的 mybatis 整合代码拿过来
+
+导入静态资源
+
+首页实现
+
+####  4.6.2 页面国际化
+
+准备工作
+
+配置文件编写
+
+配置文件生效探究
+
+配置页面国际化值
+
+配置国际化解析
+
+####  4.6.3 登录和拦截器
+
+禁用模板缓存
+
+登录
+
+登录拦截器
+
+####  4.6.4 员工列表实现
+
+RestFul 风格
+
+员工列表页面跳转
+
+Thymeleaf 公共页面元素抽取
+
+员工信息页面展示
 
 
-####  6.5 添加员工实现
-
-6.5.1 表单及细节优化
-
-6.5.2 完整增加员工功能，我们来具体实现添加功能；
-
-6.5.3 启动测试，前端填写数据，注意时间问题：
 
 
 
-####  6.6 员工信息修改
+####  4.6.5 添加员工实现
 
-6.6.1 实现
+表单及细节优化
 
-####  6.7 删除员工实现
+完整增加员工功能，我们来具体实现添加功能；
 
-####  6.8 404及注销
-
-6.8.1 404
-
-6.8.2 注销
+启动测试，前端填写数据，注意时间问题：
 
 
 
-####  6.9 定制错误数据
+####  4.6.6 员工信息修改
 
-6.9.1 SpringBoot 默认的错误处理机制
+实现
 
-6.9.2 错误处理原理分析
+####  4.6.7 删除员工实现
+
+####  4.6.8 404及注销
+
+ 404
+
+注销
+
+
+
+####  4.6.9 定制错误数据
+
+SpringBoot 默认的错误处理机制
+
+错误处理原理分析
 
 
 
@@ -1473,7 +1473,7 @@ Simple expressions:（表达式语法） Variable Expressions: ${...}：获取�
 >
 > - 掌握在项目中集成Swagger自动生成API文档
 
-#### Swagger简介
+#### 5.1.1Swagger简介
 
 > 当前主流的前后端技术栈就是 Vue+SpringBoot
 
@@ -1518,7 +1518,7 @@ Simple expressions:（表达式语法） Variable Expressions: ${...}：获取�
 
 
 
-#### SpringBoot集成Swagger
+#### 5.1.2 SpringBoot集成Swagger
 
 使用swagger的要求: jdk 1.8 + 否则swagger2无法运行
 
@@ -1814,23 +1814,23 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 
 ## 第 6 章: SprringSecurity权限控制
 
-###  1. SpringSecurity简介
+###  6.1 SpringSecurity简介
 
-###  2. SpringSecurity实战测试
+###  6.2 SpringSecurity实战测试
 
-###  3. 完整配置代码
+###  6.3 完整配置代码
 
 
 
 ---
 
-## 第 7 章: 整合Dubbo+Zookeeper===
+## 第 7 章: 整合Dubbo+Zookeeper
 
-###  1. 分布式基础知识
+###  7.1 分布式基础知识
 
-###  2. Dubbo
+###  7.2 Dubbo
 
-###  3. SpringBoot丶Dubbo丶zookeeper
+###  7.3 SpringBoot丶Dubbo丶zookeeper
 
 
 
@@ -1840,9 +1840,9 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 
 
 
-###  1. Shiro简介
+###  8.1 Shiro简介
 
-#### 1.1 什么是Shiro
+#### 8.1.1 什么是Shiro
 
 - Apache Shiro 是一个Java 的安全（权限）框架。
 
@@ -1854,7 +1854,7 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 
   ![image-20201224102652156](assets/image-20201224102652156.png)
 
-#### 1.2 Shiro有哪些功能
+#### 8.1.2 Shiro有哪些功能
 
 ![image-20201224102745156](assets/image-20201224102745156.png)
 
@@ -1869,7 +1869,7 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 - **Run As**：允许一个用户假装为另一个用户（如果他们允许）的身份进行访问；
 - **Remember Me**：记住我，这个是非常常见的功能，即一次登录后，下次再来的话不用登录了
 
-#### 1.3 Shiro架构(外部)
+#### 8.1.3 Shiro架构(外部)
 
 **shiro的核心三大对象:**
 
@@ -1885,7 +1885,7 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 - **SecurityManager**：安全管理器，即所有与安全有关的操作都会与SercurityManager交互，并且它管理着所有的Subject，可以看出它是Shiro的核心，它负责与Shiro的其他组件进行交互，它相当于SpringMVC的DispatcherServlet的角色
 - **Realm**：Shiro从Realm获取安全数据（如用户，角色，权限），就是说SecurityManager 要验证用户身份，那么它需要从Realm 获取相应的用户进行比较，来确定用户的身份是否合法；也需要从Realm得到用户相应的角色、权限，进行验证用户的操作是否能够进行，可以把Realm看成DataSource； 
 
-#### 1.4 Shiro架构(内部)
+#### 8.1.4 Shiro架构(内部)
 
 ![image-20201224103201977](assets/image-20201224103201977.png)
 
@@ -1898,9 +1898,9 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 - **CacheManager**：缓存控制器，来管理如用户，角色，权限等缓存的；因为这些数据基本上很少改变，放到缓存中后可以提高访问的性能；
 - **Cryptography**：密码模块，Shiro 提高了一些常见的加密组件用于密码加密，解密等
 
-###  2. Shiro-HelloWorld
+###  8.2 Shiro-HelloWorld
 
-#### 2.1 快速实践
+#### 8.2.1 快速实践
 
 查看官网文档：http://shiro.apache.org/tutorial.html
 
@@ -2100,7 +2100,7 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 
 **代码解释如下:**
 
-#### 2.2 代码解释
+#### 8.2.2 代码解释
 
 1. 导入了一堆包！
 
@@ -2252,7 +2252,7 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 
 
 
-#### 2.3 官方shiro示例代码完整解释
+#### 8.2.3 官方shiro示例代码完整解释
 
 ```java
 public class Quickstart {
@@ -2343,9 +2343,9 @@ currentUser.logout();
 
 
 
-###  3. SpringBoot集成Shiro
+###  8.3 SpringBoot集成Shiro
 
-#### 3.1 准备工作
+#### 8.3.1 准备工作
 
 1. 搭建一个SpringBoot项目、选中web模块即可！项目名称: shiro-springboot
 
@@ -2396,7 +2396,7 @@ currentUser.logout();
 
    ![image-20201224161733179](assets/image-20201224161733179.png)
 
-#### 3.2 整合Shiro
+#### 8.3.2 整合Shiro
 
 **回顾核心API：** 
 
@@ -2521,7 +2521,7 @@ currentUser.logout();
 
 
 
-#### 3.3 页面拦截实现
+#### 8.3.3 页面拦截实现
 
 1. 编写两个页面、在templates目录下新建一个 user 目录 add.html update.html 
 
@@ -2632,7 +2632,7 @@ currentUser.logout();
 
 12. 测试，完全OK！ 
 
-#### 3.4 登录认证操作
+#### 8.3.4 登录认证操作
 
 1. 编写一个登录的controller
 
@@ -2705,7 +2705,7 @@ currentUser.logout();
 
 5. 测试一下！成功实现登录的认证操作！
 
-#### 3.5 整合数据库
+#### 8.3.5 整合数据库
 
 1. 导入Mybatis相关依赖
 
@@ -2860,7 +2860,7 @@ currentUser.logout();
 
 10. 测试，现在查询都是从数据库查询的了！
 
-#### 3.6 思考: 密码比对原理探究
+#### 8.3.6 思考: 密码比对原理探究
 
 思考？这个Shiro，是怎么帮我们实现密码自动比对的呢？
 
@@ -2876,7 +2876,7 @@ currentUser.logout();
 
 2. 替换当前的Realm 的 CredentialsMatcher 属性，直接使用 Md5CredentialsMatcher 对象，并设置加密算法
 
-#### 3.7 用户授权操作
+#### 8.3.7 用户授权操作
 
 使用shiro的过滤器来拦截请求即可！
 
@@ -2908,7 +2908,7 @@ currentUser.logout();
 
 5. 测试，现在没有授权，可以跳转到我们指定的位置了！
 
-#### 3.8 Shiro授权
+#### 8.3.8 Shiro授权
 
 在UserRealm 中添加授权的逻辑，增加授权的字符串！
 
@@ -2976,7 +2976,7 @@ protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal
 
 6. 测试完美通过OK！ 
 
-#### 3.9 整合Thymeleaf
+#### 8.3.9 整合Thymeleaf
 
 根据权限展示不同的前端页面
 
@@ -3033,6 +3033,6 @@ protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal
 
 
 
-#### 3.10 小结
+#### 8.3.10 小结
 
 今天花了一天时间给大家讲解了SpringSecurity 和 Shiro 两个安全的框架，主要是想让大家多一些思路，其实什么都不用，我们靠拦截器也可以实现这些功能对吧，但是可能需要花费大量的时间和代码，还有就是Bug多，思考不全，而现在，我们两个框架都会使用了，也给大家对比的进行学习了，当然真实的工作中，可能代码会更加的复杂。需要大家在工作中再多去练习和使用，将这些框架可以运用到自己的项目中才是王道，不然学了也是白学对吧，几天就忘记了，没有什么用，关于底层的实现原理，也希望大家下去可以多看源码学习，后面的学习中已经带大家看了很多源码了，希望大家能够自己多去总结和吸收！
