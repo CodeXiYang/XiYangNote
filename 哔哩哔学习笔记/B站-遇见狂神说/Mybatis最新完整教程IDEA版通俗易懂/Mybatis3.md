@@ -185,7 +185,7 @@ mybatis核心
 
 ![image-20201220143319117](assets/image-20201220143319117.png)
 
-**xml文件如下配置**
+**mybatis-config.xml文件如下配置**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -380,12 +380,6 @@ public class MybatisTest {
 
 ![image-20201220152302913](assets/image-20201220152302913.png)
 
-
-
-
-
-
-
 补充说明: *Maven静态资源过滤问题*
 
 ```xml
@@ -453,7 +447,7 @@ public class MybatisTest {
 
 ### 3.1 namespace属性
 
-通过入门案例可以看到mapper的标签中有一个namespace的属性,其作用就是用于xml与指定接口相互绑定
+通过入门案例可以看到mapper的标签中有一个namespace的属性,其作用就是用于xml与指定java接口相互绑定
 
 ![image-20201220154013993](assets/image-20201220154013993.png)
 
@@ -2070,6 +2064,7 @@ public class Teacher {
        System.out.println(teacher.getName()); 
        System.out.println(teacher.getStudents()); 
    }
+   ```
 ```
    
    
@@ -2129,7 +2124,7 @@ MyBatis 的强大特性之一便是它的动态 SQL。如果你有使用 JDBC �
 
 字段：id，title，author，create_time，views
 
-```sql
+​```sql
 CREATE TABLE `blog` ( 
     `id` varchar(50) NOT NULL COMMENT '博客id', 
     `title` varchar(100) NOT NULL COMMENT '博客标题', 

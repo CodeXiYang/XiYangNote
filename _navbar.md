@@ -1,4 +1,4 @@
-* [<i class="fa fa-paper-plane-o fa-1x"></i> XiYang Blog](http://120.25.155.46:8090/)
+* [<i class="fa fa-paper-plane-o fa-1x"></i> XiYang Blog](https://www.cnblogs.com/CodeXiYang/)
 * [<i class="fa fa-paper-plane-o fa-1x"></i> 主页](README?id=☕-Java基础)
   * [☕ JavaSE](README?id=☕-javase)
   * [🍃 JavaEE](README?id=🍃-javaee)

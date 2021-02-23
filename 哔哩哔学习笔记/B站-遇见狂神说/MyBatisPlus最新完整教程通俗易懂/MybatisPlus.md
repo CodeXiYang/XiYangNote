@@ -2,6 +2,12 @@
 
 # MyBatis Plus
 
+> 课程名称: [【狂神说Java】MyBatisPlus最新完整教程通俗易懂](https://www.bilibili.com/video/BV17E411N7KN)
+>
+> 课程概述:深入浅出的讲解了MyBatisPlus使用的全流程以及实战教学！
+>
+> 讲述人: B站-遇见狂神说
+
 
 
 ## 1. MybatisPlus概述
@@ -187,10 +193,8 @@ MyBatis是什么？ MyBatis 本来就是简化 JDBC 操作的！
 
 ### 2.2 思考
 
-1. SQL谁帮我们写的 ? 
-   - MyBatis-Plus 都写好了
-2. 方法哪里来的？ 
-   - MyBatis-Plus 都写好了
+1. SQL谁帮我们写的 ? : MyBatis-Plus 都写好了
+2. 方法哪里来的？ : MyBatis-Plus 都写好了
 
 
 
@@ -215,7 +219,8 @@ mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 
 ```java
 // 测试插入 
-@Test public void testInsert(){ 
+@Test 
+public void testInsert(){ 
     User user = new User(); 
     user.setName("狂神说Java"); 
     user.setAge(3); 
@@ -265,7 +270,8 @@ public enum IdType {
 
 ```java
 // 测试更新
-@Test public void testUpdate(){ 
+@Test 
+public void testUpdate(){ 
     User user = new User(); // 通过条件自动拼接动态sql 
     user.setId(6L); 
     user.setName("关注公众号：狂神说"); 
@@ -521,7 +527,8 @@ update user set name = "kuangshen", version = version + 1 where id = 2 and versi
 
    ```java
    // 逻辑删除组件！
-   @Bean public ISqlInjector sqlInjector() { 
+   @Bean 
+   public ISqlInjector sqlInjector() { 
        return new LogicSqlInjector(); 
    }
    ```
@@ -548,7 +555,8 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
 
    ```java
    /** * SQL执行效率插件 */
-   @Bean @Profile({"dev","test"})// 设置 dev test 环境开启，保证我们的效率 
+   @Bean 
+   @Profile({"dev","test"})// 设置 dev test 环境开启，保证我们的效率 
    public PerformanceInterceptor performanceInterceptor() { 
        PerformanceInterceptor performanceInterceptor = new PerformanceInterceptor(); 
        performanceInterceptor.setMaxTime(100); 
@@ -564,14 +572,15 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
 2. 测试使用！
 
    ```java
-   @Test void contextLoads() { 
+   @Test 
+   void contextLoads() { 
        // 参数是一个 Wrapper ，条件构造器，这里我们先不用 null 
        // 查询全部用户 
        List<User> users = userMapper.selectList(null); 
        users.forEach(System.out::println); 
    }
-   ```
-
+```
+   
    使用性能分析插件，可以帮助我们提高效率！
 
 ### 3.6 条件构造器
@@ -583,7 +592,8 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
 1. 测试一，记住查看输出的SQL进行分析
 
    ```java
-   @Test void contextLoads() { 
+   @Test 
+   void contextLoads() { 
        // 查询name不为空的用户，并且邮箱不为空的用户，年龄大于等于12 
        QueryWrapper<User> wrapper = new QueryWrapper<>(); 
        wrapper .isNotNull("name") .isNotNull("email") .ge("age",12); 
@@ -595,7 +605,8 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
 2. 测试二，记住查看输出的SQL进行分析
 
    ```java
-   @Test void test2(){ 
+   @Test 
+   void test2(){ 
        // 查询名字狂神说 
        QueryWrapper<User> wrapper = new QueryWrapper<>(); 
        wrapper.eq("name","狂神说"); 
@@ -607,7 +618,8 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
 3. 测试三，记住查看输出的SQL进行分析
 
    ```java
-   @Test void test3(){ 
+   @Test 
+   void test3(){ 
        // 查询年龄在 20 ~ 30 岁之间的用户 
        QueryWrapper<User> wrapper = new QueryWrapper<>(); 
        wrapper.between("age",20,30); // 区间 
@@ -620,7 +632,8 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
 
    ```java
    // 模糊查询 
-   @Test void test4(){ 
+   @Test 
+   void test4(){ 
        // 查询年龄在 20 ~ 30 岁之间的用户 
        QueryWrapper<User> wrapper = new QueryWrapper<>(); 
        // 左和右 t% 
@@ -636,7 +649,8 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
 
    ```java
    // 模糊查询 
-   @Test void test5(){ 
+   @Test 
+   void test5(){ 
        QueryWrapper<User> wrapper = new QueryWrapper<>(); // id 在子查询中查出来 
        wrapper.inSql("id","select id from user where id<3");
        List<Object> objects = userMapper.selectObjs(wrapper); 
@@ -648,20 +662,21 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
 
    ```java
    //测试六 
-   @Test void test6(){ 
+   @Test 
+   void test6(){ 
        QueryWrapper<User> wrapper = new QueryWrapper<>(); 
        // 通过id进行排序 
        wrapper.orderByAsc("id"); 
        List<User> users = userMapper.selectList(wrapper); 
        users.forEach(System.out::println); 
    }
-   ```
-
+```
+   
    
 
 ### 3.7 代码自动生成器
 
-*dao、pojo、service、controller都给我自己去编写完成！*
+*有了代码生成器,我们不需要去编写dao、pojo、service、controller,所有的事情都交给mybatisplus去帮我编写完成！*
 
 AutoGenerator 是 MyBatis-Plus 的代码生成器，通过 AutoGenerator 可以快速生成 Entity、Mapper、Mapper XML、Service、Controller 等各个模块的代码，极大的提升了开发效率。
 
@@ -726,10 +741,6 @@ public class KuangCode {
 测试结果
 
 
-
-
-
-*学习地址: https://www.bilibili.com/video/BV17E411N7KN*
 
 
 

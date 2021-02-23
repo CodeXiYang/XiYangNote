@@ -45,7 +45,7 @@
 **MyBatis**
 
 - [ ] [B站-遇见狂神说-MyBatis](哔哩哔学习笔记/B站-遇见狂神说/Mybatis最新完整教程IDEA版通俗易懂/Mybatis3.md)
-- [ ] 尚硅谷-xx-MyBatis
+- [ ] [尚硅谷-雷丰阳-MyBatis](尚硅谷学习笔记/第3阶段-JavaEE必备/尚硅谷-雷丰阳-MyBatis3实战教程/MyBatis3.md)
 
 **MyBatisPlus**
 

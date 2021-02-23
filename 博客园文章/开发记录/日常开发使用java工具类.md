@@ -1,12 +1,10 @@
-# Java相关工具
+# Java工具类编写
 
 *2021年2月20日11:36:19*
 
 [toc]
 
-
-
-## 工具类
+## 工具类-Util
 
 ### ResultDto
 
@@ -180,23 +178,5 @@ public class CodeGeneratorUtil {
 
 ```
 
-
-
-## SpringBoot配置文件
-
-> Springboot配置文件application.yml常用写法
-
-```yml
-
-```
-
-
-
-## SpringBoot依赖
-
-> SpringBoot项目常用依赖记录
-
-```xml
-
-```
+## 配置类-Config
 
