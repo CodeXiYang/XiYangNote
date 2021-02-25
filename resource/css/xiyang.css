@@ -432,3 +432,35 @@ footer{
 section.cover.has-mask .mask {
 	background-color: #101012!important;
 }
+
+
+/*=======================字体图标--图标样式*/
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont/iconfont.eot');
+  src: url('../fonts/iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/iconfont/iconfont.woff2') format('woff2'),
+      url('../fonts/iconfont/iconfont.woff') format('woff'),
+      url('../fonts/iconfont/iconfont.ttf') format('truetype'),
+      url('../fonts/iconfont/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*===============字体图标-字体样式===========*/
+@font-face {
+	font-family: 'webfont';
+	font-display: swap;
+	src: url('//at.alicdn.com/t/webfont_0gx2jmgmha6p.eot'); /* IE9*/
+	src: url('//at.alicdn.com/t/webfont_0gx2jmgmha6p.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('//at.alicdn.com/t/webfont_0gx2jmgmha6p.woff2') format('woff2'),
+	url('//at.alicdn.com/t/webfont_0gx2jmgmha6p.woff') format('woff'), /* chrome、firefox */
+	url('//at.alicdn.com/t/webfont_0gx2jmgmha6p.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+	url('//at.alicdn.com/t/webfont_0gx2jmgmha6p.svg#杨任东竹石体-Bold') format('svg'); /* iOS 4.1- */
+}

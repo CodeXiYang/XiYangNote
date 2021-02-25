@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "3031904",
+      "name": "swagger",
+      "font_class": "icon",
+      "unicode": "e504",
+      "unicode_decimal": 58628
+    },
+    {
+      "icon_id": "3728435",
+      "name": "java-service",
+      "font_class": "java-service",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "10745577",
+      "name": "icon_回到顶部",
+      "font_class": "icon_huojian",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    }
+  ]
+}
