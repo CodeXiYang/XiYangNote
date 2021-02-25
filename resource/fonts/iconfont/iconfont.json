@@ -6,25 +6,53 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "3031904",
-      "name": "swagger",
-      "font_class": "icon",
-      "unicode": "e504",
-      "unicode_decimal": 58628
+      "icon_id": "5772590",
+      "name": "数据库",
+      "font_class": "shujuku1",
+      "unicode": "e502",
+      "unicode_decimal": 58626
     },
     {
-      "icon_id": "3728435",
-      "name": "java-service",
-      "font_class": "java-service",
-      "unicode": "e62a",
-      "unicode_decimal": 58922
+      "icon_id": "9383120",
+      "name": "SPRING",
+      "font_class": "spring",
+      "unicode": "e512",
+      "unicode_decimal": 58642
     },
     {
-      "icon_id": "10745577",
-      "name": "icon_回到顶部",
-      "font_class": "icon_huojian",
-      "unicode": "e642",
-      "unicode_decimal": 58946
+      "icon_id": "13634861",
+      "name": "运维",
+      "font_class": "yunwei",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "14116604",
+      "name": "java",
+      "font_class": "java",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "16423680",
+      "name": "学习",
+      "font_class": "xuexi",
+      "unicode": "e8c8",
+      "unicode_decimal": 59592
+    },
+    {
+      "icon_id": "17071026",
+      "name": "火箭",
+      "font_class": "huojian",
+      "unicode": "e503",
+      "unicode_decimal": 58627
+    },
+    {
+      "icon_id": "19854500",
+      "name": "前端",
+      "font_class": "qianduan",
+      "unicode": "e841",
+      "unicode_decimal": 59457
     }
   ]
 }
