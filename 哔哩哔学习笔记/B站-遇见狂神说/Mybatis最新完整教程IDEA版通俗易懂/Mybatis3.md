@@ -1,10 +1,12 @@
-# MyBatis3
+MyBatis3
 
 >  课程名称: [【狂神说Java】Mybatis最新完整教程IDEA版通俗易懂](https://www.bilibili.com/video/BV1NE411Q7Nx  )
 >
 >  课程概述: 使用mybatis进行crud操作,动态sql,对应关系,缓存
 >
 >  讲述人: B站-遇见狂神说
+
+
 
 ## 1. MyBatis简介
 
@@ -447,7 +449,7 @@ public class MybatisTest {
 
 ### 3.1 namespace属性
 
-通过入门案例可以看到mapper的标签中有一个namespace的属性,其作用就是用于xml与指定java接口相互绑定
+通过入门案例可以看到mapper的标签中有一个namespace的属性,其作用就是用于xml与指定java接口文件相互绑定
 
 ![image-20201220154013993](assets/image-20201220154013993.png)
 
@@ -1105,7 +1107,7 @@ public class User {
 
 ## 5. ReultMap
 
-*ResultMap用于解决属性名和字段名不一致的问题*
+*ResultMap用于解决`java实体中的属性名` 和 `数据库字段名` 不一致的问题*
 
 
 
@@ -1119,7 +1121,7 @@ public class User {
    public class User { 
        private int id; //id 
        private String name; //姓名 
-       private String password; //密码和数据库不一样！ 
+       private String password; //密码字段和数据库不一样！ 数据库中的字段是pwd
        //构造 
        //set/get 
        //toString() 
