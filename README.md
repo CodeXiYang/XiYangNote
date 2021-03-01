@@ -1,19 +1,19 @@
 
 
-<span class="iconfont" style="color:#42b983;font-size:30px">&#xe62a;</span> *[低头敲代码,抬头看方向](https://www.processon.com/mindmap/5fcddb4e1e08536c5970cc7a)*
+*[低头敲代码,抬头看方向](https://www.processon.com/mindmap/5fcddb4e1e08536c5970cc7a)*
 
 ![Java开发技术栈](resource/images/Snipaste_2020-12-23_16-20-11.png)
 
 ---
 
-## ☕ JavaSE
+## JavaSE ☕ 
 
 ### JavaSE基础
 
 **JavaSE**
 
-- [ ] [尚硅谷-宋红康-JavaSE](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-宋红康-JavaSE核心基础/Java核心技术.md)
-- [ ] [尚硅谷-李贺飞-NIO](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-李贺飞-NIO/NIO)
+- [ ] [尚硅谷-宋红康-JavaSE](尚硅谷学习笔记/尚硅谷-宋红康-JavaSE核心基础/Java核心技术.md)
+- [ ] [尚硅谷-李贺飞-NIO](尚硅谷学习笔记/尚硅谷-李贺飞-NIO/NIO)
 
 ### JavaWeb开发
 
@@ -26,28 +26,28 @@
 
 **Java数据结构和算法**
 
-- [ ] [尚硅谷-韩顺平-Java数据结构和算法](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-韩顺平-Java数据结构和算法/Java数据结构和算法.md)
+- [ ] [尚硅谷-韩顺平-Java数据结构和算法](尚硅谷学习笔记/尚硅谷-韩顺平-Java数据结构和算法/Java数据结构和算法.md)
 
 **Java设计模式**
 
-- [ ] [尚硅谷-韩顺平-Java设计模式](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-韩顺平-Java设计模式/Java设计模式.md)
+- [ ] [尚硅谷-韩顺平-Java设计模式](尚硅谷学习笔记/尚硅谷-韩顺平-Java设计模式/Java设计模式.md)
 
 **JVM**
 
-- [ ] [尚硅谷-宋红康-JVM虚拟机](尚硅谷学习笔记/第4阶段-JavaEE高级/尚硅谷-宋红康-JVM虚拟机/JVM虚拟机.md)
+- [ ] [尚硅谷-宋红康-JVM虚拟机](尚硅谷学习笔记/尚硅谷-宋红康-JVM虚拟机/JVM虚拟机.md)
 
 
 
 
 
-## 🍃 JavaEE
+## JavaEE 🍃 
 
 ### ORM框架
 
 **MyBatis**
 
 - [ ] [B站-遇见狂神说-MyBatis](哔哩哔学习笔记/B站-遇见狂神说/Mybatis最新完整教程IDEA版通俗易懂/Mybatis3.md)
-- [ ] [尚硅谷-雷丰阳-MyBatis](尚硅谷学习笔记/第3阶段-JavaEE必备/尚硅谷-雷丰阳-MyBatis3实战教程/MyBatis3.md)
+- [ ] [尚硅谷-雷丰阳-MyBatis](尚硅谷学习笔记/尚硅谷-雷丰阳-MyBatis3实战教程/MyBatis3.md)
 
 **MyBatisPlus**
 
@@ -75,7 +75,7 @@
 **SpringBoot**
 
 - [ ] 尚硅谷-雷丰阳-SpringBoot1.x
-- [ ] [尚硅谷-雷丰阳-SpringBoot2.x](尚硅谷学习笔记/第4阶段-JavaEE高级/尚硅谷-雷丰阳-SpringBoot2/SpringBoot2核心技术与响应式编程.md)
+- [ ] [尚硅谷-雷丰阳-SpringBoot2.x](尚硅谷学习笔记/尚硅谷-雷丰阳-SpringBoot2/SpringBoot2核心技术与响应式编程.md)
 - [ ] [B站-遇见狂神说-SpringBoot2.x](哔哩哔学习笔记/B站-遇见狂神说/SpringBoot2.2.5最新教程IDEA版通俗易懂/SpringBoot2.x.md)
 - [ ] [B站-编程不良人-SpringBoot2.2.5](哔哩哔学习笔记/B站-编程不良人/springboot2.2.5笔记/SpringBoot2.2.5.md)
 
@@ -89,7 +89,7 @@
 
 **Netty**
 
-- [ ] [尚硅谷-韩顺平-Netty](尚硅谷学习笔记/第4阶段-JavaEE高级/尚硅谷-韩顺平-Netty网络通讯框架/Netty4.md)
+- [ ] [尚硅谷-韩顺平-Netty](尚硅谷学习笔记/尚硅谷-韩顺平-Netty网络通讯框架/Netty4.md)
 
 
 
@@ -139,7 +139,7 @@
 - [ ] 尚硅谷-xx-就业面试第二季
 - [ ] 尚硅谷-xx-就业面试第三季
 
-## ~~🤔 Java大数据~~
+## ~~Java大数据🤔~~
 
 *大数据相关的知识待定~~*
 
@@ -175,7 +175,7 @@
 - [ ] 尚硅谷-xx-阿里云离线数仓(阿里云委托录制)
 - [ ] 尚硅谷-xx-阿里云实时数仓(阿里云委托录制)</div>
 
-## 🎨 前端技术
+## 前端技术 🎨 
 
 ### 前端基础
 
@@ -292,21 +292,21 @@
 
 
 
-## 🗄️  数据库技术
+## 数据库技术 🗄️  
 
 ### SQL
 
 **MySQL及连接技术** 
 
 - [ ] B站-遇见狂神说-MySQL
-- [ ] [尚硅谷-李玉婷-MySQL核心基础](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-李玉婷-MySQL核心基础/MySQL核心技术.md)
+- [ ] [尚硅谷-李玉婷-MySQL核心基础](尚硅谷学习笔记/尚硅谷-李玉婷-MySQL核心基础/MySQL核心技术.md)
 - [ ] 尚硅谷-周阳-MySQL高级
-- [ ] [尚硅谷-宋红康-JDBC](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-宋红康-JDBC/JDBC.md)
+- [ ] [尚硅谷-宋红康-JDBC](尚硅谷学习笔记/尚硅谷-宋红康-JDBC/JDBC.md)
 - [ ] [知播渔-李南江-MySQL8.0](知播渔学习笔记/14-MySQL8及数据迁移/MySQL8及数据迁移.md)
 
 **oracle及连接技术**
 
-- [ ] [尚硅谷-宋红康-SQL丶PLSQL丶Oracle](尚硅谷学习笔记/第1阶段-基础阶段/尚硅谷-宋红康-Oracle丶SQL丶PLSQL/README.md)
+- [ ] [尚硅谷-宋红康-SQL丶PLSQL丶Oracle](尚硅谷学习笔记/尚硅谷-宋红康-Oracle丶SQL丶PLSQL/README.md)
 
 ### NoSQL
 
@@ -324,7 +324,7 @@
 
 
 
-## 🛠️DevOps
+## DevOps 🛠️
 
 ### Linux
 
@@ -349,7 +349,7 @@
 - [x] [B站-遇见狂神说-Git](哔哩哔学习笔记/B站-遇见狂神说/Git最新教程通俗易懂/git.md)
 - [ ] 知播渔-李南江-Git
 
-## 🎇 拓展学习
+##  拓展学习 🎇
 
 **idea工具**
 
