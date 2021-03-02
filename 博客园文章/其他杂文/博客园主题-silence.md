@@ -6,6 +6,8 @@
 >
 > GitHub地址: https://github.com/esofar/cnblogs-theme-silence
 
+[toc]
+
 
 
 ## 博客园设置
@@ -77,6 +79,11 @@ window.$silence里面的[配置选项](https://esofar.github.io/cnblogs-theme-si
             levels: ['h1','h2', 'h3', 'h4','h5','h6']
         },
     };
+    //删除广告
+    document.getElementById("cnblogs_c1").remove()
+    document.getElementById("under_post_card1").remove()
+    document.getElementById("cnblogs_c2").remove()
+    document.getElementById("under_post_card2").remove()
 </script>
 <script src="https://cdn.jsdelivr.net/gh/esofar/cnblogs-theme-silence@3.0.0-beta3/dist/silence.min.js"></script>
 ```
