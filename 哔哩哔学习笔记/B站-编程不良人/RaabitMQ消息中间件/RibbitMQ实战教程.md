@@ -6,7 +6,9 @@
 
 ### 1.1 什么是MQ
 
-`MQ`(Message Quene) :  翻译为 `消息队列`,通过典型的 `生产者`和`消费者`模型,生产者不断向消息队列中生产消息，消费者不断的从队列中获取消息。因为消息的生产和消费都是异步的，而且只关心消息的发送和接收，没有业务逻辑的侵入,轻松的实现系统间解耦。别名为 `消息中间件`	通过利用高效可靠的消息传递机制进行平台无关的数据交流，并基于数据通信来进行分布式系统的集成。
+`MQ`(Message Quene) :  翻译为 `消息队列`,通过典型的 `生产者`和`消费者`
+模型,生产者不断向消息队列中生产消息，消费者不断的从队列中获取消息。因为消息的生产和消费都是异步的，而且只关心消息的发送和接收，没有业务逻辑的侵入,轻松的实现系统间解耦。别名为 `消息中间件`
+通过利用高效可靠的消息传递机制进行平台无关的数据交流，并基于数据通信来进行分布式系统的集成。
 
 ### 1.2 MQ有哪些
 
@@ -31,8 +33,8 @@
 
 **RabbitMQ**
 
-- RabbitMQ是使用Erlang语言开发的开源消息队列系统，基于AMQP协议来实现。AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。AMQP协议更多用在企业系统内对数据一致性、稳定性和可靠性要求很高的场景，对性能和吞吐量的要求还在其次。
-  		
+-
+RabbitMQ是使用Erlang语言开发的开源消息队列系统，基于AMQP协议来实现。AMQP的主要特征是面向消息、队列、路由（包括点对点和发布/订阅）、可靠性、安全。AMQP协议更多用在企业系统内对数据一致性、稳定性和可靠性要求很高的场景，对性能和吞吐量的要求还在其次。
 
 > RabbitMQ比Kafka可靠，Kafka更适合IO高吞吐的处理，一般应用在大数据日志处理或对实时性（少量延迟），可靠性（少量丢数据）要求稍低的场景使用，比如ELK日志收集。
 
@@ -40,7 +42,7 @@
 
 ## 2. RabbitMQ 的引言
 
-### 2.1 RabbitMQ 
+### 2.1 RabbitMQ
 
 > 基于`AMQP`协议，erlang语言开发，是部署最广泛的开源消息中间件,是最受欢迎的开源消息中间件之一。
 
@@ -52,7 +54,8 @@
 
 **AMQP 协议**
 
-- AMQP（advanced message queuing protocol）`在2003年时被提出，最早用于解决金融领不同平台之间的消息传递交互问题。顾名思义，AMQP是一种协议，更准确的说是一种binary wire-level protocol（链接协议）。这是其和JMS的本质差别，AMQP不从API层进行限定，而是直接定义网络交换的数据格式。这使得实现了AMQP的provider天然性就是跨平台的。以下是AMQP协议模型:
+- AMQP（advanced message queuing protocol）`在2003年时被提出，最早用于解决金融领不同平台之间的消息传递交互问题。顾名思义，AMQP是一种协议，更准确的说是一种binary wire-level
+  protocol（链接协议）。这是其和JMS的本质差别，AMQP不从API层进行限定，而是直接定义网络交换的数据格式。这使得实现了AMQP的provider天然性就是跨平台的。以下是AMQP协议模型:
 
   ![image-20200311182438041](assets/image-20200311182438041.png)
 
@@ -155,7 +158,7 @@
 	http://10.15.0.8:15672/
 ```
 
- ![image-20190926194738708](assets/image-20190926194738708-3836601.png)
+![image-20190926194738708](assets/image-20190926194738708-3836601.png)
 
 ```markdown
 # 12.登录管理界面
@@ -196,8 +199,6 @@
 
 - `Queues：队列，即消息队列，消息存放在队列中，等待消费，消费后被移除队列。`
 
-  
-
 #### 3.2.2 Admin用户和虚拟主机管理
 
 ##### 1. 添加用户
@@ -233,7 +234,7 @@
 	为了让各个用户可以互不干扰的工作，RabbitMQ添加了虚拟主机（Virtual Hosts）的概念。其实就是一个独立的访问路径，不同用户使用不同路径，各自有自己的队列、交换机，互相不会影响。
 ```
 
- ![image-20191126163023153](assets/image-20191126163023153.png)
+![image-20191126163023153](assets/image-20191126163023153.png)
 
 ##### 3. 绑定虚拟主机和用户
 
@@ -241,7 +242,7 @@
 
 点击添加好的虚拟主机：
 
- ![image-20191126163506795](assets/image-20191126163506795.png)
+![image-20191126163506795](assets/image-20191126163506795.png)
 
 进入虚拟机设置界面:
 
@@ -260,8 +261,6 @@
 ![image-20191126165434784](assets/image-20191126165434784.png)
 
 ![image-20191126165459282](assets/image-20191126165459282.png)
-
-
 
 ### 4.2 引入依赖
 
@@ -339,7 +338,8 @@
 
 ### 4.4 第二种模型(work quene)
 
-`Work queues`，也被称为（`Task queues`），任务模型。当消息处理比较耗时的时候，可能生产消息的速度会远远大于消息的消费速度。长此以往，消息就会堆积越来越多，无法及时处理。此时就可以使用work 模型：**让多个消费者绑定到一个队列，共同消费队列中的消息**。队列中的消息一旦消费，就会消失，因此任务是不会被重复执行的。
+`Work queues`，也被称为（`Task queues`），任务模型。当消息处理比较耗时的时候，可能生产消息的速度会远远大于消息的消费速度。长此以往，消息就会堆积越来越多，无法及时处理。此时就可以使用work 模型：**
+让多个消费者绑定到一个队列，共同消费队列中的消息**。队列中的消息一旦消费，就会消失，因此任务是不会被重复执行的。
 
 ![image-20200314221002008](assets/image-20200314221002008.png)
 
@@ -423,20 +423,20 @@ channel.basicConsume("hello",false,new DefaultConsumer(channel){
 
 ---
 
-### 4.5 第三种模型(fanout) 
+### 4.5 第三种模型(fanout)
 
 `fanout 扇出 也称为广播`
 
- ![image-20191126213115873](assets/image-20191126213115873.png)
+![image-20191126213115873](assets/image-20191126213115873.png)
 
 在广播模式下，消息发送流程是这样的：
 
--  可以有多个消费者
--  每个**消费者有自己的queue**（队列）
--  每个**队列都要绑定到Exchange**（交换机）
+- 可以有多个消费者
+- 每个**消费者有自己的queue**（队列）
+- 每个**队列都要绑定到Exchange**（交换机）
 - **生产者发送的消息，只能发送到交换机**，交换机来决定要发给哪个队列，生产者无法决定。
--  交换机把消息发送给绑定过的所有队列
--  队列的消费者都能拿到消息。实现一条消息被多个消费者消费
+- 交换机把消息发送给绑定过的所有队列
+- 队列的消费者都能拿到消息。实现一条消息被多个消费者消费
 
 #### 1. 开发生产者
 
@@ -517,7 +517,7 @@ channel.basicConsume(queue,true,new DefaultConsumer(channel){
 
 `在Fanout模式中，一条消息，会被所有订阅的队列都消费。但是，在某些场景下，我们希望不同的消息被不同的队列消费。这时就要用到Direct类型的Exchange。`
 
- 在Direct模型下：
+在Direct模型下：
 
 - 队列与交换机的绑定，不能是任意绑定了，而是要指定一个`RoutingKey`（路由key）
 - 消息的发送方在 向 Exchange发送消息时，也必须指定消息的 `RoutingKey`。
@@ -585,21 +585,22 @@ channel.basicConsume(queue,true,new DefaultConsumer(channel){
 
 ##### 4.测试生产者发送Route key为error的消息时
 
- ![image-20200316102613933](assets/image-20200316102613933.png)
+![image-20200316102613933](assets/image-20200316102613933.png)
 
- ![image-20200316102627912](assets/image-20200316102627912.png)
+![image-20200316102627912](assets/image-20200316102627912.png)
 
 ##### 5.测试生产者发送Route key为info的消息时
 
- ![image-20200316102925740](assets/image-20200316102925740.png)
+![image-20200316102925740](assets/image-20200316102925740.png)
 
- ![image-20200316102947326](assets/image-20200316102947326.png)
+![image-20200316102947326](assets/image-20200316102947326.png)
 
 ----
 
 #### 4.6.2 Routing 之订阅模型-Topic
 
-`Topic`类型的`Exchange`与`Direct`相比，都是可以根据`RoutingKey`把消息路由到不同的队列。只不过`Topic`类型`Exchange`可以让队列在绑定`Routing key` 的时候使用通配符！这种模型`Routingkey` 一般都是由一个或多个单词组成，多个单词之间以”.”分割，例如： `item.insert`
+`Topic`类型的`Exchange`与`Direct`相比，都是可以根据`RoutingKey`把消息路由到不同的队列。只不过`Topic`类型`Exchange`可以让队列在绑定`Routing key`
+的时候使用通配符！这种模型`Routingkey` 一般都是由一个或多个单词组成，多个单词之间以”.”分割，例如： `item.insert`
 
 ![image-20191127121900255](assets/image-20191127121900255.png)
 
@@ -622,7 +623,7 @@ String routekey = "user.save";//动态路由key
 channel.basicPublish("topics",routekey,null,("这是路由中的动态订阅模型,route key: ["+routekey+"]").getBytes());
 ```
 
-##### 2.开发消费者-1 
+##### 2.开发消费者-1
 
 `Routing Key中使用*通配符方式`
 
@@ -666,21 +667,15 @@ channel.basicConsume(queue,true,new DefaultConsumer(channel){
 
 ##### 4.测试结果
 
- ![image-20200316113935785](assets/image-20200316113935785.png)
+![image-20200316113935785](assets/image-20200316113935785.png)
 
- ![image-20200316114000459](assets/image-20200316114000459.png)
-
-
-
-
-
-
+![image-20200316114000459](assets/image-20200316114000459.png)
 
 ## 5. SpringBoot中使用RabbitMQ
 
 ### 5.0 搭建初始环境
 
-#### 	1. 引入依赖
+#### 1. 引入依赖
 
 ```xml
 <dependency>
@@ -689,7 +684,7 @@ channel.basicConsume(queue,true,new DefaultConsumer(channel){
 </dependency>
 ```
 
-#### 	2. 配置配置文件
+#### 2. 配置配置文件
 
 ```yml
 spring:
@@ -703,7 +698,7 @@ spring:
     virtual-host: /ems
 ```
 
-`RabbitTemplate`  用来简化操作     使用时候直接在项目中注入即可使用
+`RabbitTemplate`  用来简化操作 使用时候直接在项目中注入即可使用
 
 ### 5.1 第一种hello world模型使用
 
@@ -782,8 +777,6 @@ public void testFanout() throws InterruptedException {
 }
 ```
 
-
-
 **开发消费者**
 
 ```java
@@ -807,8 +800,6 @@ public class FanoutCustomer {
     }
 }
 ```
-
-
 
 ### 5.4 Route 路由模型
 
@@ -868,7 +859,6 @@ public class DirectCustomer {
    }
    ```
 
-   
 
 2. ##### 开发消费者
 
@@ -907,53 +897,51 @@ public class DirectCustomer {
 
 `场景说明：用户注册后，需要发注册邮件和注册短信,传统的做法有两种 1.串行的方式 2.并行的方式`
 
-- `串行方式:` 将注册信息写入数据库后,发送注册邮件,再发送注册短信,以上三个任务全部完成后才返回给客户端。 这有一个问题是,邮件,短信并不是必须的,它只是一个通知,而这种做法让客户端等待没有必要等待的东西. 
+- `串行方式:` 将注册信息写入数据库后,发送注册邮件,再发送注册短信,以上三个任务全部完成后才返回给客户端。 这有一个问题是,邮件,短信并不是必须的,它只是一个通知,而这种做法让客户端等待没有必要等待的东西.
 
- ![这里写图片描述](assets/SouthEast-4860248.png)
+![这里写图片描述](assets/SouthEast-4860248.png)
 
-- `并行方式: `将注册信息写入数据库后,发送邮件的同时,发送短信,以上三个任务完成后,返回给客户端,并行的方式能提高处理的时间。 
+- `并行方式: `将注册信息写入数据库后,发送邮件的同时,发送短信,以上三个任务完成后,返回给客户端,并行的方式能提高处理的时间。
 
- ![这里写图片描述](assets/SouthEast-20191127211112660.png)
+![这里写图片描述](assets/SouthEast-20191127211112660.png)
 
-- `消息队列:`假设三个业务节点分别使用50ms,串行方式使用时间150ms,并行使用时间100ms。虽然并行已经提高的处理时间,但是,前面说过,邮件和短信对我正常的使用网站没有任何影响，客户端没有必要等着其发送完成才显示注册成功,应该是写入数据库后就返回.  `消息队列`: 引入消息队列后，把发送邮件,短信不是必须的业务逻辑异步处理 
+- `消息队列:`
+  假设三个业务节点分别使用50ms,串行方式使用时间150ms,并行使用时间100ms。虽然并行已经提高的处理时间,但是,前面说过,邮件和短信对我正常的使用网站没有任何影响，客户端没有必要等着其发送完成才显示注册成功,应该是写入数据库后就返回.  `消息队列`:
+  引入消息队列后，把发送邮件,短信不是必须的业务逻辑异步处理
 
   ![img](assets/592892-20190520220249900-1679743651.jpg)
 
 由此可以看出,引入消息队列后，用户的响应时间就等于写入数据库的时间+写入消息队列的时间(可以忽略不计),引入消息队列后处理后,响应时间是串行的3倍,是并行的2倍。
 
-
-
 ### 6.2 应用解耦
 
 `场景：双11是购物狂节,用户下单后,订单系统需要通知库存系统,传统的做法就是订单系统调用库存系统的接口. `
 
- ![这里写图片描述](assets/SouthEast-20191127211247287.png)
+![这里写图片描述](assets/SouthEast-20191127211247287.png)
 
 这种做法有一个缺点:
 
-当库存系统出现故障时,订单就会失败。 订单系统和库存系统高耦合.  引入消息队列 
+当库存系统出现故障时,订单就会失败。 订单系统和库存系统高耦合. 引入消息队列
 
- ![这里写图片描述](assets/SouthEast-20191127211304085.png)
+![这里写图片描述](assets/SouthEast-20191127211304085.png)
 
 - `订单系统:`用户下单后,订单系统完成持久化处理,将消息写入消息队列,返回用户订单下单成功。
 
-- `库存系统:`订阅下单的消息,获取下单消息,进行库操作。  就算库存系统出现故障,消息队列也能保证消息的可靠投递,不会导致消息丢失.
-
-  
+- `库存系统:`订阅下单的消息,获取下单消息,进行库操作。 就算库存系统出现故障,消息队列也能保证消息的可靠投递,不会导致消息丢失.
 
 ### 6.3 流量削峰
 
- `场景:` 秒杀活动，一般会因为流量过大，导致应用挂掉,为了解决这个问题，一般在应用前端加入消息队列。  
+`场景:` 秒杀活动，一般会因为流量过大，导致应用挂掉,为了解决这个问题，一般在应用前端加入消息队列。
 
-  `作用:` 
+`作用:`
 
-​			1.可以控制活动人数，超过此一定阀值的订单直接丢弃(我为什么秒杀一次都没有成功过呢^^) 
+​ 1.可以控制活动人数，超过此一定阀值的订单直接丢弃(我为什么秒杀一次都没有成功过呢^^)
 
-​			2.可以缓解短时间的高流量压垮应用(应用程序按自己的最大处理能力获取订单) 
+​ 2.可以缓解短时间的高流量压垮应用(应用程序按自己的最大处理能力获取订单)
 
- ![这里写图片描述](assets/SouthEast-20191127211341601.png)
+![这里写图片描述](assets/SouthEast-20191127211341601.png)
 
-1.用户的请求,服务器收到之后,首先写入消息队列,加入消息队列长度超过最大值,则直接抛弃用户请求或跳转到错误页面.  
+1.用户的请求,服务器收到之后,首先写入消息队列,加入消息队列长度超过最大值,则直接抛弃用户请求或跳转到错误页面.
 
 2.秒杀业务根据消息队列中的请求信息，再做后续处理.
 
@@ -965,7 +953,7 @@ public class DirectCustomer {
 
 #### 7.1.1 普通集群(副本集群)
 
-> All data/state required for the operation of a RabbitMQ broker is replicated across all nodes. An exception to this are message queues, which by default reside on one node, though they are visible and reachable from all nodes. To replicate queues across nodes in a cluster   --摘自官网
+> All data/state required for the operation of a RabbitMQ broker is replicated across all nodes. An exception to this are message queues, which by default reside on one node, though they are visible and reachable from all nodes. To replicate queues across nodes in a cluster --摘自官网
 
 `默认情况下:RabbitMQ代理操作所需的所有数据/状态都将跨所有节点复制。这方面的一个例外是消息队列，默认情况下，消息队列位于一个节点上，尽管它们可以从所有节点看到和访问`
 
@@ -973,7 +961,7 @@ public class DirectCustomer {
 
 ![image-20200320094147471](assets/image-20200320094147471.png)
 
-​	核心解决问题:  `当集群中某一时刻master节点宕机,可以对Quene中信息,进行备份`
+​ 核心解决问题:  `当集群中某一时刻master节点宕机,可以对Quene中信息,进行备份`
 
 **集群搭建**
 
@@ -1052,19 +1040,15 @@ public class DirectCustomer {
 
 #### 7.1.2 镜像集群
 
-> This guide covers mirroring (queue contents replication) of classic queues  --摘自官网
+> This guide covers mirroring (queue contents replication) of classic queues --摘自官网
 >
 > By default, contents of a queue within a RabbitMQ cluster are located on a single node (the node on which the queue was declared). This is in contrast to exchanges and bindings, which can always be considered to be on all nodes. Queues can optionally be made *mirrored* across multiple nodes. --摘自官网
 
 `镜像队列机制就是将队列在三个节点之间设置主从关系，消息会在三个节点之间进行自动同步，且如果其中一个节点不可用，并不会导致消息丢失或服务不可用的情况，提升MQ集群的整体高可用性。`
 
-
-
 **集群架构图**
 
 ![image-20200320113423235](assets/image-20200320113423235.png)
-
-
 
 **配置集群架构**
 

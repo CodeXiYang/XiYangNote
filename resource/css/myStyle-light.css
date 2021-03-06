@@ -5,13 +5,15 @@
 a {
     text-decoration: none;
 }
-body{
-    font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;   
-    word-spacing:1px; /*更改默认的词间距*/
-    letter-spacing:1px;/*更改默认的字符间距*/ 
+
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+    word-spacing: 1px; /*更改默认的词间距*/
+    letter-spacing: 1px; /*更改默认的字符间距*/
     /* background:rgb(255, 255, 255); */
 
 }
+
 /* 置顶插件 */
 .to-top {
     display: none;
@@ -20,21 +22,24 @@ body{
     color: #ffffff;
     border-radius: 10px;
     background-color: rgb(66, 185, 163);
-    background: linear-gradient(right,rgb(66 185 163), rgb(102, 126, 233),rgb(66 185 163));
-    background: -ms-linear-gradient(right,rgb(66 185 163), rgb(102, 126, 233),rgb(66 185 163));
-    background: -webkit-linear-gradient(right,rgb(66 185 163), rgb(102, 126, 233),rgb(66 185 163));
-    background: -o-linear-gradient(right,rgb(66 185 163), rgb(102, 126, 233),rgb(66 185 163));
-    background: -moz-linear-gradient(right,rgb(66 185 163), rgb(102, 126, 233),rgb(66 185 163));
+    background: linear-gradient(right, rgb(66 185 163), rgb(102, 126, 233), rgb(66 185 163));
+    background: -ms-linear-gradient(right, rgb(66 185 163), rgb(102, 126, 233), rgb(66 185 163));
+    background: -webkit-linear-gradient(right, rgb(66 185 163), rgb(102, 126, 233), rgb(66 185 163));
+    background: -o-linear-gradient(right, rgb(66 185 163), rgb(102, 126, 233), rgb(66 185 163));
+    background: -moz-linear-gradient(right, rgb(66 185 163), rgb(102, 126, 233), rgb(66 185 163));
     text-align: center;
     vertical-align: middle;
 }
-.to-top:hover{
-    background: -webkit-linear-gradient(right,rgb(102, 126, 233),rgb(66 185 163),rgb(102, 126, 233));
+
+.to-top:hover {
+    background: -webkit-linear-gradient(right, rgb(102, 126, 233), rgb(66 185 163), rgb(102, 126, 233));
 }
+
 /* 首页a标签置顶,不然无法点击 */
 section.cover .cover-main {
-    z-index:10 !important;
+    z-index: 10 !important;
 }
+
 /* 导航栏 */
 /* .app-nav {
     margin: 20px 60px 0 0 !important;
@@ -48,13 +53,14 @@ section.cover .cover-main {
     background-color: rgb(68, 68, 68) !important;
 } */
 /* 内容居中和宽度 */
-.content{
-    width:1000px;
+.content {
+    width: 1000px;
     margin: 0 auto;
     padding-top: 70px !important;
 }
+
 /* 内容区域的字体颜色和背景 */
-.markdown-section{
+.markdown-section {
     /* background:rgb(247, 247, 247); */
     /* color: rgb(184, 191, 198); */
     color: black;
@@ -62,6 +68,7 @@ section.cover .cover-main {
     padding: 30px 30px 40px 30px !important;
     border-radius: 20px;
 }
+
 /* 行代码块 */
 .markdown-section code {
     font-size: 14px;
@@ -72,8 +79,9 @@ section.cover .cover-main {
     background: rgb(247, 247, 247);
     white-space: normal;
     color: #f22f27;
-    
+
 }
+
 /* 搜索框 */
 /* .search {
     border-bottom: 1px solid rgb(68,68,68) !important;
@@ -94,22 +102,24 @@ section.cover .cover-main {
 .sidebar ul li a {
     /* color: rgb(222, 222, 222); */
     font-weight: 600;
-    font-size:16px;
+    font-size: 16px;
 }
+
 .sidebar ul ul li a {
     /* color: rgb(184, 191, 198); */
-    font-weight:400 !important;
-    font-size:14px !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
 }
 
 .sidebar ul li.active > a {
     color: rgb(66, 185, 163);
-} 
+}
 
 /* 侧边栏标题 */
-.sidebar > h1 a{
+.sidebar > h1 a {
     color: black
 }
+
 /* 侧边栏和内容分界线 */
 .sidebar {
     border-right: 1px solid rgb(247, 247, 247);
@@ -118,26 +128,28 @@ section.cover .cover-main {
 /* .sidebar-toggle{
     background-color: rgb(68,68,68) !important;
 } */
-h1
-{
+h1 {
     font-weight: bold !important;
-    color:#ffffff !important;
+    color: #ffffff !important;
 }
-h1 span{
-    display:inline-block;
+
+h1 span {
+    display: inline-block;
     background: rgb(102, 126, 233);
-    color:#ffffff !important;
-    padding:  10px  16px;
-    border-radius:5px;
+    color: #ffffff !important;
+    padding: 10px 16px;
+    border-radius: 5px;
     box-shadow: 2px 2px 5px rgb(216, 216, 216);
 }
+
 .markdown-section hr {
     border: none;
     border-bottom: 2px solid rgb(247, 247, 247) !important;
     margin: 2em 0;
 }
+
 /* 标题颜色 */
-.markdown-section h2 span, .markdown-section h3 span, .markdown-section h4 span,.markdown-section h5 span{
+.markdown-section h2 span, .markdown-section h3 span, .markdown-section h4 span, .markdown-section h5 span {
     /* color: rgb(222, 222, 222); */
     font-weight: bold;
 }
@@ -157,22 +169,26 @@ section.cover.has-mask .mask {
 .markdown-section strong {
     color: rgb(102, 126, 233);
 }
+
 /* a 标签 */
 .markdown-section a {
     color: rgb(66, 185, 163);
     font-weight: 500;
 }
+
 /* 表格 */
 .markdown-section tr:nth-child(2n) {
     background-color: rgb(51, 51, 51);
 }
+
 /* 引用块 */
-.markdown-section blockquote{
+.markdown-section blockquote {
     background: #F4F4C8;
-    padding:10px;
-    border-radius:10px;
-	border-left: 4px solid var(--theme-color,#858585)!important;
+    padding: 10px;
+    border-radius: 10px;
+    border-left: 4px solid var(--theme-color, #858585) !important;
 }
+
 /* 代码块 */
 /* .markdown-section pre {
     box-shadow: 2px 2px 20px 6px #ddd !important;
@@ -194,11 +210,12 @@ section.cover.has-mask .mask {
     border-radius: 5px;
     background-position: 10px 10px;
 }
+
 /* 代码块 */
-.markdown-section pre>code {
+.markdown-section pre > code {
     color: #c0c3c1 !important;
-    font-family: 'Inconsolata', consolas,"PingFang SC", "Microsoft YaHei", monospace !important;
-    background-color: #282c34 !important;    
+    font-family: 'Inconsolata', consolas, "PingFang SC", "Microsoft YaHei", monospace !important;
+    background-color: #282c34 !important;
     font-size: 15px !important;
     white-space: pre !important;
     line-height: 1.5 !important;
@@ -207,80 +224,91 @@ section.cover.has-mask .mask {
     tab-size: 4 !important;
 
 }
+
 /* 代码块 */
 markdown-section code, .markdown-section pre {
     background-color: #282c34;
 }
-.token.directive.keyword{
+
+.token.directive.keyword {
     color: #4faee2 !important;
 }
 
-.token.keyword{
+.token.keyword {
     color: #c678dd !important;
 }
 
-.token.comment{
+.token.comment {
     color: #737c8b !important;
 }
 
-.token.tag{
+.token.tag {
     color: #a589ad !important;
 }
 
 
-.token.attr-name{
+.token.attr-name {
     color: #de916c !important;
 }
-.token.attr-value{
+
+.token.attr-value {
     color: #4faee2 !important;
 }
 
-.token.macro.property{
+.token.macro.property {
     color: #4faee2 !important;
 }
 
-.token.function{
+.token.function {
     color: #e6b456 !important;
 }
-.token.string{
+
+.token.string {
     color: #98b755 !important;
 }
-.token.punctuation{
+
+.token.punctuation {
     color: #c0c3c1 !important;
 }
 
-.token.number{
-    color:#c0c3c1  !important;
+.token.number {
+    color: #c0c3c1 !important;
 }
 
 img, pre {
     border-radius: 8px;
 }
-img{
+
+img {
     border: 1px solid #a4a2a2;
     padding: 3px;
 }
+
 /*表格*/
 .markdown-section tr:nth-child(2n) {
     background-color: rgb(248, 246, 246) !important;
 }
 
 /**/
-.app-nav{
+.app-nav {
     position: fixed;
 }
-.app-nav ul li a{
+
+.app-nav ul li a {
     font-weight: bold;
-    color:rgb(66, 185, 163);
+    color: rgb(66, 185, 163);
 }
-.app-nav ul li a:hover{
-    color:rgb(221,27,27);
+
+.app-nav ul li a:hover {
+    color: rgb(221, 27, 27);
 }
+
 /*文章中的a链接标签样式*/
-#main p a{
-    color:#F22F27;
+#main p a {
+    color: #F22F27;
     /*text-decoration:underline wavy rgb(66, 185, 163) ;*/
 }
+
 /*复选框的样式,做任务列表的*/
 input[type="checkbox"] {
     width: 13px;
@@ -292,6 +320,7 @@ input[type="checkbox"] {
     margin-right: 10px;
     position: relative;
 }
+
 input[type="checkbox"]::before {
     content: "";
     position: absolute;
@@ -303,6 +332,7 @@ input[type="checkbox"]::before {
     border: 1px solid rgb(66, 185, 163);
     border-radius: 3px;
 }
+
 input[type="checkbox"]:checked::before {
     content: "✔️";
     background-color: #F22F27;
@@ -311,38 +341,44 @@ input[type="checkbox"]:checked::before {
     left: -1px;
     width: 117%;
     border: 1px solid #F22F27;
-    border-radius:3px;
+    border-radius: 3px;
     color: green;
     font-size: 10px;
     font-weight: bold;
 }
+
 /*侧边栏样式*/
 body.sticky .sidebar, body.sticky .sidebar-toggle {
     position: fixed;
     background-color: #f4f4f4;
 }
+
 /*搜索框圆角*/
 .search input {
     border-radius: 1rem;
 }
+
 /*首页*/
-.app-nav a.active{
-	border-bottom:none;
+.app-nav a.active {
+    border-bottom: none;
 }
+
 /*文章一级标题*/
 .markdown-section h1 {
     font-size: 2rem;
     margin: 0 0 1rem;
     text-align: center;
 }
+
 /*完成*/
-#ok{
-	display:block;
-	margin-top:5rem;
-	margin-bottom:5rem;
-	font-size:5rem;
-	text-align:center;
+#ok {
+    display: block;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    font-size: 5rem;
+    text-align: center;
 }
+
 .markdown-section hr {
     border: none;
     border-bottom: 5px solid #4f9ee3 !important;

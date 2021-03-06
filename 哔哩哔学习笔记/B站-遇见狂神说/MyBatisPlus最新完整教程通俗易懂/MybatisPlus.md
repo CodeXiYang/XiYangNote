@@ -1,5 +1,3 @@
-
-
 # MyBatis Plus
 
 > 课程名称: [【狂神说Java】MyBatisPlus最新完整教程通俗易懂](https://www.bilibili.com/video/BV17E411N7KN)
@@ -8,13 +6,11 @@
 >
 > 讲述人: B站-遇见狂神说
 
-
-
 ## 1. MybatisPlus概述
 
 ### 1.1 为什么要学习MyBatisPlus
 
-为什么要学习它呢？MyBatisPlus可以节省我们大量工作时间，所有的CRUD代码它都可以自动化完成！JPA 、 tk-mapper、MyBatisPlus 
+为什么要学习它呢？MyBatisPlus可以节省我们大量工作时间，所有的CRUD代码它都可以自动化完成！JPA 、 tk-mapper、MyBatisPlus
 
 MyBatisPlus在mybatis的基础上进行了简化,<u>偷懒的！</u>
 
@@ -56,8 +52,6 @@ MyBatis是什么？ MyBatis 本来就是简化 JDBC 操作的！
 
 **内置全局拦截插件**：提供全表 delete 、 update 操作智能分析阻断，也可自定义拦截规则，预防误操作
 
-
-
 ## 2. MybatisPlus快速入门
 
 地址：https://mp.baomidou.com/guide/quick-start.html#初始化工程
@@ -71,8 +65,6 @@ MyBatis是什么？ MyBatis 本来就是简化 JDBC 操作的！
 3、代码如何编写
 
 4、提高扩展技术能力！
-
-
 
 ### 2.1 MyBatisPlus使用步骤
 
@@ -190,13 +182,10 @@ MyBatis是什么？ MyBatis 本来就是简化 JDBC 操作的！
 
    ![image-20201218160853578](assets/image-20201218160853578.png)
 
-
 ### 2.2 思考
 
 1. SQL谁帮我们写的 ? : MyBatis-Plus 都写好了
 2. 方法哪里来的？ : MyBatis-Plus 都写好了
-
-
 
 ### 2.3 配置日志
 
@@ -207,11 +196,7 @@ MyBatis是什么？ MyBatis 本来就是简化 JDBC 操作的！
 mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
 ```
 
-配置完毕日志之后，后面的学习就需要注意这个自动生成的SQL，你们就会喜欢上 MyBatis-Plus！ 
-
-
-
-
+配置完毕日志之后，后面的学习就需要注意这个自动生成的SQL，你们就会喜欢上 MyBatis-Plus！
 
 ## 3. CRUD及其扩展
 
@@ -241,13 +226,14 @@ public void testInsert(){
 
 **雪花算法：**
 
-snowflflake是Twitter开源的分布式ID生成算法，结果是一个long型的ID。其核心思想是：使用41bit作为毫秒数，10bit作为机器的ID（5个bit是数据中心，5个bit的机器ID），12bit作为毫秒内的流水号（意味着每个节点在每毫秒可以产生 4096 个 ID），最后还有一个符号位，永远是0。可以保证几乎全球唯一！
+snowflflake是Twitter开源的分布式ID生成算法，结果是一个long型的ID。其核心思想是：使用41bit作为毫秒数，10bit作为机器的ID（5个bit是数据中心，5个bit的机器ID），12bit作为毫秒内的流水号（意味着每个节点在每毫秒可以产生
+4096 个 ID），最后还有一个符号位，永远是0。可以保证几乎全球唯一！
 
 **主键自增**
 
 我们需要配置主键自增：
 
-1. 实体类字段上 @TableId(type = IdType.AUTO) 
+1. 实体类字段上 @TableId(type = IdType.AUTO)
 2. 数据库字段一定要是自增！
 3. 再次测试插入即可！
 
@@ -263,8 +249,6 @@ public enum IdType {
     uuid ID_WORKER_STR(5); //ID_WORKER 字符串表示法 
 }
 ```
-
-
 
 ### 3.2 更新操作
 
@@ -413,10 +397,6 @@ update user set name = "kuangshen", version = version + 1 where id = 2 and versi
    }
    ```
 
-   
-
-
-
 ### 3.3 查询操作
 
 ```java
@@ -440,8 +420,6 @@ update user set name = "kuangshen", version = version + 1 where id = 2 and versi
     users.forEach(System.out::println); 
 }
 ```
-
-
 
 #### 3.3.1 分页操作
 
@@ -479,8 +457,6 @@ update user set name = "kuangshen", version = version + 1 where id = 2 and versi
    }
    ```
 
-   
-
 ### 3.4 删除操作
 
 1. 根据 id 删除记录
@@ -506,7 +482,7 @@ update user set name = "kuangshen", version = version + 1 where id = 2 and versi
 
 #### 3.4.1 逻辑删除
 
-*物理删除 ：从数据库中直接移除* 
+*物理删除 ：从数据库中直接移除*
 
 *逻辑删除 ：再数据库中没有被移除，而是通过一个变量来让他失效！ deleted = 0 => deleted = 1*
 
@@ -579,6 +555,7 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
        List<User> users = userMapper.selectList(null); 
        users.forEach(System.out::println); 
    }
+
 ```
    
    使用性能分析插件，可以帮助我们提高效率！
@@ -670,6 +647,7 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
        List<User> users = userMapper.selectList(wrapper); 
        users.forEach(System.out::println); 
    }
+
 ```
    
    

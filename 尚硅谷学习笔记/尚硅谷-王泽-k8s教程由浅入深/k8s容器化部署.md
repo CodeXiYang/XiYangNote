@@ -24,10 +24,6 @@
 - [ ] [kubernetes高可用集群搭建](尚硅谷学习笔记/尚硅谷-王泽-k8s教程由浅入深/20-kubernetes高可用集群搭建.md)
 - [ ] [kubernetes部署项目](尚硅谷学习笔记/尚硅谷-王泽-k8s教程由浅入深/21-kubernetes部署项目.md)
 
-
-
-
-
 ## 参考
 
 > 视频地址: https://www.bilibili.com/video/BV1GT4y1A756

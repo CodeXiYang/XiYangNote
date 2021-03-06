@@ -1,7 +1,5 @@
 # 2021Java后端开发路线梳理
 
- 
-
 > 课程名称: [找不到java后端开发工作? 按这个学,找工作没问题 (超全超详细的Java企业级学习路线)](https://www.bilibili.com/video/BV14K4y177Qk)
 >
 > 课程概述: 超全超详细的java学习路线 包括 java javascript html css spring springboot springmvc mybatis redis linux springcloud 数据结构 设计模式 算法等
@@ -14,13 +12,13 @@
 
 - 变量
 - 控制结构
-  - 顺序结构
-  - 分支结构
-  - 循环结构
+    - 顺序结构
+    - 分支结构
+    - 循环结构
 - OOP
-  - 封装
-  - 继承
-  - 多态
+    - 封装
+    - 继承
+    - 多态
 - 数组
 - Java API
 - 异常和处理
@@ -37,26 +35,26 @@
 ### 2.1 Java多线程和高并发
 
 - 并发基础
-  - 互斥同步
-  - 非阻塞同步
-  - 指令重排
-  - synchronized
-  - volatile
+    - 互斥同步
+    - 非阻塞同步
+    - 指令重排
+    - synchronized
+    - volatile
 - 线程
-  - 线程的概念
-  - 线程的创建
+    - 线程的概念
+    - 线程的创建
 - 锁
-  - 自旋锁
-  - 偏向锁
-  - 可重入锁
+    - 自旋锁
+    - 偏向锁
+    - 可重入锁
 - 线程池
 - 并发容器
 - JUC
-  - executor
-  - collections
-  - locks
-  - atomic（原子类）
-  - tools(CountDownlatch, Exchanger, ThreadLocal, CyclicBarrier)
+    - executor
+    - collections
+    - locks
+    - atomic（原子类）
+    - tools(CountDownlatch, Exchanger, ThreadLocal, CyclicBarrier)
 
 ### 2.2 数据结构和算法
 
@@ -74,15 +72,15 @@
 **算法**
 
 - 排序算法(8种)
-  - 冒泡
-  - 选择
-  - 插入
-  - 快排
-  - 基数排序
-  - 归并排序
-  - 堆排序
+    - 冒泡
+    - 选择
+    - 插入
+    - 快排
+    - 基数排序
+    - 归并排序
+    - 堆排序
 - 查找算法
-  - 二分查找
+    - 二分查找
 - 分治算法
 - 动态规划(解决背包问题)
 - 回溯算法(解决骑士周游问题)
@@ -92,10 +90,6 @@
 - Kruskal
 - floyd(解决最短路径)
 - 迪杰斯特拉(最短路径)
-
-
-
-
 
 ### 2.3 设计模式
 
@@ -168,11 +162,9 @@
 
 - SSM
 
-  - Spring(轻量级的容器框架)
-  - SpringMVC(分层的web开发框架)
-  - MyBatis(持久层ORM框架)
-
-  
+    - Spring(轻量级的容器框架)
+    - SpringMVC(分层的web开发框架)
+    - MyBatis(持久层ORM框架)
 
 ### 4.2 项目管理技术
 
@@ -204,25 +196,25 @@
 - FastDFS(分布式的文件系统)
 - Docker(应用容器引擎)
 - Spring家族
-  - SpringBoot
-  - SpringCloud(组件贼多,每个组件都有自己的功能,归纳一些常见的组件)
-    - nacos(阿里巴巴的开源组件,用来做服务发现和配置以及管理)
-    - Seata(阿里巴巴的开源组件,用来做分布式事务的中间件)
-    - Sentinel(阿里巴巴的开源组件,用来做流量控制,熔断,系统负载保护)
-    - GateWay(网关,限流,日志,监控,鉴权)
-    - OpenFeign(服务间调用)
+    - SpringBoot
+    - SpringCloud(组件贼多,每个组件都有自己的功能,归纳一些常见的组件)
+        - nacos(阿里巴巴的开源组件,用来做服务发现和配置以及管理)
+        - Seata(阿里巴巴的开源组件,用来做分布式事务的中间件)
+        - Sentinel(阿里巴巴的开源组件,用来做流量控制,熔断,系统负载保护)
+        - GateWay(网关,限流,日志,监控,鉴权)
+        - OpenFeign(服务间调用)
 - 搜索引擎
-  - ElasticSearch
-  - Solr
+    - ElasticSearch
+    - Solr
 - 中间件
-  - MyCat(数据库中间件,分库分表)
-  - ActiveMQ(消息中间件)
-  - RabbitMQ(消息中间件)
-  - KafKa(消息中间件)
+    - MyCat(数据库中间件,分库分表)
+    - ActiveMQ(消息中间件)
+    - RabbitMQ(消息中间件)
+    - KafKa(消息中间件)
 - 日志分析与监控(ELK)
-  - ElasticSearch(数据收集,存储数据)
-  - LogStah(分析日志)
-  - Kibana(数据可视化)
+    - ElasticSearch(数据收集,存储数据)
+    - LogStah(分析日志)
+    - Kibana(数据可视化)
 - Zookeepr(一致性服务:比如配置维护,域名维护,分布式同步)
 
 ## 第六阶段: DevOps(开发运维一体化) 自动化管理项目,解决CI/CD
@@ -246,8 +238,6 @@
 - Spark
 - Flink
 
-
-
 ## 第八阶段: 项目
 
 [github高效查找项目学习]()
@@ -262,8 +252,8 @@
 ## 第九阶段: 大厂高频面试题
 
 - Java高级部分
-  - 多线程 / 高并发
-  - JVM
+    - 多线程 / 高并发
+    - JVM
 - SSM底层源码
 - Redis优化
 - 中间件
@@ -278,8 +268,6 @@
 **框架源码**
 
 **内核二开**
-
-
 
 ## 编程基础的扩展(科班)
 

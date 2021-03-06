@@ -1,7 +1,5 @@
 # Echarts
 
-
-
 ## 1. Echarts简介
 
 ### 1.1 什么是ECharts?
@@ -31,8 +29,6 @@ ECharts4.0开始, 为了提升移动端性能, 还支持 SVG 渲染
 
 https://echarts.baidu.com
 
-
-
 ## 2. Echarts基本使用
 
 ### 2.1 导入ECharts插件
@@ -52,8 +48,6 @@ https://echarts.baidu.com
 </head>
 ```
 
-
-
 ### 2.2 为ECharts准备一个容器
 
 编写一个div容器,用于展示可视化数据
@@ -62,10 +56,6 @@ https://echarts.baidu.com
 <!--2.为ECharts准备一个容器-->
 <div style="width: 600px; height: 400px"></div>
 ```
-
-
-
-
 
 ### 2.3 Echarts的基本使用
 
@@ -180,11 +170,11 @@ myCharts.setOption(option);
 
 - `show` : 是否显示
 - `feature`: 具体显示功能
-  - saveAsImage: 保存图片
-  - dataView: 数据视图
-  - restore: 还原
-  - dataZoom: 缩放视图
-  - magicType: 动态类型切换
+    - saveAsImage: 保存图片
+    - dataView: 数据视图
+    - restore: 还原
+    - dataZoom: 缩放视图
+    - magicType: 动态类型切换
 
 ```javascript
 /*3.拿到准备好的容器*/
@@ -378,8 +368,6 @@ myCharts.setOption(option);
     <script src="js/china.js"></script>
 </head>
 ```
-
-
 
 ```javascript
 /*3.拿到准备好的容器*/

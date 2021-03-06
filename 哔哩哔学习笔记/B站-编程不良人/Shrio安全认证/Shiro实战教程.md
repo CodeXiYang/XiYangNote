@@ -2,11 +2,11 @@
 
 > 课程名称:[Shiro实战教程](https://www.bilibili.com/video/BV1uz4y197Zm)
 >
-> 课程概述: 
+> 课程概述:
 >
 > - 2020最新版Shiro教程,整合SpringBoot项目实战教程
 > - Apache Shiro 是目前使用率较高的一个 Java 安全框架。
-> - 本视频基于 Shiro 的最新版本进行录制。 内容涵盖 Shiro 认证、加密、授权、安全标签、安全注解、会话管理、缓存等内容，并整合主流微框架springboot框架，以及redis相关技术的使用。 
+> - 本视频基于 Shiro 的最新版本进行录制。 内容涵盖 Shiro 认证、加密、授权、安全标签、安全注解、会话管理、缓存等内容，并整合主流微框架springboot框架，以及redis相关技术的使用。
 > - JavaEE 企业级开发的核心技术。视频讲授过程中通过分析源代码使学员知其然更知其所以然。
 >
 > 讲述人: B站-编程不良人
@@ -19,13 +19,15 @@
 
 ### 1.1 什么是权限管理
 
-基本上涉及到用户参与的系统都要进行权限管理，权限管理属于系统安全的范畴，权限管理实现`对用户访问系统的控制`，按照安全规则或者[安全策略](http://baike.baidu.com/view/160028.htm)控制用户可以访问而且只能访问自己被授权的资源。
+基本上涉及到用户参与的系统都要进行权限管理，权限管理属于系统安全的范畴，权限管理实现`对用户访问系统的控制`
+，按照安全规则或者[安全策略](http://baike.baidu.com/view/160028.htm)控制用户可以访问而且只能访问自己被授权的资源。
 
 权限管理包括用户`身份认证`和`授权`两部分，简称`认证授权`。对于需要访问控制的资源用户首先经过身份认证，认证通过后用户具有该资源的访问权限方可访问。
 
 ### 1.2 什么是身份认证
 
-`身份认证`，就是判断一个用户是否为合法用户的处理过程。最常用的简单身份认证方式是系统通过核对用户输入的用户名和口令，看其是否与系统中存储的该用户的用户名和口令一致，来判断用户身份是否正确。对于采用[指纹](http://baike.baidu.com/view/5628.htm)等系统，则出示指纹；对于硬件Key等刷卡系统，则需要刷卡。
+`身份认证`
+，就是判断一个用户是否为合法用户的处理过程。最常用的简单身份认证方式是系统通过核对用户输入的用户名和口令，看其是否与系统中存储的该用户的用户名和口令一致，来判断用户身份是否正确。对于采用[指纹](http://baike.baidu.com/view/5628.htm)等系统，则出示指纹；对于硬件Key等刷卡系统，则需要刷卡。
 
 ### 1.3 什么是授权
 
@@ -35,13 +37,11 @@
 
 ## 第 2 章: 什么是shiro
 
-> **Apache Shiro™** is a powerful and easy-to-use Java security framework that performs authentication, authorization, cryptography, and session management. With Shiro’s easy-to-understand API, you can quickly and easily secure any application – from the smallest mobile applications to the largest web and enterprise applications.  
+> **Apache Shiro™** is a powerful and easy-to-use Java security framework that performs authentication, authorization, cryptography, and session management. With Shiro’s easy-to-understand API, you can quickly and easily secure any application – from the smallest mobile applications to the largest web and enterprise applications.
 >
 > Shiro 是一个功能强大且易于使用的Java安全框架，它执行身份验证、授权、加密和会话管理。使用Shiro易于理解的API，您可以快速轻松地保护任何应用程序—从最小的移动应用程序到最大的web和企业应用程序。
 
 `Shiro是apache旗下一个开源框架，它将软件系统的安全认证相关的功能抽取出来，实现用户身份认证，权限授权、加密、会话管理等功能，组成了一个通用的安全认证框架。`
-
-
 
 *PS: 市面上目前有许多的权限框架;例如非常主流的shiro和spring security框架*
 
@@ -56,27 +56,30 @@
 
 ### 3.1 Subject
 
-`Subject即主体`，外部应用与subject进行交互，subject记录了当前操作用户，将用户的概念理解为当前操作的主体，可能是一个通过浏览器请求的用户，也可能是一个运行的程序。	Subject在shiro中是一个接口，接口中定义了很多认证授相关的方法，外部程序通过subject进行认证授，而subject是通过SecurityManager安全管理器进行认证授权
+`Subject即主体`，外部应用与subject进行交互，subject记录了当前操作用户，将用户的概念理解为当前操作的主体，可能是一个通过浏览器请求的用户，也可能是一个运行的程序。
+Subject在shiro中是一个接口，接口中定义了很多认证授相关的方法，外部程序通过subject进行认证授，而subject是通过SecurityManager安全管理器进行认证授权
 
 ### 3.2 SecurityManager
 
-`SecurityManager即安全管理器`，对全部的subject进行安全管理，它是shiro的核心，负责对所有的subject进行安全管理。通过SecurityManager可以完成subject的认证、授权等，实质上SecurityManager是通过Authenticator进行认证，通过Authorizer进行授权，通过SessionManager进行会话管理等。
+`SecurityManager即安全管理器`
+，对全部的subject进行安全管理，它是shiro的核心，负责对所有的subject进行安全管理。通过SecurityManager可以完成subject的认证、授权等，实质上SecurityManager是通过Authenticator进行认证，通过Authorizer进行授权，通过SessionManager进行会话管理等。
 
 `SecurityManager是一个接口，继承了Authenticator, Authorizer, SessionManager这三个接口。`
 
 ### 3.3 Authenticator
 
-`Authenticator即认证器`，对用户身份进行认证，Authenticator是一个接口，shiro提供ModularRealmAuthenticator实现类，通过ModularRealmAuthenticator基本上可以满足大多数需求，也可以自定义认证器。
+`Authenticator即认证器`
+，对用户身份进行认证，Authenticator是一个接口，shiro提供ModularRealmAuthenticator实现类，通过ModularRealmAuthenticator基本上可以满足大多数需求，也可以自定义认证器。
 
 ### 3.4 Authorizer
 
 `Authorizer即授权器`，用户通过认证器认证通过，在访问功能时需要通过授权器判断用户是否有此功能的操作权限。
 
-###  3.5 Realm
+### 3.5 Realm
 
 `Realm即领域`，相当于datasource数据源，securityManager进行安全认证需要通过Realm获取用户权限数据，比如：如果用户身份数据在数据库那么realm就需要从数据库获取用户身份信息。
 
-- ​	注意：不要把realm理解成只是从数据源取数据，在realm中还有认证授权校验的相关的代码。
+- ​ 注意：不要把realm理解成只是从数据源取数据，在realm中还有认证授权校验的相关的代码。
 
 ### 3.6 SessionManager
 
@@ -92,7 +95,7 @@
 
 ### 3.9 Cryptography
 
-​	`Cryptography即密码管理`，shiro提供了一套加密/解密的组件，方便开发。比如提供常用的散列、加/解密等功能。
+​    `Cryptography即密码管理`，shiro提供了一套加密/解密的组件，方便开发。比如提供常用的散列、加/解密等功能。
 
 ----
 
@@ -106,7 +109,7 @@
 
 - **Subject：主体**
 
-访问系统的用户，主体可以是用户、程序等，进行认证的都称为主体； 
+访问系统的用户，主体可以是用户、程序等，进行认证的都称为主体；
 
 - **Principal：身份信息**
 
@@ -378,33 +381,31 @@ public class TestAuthenticatorCusttomerRealm {
 ### 5.4 授权方式
 
 - **基于角色的访问控制**
-  
-  - RBAC基于角色的访问控制（Role-Based Access Control）是以角色为中心进行访问控制
-  
-    ```java
-    if(subject.hasRole("admin")){
-       //操作什么资源
-    }
-    ```
-  
+
+    - RBAC基于角色的访问控制（Role-Based Access Control）是以角色为中心进行访问控制
+
+      ```java
+      if(subject.hasRole("admin")){
+         //操作什么资源
+      }
+      ```
+
 - **基于资源的访问控制**
-  
-  - RBAC基于资源的访问控制（Resource-Based Access Control）是以资源为中心进行访问控制
-  
-    ```java
-    if(subject.isPermission("user:update:01")){ //资源实例
-      //对01用户进行修改
-    }
-    if(subject.isPermission("user:update:*")){  //资源类型
-      //对01用户进行修改
-    }
-    ```
-  
-    
 
-### 5.5 权限字符串 
+    - RBAC基于资源的访问控制（Resource-Based Access Control）是以资源为中心进行访问控制
 
-​		权限字符串的规则是：**资源标识符：操作：资源实例标识符**，意思是对哪个资源的哪个实例具有什么操作，“:”是资源/操作/实例的分割符，权限字符串也可以使用*通配符。
+      ```java
+      if(subject.isPermission("user:update:01")){ //资源实例
+        //对01用户进行修改
+      }
+      if(subject.isPermission("user:update:*")){  //资源类型
+        //对01用户进行修改
+      }
+      ```
+
+### 5.5 权限字符串
+
+​ 权限字符串的规则是：**资源标识符：操作：资源实例标识符**，意思是对哪个资源的哪个实例具有什么操作，“:”是资源/操作/实例的分割符，权限字符串也可以使用*通配符。
 
 例子：
 
@@ -443,7 +444,6 @@ public class TestAuthenticatorCusttomerRealm {
   </shiro:hasRole>
   注意: Thymeleaf 中使用shiro需要额外集成!
   ```
-
 
 ### 5.7 开发授权
 
@@ -633,7 +633,7 @@ public class IndexController {
 ![image-20200523101955121](assets/image-20200523101955121.png)
 
 - 注意:
-  - **默认在配置好shiro环境后默认环境中没有对项目中任何资源进行权限控制,所有现在项目中所有资源都可以通过路径访问**
+    - **默认在配置好shiro环境后默认环境中没有对项目中任何资源进行权限控制,所有现在项目中所有资源都可以通过路径访问**
 
 #### 7.加入权限控制
 
@@ -650,7 +650,7 @@ public class IndexController {
 
   ![image-20200523102303320](assets/image-20200523102303320.png)
 
-  - **/\**** 代表拦截项目中一切资源  **authc** 代表shiro中的一个filter的别名,详细内容看文档的shirofilter列表
+    - **/\**** 代表拦截项目中一切资源  **authc** 代表shiro中的一个filter的别名,详细内容看文档的shirofilter列表
 
 #### 8.重启项目访问查看
 
@@ -987,8 +987,6 @@ public class UserController {
 
 ----
 
-
-
 #### 2.开发数据库认证
 
 ##### 0.开发DAO
@@ -1159,8 +1157,8 @@ public String save(){
 
 #### 2.方法调用授权
 
-- @RequiresRoles               用来基于角色进行授权
-- @RequiresPermissions    用来基于权限进行授权
+- @RequiresRoles 用来基于角色进行授权
+- @RequiresPermissions 用来基于权限进行授权
 
 ```java
 @RequiresRoles(value={"admin","user"})//用来判断角色  同时具有 admin user
@@ -1352,9 +1350,9 @@ public class CustomerRealm extends AuthorizingRealm {
 
 #### 1.Cache 作用
 
-- Cache 缓存: **计算机内存中一段数据**  
+- Cache 缓存: **计算机内存中一段数据**
 - 作用: **用来减轻DB的访问压力,从而提高系统的查询效率**
-- 流程: 
+- 流程:
 
 ![image-20200530090656417](assets/image-20200530090656417.png)
 
@@ -1531,37 +1529,37 @@ public class RedisCache<K,V> implements Cache<K,V> {
 
 - 解决方案: **需要自动salt实现序列化**
 
-  - 自定义salt实现序列化
+    - 自定义salt实现序列化
 
-    ```java
-    //自定义salt实现  实现序列化接口
-    public class MyByteSource extends SimpleByteSource implements Serializable {
-        public MyByteSource(String string) {
-            super(string);
-        }
-    }
-    ```
-
-  - 在realm中使用自定义salt
-
-    ```java
-     @Override
-    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-      System.out.println("==========================");
-      //根据身份信息
-      String principal = (String) token.getPrincipal();
-      //在工厂中获取service对象
-      UserService userService = (UserService) ApplicationContextUtils.getBean("userService");
-      User user = userService.findByUserName(principal);
-      if(!ObjectUtils.isEmpty(user)){
-        return new SimpleAuthenticationInfo(user.getUsername(),user.getPassword(), 
-                                          new MyByteSource(user.getSalt()),this.getName());
+      ```java
+      //自定义salt实现  实现序列化接口
+      public class MyByteSource extends SimpleByteSource implements Serializable {
+          public MyByteSource(String string) {
+              super(string);
+          }
       }
-      return null;
-    }
-    ```
+      ```
 
-    ![image-20200530101301543](assets/image-20200530101301543.png)
+    - 在realm中使用自定义salt
+
+      ```java
+       @Override
+      protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
+        System.out.println("==========================");
+        //根据身份信息
+        String principal = (String) token.getPrincipal();
+        //在工厂中获取service对象
+        UserService userService = (UserService) ApplicationContextUtils.getBean("userService");
+        User user = userService.findByUserName(principal);
+        if(!ObjectUtils.isEmpty(user)){
+          return new SimpleAuthenticationInfo(user.getUsername(),user.getPassword(), 
+                                            new MyByteSource(user.getSalt()),this.getName());
+        }
+        return null;
+      }
+      ```
+
+      ![image-20200530101301543](assets/image-20200530101301543.png)
 
 ##### 7.再次启动测试,发现可以成功放入redis缓存
 
@@ -1744,7 +1742,7 @@ public class RedisCache<K,V> implements Cache<K,V> {
 
 ### 2.页面中引入命名空间
 
--  xmlns:shiro="http://www.pollix.at/thymeleaf/shiro"
+- xmlns:shiro="http://www.pollix.at/thymeleaf/shiro"
 
 ```html
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
@@ -1830,8 +1828,6 @@ public ShiroDialect shiroDialect(){
 ```
 
 ![image-20200601210335151](assets/image-20200601210335151.png)
-
-
 
 ## 附: SQL脚本
 

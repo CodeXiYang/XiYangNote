@@ -14,27 +14,24 @@
 - 数据库和Excel很像, Excel本质是一个文件， 数据库本质上也是一个文件，
 - 数据库和Excel很像, Excel文件中可以有很多的表, 一个数据库中也有很多的表
 - 数据库和Excel很像, Excel文件的每张表就是用来存储数据的, 数据库文件的每张表也是用来存储数据的
-- 所以学习数据库和学习Excel差不多,
-  就是学习如何新建数据库文件,如何在数据库中新建表,如何往表中存储数据和操作表中的数据
+- 所以学习数据库和学习Excel差不多, 就是学习如何新建数据库文件,如何在数据库中新建表,如何往表中存储数据和操作表中的数据
 
 ### 1.2 什么是MySQL?
 
--  MySQL是由瑞典AB 公司开发"关系型"数据，目前属于 Oracle 旗下产品
--  由于MySQL是开源免费的, 所以现在是市面上最受欢迎的数据库之一
+- MySQL是由瑞典AB 公司开发"关系型"数据，目前属于 Oracle 旗下产品
+- 由于MySQL是开源免费的, 所以现在是市面上最受欢迎的数据库之一
 
 ### 1.3 什么是关系型数据库?
 
 **数据库萌芽阶段:**
 
-- 最初程序员们把磁盘上的文件当做数据库来使用,但是由于文件不方便管理和不安全，
-  所以后来就有了第一代数据库(层次模型数据库和网状模型数据库)
-  + 网状模型数据库是层次模型数据库的升级版
-  + 层次模型数据库类似于HTML结构, 是通过树状结构来保存管理数据的
-  + 在层次模型数据库中有且仅有一个结点没有父结点，它就是根结点
-  + 在层次模型数据库中其它结点只能有一个父结点
-  + 在层次模型数据库中所有的子节点不能脱离父节点而单独存在
-- 后来由于层次模型和网状模型数据库的结构比较复杂，不利于数据库的维护和重建
-  所以就有了第二代数据库(关系型数据库和非关系型数据库)
+- 最初程序员们把磁盘上的文件当做数据库来使用,但是由于文件不方便管理和不安全， 所以后来就有了第一代数据库(层次模型数据库和网状模型数据库)
+    + 网状模型数据库是层次模型数据库的升级版
+    + 层次模型数据库类似于HTML结构, 是通过树状结构来保存管理数据的
+    + 在层次模型数据库中有且仅有一个结点没有父结点，它就是根结点
+    + 在层次模型数据库中其它结点只能有一个父结点
+    + 在层次模型数据库中所有的子节点不能脱离父节点而单独存在
+- 后来由于层次模型和网状模型数据库的结构比较复杂，不利于数据库的维护和重建 所以就有了第二代数据库(关系型数据库和非关系型数据库)
 
 **第一代数据库:**
 
@@ -61,15 +58,15 @@
    https://dev.mysql.com/downloads/mysql/
 
 2. 安装过程:
-   - 选择自定义安装
-   - 选择要安装的版本
-   - 修改安装路径
-   - 设置数据库密码
-   - 其它一律下一步
+    - 选择自定义安装
+    - 选择要安装的版本
+    - 修改安装路径
+    - 设置数据库密码
+    - 其它一律下一步
 
 3. 测试是否安装成功
-   - 配置环境变量, 将安装目录中bin文件夹的地址放到环境变量path中
-   - 在终端输入 mysql --help 或者 mysql --version
+    - 配置环境变量, 将安装目录中bin文件夹的地址放到环境变量path中
+    - 在终端输入 mysql --help 或者 mysql --version
 
 ### 1.5 数据库的连接和断开
 
@@ -99,7 +96,7 @@ mysql -uroot -p  密码采用暗文形式
 
 **最常用的方式:**
 
-`mysql -h127.0.0.1  -uroot -p ` 链接远程MySQL服务器, 使用默认端口3306
+`mysql -h127.0.0.1 -uroot -p ` 链接远程MySQL服务器, 使用默认端口3306
 
 #### 退出链接
 
@@ -115,54 +112,46 @@ mysql -uroot -p  密码采用暗文形式
 **初始表介绍**
 
 - information_schema
-  - 保存着关于MySQL服务器所维护的所有其他数据库的信息。
-  - 如数据库名，数据库的表，表栏的数据类型与访问权限等
+    - 保存着关于MySQL服务器所维护的所有其他数据库的信息。
+    - 如数据库名，数据库的表，表栏的数据类型与访问权限等
 - mysql
-  - MySQL系统数据库, 保存了登录用户名,密码,以及每个用户的权限等等
+    - MySQL系统数据库, 保存了登录用户名,密码,以及每个用户的权限等等
 - performance_schema
-  - 用来保存数据库服务器性能的参数
-- sys
-  这个库是通过视图的形式把information_schema和performance_schema结合起来，查询出更加令人容易理解的数据
+    - 用来保存数据库服务器性能的参数
+- sys 这个库是通过视图的形式把information_schema和performance_schema结合起来，查询出更加令人容易理解的数据
 
 ### 1.6 数据库SQL简介
 
 #### 如何使用MySQL
 
 1. 学习MySQL和学习Excel差不多
-   - 使用Excel步骤: 安装Excel-创建Excel文件-创建表-在表中存储数据
-   - 使用MySQL步骤: 安装MySQL-创建数据库----创建表-在表中存储数据
+    - 使用Excel步骤: 安装Excel-创建Excel文件-创建表-在表中存储数据
+    - 使用MySQL步骤: 安装MySQL-创建数据库----创建表-在表中存储数据
 2. 学习MySQL本质上就是学习数据库的增删改查(CRUD)
 3. 在MySQL中主要有三种类型的增删改查, 分别是:
-   - 数据库的增删改查
-   - 表的增删改查
-   - 数据的增删改查
+    - 数据库的增删改查
+    - 表的增删改查
+    - 数据的增删改查
 
 *MySQL中可以有0~N个数据库, 数据库中可以有0~N个表, 表中可以有0~N个数据*
 
 #### 什么是SQL？
 
-结构化查询语言(Structured Query Language)简称
-是用来操作关系型数据库的一门语言
-是一个关系型数据库通用的操作语言
+结构化查询语言(Structured Query Language)简称 是用来操作关系型数据库的一门语言 是一个关系型数据库通用的操作语言
 
 **注意点:**
-各大厂商为了更多的占用市场份额, 都会在标准的SQL基础上扩展一些自己的东西
-例如: 
+各大厂商为了更多的占用市场份额, 都会在标准的SQL基础上扩展一些自己的东西 例如:
 
-- SQL Server  使用T-SQL
-- Oracle      使用PL/SQL
-- MySQL       使用MySQL
+- SQL Server 使用T-SQL
+- Oracle 使用PL/SQL
+- MySQL 使用MySQL
 
 #### SQL语句功能划分
 
-- DDL:数据定义语句
-	用来定义数据库对象：创建库，表，列等。
-- DML：数据操作语句
-	用来操作数据库表中的记录
-- DQL：数据查询语句
-	用来查询数据
-- DCL：数据控制语句
-	用来定义访问权限和安全级别
+- DDL:数据定义语句 用来定义数据库对象：创建库，表，列等。
+- DML：数据操作语句 用来操作数据库表中的记录
+- DQL：数据查询语句 用来查询数据
+- DCL：数据控制语句 用来定义访问权限和安全级别
 
 #### SQL数据类型
 
@@ -226,8 +215,6 @@ create database if not exists `create` charset=utf8;
 -- 注意点: 如果数据库的名称是SQL的关键字或者是一些特殊字符#~@*&.., 这个时候就需要用反引号括起来
 ```
 
-
-
 ### 2.2 删除数据库
 
 语法格式: `drop database [if exists] 数据库名称;`
@@ -256,7 +243,7 @@ alter database it666 charset=utf8;
 
 ### 2.4 查看数据库
 
-语法格式: 
+语法格式:
 
 - `show create database 数据库名称;`
 - `show databases;`
@@ -277,8 +264,6 @@ alter database 数据库名称 charset=字符编码
 show databases;
 show create database 数据库名称;
 ```
-
-
 
 ## 第 3 章: 表增删改查
 
@@ -306,8 +291,6 @@ create table 表名(
 );
 ```
 
-
-
 **示例一:**
 
 ```sql
@@ -328,8 +311,6 @@ create table if not exists person(
 -- 注意点: 以上代码创建表, 没有就会创建一个新的, 有就会自动跳过
 ```
 
-
-
 ### 3.2 删除表
 
 `drop table 表名;`
@@ -348,8 +329,6 @@ drop table if exists person;
 -- 注意点: 以上语句, 如果需要删除的表存在, 那么就直接删除, 如果不存在就跳过
 ```
 
-
-
 ### 3.3 修改表
 
 #### 修改表名
@@ -359,8 +338,6 @@ drop table if exists person;
 ```sql
 rename table stu to person;
 ```
-
-
 
 #### 添加字段
 
@@ -381,8 +358,6 @@ alter table person add phone int after name;
 -- 注意点: 我们可以通过after指定将新增的字段放到哪个字段的后面
 ```
 
-
-
 #### 删除字段
 
 `alter table 表名 drop 字段名称;`
@@ -390,8 +365,6 @@ alter table person add phone int after name;
 ```sql
 alter table person drop phone;
 ```
-
-
 
 #### 修改字段
 
@@ -403,8 +376,6 @@ alter table person drop phone;
 alter table person modify score double;
 ```
 
-
-
 **修改字段的名称和数据类型**
 
 `alter table 表名 change 原始字段名称 新的字段名称 新的数据类型;`
@@ -412,8 +383,6 @@ alter table person modify score double;
 ```sql
 alter table person change age addr text;
 ```
-
-
 
 ### 3.4 MySQL存储引擎
 
@@ -445,8 +414,6 @@ alter table 表名 engine=引擎名称;
 alter table stu engine=MyISAM;
 ```
 
-
-
 #### 不同引擎的本质
 
 - 前面我们说过数据库的本质就是文件, 所以我们可以先观察一下
@@ -462,14 +429,12 @@ create table stu(
 ```
 
 **InnoDB:**
-   - 如果表的存储引擎是InnoDB, 那么只要创建表就会自动创建一个文件, 这个文件就保存了这张表的结构
-   - 如果往InnoDB的表中存储数据, 那么数据会被存储到ibdata1的文件中, 如果存储的数据比较多, 那么系统会自动再创建ibdata2, ibdata3, ...文件
+
+- 如果表的存储引擎是InnoDB, 那么只要创建表就会自动创建一个文件, 这个文件就保存了这张表的结构
+- 如果往InnoDB的表中存储数据, 那么数据会被存储到ibdata1的文件中, 如果存储的数据比较多, 那么系统会自动再创建ibdata2, ibdata3, ...文件
 
 **MyISAM:**
-    - 如果表的存储引擎是MyISAM, 那么只要创建表就会自动创建三个文件
-        + .sdi这个文件就保存了这张表的结构
-        + .MYD这个文件就保存了这张表中存储的数据
-        + .MYI这个文件就保存了这张表中的索引
+- 如果表的存储引擎是MyISAM, 那么只要创建表就会自动创建三个文件 + .sdi这个文件就保存了这张表的结构 + .MYD这个文件就保存了这张表中存储的数据 + .MYI这个文件就保存了这张表中的索引
 
 **Memory:**
 
@@ -502,8 +467,6 @@ insert into stu values (3, 'ls');
 insert into  stu values (4, 'ww'), (5, 'zl');
 ```
 
-
-
 ### 4.2 更新数据
 
 *将指定表中的数据进行更新(修改)*
@@ -525,8 +488,6 @@ update stu set score=66 where name='zs' OR name='ww';
 update stu set name='it666', score=33 where id=5;
 ```
 
-
-
 ### 4.3 查看数据
 
 *查看指定表中有哪些数据*
@@ -535,7 +496,7 @@ update stu set name='it666', score=33 where id=5;
 
 `select * from 表名;`
 
-**注意点:** 
+**注意点:**
 
 - 以上方式会将表中所有的数据都查询出来, 所以性能比较差
 - 以上方式会将表中所有的数据都查询出来, 不能查询特定字段的值
@@ -543,7 +504,7 @@ update stu set name='it666', score=33 where id=5;
 
 #### where查询
 
- `select 字段名称1, 字段名称2 from 表名 [where 条件];`
+`select 字段名称1, 字段名称2 from 表名 [where 条件];`
 
 ```sql
 # 查询特定字段的数据
@@ -571,10 +532,6 @@ NOT；非
 LIKE: 模糊查询
 ```
 
-
-
-
-
 ### 4.4 删除数据
 
 *删除指定表中的数据*
@@ -588,11 +545,10 @@ delete from stu where score > 60;
 delete from stu;
 ```
 
-
-
 ## 第 5 章: 数据类型
 
-**MySQL为什么要提供数据类型?**如果没有数据类型, 那么MySQL就不知道需要分配多大的存储空间来存储你的数据过大会浪费会造成资源浪费, 体积变大效率变低, 过小可能导致数据溢出不能完整的保存数据所以MySQL提供数据类型的目的是为了让我们合理的分配存储空间, 降低数据库的体积为了让我们合理的分配存储空间, 完整的保存数据为了更好的对数据库进行优化
+**MySQL为什么要提供数据类型?**如果没有数据类型, 那么MySQL就不知道需要分配多大的存储空间来存储你的数据过大会浪费会造成资源浪费, 体积变大效率变低,
+过小可能导致数据溢出不能完整的保存数据所以MySQL提供数据类型的目的是为了让我们合理的分配存储空间, 降低数据库的体积为了让我们合理的分配存储空间, 完整的保存数据为了更好的对数据库进行优化
 
 **MySQL中有哪些数据类型?** 整型类型/浮点类型/定点类型/字符类型/文本类型/枚举类型/集合类型/日期类型/布尔类型
 
@@ -612,22 +568,20 @@ BIGINT	        8 字节	(-9,223,372,036,854,775,808，9 223 372 036 854 775 807)
 
 1. MySQL中的整型和其它编程语言的整型一样, 也区分有符号和无符号
 
-   - 默认情况下整型就是有符号的
-   - 可以在数据类型的后面加上 unsigned 来将数据类型变成无符号的
+    - 默认情况下整型就是有符号的
+    - 可以在数据类型的后面加上 unsigned 来将数据类型变成无符号的
 
-   2. 在设计数据库的时候一定要合理的使用数据类型
-                 + 例如: 我们要保存一个人的年龄 (整数)
-                         +   
-                 我们应该使用TINYINT类型, 因为人最多活到255岁已经上天了, 所以使用最小的整型即可
-                 
-             
+    2. 在设计数据库的时候一定要合理的使用数据类型 + 例如: 我们要保存一个人的年龄 (整数)
+       +   
+       我们应该使用TINYINT类型, 因为人最多活到255岁已经上天了, 所以使用最小的整型即可
+
                  如果使用其它的整型, 就会造成资源浪费, 数据库体积变大, 效率变低...
 
 3. 在保存数据的时候, 如果超出了当前数据类型的范围, 那么就会报错
 4. 在设置整型的时候, 还可以设置整型数据将来显示的位宽
-   - 例如: 现在设置将来显示整型的位宽是2, 现在存储的数据1, 那么将来查询出来的数据就会显示成 1;
-   - 2020-2-3 -- 2020-02-03
-   - 注意点: 如果存储的数据没有指定的位宽宽, 那么就会自动补空格或者0, 如果大于或者等于了指定的位宽, 那么毛都不做
+    - 例如: 现在设置将来显示整型的位宽是2, 现在存储的数据1, 那么将来查询出来的数据就会显示成 1;
+    - 2020-2-3 -- 2020-02-03
+    - 注意点: 如果存储的数据没有指定的位宽宽, 那么就会自动补空格或者0, 如果大于或者等于了指定的位宽, 那么毛都不做
 
 ```sql
 create table person(
@@ -654,8 +608,6 @@ insert into person values (1, 1);   #01
 insert into person values (1, 12);  #12
 insert into person values (1, 123); #123
 ```
-
-
 
 ### 5.2 浮点类型
 
@@ -718,8 +670,6 @@ weight: 1.123456-8357467651000
 height: 1.123456789012345-7000
 ```
 
-
-
 ### 5.3 定点类型
 
 定点类型也是用于存储小数的
@@ -743,8 +693,6 @@ insert into person4 values (1, 1.12345678901234567890, 1.12345678901234567890);
 -- height: 1.12345678901234567890
 ```
 
-
-
 ### 5.4 字符类型
 
 *字符类型专门用来存储字符的*
@@ -757,10 +705,10 @@ insert into person4 values (1, 1.12345678901234567890, 1.12345678901234567890);
 **char和varchar区别**
 
 - 能够保存数据的容量不一样
-- char不会回收多余的字符,  要多少给多少
+- char不会回收多余的字符, 要多少给多少
 - varchar会回收多余的字符, 用多少给多少
-  - 例如: 通过    char(2)存储存储数据'a', 存储的结果是' a';
-  - 例如: 通过 varchar(2)存储存储数据'a', 存储的结果是'a';
+    - 例如: 通过 char(2)存储存储数据'a', 存储的结果是' a';
+    - 例如: 通过 varchar(2)存储存储数据'a', 存储的结果是'a';
 
 **示例一:**
 
@@ -794,7 +742,7 @@ Column length too big for column 'name2' (max = 21845); use BLOB or TEXT instead
 Column length too big for column 'name2' (max = 32767); use BLOB or TEXT instead
 ```
 
-注意点: 
+注意点:
 
 - 由于是字符类型, 所以传递值建议用单引号''
 - VARCHAR理论上可以存储65535个字符, 但是实际会随着当前数据库的字符集改变
@@ -852,7 +800,7 @@ insert into person values (3, '妖'); #不会报错
 
 - MySQL中的枚举类型和其它的编程语言一样, 底层都是使用整型来实现的
 
-  - 和其它编程语言不太一样的是, 其它编程语言的枚举都是从0开始的, 而MySQL的枚举是从1开始的select gender+0 from person;
+    - 和其它编程语言不太一样的是, 其它编程语言的枚举都是从0开始的, 而MySQL的枚举是从1开始的select gender+0 from person;
 
 - 由于MySQL的枚举底层是使用整型实现的, 所以我们在赋值的时候除了可以赋值固定的几个值其中的一个意外我们还可以赋值对应的整数
 
@@ -860,8 +808,6 @@ insert into person values (3, '妖'); #不会报错
   insert into person values (4, 1); #不会报错
   insert into person values (4, 4); #会报错
   ```
-
-  
 
 ### 5.7 集合类型
 
@@ -916,15 +862,13 @@ insert into person values (2, false); #不会报错
 
 - MySQL中的布尔类型也是使用整型来实现的, 0就表示假, 1就表示真
 
-  - 底层的本质是因为MySQL是使用C/C++来实现的, 所以就是'非零即真'
+    - 底层的本质是因为MySQL是使用C/C++来实现的, 所以就是'非零即真'
 
   ```sql
   insert into person values (3, 1); #不会报错
   insert into person values (4, 0); #不会报错
   insert into person values (5, 2); #不会报错
   ```
-
-  
 
 ### 5.9 日期类型
 
@@ -948,15 +892,11 @@ create table person(
 insert into person values (1, '2020-02-02', '14:18:23', '2020-02-02 14:18:23');
 ```
 
-
-
-
-
 ## 第 6 章: 数据完整性
 
 **什么是数据的完整性?** 保证保存到数据库中的数据都是正确的。
 
-**如何保证数据完整性?** 
+**如何保证数据完整性?**
 
 - 数据的完整性可以分为三类: 实体完整性、域完整性、参照完整性
 - 无论是哪一种完整性都是在创建表时给表添加约束即可
@@ -968,7 +908,7 @@ insert into person values (1, '2020-02-02', '14:18:23', '2020-02-02 14:18:23');
 1. 什么是实体? 表中的一行数据就是一个实体（entity）
 2. 如何保证实体完整性? 保证实体完整性就是保证每一行数据的唯一性
 
-实体完整性的约束类型: 
+实体完整性的约束类型:
 
 ```
 	主键约束（primary key）
@@ -990,6 +930,7 @@ insert into person2 values (2, 'lnj');
 ```
 
 主键的特征:
+
 - 如果将某一个字段设置成了主键, 那么这个字段的取值就不能重复了
 
 - 如果将某一个字段设置成了主键, 那么这个字段的取值就不能是null了
@@ -1017,7 +958,8 @@ insert into person2 values (2, 'lnj');
 
 ##### 联合主键
 
-**什么是联合主键?** 我们通过将表中的某个永远不重复的字段设置为主键, 从而达到保证每一行数据的唯一性(实体完整性)但是在企业开发中有时候我们可能找不到不重复的字段, 此时我们还可以通过联合主键的方式来保证每一行数据的唯一性联合主键就是同时将多个字段作为一个主键来使用
+**什么是联合主键?** 我们通过将表中的某个永远不重复的字段设置为主键, 从而达到保证每一行数据的唯一性(实体完整性)但是在企业开发中有时候我们可能找不到不重复的字段,
+此时我们还可以通过联合主键的方式来保证每一行数据的唯一性联合主键就是同时将多个字段作为一个主键来使用
 
 ```
  ________
@@ -1038,10 +980,6 @@ insert into person values ('lnj', 88);
 ```
 
 **注意点:** 联合主键并不是添加多个主键, 而是将多个字段的值作为主键来使用也就是过去我们指定id为主键, 那么id的取值不能重复而现在如果我们指定 name和age为主键, 那么name+age的值不能重复
-
-
-
-
 
 #### 唯一约束(unique)
 
@@ -1085,7 +1023,7 @@ create table person(
 #Incorrect table definition; there can be only one auto column and it must be defined as a key
 ```
 
-**注意点:** 
+**注意点:**
 
 - 如果某个字段是自动增长的, 那么这个字段必须是主键才可以
 
@@ -1101,11 +1039,9 @@ create table person(
 
 - 在企业开发中我们应该如何选择主键
 
-  - 最少性: 能用一个字段作为主键, 就不要使用多个字段
-  - 稳定性: 能用不被操作(修改)的字段作为主键, 就不要使用会被操作的字段作为主键
-  - 一般情况下我们会定义一个名称叫做id的字段, 并且这个字段是整型的, 并且这个字段是自动增长的来作为主键
-
-
+    - 最少性: 能用一个字段作为主键, 就不要使用多个字段
+    - 稳定性: 能用不被操作(修改)的字段作为主键, 就不要使用会被操作的字段作为主键
+    - 一般情况下我们会定义一个名称叫做id的字段, 并且这个字段是整型的, 并且这个字段是自动增长的来作为主键
 
 ##### 如何修约束
 
@@ -1145,12 +1081,6 @@ create table person(
    insert into person3 values (null, 'lnj');
    ```
 
-   
-
-
-
-
-
 ### 6.2 域完整性
 
 **什么是域?** 一行数据中的每个单元格都是一个域
@@ -1159,13 +1089,11 @@ create table person(
 
 - 保证域的完整性就是保证每个单元格数据的正确性
 - 使用正确的数据类型
-  - 例如: 人的年龄不可能超过255岁, 而且不能是负数, 所以我们就可以使用 TINYINT UNSIGNED
-  - 例如: 人的性别只能是男/女或者妖, 所以我们就可以使用枚举类型
-  - 例如: 要存储比较多的文字, 为了保证不超出每一行最大的存储限制, 我们就可以使用大文本类型
+    - 例如: 人的年龄不可能超过255岁, 而且不能是负数, 所以我们就可以使用 TINYINT UNSIGNED
+    - 例如: 人的性别只能是男/女或者妖, 所以我们就可以使用枚举类型
+    - 例如: 要存储比较多的文字, 为了保证不超出每一行最大的存储限制, 我们就可以使用大文本类型
 - 使用非空约束（not null）
 - 使用默认值约束(default)
-
-
 
 **示例:**
 
@@ -1185,10 +1113,6 @@ insert into person2 values (1, default);
 insert into person2 values (1, 'zs');
 -- 注意点: 哪怕设置了默认值, 传入null之后也不会使用默认值
 ```
-
-
-
-
 
 ### 6.3 参照完整性
 
@@ -1227,7 +1151,7 @@ insert into person2 values (1, 'zs');
 
 *表与表之间的关系可以分为三种: 一对一、一对多、多对多*
 
-##### 一对一(一般不需要拆分): 
+##### 一对一(一般不需要拆分):
 
 - 一夫一妻制
 
@@ -1405,9 +1329,7 @@ CREATE TABLE `grade` (
     + uid的取值引用的是stu这张表中的id字段的值
 ```
 
-
-
-##### 如何动态删除外键 
+##### 如何动态删除外键
 
 `alter table 从表名称 drop foreign key 外键名称;`
 
@@ -1528,10 +1450,6 @@ alter table rel add foreign key(stuId) references stu(id);
 alter table rel add foreign key(teacherId) references teacher(id);
 ```
 
-
-
-
-
 ## 第 7 章: 高级查询
 
 ### 7.1 单表查询
@@ -1575,11 +1493,7 @@ select [* || 字段] from 表名 [where 条件]; #查询表中满足条件的数
 
 #### 模糊查询
 
-
-
 #### 排序 order by
-
-
 
 #### 函数
 
@@ -1593,27 +1507,29 @@ select count(*) from stu where score >= 60;
 ```
 
 `sum(); 求和`
+
 ```sql
 select sum(id) from stu;
 ```
 
 `avg(); 求平均值`
+
 ```sql
 select avg(id) from stu; # 21 / 6 = 3.5
 select avg(score) from stu;
 ```
 
 `max(); 获取最大值`
+
 ```sql
 select max(score) from stu;
 ```
 
 `min(); 获取最小值`
+
 ```sql
 select min(score) from stu;
 ```
-
-
 
 ##### 数值类函数
 
@@ -1649,8 +1565,6 @@ select floor(3.9) from dual;
 select truncate(3.1234567, 2) from dual;
 ```
 
-
-
 ##### 字符串类函数
 
 `ucase(); 转换为大写`
@@ -1660,26 +1574,28 @@ select ucase('hello world') from dual;
 ```
 
 `lcase(); 转换为小写`
+
 ```sql
 select lcase('HELLO WORLD') from dual;
 ```
 
 `left(); 从左边开始截取到指定的位置`
+
 ```sql
 select left('1234567890', 3) from dual;
 ```
 
 `right(); 从右边开始截取到指定的位置`
+
 ```sql
 select right('1234567890', 3) from dual;
 ```
 
 `substring(); 从指定位置开始截取指定个字符`
+
 ```sql
 select substring('1234567890', 3, 5) from dual;
 ```
-
-
 
 #### 数据分组 group by
 
@@ -1706,8 +1622,6 @@ select name from stu group by city;
 select city, group_concat(name) from stu group by city;
 ```
 
-
-
 #### 条件查询 having
 
 - having和where很像都是用来做条件查询的
@@ -1727,8 +1641,6 @@ select name, age from stu having city='北京';
 需求: select city, avg(score) as average from stu group by city having average>=60;
 ```
 
-
-
 #### 分页 limit
 
 `select 字段 from 表 limit 索引, 个数;`
@@ -1737,8 +1649,6 @@ select name, age from stu having city='北京';
 select * from stu limit 0, 3;
 select * from stu limit 3, 3;
 ```
-
-
 
 #### 查询选项
 
@@ -1761,8 +1671,6 @@ select name, score from stu;
 select distinct name, score from stu;
 ```
 
-
-
 #### 完整的查询语句
 
 ```sql
@@ -1773,8 +1681,6 @@ select [查询选项] 字段名称 [from 表名]
 [having 条件] 
 [limit 分页];
 ```
-
-
 
 ### 7.2 多表查询
 
@@ -1850,8 +1756,6 @@ select id, name from stu union select id, score from grade;
   select id, name from stu union all select id, name from person;
   ```
 
-
-
 #### 连接查询 join
 
 - 将多张表中'关联的字段''连接'在一起查询我们称之为'表的连接查询'
@@ -1859,8 +1763,6 @@ select id, name from stu union select id, score from grade;
 - 大白话: 查询多张表中满足条件的数据
 
 - 表的连接分为: 内连接,外连接,交叉连接,全连接
-
-  
 
 ##### 内连接 inner join
 
@@ -1881,8 +1783,6 @@ select * from stu inner join grade on stu.id = grade.stuId;
 
 - 在内连接中只会返回满足条件的数据
 
-
-
 ##### 外连接
 
 ###### 左外连接 left join
@@ -1896,8 +1796,6 @@ select stu.id, stu.name, grade.score from stu left join grade on stu.id = grade.
 -- 所以stu表不看条件, 只有grade表看条件
 ```
 
-
-
 ###### 右外连接 right join
 
 - 在右外连接中, 右边的表是不看条件的, 无论条件是否满足, 都会返回右边表中所有的数据
@@ -1908,8 +1806,6 @@ select stu.id, stu.name, grade.score from stu right join grade on stu.id = grade
 -- 在以上的查询语句中stu表在左边, grade表在右边
 -- 所以grade表不看条件, 只有stu表看条件
 ```
-
-
 
 ##### 交叉连接 cross join
 
@@ -1968,8 +1864,6 @@ select * from stu natural right join grade;
 - 如果没有指定条件, 也没有同名的字段, 那么就会返回笛卡尔集
 - 在自然连接中, 返回的结果集会自动优化, 会自动去除重复的判断字段
 
-
-
 #### using关键字
 
 如果多张表需要判断的条件字段名称一致, 那么除了可以使用自然连接来简化以外还可以使用using关键字来简化
@@ -2023,8 +1917,6 @@ select name from stu where stuId in(3, 1);
 select name from stu where stuId in(select stuId from grade where score >= 60);
 ```
 
-
-
 ##### 结果作为表
 
 ```sql
@@ -2034,7 +1926,7 @@ select name, city, score from (select name, city, score from person where score 
 
 注意点: 如果要将一个查询语句查询的结果作为另一个查询的表来使用, 那么必须给子查询起一个别名
 
-## 第 8 章: 事务 
+## 第 8 章: 事务
 
 ### 8.1 事务基本概念
 
@@ -2084,10 +1976,6 @@ commit; -- 任务成功, 提交开启事务之后所有操作
 - 如果成功了, 如果执行了commit, 那么系统就会自动利用拷贝表中最新的数据覆盖原有表中的数据
 - 所以成功了会影响到原有的数据
 
-
-
-
-
 ### 8.3 事务回滚点
 
 ```
@@ -2104,8 +1992,6 @@ savepoint def;
 insert into bank values (null, '1003', '555', 55555);
 rollback to abc;
 ```
-
-
 
 ### 8.4 事务特点
 
@@ -2174,10 +2060,6 @@ set session transaction isolation level read committed;
 select * from bank;
 ```
 
-
-
-
-
 ##### 不可重复读
 
 一个事务范围内多次查询的结果不同
@@ -2197,10 +2079,6 @@ select * from bank;
 commit;
 -- 解决办法(repeatable read)
 ```
-
-
-
-
 
 ##### 重复读
 
@@ -2222,8 +2100,6 @@ commit;
 -- 解决办法(serializable)
 ```
 
-
-
 ##### 幻读
 
 读到到的结果并不是最终的结果
@@ -2243,8 +2119,6 @@ select * from bank;
 commit;
 ```
 
-
-
 #### 4种结果与4种隔离级别的对应关系
 
 | 事务隔离级别                 | 脏读 | 不可重复读 | 幻读 |
@@ -2254,57 +2128,31 @@ commit;
 | 可重复读（repeatable-read）  | 否   | 否         | 是   |
 | 串行化（serializable）       | 否   | 否         | 否   |
 
-
-
 ## 第 9 章: 视图 🚩
 
 9.1 视图基本概念
 
-
-
 9.2 视图的作用
-
-
 
 9.3 创建视图语法
 
-
-
 9.4 视图数据操作
-
-
 
 9.5 修改视图内容
 
-
-
 9.6 删除视图
-
-
 
 9.7 视图完整语句
 
-
-
 9.8 视图算法
-
-
 
 9.9 视图限制(with check option)
 
-
-
 9.10 预处理
-
-
 
 ## 第 10 章: 存储过程和函数
 
-
-
 ## 第 11 章: 索引
-
-
 
 ## 第 12 章: NodeJS操作MySQL
 

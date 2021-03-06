@@ -2,8 +2,6 @@
 
 ## 第 1 章: Spring概述
 
-
-
 ![image-20201218190311916](assets/image-20201218190311916.png)
 
 ### 1.1 Spring简介
@@ -33,8 +31,6 @@ GitHub : https://github.com/spring-projects
 
 一句话概括：**Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器（框架）。**
 
-
-
 ### 1.3 Spring组成
 
 ![image-20201218190535292](assets/image-20201218190535292.png)
@@ -45,13 +41,20 @@ Spring 框架是一个分层架构，由 7 个定义良好的模块组成。Spri
 
 组成 Spring 框架的每个模块（或组件）都可以单独存在，或者与其他一个或多个模块联合实现。每个模块的功能如下：
 
-- **核心容器**：核心容器提供 Spring 框架的基本功能。核心容器的主要组件是 BeanFactory ，它是工厂模式的实现。 BeanFactory 使用控制反转（IOC） 模式将应用程序的配置和依赖性规范与实际的应用程序代码分开。
+- **核心容器**：核心容器提供 Spring 框架的基本功能。核心容器的主要组件是 BeanFactory ，它是工厂模式的实现。 BeanFactory 使用控制反转（IOC）
+  模式将应用程序的配置和依赖性规范与实际的应用程序代码分开。
 - **Spring** **上下文**：Spring 上下文是一个配置文件，向 Spring 框架提供上下文信息。Spring 上下文包括企业服务，例如 JNDI、EJB、电子邮件、国际化、校验和调度功能。
-- **Spring AOP**：通过配置管理特性，Spring AOP 模块直接将面向切面的编程功能 , 集成到了 Spring框架中。所以，可以很容易地使 Spring 框架管理任何支持 AOP的对象。Spring AOP 模块为基于Spring 的应用程序中的对象提供了事务管理服务。通过使用 Spring AOP，不用依赖组件，就可以将声明性事务管理集成到应用程序中。
-- **Spring DAO**：JDBC DAO 抽象层提供了有意义的异常层次结构，可用该结构来管理异常处理和不同数据库供应商抛出的错误消息。异常层次结构简化了错误处理，并且极大地降低了需要编写的异常代码数量（例如打开和关闭连接）。Spring DAO 的面向 JDBC 的异常遵从通用的 DAO 异常层次结构。
-- **Spring ORM**：Spring 框架插入了若干个 ORM 框架，从而提供了 ORM 的对象关系工具，其中包括 JDO、Hibernate 和 iBatis SQL Map。所有这些都遵从 Spring 的通用事务和 DAO 异常层次结构。
-- **Spring Web** **模块**：Web 上下文模块建立在应用程序上下文模块之上，为基于 Web 的应用程序提供了上下文。所以，Spring 框架支持与 Jakarta Struts 的集成。Web 模块还简化了处理多部分请求以及将请求参数绑定到域对象的工作。
-- **Spring MVC** **框架**：MVC 框架是一个全功能的构建 Web 应用程序的 MVC 实现。通过策略接口，MVC 框架变成为高度可配置的，MVC 容纳了大量视图技术，其中包括 JSP、Velocity、Tiles、iText和 POI。 
+- **Spring AOP**：通过配置管理特性，Spring AOP 模块直接将面向切面的编程功能 , 集成到了 Spring框架中。所以，可以很容易地使 Spring 框架管理任何支持 AOP的对象。Spring AOP
+  模块为基于Spring 的应用程序中的对象提供了事务管理服务。通过使用 Spring AOP，不用依赖组件，就可以将声明性事务管理集成到应用程序中。
+- **Spring DAO**：JDBC DAO
+  抽象层提供了有意义的异常层次结构，可用该结构来管理异常处理和不同数据库供应商抛出的错误消息。异常层次结构简化了错误处理，并且极大地降低了需要编写的异常代码数量（例如打开和关闭连接）。Spring DAO 的面向 JDBC
+  的异常遵从通用的 DAO 异常层次结构。
+- **Spring ORM**：Spring 框架插入了若干个 ORM 框架，从而提供了 ORM 的对象关系工具，其中包括 JDO、Hibernate 和 iBatis SQL Map。所有这些都遵从 Spring 的通用事务和 DAO
+  异常层次结构。
+- **Spring Web** **模块**：Web 上下文模块建立在应用程序上下文模块之上，为基于 Web 的应用程序提供了上下文。所以，Spring 框架支持与 Jakarta Struts 的集成。Web
+  模块还简化了处理多部分请求以及将请求参数绑定到域对象的工作。
+- **Spring MVC** **框架**：MVC 框架是一个全功能的构建 Web 应用程序的 MVC 实现。通过策略接口，MVC 框架变成为高度可配置的，MVC 容纳了大量视图技术，其中包括
+  JSP、Velocity、Tiles、iText和 POI。
 
 ### 1.4 拓展
 
@@ -60,20 +63,13 @@ Spring 框架是一个分层架构，由 7 个定义良好的模块组成。Spri
 - Spring Boot 是 Spring 的一套快速配置脚手架，可以基于Spring Boot 快速开发单个微服务;
 - Spring Cloud是基于Spring Boot实现的；
 - Spring Boot专注于快速、方便集成的单个微服务个体，Spring Cloud关注全局的服务治理框架；
-- Spring Boot使用了约束优于配置的理念，很多集成方案已经帮你选择好了，能不配置就不配置 ,Spring Cloud很大的一部分是基于Spring Boot来实现，Spring Boot可以离开Spring Cloud独立使用开发项目，但是Spring Cloud离不开Spring Boot，属于依赖的关系。
+- Spring Boot使用了约束优于配置的理念，很多集成方案已经帮你选择好了，能不配置就不配置 ,Spring Cloud很大的一部分是基于Spring Boot来实现，Spring Boot可以离开Spring
+  Cloud独立使用开发项目，但是Spring Cloud离不开Spring Boot，属于依赖的关系。
 - SpringBoot在SpringClound中起到了承上启下的作用，如果你要学习SpringCloud必须要学习SpringBoot。
 
 ![image-20201218190822426](assets/image-20201218190822426.png)
 
-
-
-
-
-
-
 ## 第 2 章: IOC基础
-
-
 
 *新建一个空白的maven项目*
 
@@ -136,7 +132,7 @@ Spring 框架是一个分层架构，由 7 个定义良好的模块组成。Spri
 
 #### 2.1.2 IOC原型
 
-1. 把Userdao的实现类增加一个 
+1. 把Userdao的实现类增加一个
 
    ```java
    public class UserDaoMySqlImpl implements UserDao { 
@@ -147,7 +143,7 @@ Spring 框架是一个分层架构，由 7 个定义良好的模块组成。Spri
    }
    ```
 
-2. 紧接着我们要去使用MySql的话 , 我们就需要去service实现类里面修改对应的实现 
+2. 紧接着我们要去使用MySql的话 , 我们就需要去service实现类里面修改对应的实现
 
    ```java
    public class UserServiceImpl implements UserService { 
@@ -170,9 +166,10 @@ Spring 框架是一个分层架构，由 7 个定义良好的模块组成。Spri
    }
    ```
 
-   **问题**: 那么我们要使用Oracle , 又需要去service实现类里面修改对应的实现 . 假设我们的这种需求非常大 , 这种方式就根本不适用了, 甚至反人类对吧 , 每次变动 , 都需要修改大量代码 . 这种设计的耦合性太高了, 牵一发而动全身 .
+   **问题**: 那么我们要使用Oracle , 又需要去service实现类里面修改对应的实现 . 假设我们的这种需求非常大 , 这种方式就根本不适用了, 甚至反人类对吧 , 每次变动 , 都需要修改大量代码 .
+   这种设计的耦合性太高了, 牵一发而动全身 .
 
-   **那我们如何去解决呢 ?** 
+   **那我们如何去解决呢 ?**
 
 4. 我们可以在需要用到他的地方 , 不去实现它 , 而是留出一个接口 , 利用set , 我们去代码里修改下 .
 
@@ -203,15 +200,15 @@ Spring 框架是一个分层架构，由 7 个定义良好的模块组成。Spri
    }
    ```
 
-   大家发现了区别没有 ? 可能很多人说没啥区别 . 但是同学们 , 他们已经发生了根本性的变化 , 很多地方都不一样了 . 仔细去思考一下 , 以前所有东西都是由程序去进行控制创建 , 而现在是由我们自行控制创建对象 , 把主动权交给了调用者 . 程序不用去管怎么创建,怎么实现了 . 它只负责提供一个接口 .
+   大家发现了区别没有 ? 可能很多人说没啥区别 . 但是同学们 , 他们已经发生了根本性的变化 , 很多地方都不一样了 . 仔细去思考一下 , 以前所有东西都是由程序去进行控制创建 , 而现在是由我们自行控制创建对象 ,
+   把主动权交给了调用者 . 程序不用去管怎么创建,怎么实现了 . 它只负责提供一个接口 .
 
    这种思想 , 从本质上解决了问题 , 我们程序员不再去管理对象的创建了 , 更多的去关注业务的实现 . 耦合性大大降低 . 这也就是**IOC的原型** !
 
-
-
 ### 2.2 IOC本质
 
-**控制反转IoC(Inversion of Control)，是一种设计思想，DI(依赖注入)是实现IoC的一种方法**，也有人认为DI只是IoC的另一种说法。没有IoC的程序中 , 我们使用面向对象编程 , 对象的创建与对象间的依赖关系完全硬编码在程序中，对象的创建由程序自己控制，控制反转后将对象的创建转移给第三方，个人认为所谓控制反转就是：获得依赖对象的方式反转了。
+**控制反转IoC(Inversion of Control)，是一种设计思想，DI(依赖注入)是实现IoC的一种方法**，也有人认为DI只是IoC的另一种说法。没有IoC的程序中 , 我们使用面向对象编程 ,
+对象的创建与对象间的依赖关系完全硬编码在程序中，对象的创建由程序自己控制，控制反转后将对象的创建转移给第三方，个人认为所谓控制反转就是：获得依赖对象的方式反转了。
 
 ![image-20201218191537185](assets/image-20201218191537185.png)
 
@@ -224,13 +221,7 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 
 **控制反转是一种通过描述（XML或注解）并通过第三方去生产或获取特定对象的方式。在Spring中实现控制反转的是IoC容器，其实现方法是依赖注入（Dependency Injection,DI）。**
 
-
-
-
-
 ## 第 3 章: HelloSpring
-
-
 
 ### 3.1 导入jar包
 
@@ -243,8 +234,6 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
     <version>5.1.10.RELEASE</version> 
 </dependency>
 ```
-
-
 
 ### 3.2 编写代码
 
@@ -280,7 +269,7 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
    </beans>
    ```
 
-3. 我们可以去进行测试了 
+3. 我们可以去进行测试了
 
    ```java
    @Test public void test(){ 
@@ -292,8 +281,6 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
    }
    ```
 
-   
-
 ### 3.3 思考
 
 1. Hello 对象是谁创建的 ? 【 hello 对象是由Spring创建的 】
@@ -302,20 +289,14 @@ Spring容器在初始化时先读取配置文件，根据配置文件或元数�
 
    这个过程就叫控制反转 :
 
-   - **控制** : 谁来控制对象的创建 , 传统应用程序的对象是由程序本身控制创建的 , 使用Spring后 , 对象是由Spring来创建的
-   - **反转** : 程序本身不创建对象 , 而变成被动的接收对象 .
-
-   
+    - **控制** : 谁来控制对象的创建 , 传统应用程序的对象是由程序本身控制创建的 , 使用Spring后 , 对象是由Spring来创建的
+    - **反转** : 程序本身不创建对象 , 而变成被动的接收对象 .
 
 依赖注入 : 就是利用set方法来进行注入的.
 
 IOC是一种编程思想，由主动的编程变成被动的接收
 
-可以通过`newClassPathXmlApplicationContext`去浏览一下底层源码 
-
-
-
-
+可以通过`newClassPathXmlApplicationContext`去浏览一下底层源码
 
 ### 3.4 修改案例一
 
@@ -349,11 +330,7 @@ IOC是一种编程思想，由主动的编程变成被动的接收
 
 *OK , 到了现在 , 我们彻底不用再程序中去改动了 , 要实现不同的操作 , 只需要在xml配置文件中进行修改, 所谓的IoC,一句话搞定 : 对象由Spring 来创建 , 管理 , 装配 !*
 
-
-
 ## 第 4 章: IOC创建对象方式
-
-
 
 ### 4.1 通过无参构造方法来创建
 
@@ -399,8 +376,6 @@ IOC是一种编程思想，由主动的编程变成被动的接收
    ```
 
    **结果可以发现，在调用show方法之前，User对象已经通过无参构造初始化了！**
-
-
 
 ### 4.2 通过有参构造方法来创建
 
@@ -459,11 +434,7 @@ IOC是一种编程思想，由主动的编程变成被动的接收
 
 **结论**：在配置文件加载的时候。其中管理的对象都已经初始化了！
 
-
-
 ## 第 5 章: Spring配置
-
-
 
 ### 5.1 别名
 
@@ -473,8 +444,6 @@ IOC是一种编程思想，由主动的编程变成被动的接收
 <!--设置别名：在获取Bean的时候可以使用别名获取--> 
 <alias name="userT" alias="userNew"/>
 ```
-
-
 
 ### 5.2 Bean配置
 
@@ -491,8 +460,6 @@ class是bean的全限定名=包名+类名 -->
 </bean>
 ```
 
-
-
 ### 5.3 import
 
 *团队的合作通过import来实现 .*
@@ -501,11 +468,7 @@ class是bean的全限定名=包名+类名 -->
 <import resource="{path}/beans.xml"/>
 ```
 
-
-
 ## 第 6 章: 依赖注入(DI)
-
-
 
 ### 6.1 构造器注入
 
@@ -592,8 +555,6 @@ public void test01(){
 }
 ```
 
-
-
 #### 6.2.2 Bean注入
 
 注意点：这里的值是一个引用，ref
@@ -607,8 +568,6 @@ public void test01(){
     <property name="address" ref="addr"/> 
 </bean>
 ```
-
-
 
 #### 6.2.3 数组注入
 
@@ -626,8 +585,6 @@ public void test01(){
 </bean>
 ```
 
-
-
 #### 6.2.4 List注入
 
 ```xml
@@ -639,10 +596,6 @@ public void test01(){
 </property>
 ```
 
-
-
-
-
 #### 6.2.5 Map注入
 
 ```xml
@@ -652,8 +605,6 @@ public void test01(){
     </map> 
 </property>
 ```
-
-
 
 #### 6.2.6 Set注入
 
@@ -666,15 +617,11 @@ public void test01(){
 </property>
 ```
 
-
-
 #### 6.2.7 Null注入
 
 ```xml
 <property name="wife"><null/></property>
 ```
-
-
 
 #### 6.2.8 Properties注入
 
@@ -689,8 +636,6 @@ public void test01(){
 ```
 
 测试结果：
-
-
 
 ### 6.3 拓展注入实现
 
@@ -713,9 +658,9 @@ public class User {
 }
 ```
 
-#### 6.3.1 P命名空间注入 
+#### 6.3.1 P命名空间注入
 
- *需要在头文件中假如约束文件*
+*需要在头文件中假如约束文件*
 
 ```xml
 导入约束 : xmlns:p="http://www.springframework.org/schema/p" 
@@ -723,7 +668,7 @@ public class User {
 <bean id="user" class="com.kuang.pojo.User" p:name="狂神" p:age="18"/>
 ```
 
-#### 6.3.2 c 命名空间注入 
+#### 6.3.2 c 命名空间注入
 
 *需要在头文件中假如约束文件*
 
@@ -748,8 +693,6 @@ public void test02(){
 }
 ```
 
-
-
 ### 6.4 Bean的作用域
 
 在Spring中，那些组成应用程序的主体及由Spring IoC容器所管理的对象，被称之为bean。简单地讲，bean就是由IoC容器初始化、装配及管理的对象 .
@@ -760,7 +703,8 @@ public void test02(){
 
 #### 6.4.1  Singleton
 
-当一个bean的作用域为Singleton，那么Spring IoC容器中只会存在一个共享的bean实例，并且所有对bean的请求，只要id与该bean定义相匹配，则只会返回bean的同一实例。Singleton是单例类型，就是在创建起容器时就同时自动创建了一个bean的对象，不管你是否使用，他都存在了，每次获取到的对象都是同一个对象。注意，Singleton作用域是Spring中的缺省作用域。要在XML中将bean定义成singleton，可以这样配置：
+当一个bean的作用域为Singleton，那么Spring
+IoC容器中只会存在一个共享的bean实例，并且所有对bean的请求，只要id与该bean定义相匹配，则只会返回bean的同一实例。Singleton是单例类型，就是在创建起容器时就同时自动创建了一个bean的对象，不管你是否使用，他都存在了，每次获取到的对象都是同一个对象。注意，Singleton作用域是Spring中的缺省作用域。要在XML中将bean定义成singleton，可以这样配置：
 
 ```xml
 <bean id="ServiceImpl" class="cn.csdn.service.ServiceImpl" scope="singleton">
@@ -778,19 +722,16 @@ public void test03(){
 }
 ```
 
-
-
 #### 6.4.2 Prototype
 
-当一个bean的作用域为Prototype，表示一个bean定义对应多个对象实例。Prototype作用域的bean会导致在每次对该bean请求（将其注入到另一个bean中，或者以程序的方式调用容器的getBean()方法）时都会创建一个新的bean实例。Prototype是原型类型，它在我们创建容器的时候并没有实例化，而是当我们获取bean的时候才会去创建一个对象，而且我们每次获取到的对象都不是同一个对象。根据经验，对有状态的bean应该使用prototype作用域，而对无状态的bean则应该使用singleton作用域。在XML中将bean定义成prototype，可以这样配置：
+当一个bean的作用域为Prototype，表示一个bean定义对应多个对象实例。Prototype作用域的bean会导致在每次对该bean请求（将其注入到另一个bean中，或者以程序的方式调用容器的getBean()
+方法）时都会创建一个新的bean实例。Prototype是原型类型，它在我们创建容器的时候并没有实例化，而是当我们获取bean的时候才会去创建一个对象，而且我们每次获取到的对象都不是同一个对象。根据经验，对有状态的bean应该使用prototype作用域，而对无状态的bean则应该使用singleton作用域。在XML中将bean定义成prototype，可以这样配置：
 
 ```xml
 <bean id="account" class="com.foo.DefaultAccount" scope="prototype"/> 
 或者 
 <bean id="account" class="com.foo.DefaultAccount" singleton="false"/>
 ```
-
-
 
 #### 6.4.3 Request
 
@@ -800,9 +741,8 @@ public void test03(){
 <bean id="loginAction" class=cn.csdn.LoginAction scope="request"/>
 ```
 
-针对每次HTTP请求，Spring容器会根据loginAction bean的定义创建一个全新的LoginAction bean实例，且该loginAction bean实例仅在当前HTTP request内有效，因此可以根据需要放心的更改所建实例的内部状态，而其他请求中根据loginAction bean定义创建的实例，将不会看到这些特定于某个请求的状态变化。当处理请求结束，request作用域的bean实例将被销毁。
-
-
+针对每次HTTP请求，Spring容器会根据loginAction bean的定义创建一个全新的LoginAction bean实例，且该loginAction bean实例仅在当前HTTP
+request内有效，因此可以根据需要放心的更改所建实例的内部状态，而其他请求中根据loginAction bean定义创建的实例，将不会看到这些特定于某个请求的状态变化。当处理请求结束，request作用域的bean实例将被销毁。
 
 #### 6.4.4 Session
 
@@ -812,15 +752,11 @@ public void test03(){
 <bean id="userPreferences" class="com.foo.UserPreferences" scope="session"/>
 ```
 
-针对某个HTTP Session，Spring容器会根据userPreferences bean定义创建一个全新的userPreferences bean实例，且该userPreferences bean仅在当前HTTP Session内有效。与request作用域一样，可以根据需要放心的更改所创建实例的内部状态，而别的HTTP Session中根据userPreferences创建的实例，将不会看到这些特定于某个HTTP Session的状态变化。当HTTP Session最终被废弃的时候，在该HTTP Session作用域内的bean也会被废弃掉。
-
-
-
-
+针对某个HTTP Session，Spring容器会根据userPreferences bean定义创建一个全新的userPreferences bean实例，且该userPreferences bean仅在当前HTTP
+Session内有效。与request作用域一样，可以根据需要放心的更改所创建实例的内部状态，而别的HTTP Session中根据userPreferences创建的实例，将不会看到这些特定于某个HTTP
+Session的状态变化。当HTTP Session最终被废弃的时候，在该HTTP Session作用域内的bean也会被废弃掉。
 
 ## 第 7 章: Bean的自动装配
-
-
 
 自动装配是使用spring满足bean依赖的一种方法
 
@@ -836,14 +772,12 @@ Spring中bean有三种装配机制，分别是：
 
 Spring的自动装配需要从两个角度来实现，或者说是两个操作：
 
-1. **组件扫描(component scanning)**：spring会自动发现应用上下文中所创建的bean； 
-2. **自动装配(autowiring)**：spring自动满足bean之间的依赖，也就是我们说的IoC/DI； 
+1. **组件扫描(component scanning)**：spring会自动发现应用上下文中所创建的bean；
+2. **自动装配(autowiring)**：spring自动满足bean之间的依赖，也就是我们说的IoC/DI；
 
 组件扫描和自动装配组合发挥巨大威力，使的显示的配置降低到最少。
 
 **推荐不使用自动装配xml配置 , 而使用注解**
-
-
 
 ### 7.1 测试环境搭建
 
@@ -911,8 +845,6 @@ Spring的自动装配需要从两个角度来实现，或者说是两个操作�
 
    结果正常输出，环境OK
 
-
-
 ### 7.2 byName
 
 **autowire byName (按名称自动装配)**
@@ -941,13 +873,9 @@ Spring的自动装配需要从两个角度来实现，或者说是两个操作�
 
 当一个bean节点带有 autowire byName的属性时。
 
-1. 将查找其类中所有的set方法名，例如setCat，获得将set去掉并且首字母小写的字符串，即cat。 
+1. 将查找其类中所有的set方法名，例如setCat，获得将set去掉并且首字母小写的字符串，即cat。
 2. 去spring容器中寻找是否有此字符串名称id的对象。
 3. 如果有，就取出注入；如果没有，就报空指针异常。
-
-
-
-
 
 ### 7.3 byType
 
@@ -982,8 +910,6 @@ NoUniqueBeanDefinitionException
 
 **这就是按照类型自动装配！**
 
-
-
 ### 7.4 使用注解
 
 jdk1.5开始支持注解，spring2.5开始全面支持注解。
@@ -1003,10 +929,6 @@ jdk1.5开始支持注解，spring2.5开始全面支持注解。
    ```xml
    <context:annotation-config/>
    ```
-
-   
-
-
 
 #### 7.4.1 @Autowired
 
@@ -1050,15 +972,13 @@ jdk1.5开始支持注解，spring2.5开始全面支持注解。
 
 【小狂神科普时间】
 
-@Autowired(required=false) 说明： false，对象可以为null；true，对象必须存对象，不能为null。 
+@Autowired(required=false) 说明： false，对象可以为null；true，对象必须存对象，不能为null。
 
 ```java
 //如果允许对象为null，设置required = false,默认为true 
 @Autowired(required = false) 
 private Cat cat;
 ```
-
-
 
 #### 7.4.2 @Qualifier
 
@@ -1090,7 +1010,7 @@ private Cat cat;
    private Dog dog;
    ```
 
-    测试，成功输出！
+   测试，成功输出！
 
 #### 7.4.3 @Resource
 
@@ -1146,32 +1066,19 @@ private Cat cat;
 
    结论：先进行byName查找，失败；再进行byType查找，成功。
 
-
-
 ### 7.5 小结
 
 **@Autowired与@Resource异同：**
 
 1. @Autowired与@Resource都可以用来装配bean。都可以写在字段上，或写在setter方法上。
-2. @Autowired默认按类型装配（属于spring规范），默认情况下必须要求依赖对象必须存在，如果
-   要允许null 值，可以设置它的required属性为false，如：@Autowired(required=false) ，如果我
+2. @Autowired默认按类型装配（属于spring规范），默认情况下必须要求依赖对象必须存在，如果 要允许null 值，可以设置它的required属性为false，如：@Autowired(required=false) ，如果我
    们想使用名称装配可以结合@Qualifier注解进行使用
-3. @Resource（属于J2EE复返），默认按照名称进行装配，名称可以通过name属性进行指定。如果
-   没有指定name属性，当注解写在字段上时，默认取字段名进行按照名称查找，如果注解写在
-   setter方法上默认取属性名进行装配。 当找不到与名称匹配的bean时才按照类型进行装配。但是
-   需要注意的是，如果name属性一旦指定，就只会按照名称进行装配。
+3. @Resource（属于J2EE复返），默认按照名称进行装配，名称可以通过name属性进行指定。如果 没有指定name属性，当注解写在字段上时，默认取字段名进行按照名称查找，如果注解写在 setter方法上默认取属性名进行装配。
+   当找不到与名称匹配的bean时才按照类型进行装配。但是 需要注意的是，如果name属性一旦指定，就只会按照名称进行装配。
 
 **它们的作用相同都是用注解方式注入对象，但执行顺序不同。@Autowired先byType，@Resource先 byName。**
 
-
-
-
-
-
-
 ## 第 8 章: 使用注解开发
-
-
 
 ### 8.1 说明
 
@@ -1190,8 +1097,6 @@ private Cat cat;
                            http://www.springframework.org/schema/context/spring-context.xsd">
 </beans>
 ```
-
-
 
 ### 8.2 Bean的实现
 
@@ -1224,8 +1129,6 @@ private Cat cat;
    }
    ```
 
-   
-
 ### 8.3 属性注入
 
 使用注解注入属性
@@ -1253,8 +1156,6 @@ private Cat cat;
    }
    ```
 
-   
-
 ### 8.4 衍生注解
 
 *我们这些注解，就是替代了在配置文件当中配置步骤而已！更加的方便快捷！*
@@ -1269,15 +1170,9 @@ private Cat cat;
 
 写上这些注解，就相当于将这个类交给Spring管理装配了！
 
-
-
 ### 8.5 自动装配注解
 
 *在Bean的自动装配已经讲过了，可以回顾！*
-
-
-
-
 
 ### 8.6 作用域
 
@@ -1294,8 +1189,6 @@ public class User {
     public String name; 
 }
 ```
-
-
 
 ### 8.7 小结
 
@@ -1319,11 +1212,7 @@ public class User {
 1. 进行注解驱动注册，从而使注解生效
 2. 用于激活那些已经在spring容器里注册过的bean上面的注解，也就是显示的向Spring注册
 3. 如果不扫描包，就需要手动配置bean
-4. 如果不加注解驱动，则注入的值为null！ 
-
-
-
-
+4. 如果不加注解驱动，则注入的值为null！
 
 ### 8.8 基于Java类进行配置
 
@@ -1363,7 +1252,7 @@ JavaConfifig 原来是 Spring 的一个子项目，它通过 Java 类的方式�
    }
    ```
 
-    成功输出结果！
+   成功输出结果！
 
 **导入其他配置如何做呢？**
 
@@ -1389,13 +1278,7 @@ JavaConfifig 原来是 Spring 的一个子项目，它通过 Java 类的方式�
 
    关于这种Java类的配置方式，我们在之后的SpringBoot 和 SpringCloud中还会大量看到，我们需要知道这些注解的作用即可！
 
-
-
-
-
 ## 第 9 章: 代理模式
-
-
 
 *为什么要学习代理模式，因为AOP的底层机制就是动态代理！*
 
@@ -1483,8 +1366,6 @@ JavaConfifig 原来是 Spring 的一个子项目，它通过 Java 类的方式�
    ```
 
 **分析**： 在这个过程中，你直接接触的就是中介，就如同现实生活中的样子，你看不到房东，但是你依旧租到了房东的房子通过代理，这就是所谓的代理模式，程序源自于生活，所以学编程的人，一般能够更加抽象的看待生活中发生的事情。
-
-
 
 ### 9.2 静态代理的好处
 
@@ -1574,7 +1455,7 @@ public class UserServiceProxy implements UserService {
 }
 ```
 
- 测试访问类：
+测试访问类：
 
 ```java
 public class Client { 
@@ -1717,11 +1598,7 @@ public Object getProxy(){
    }
    ```
 
-   
-
 **核心**：一个动态代理 , 一般代理某一类业务 , 一个动态代理可以代理多个类，代理的是接口！、
-
-
 
 ### 9.5 深化代理
 
@@ -1782,23 +1659,14 @@ public class Test {
 - 一个动态代理 , 一般代理某一类业务
 - 一个动态代理可以代理多个类，代理的是接口！
 
-
-
-
-
-
-
-
-
 ## 第 10 章: AOP
 
 ### 10.1 什么是AOP
 
-AOP（Aspect Oriented Programming）意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。
+AOP（Aspect Oriented
+Programming）意为：面向切面编程，通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的耦合度降低，提高程序的可重用性，同时提高了开发的效率。
 
 ![image-20201218203931717](assets/image-20201218203931717.png)
-
-
 
 ### 10.2 AOP在Spring中的作用
 
@@ -1820,8 +1688,6 @@ SpringAOP中，通过Advice定义横切逻辑，Spring中支持5种类型的Advi
 
 即 Aop 在 不改变原有代码的情况下 , 去增加新的功能 .
 
-
-
 ### 10.3 使用Spring实现AOP
 
 【重点】使用AOP织入，需要导入一个依赖包！
@@ -1834,8 +1700,6 @@ SpringAOP中，通过Advice定义横切逻辑，Spring中支持5种类型的Advi
     <version>1.9.4</version> 
 </dependency>
 ```
-
-
 
 #### 10.3.1 第一种方式
 
@@ -1900,7 +1764,7 @@ public class AfterLog implements AfterReturningAdvice {
 }
 ```
 
-最后去spring的文件中注册 , 并实现aop切入实现 , 注意导入约束 
+最后去spring的文件中注册 , 并实现aop切入实现 , 注意导入约束
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> 
@@ -1942,8 +1806,6 @@ public class MyTest {
 **Aop的重要性** : 很重要 . 一定要理解其中的思路 , 主要是思想的理解这一块 .
 
 Spring的Aop就是将公共的业务 (日志 , 安全等) 和领域业务结合起来 , 当执行领域业务时 , 将会把公共业务加进来 . 实现公共业务的重复利用 . 领域业务更纯粹 , 程序猿专注领域业务 , 其本质还是动态代理 .
-
-
 
 #### 10.3.2 第二种方式
 
@@ -1993,8 +1855,6 @@ public class MyTest {
 }
 ```
 
-
-
 #### 10.3.3 第三种方式
 
 **使用注解实现**
@@ -2040,15 +1900,9 @@ aop:aspectj-autoproxy：说明
 <aop:aspectj-autoproxy />有一个proxy-target-class属性，默认为false，表示使用jdk动态 代理织入增强，当配为<aop:aspectj-autoproxy poxy-target-class="true"/>时，表示使用 CGLib动态代理技术织入增强。不过即使proxy-target-class设置为false，如果目标类没有声明接 口，则spring将自动使用CGLib动态代理。
 ```
 
-
-
-
-
 ---
 
 ## 第 11 章: Spring整合Mybatis
-
-
 
 **导入相关jar包**
 
@@ -2062,7 +1916,6 @@ aop:aspectj-autoproxy：说明
    </dependency>
    ```
 
-   
 
 2. mybatis
 
@@ -2074,7 +1927,6 @@ aop:aspectj-autoproxy：说明
    </dependency>
    ```
 
-   
 
 3. mysql-connector-java
 
@@ -2086,7 +1938,6 @@ aop:aspectj-autoproxy：说明
    </dependency>
    ```
 
-   
 
 4. spring相关
 
@@ -2103,7 +1954,6 @@ aop:aspectj-autoproxy：说明
    </dependency>
    ```
 
-   
 
 5. aspectJ AOP 织入器
 
@@ -2116,7 +1966,6 @@ aop:aspectj-autoproxy：说明
    </dependency>
    ```
 
-   
 
 6. mybatis-spring整合包 【重点】
 
@@ -2128,7 +1977,6 @@ aop:aspectj-autoproxy：说明
    </dependency>
    ```
 
-   
 
 7. 配置Maven静态资源过滤问题！
 
@@ -2146,8 +1994,6 @@ aop:aspectj-autoproxy：说明
        </resources> 
    </build>
    ```
-
-   
 
 ### 11.1 回忆MyBatis
 
@@ -2226,20 +2072,13 @@ aop:aspectj-autoproxy：说明
    }
    ```
 
-   
-
-
-
 ### 11.2 MyBats-Spring学习
 
 引入Spring之前需要了解mybatis-spring包中的一些重要类；http://www.mybatis.org/spring/zh/index.html
 
 **什么是 MyBatis-Spring？**: MyBatis-Spring 会帮助你将 MyBatis 代码无缝地整合到 Spring 中。
-**知识基础**: 在开始使用 MyBatis-Spring 之前，你需要先熟悉 Spring 和 MyBatis 这两个框架和有关它们的术语。这
-很重要
+**知识基础**: 在开始使用 MyBatis-Spring 之前，你需要先熟悉 Spring 和 MyBatis 这两个框架和有关它们的术语。这 很重要
 **MyBatis-Spring 需要以下版本：**
-
-
 
 | **MyBatis-Spring** | **MyBatis** | **Spring** **框架** | **Spring Batch** | **Java** |
 | ------------------ | ----------- | ------------------- | ---------------- | -------- |
@@ -2266,19 +2105,23 @@ aop:aspectj-autoproxy：说明
 </bean>
 ```
 
-**注意**： SqlSessionFactory 需要一个 DataSource （数据源）。 这可以是任意的DataSource ，只需要和配置其它 Spring 数据库连接一样配置它就可以了。在基础的 MyBatis 用法中，是通过 SqlSessionFactoryBuilder 来创建 SqlSessionFactory的。 而在 MyBatis-Spring 中，则使用 SqlSessionFactoryBean 来创建。
+**注意**： SqlSessionFactory 需要一个 DataSource （数据源）。 这可以是任意的DataSource ，只需要和配置其它 Spring 数据库连接一样配置它就可以了。在基础的 MyBatis 用法中，是通过
+SqlSessionFactoryBuilder 来创建 SqlSessionFactory的。 而在 MyBatis-Spring 中，则使用 SqlSessionFactoryBean 来创建。
 
-在 MyBatis 中，你可以使用 SqlSessionFactory 来创建 SqlSession 。一旦你获得一个session 之后，你可以使用它来执行映射了的语句，提交或回滚连接，最后，当不再需要它的时候，你可以关闭 session。 
+在 MyBatis 中，你可以使用 SqlSessionFactory 来创建 SqlSession 。一旦你获得一个session 之后，你可以使用它来执行映射了的语句，提交或回滚连接，最后，当不再需要它的时候，你可以关闭
+session。
 
 SqlSessionFactory 有一个唯一的必要属性：用于 JDBC 的 DataSource 。这可以是任意的DataSource 对象，它的配置方法和其它 Spring 数据库连接是一样的。
 
 一个常用的属性是 configLocation ，它用来指定 MyBatis 的 XML 配置文件路径。它在需要修改MyBatis 的基础配置非常有用。通常，基础配置指的是 `<settings> 或 <typeAliases> `元素。
 
-需要注意的是，这个配置文件**并不需要**是一个完整的 MyBatis 配置。确切地说，任何环境配置（` <environments>` ），数据源（ `<DataSource> `）和 MyBatis 的事务管理器（` <transactionManager>` ）都会被**忽略**。 SqlSessionFactoryBean 会创建它自有的 MyBatis环境配置（ Environment ），并按要求设置自定义环境的值。
+需要注意的是，这个配置文件**并不需要**是一个完整的 MyBatis 配置。确切地说，任何环境配置（` <environments>` ），数据源（ `<DataSource> `）和 MyBatis
+的事务管理器（` <transactionManager>` ）都会被**忽略**。 SqlSessionFactoryBean 会创建它自有的 MyBatis环境配置（ Environment ），并按要求设置自定义环境的值。
 
 SqlSessionTemplate 是 MyBatis-Spring 的核心。作为 SqlSession 的一个实现，这意味着可以使用它无缝代替你代码中已经在使用的 SqlSession 。
 
-模板可以参与到 Spring 的事务管理中，并且由于其是线程安全的，可以供多个映射器类使用，你应该**总是**用 SqlSessionTemplate 来替换 MyBatis 默认的 DefaultSqlSession 实现。在同一应用程序中的不同类之间混杂使用可能会引起数据一致性的问题。
+模板可以参与到 Spring 的事务管理中，并且由于其是线程安全的，可以供多个映射器类使用，你应该**总是**用 SqlSessionTemplate 来替换 MyBatis 默认的 DefaultSqlSession
+实现。在同一应用程序中的不同类之间混杂使用可能会引起数据一致性的问题。
 
 可以使用 SqlSessionFactory 作为构造方法的参数来创建 SqlSessionTemplate 对象。
 
@@ -2302,15 +2145,13 @@ public class UserDaoImpl implements UserDao {
 }
 ```
 
-按下面这样，注入 SqlSessionTemplate ： 
+按下面这样，注入 SqlSessionTemplate ：
 
 ```xml
 <bean id="userDao" class="org.mybatis.spring.sample.dao.UserDaoImpl"> 
     <property name="sqlSession" ref="sqlSession" /> 
 </bean>
 ```
-
-
 
 ### 11.3 整合实现一
 
@@ -2348,7 +2189,7 @@ public class UserDaoImpl implements UserDao {
    </bean>
    ```
 
-4. 注册sqlSessionTemplate，关联sqlSessionFactory； 
+4. 注册sqlSessionTemplate，关联sqlSessionFactory；
 
    ```xml
    <!--注册sqlSessionTemplate , 关联sqlSessionFactory--> 
@@ -2407,15 +2248,14 @@ public class UserDaoImpl implements UserDao {
 </configuration>
 ```
 
-
-
 ### 11.4 整合实现二
 
 *mybatis-spring1.2.3版以上的才有这个 .*
 
 官方文档截图 :
 
-dao继承Support类 , 直接利用 getSqlSession() 获得 , 然后直接注入SqlSessionFactory . 比起方式1 , 不需要管理SqlSessionTemplate , 而且对事务的支持更加友好 . 可跟踪源码查看
+dao继承Support类 , 直接利用 getSqlSession() 获得 , 然后直接注入SqlSessionFactory . 比起方式1 , 不需要管理SqlSessionTemplate , 而且对事务的支持更加友好 .
+可跟踪源码查看
 
 ![image-20201218210659411](assets/image-20201218210659411.png)
 
@@ -2469,17 +2309,13 @@ dao继承Support类 , 直接利用 getSqlSession() 获得 , 然后直接注入Sq
 **事务四个属性ACID**
 
 1. **原子性**（atomicity）
-   - 事务是原子性操作，由一系列动作组成，事务的原子性确保动作要么全部完成，要么完全不起作用
+    - 事务是原子性操作，由一系列动作组成，事务的原子性确保动作要么全部完成，要么完全不起作用
 2. **一致性**（consistency）
-   - 一旦所有事务动作完成，事务就要被提交。数据和资源处于一种满足业务规则的一致性状态中
+    - 一旦所有事务动作完成，事务就要被提交。数据和资源处于一种满足业务规则的一致性状态中
 3. **隔离性**（isolation）
-   - 可能多个事务会同时处理相同的数据，因此每个事务都应该与其他事务隔离开来，防止数据损坏 
+    - 可能多个事务会同时处理相同的数据，因此每个事务都应该与其他事务隔离开来，防止数据损坏
 4. **持久性**（durability）
-   - 事务一旦完成，无论系统发生什么错误，结果都不会受到影响。通常情况下，事务的结果被写到持久化存储器中
-
-
-
-
+    - 事务一旦完成，无论系统发生什么错误，结果都不会受到影响。通常情况下，事务的结果被写到持久化存储器中
 
 ### 12.2 测试
 
@@ -2618,7 +2454,9 @@ http://www.springframework.org/schema/tx/spring-tx.xsd">
 - propagation_never：以非事务方式执行操作，如果当前事务存在则抛出异常。
 - propagation_nested：如果当前存在事务，则在嵌套事务内执行。如果当前没有事务，则执行与propagation_required类似的操作
 
-Spring 默认的事务传播行为是 PROPAGATION_REQUIRED，它适合于绝大多数的情况。假设 ServiveX#methodX() 都工作在事务环境下（即都被 Spring 事务增强了），假设程序中存在如下的调用链：Service1#method1()->Service2#method2()->Service3#method3()，那么这 3 个服务类的 3个方法通过 Spring 的事务传播机制都工作在同一个事务中。
+Spring 默认的事务传播行为是 PROPAGATION_REQUIRED，它适合于绝大多数的情况。假设 ServiveX#methodX() 都工作在事务环境下（即都被 Spring
+事务增强了），假设程序中存在如下的调用链：Service1#method1()->Service2#method2()->Service3#method3()，那么这 3 个服务类的 3个方法通过 Spring
+的事务传播机制都工作在同一个事务中。
 
 就好比，我们刚才的几个方法存在调用，所以会被放在一组事务当中！
 
@@ -2648,28 +2486,12 @@ public void test2(){
 }
 ```
 
-
-
-
-
 ### 12.4 思考问题
 
 *为什么需要配置事务？*
 
 - 如果不配置，就需要我们手动提交控制事务；
 - 事务在项目开发过程非常重要，涉及到数据的一致性的问题，不容马虎！
-
-
-
-
-
-
-
-
-
-
-
-
 
 > 学习地址: https://www.bilibili.com/video/BV1WE411d7Dv
 >

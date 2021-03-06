@@ -4,15 +4,12 @@
 >
 > 说明: 学习的目的是用于记录笔记,比较喜欢docsify的文档风格
 
-
-
 ## 1. Docsify简介和安装
 
 ### 1.1 简介
 
-`docsify`是由现饿了么前端团队@elemeFE的cinwell.li编写的一套文档站点生成框架，github上已有3k+ star,Docsify 是一个动态生成文档网站的工具。不同于 GitBook、Hexo 的地方是它不会生成将 .md 转成 .html 文件，所有转换工作都是在运行时进行。
-
-
+`docsify`是由现饿了么前端团队@elemeFE的cinwell.li编写的一套文档站点生成框架，github上已有3k+ star,Docsify 是一个动态生成文档网站的工具。不同于 GitBook、Hexo 的地方是它不会生成将
+.md 转成 .html 文件，所有转换工作都是在运行时进行。
 
 ### 1.2 特性
 
@@ -30,9 +27,7 @@
 
 - 兼容 IE10+
 
-- 支持 SSR (**example**) 
-
-
+- 支持 SSR (**example**)
 
 ### 1.3 安装
 
@@ -48,23 +43,13 @@
 npm i docsify-cli -g
 ```
 
-
-
- 
-
 ### 1.4 样板
 
 *其他人基于docsify框架记录笔记的样板*
 
 https://veal98.gitee.io/cs-wiki/#/
 
-
-
 ## 2. Docsify基本操作
-
-
-
-
 
 ### 2.1 初始化Doscify
 
@@ -72,19 +57,11 @@ https://veal98.gitee.io/cs-wiki/#/
 
 ![image-20201019151439050](assets/image-20201019151439050.png)
 
-
-
-
-
 ### 2.2 启动Doscify
 
 启动doscify服务`doscify serve`
 
-
-
 ### 2.3 Doscify基本配置
-
-
 
 #### 2.3.1 加载中
 
@@ -109,10 +86,6 @@ https://veal98.gitee.io/cs-wiki/#/
 #### 2.3.2 多页文档
 
 当访问子文件夹的时候默认是访问该文件下的`README.md`文件
-
-
-
-
 
 #### 2.3.3 定制侧边栏
 
@@ -139,8 +112,6 @@ https://veal98.gitee.io/cs-wiki/#/
 
 *ps: 当定制侧边栏后,无法显示文章的标题侧边栏目,不推荐*
 
-
-
 #### 2.3.4 显示文章标题
 
 开启`subMaxLevel: 6`
@@ -156,8 +127,6 @@ https://veal98.gitee.io/cs-wiki/#/
     }
   </script>
 ```
-
-
 
 #### 2.3.5 文档封面
 
@@ -215,9 +184,7 @@ doscify默认提供的是vue样式的主题,可以在index.html进行引入切�
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css">
 ```
 
-
-
-####  2.3.7 搜索插件
+#### 2.3.7 搜索插件
 
 index.html中的插件配置
 
@@ -251,8 +218,6 @@ index.html中的插件配置
 ```html
 <script src="//unpkg.com/docsify-copy-code"></script>
 ```
-
-
 
 ## 3. 更多学习
 
@@ -465,8 +430,6 @@ Guide哥: https://blog.csdn.net/qq_34337272/article/details/105511189
 -->
 ```
 
-
-
 ### README.css
 
 ```css
@@ -506,8 +469,6 @@ table{
     cursor: pointer;
 }
 ```
-
-
 
 ### myStyle-light.css
 

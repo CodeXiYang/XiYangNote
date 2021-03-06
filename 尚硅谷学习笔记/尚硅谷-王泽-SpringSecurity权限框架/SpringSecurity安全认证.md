@@ -8,7 +8,7 @@
 >
 > 讲述人: 王泽
 >
-> 前置知识: 
+> 前置知识:
 >
 > 1. 掌握Spring框架
 >
@@ -18,21 +18,18 @@
 
 ## 第 1 章: 权限框架简介
 
-
-
-
-
 ### 1.1 概要
 
 Spring 是非常流行和成功的 Java 应用开发框架，Spring Security 正是 Spring 家族中的成员。Spring Security 基于 Spring 框架，提供了一套 Web 应用安全性的完整解决方案。
 
-正如你可能知道的关于安全方面的两个主要区域是 **"认证"** 和 **"授权"** （或者访问控制），一般来说， <span style="color:red">Web应用的安全性包括<u>用户认证</u>（Authentication）和<u>用户授权</u>（Authorization ）两个部分</span>，这两点也是Spring Security重要核心功能。
+正如你可能知道的关于安全方面的两个主要区域是 **"认证"** 和 **"授权"** （或者访问控制），一般来说， <span style="color:red">Web应用的安全性包括<u>用户认证</u>
+（Authentication）和<u>用户授权</u>（Authorization ）两个部分</span>，这两点也是Spring Security重要核心功能。
 
 **用户认证指的是:** 验证某个用户是否为系统中的合法主体，也就是说用户能否访问该系统。用户认证一般要求用户提供用户名和密码。系统通过校验用户名和密码来完成认证过程。**通俗点说就是系统认为用户是否能登录**
 
-**用户授权指的是:** 是验证某个用户是否有权限执行某个操作。在一个系统中，不同用户所具有的权限是不同的。比如对一个文件来说，有的用户只能进行读取，而有的用户可以进行修改。一般来说，系统会为不同的用户分配不同的角色，而每个角色则对应一系列的权限。**通俗点讲就是系统判断用户是否有权限去做某些事情。**
-
-
+**用户授权指的是:**
+是验证某个用户是否有权限执行某个操作。在一个系统中，不同用户所具有的权限是不同的。比如对一个文件来说，有的用户只能进行读取，而有的用户可以进行修改。一般来说，系统会为不同的用户分配不同的角色，而每个角色则对应一系列的权限。**
+通俗点讲就是系统判断用户是否有权限去做某些事情。**
 
 ### 1.2 Security历史
 
@@ -40,7 +37,8 @@ Spring 是非常流行和成功的 Java 应用开发框架，Spring Security 正
 
 ---
 
-Spring Security以"The Acegi Secutity System for Spring"的名字始于2013年晚些时候。一个问题提交到Spring开发者的邮件列表，询问是否已经有考虑一个机遇Spring的安全性社区实现。那时候Spring的社区相对较小（相对现在）。实际上Spring自己在2013年只是一个存在于ScourseForge的项目，这个问题的回答是一个值得研究的领域，虽然目前时间的缺乏组织了我们对它的探索。
+Spring Security以"The Acegi Secutity System for Spring"
+的名字始于2013年晚些时候。一个问题提交到Spring开发者的邮件列表，询问是否已经有考虑一个机遇Spring的安全性社区实现。那时候Spring的社区相对较小（相对现在）。实际上Spring自己在2013年只是一个存在于ScourseForge的项目，这个问题的回答是一个值得研究的领域，虽然目前时间的缺乏组织了我们对它的探索。
 
 ---
 
@@ -58,24 +56,20 @@ Acegi安全特定的认证服务介绍。大约一年后，Acegi安全正式成�
 
 Acegi安全2007年底正式成为了Spring组合项目，更名为"Spring Security".
 
-
-
 ### 1.3 权限类框架产品对比
 
 #### 1.3.1 Spring Security
 
 SpringSecurity权限框架是Spring 技术栈的组成部分。通过提供完整可扩展的认证和授权支持保护你的应用程序。官网: https://spring.io/projects/spring-security
 
-**SpringSecurity 特点:** 
+**SpringSecurity 特点:**
 
 1. 和Spring无缝整合。
 2. 全面的权限控制。
 3. 专门为Web开发而设计。
-   - 旧版本不能脱离Web环境使用。
-   - 新版本对整个框架进行了分层抽取，分成了核心模块和Web模块。单独引入核心模块就可以脱离Web环境。
+    - 旧版本不能脱离Web环境使用。
+    - 新版本对整个框架进行了分层抽取，分成了核心模块和Web模块。单独引入核心模块就可以脱离Web环境。
 4. 重量级。
-
-
 
 #### 1.3.2 Shiro
 
@@ -85,8 +79,8 @@ Shiro权限框架是Apache 旗下的轻量级权限控制框架。
 
 1. 轻量级。Shiro主张的理念是把复杂的事情变简单。针对对性能有更高要求的互联网应用有更好表现。
 2. 通用性。
-   - 好处：不局限于Web环境，可以脱离Web环境使用。
-   - 缺陷：在Web环境下一些特定的需求需要手动编写代码定制。
+    - 好处：不局限于Web环境，可以脱离Web环境使用。
+    - 缺陷：在Web环境下一些特定的需求需要手动编写代码定制。
 
 #### 1.3.3 SpringSecurity与Shiro的选择
 
@@ -94,7 +88,8 @@ Spring Security是Spring家族中的一个安全管理框架，实际上，在Sp
 
 ---
 
-相对于Shiro，在SSM中整合Spring Security都是比较麻烦的操作，所以， SpringSecurity虽然功能比Shiro强大，但是使用反而没有Shiro多（ Shiro虽然功能没有Spring Security多，但是对于大部分项目而言， Shiro也够用了）。自从有了Spring Boot之后， Spring Boot对于Spring Security提供了自动化配置方案，可以使用更少的配置来使用Spring Security.
+相对于Shiro，在SSM中整合Spring Security都是比较麻烦的操作，所以， SpringSecurity虽然功能比Shiro强大，但是使用反而没有Shiro多（ Shiro虽然功能没有Spring
+Security多，但是对于大部分项目而言， Shiro也够用了）。自从有了Spring Boot之后， Spring Boot对于Spring Security提供了自动化配置方案，可以使用更少的配置来使用Spring Security.
 
 ---
 
@@ -106,8 +101,6 @@ Spring Security是Spring家族中的一个安全管理框架，实际上，在Sp
 
 *ps: 以上只是一个推荐的组合而已，如果单纯从技术上来说，无论怎么组合，都是可以运行的。*
 
-
-
 ### 1.4 模块划分
 
 ![image-20201030165421757](assets/image-20201030165421757.png)
@@ -116,61 +109,29 @@ Spring Security是Spring家族中的一个安全管理框架，实际上，在Sp
 
 ### 2.1 创建一个项目
 
-
-
-
-
 ### 2.2 运行这个项目
-
-
 
 ### 2.3 权限管理相关概念
 
-
-
 ### 2.4 添加一个控制器进行访问
-
-
 
 ### 2.5 SpringSecurity基本原理
 
-
-
 ### 2.6 UserDetailsService接口讲解
 
-
-
 ### 2.7 PasswordEncoder接口讲解
-
-
-
-
 
 ### 2.8 SpringBoot对Security的自动配置
 
 https://docs.spring.io/spring-security/site/docs/5.3.4.RELEASE/reference/html5/#servlet-hello
 
-
-
 ## 第 3 章: Web权限方案
-
-
 
 ## 第 4 章: 微服务权限方案
 
-
-
 ## 第 5 章: 源码解析
 
-
-
-
-
-
-
-
-
->  学习地址: 
+> 学习地址:
 >
 >  本视频为1024专属视频，需提前学习请前往尚硅谷官网：www.atguigu.com，B站预计11中旬完结。 
 

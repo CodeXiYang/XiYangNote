@@ -62,11 +62,11 @@ Docker 使用 Google 公司推出的 Go 语言 进行开发实现，
 
 - **场景一**: `在开发的时候，在本机测试环境可以跑，生产环境跑不起来`
 
-  这里我们拿java Web应用程序举例，我们一个java Web应用程序涉及很多东西，比如jdk、tomcat、mysql等软件环境。当这些其中某一项<u>版本不一致</u>的时候，可能就会导致应用程序跑不起来这种情况。<u>Docker则将程序以及使用软件环境直接打包(将程序应用和运行环境都打包)在一起，无论在那个机器上保证了环境一致</u>。
+  这里我们拿java Web应用程序举例，我们一个java Web应用程序涉及很多东西，比如jdk、tomcat、mysql等软件环境。当这些其中某一项<u>版本不一致</u>的时候，可能就会导致应用程序跑不起来这种情况。<u>
+  Docker则将程序以及使用软件环境直接打包(将程序应用和运行环境都打包)在一起，无论在那个机器上保证了环境一致</u>。
 
   **优势1:  docker保证了一致的运行环境,更轻松的迁移**
 
-  
 
 - **场景二**:`服务器程序挂了，结果发现是别人程序代码出了问题把内存吃完了，导致自己程序代码因为内存不够就挂了`
 
@@ -74,12 +74,11 @@ Docker 使用 Google 公司推出的 Go 语言 进行开发实现，
 
   **优势2：docker对进程进行封装隔离,容器与容器之间互不影响,更高效的利用系统资源**
 
-  
 
 - **场景三**:`公司要弄一个活动，可能会有大量的流量进来，公司需要再多部署几十台服务器`
 
   在没有Docker的情况下，要在几天内部署几十台服务器，这对运维来说是一件非常折磨人的事，而且每台服务器的环境还不一定一样，就会出现各种问题，最后部署地头皮发麻。用Docker的话，我只需要将程序打包到镜像，你要多少台服务，我就给你跑多少容器，极大地提高了部署效率。
-  
+
   **优势3: docker通过镜像复制N多个环境一致容器,保证了N多个环境的一致,以及应用的快速的部署**
 
 ----
@@ -94,32 +93,26 @@ Docker 使用 Google 公司推出的 Go 语言 进行开发实现，
 
 - 上面的小格子表示通过docker启动的一个个软件环境(mysql,redis,jdk,tomcat,es...等),一个软件环境也叫一个容器(mysql容器,redis容器..); 容器与容器之间互相进程级隔离互不影响~
 
-
-
 ### 3.2 Docker与虚拟机的对比
 
 #### 3.2.1 Docker与虚拟机运行程序的流程
 
-docker运行程序的流程: 
+docker运行程序的流程:
 
-虚拟机运行程序的流程: 
+虚拟机运行程序的流程:
 
 ![image-20201229115523777](assets/image-20201229115523777.png)
-
-
 
 #### 3.2.2 Docker与虚拟机优缺点分析
 
 ![image-20201220222456675](assets/image-20201220222456675.png)
 
-比较上面两张图，我们发现: 
+比较上面两张图，我们发现:
 
-**操作系统层面对比:** 
+**操作系统层面对比:**
 
 - 虚拟机是<u>携带操作系统</u>，本身很小的应用程序却因为携带了操作系统而变得非常大，很笨重。
 - Docker是<u>不携带操作系统</u>的，所以Docker的应用就非常的轻巧。
-
-
 
 **另外在调用宿主机的CPU、磁盘等等这些资源的时候，拿内存举例来对比:**
 
@@ -142,7 +135,7 @@ docker运行程序的流程:
 
 ## 4.Docker的安装
 
-*注意：docker引擎支持支持主流操作系统window  macos  linux  uninx*
+*注意：docker引擎支持支持主流操作系统window macos linux uninx*
 
 *win10安装docker参考: https://docker_practice.gitee.io/zh-cn/install/windows.html*
 
@@ -200,11 +193,11 @@ docker运行程序的流程:
   $ sudo systemctl start docker
   ```
 
--  关闭docker
+- 关闭docker
 
-  ```bash
-  $ sudo systemctl stop docker
-  ```
+```bash
+$ sudo systemctl stop docker
+```
 
 - 测试docker安装
 
@@ -216,7 +209,8 @@ docker运行程序的流程:
 
 *由于linux有不同的发行版,有的公司用的centos,有的公司用的ubantu,所以docker有一种更简单的方式来进行多种不同linux发行版本的通用安装方式,详细步骤参考下面*
 
-- 在测试或开发环境中 Docker 官方为了简化安装流程，提供了一套便捷的安装脚本，CentOS 系统上可以使用这套脚本安装，另外可以通过 `--mirror` 选项使用国内源进行安装：执行这个命令后，脚本就会自动的将一切准备工作做好，并且把 Docker 的稳定(stable)版本安装在系统中。
+- 在测试或开发环境中 Docker 官方为了简化安装流程，提供了一套便捷的安装脚本，CentOS 系统上可以使用这套脚本安装，另外可以通过 `--mirror`
+  选项使用国内源进行安装：执行这个命令后，脚本就会自动的将一切准备工作做好，并且把 Docker 的稳定(stable)版本安装在系统中。
 
   ```bash
   $ curl -fsSL get.docker.com -o get-docker.sh
@@ -439,19 +433,22 @@ For more examples and ideas, visit:
 
 - UnionFS（联合文件系统）:
 
-  Union文件系统是一种分层，轻量级并且高性能的文件系统，它支持对文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下。Union文件系统是Docker镜像的基础。这种文件系统特性:就是一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录 。	
+  Union文件系统是一种分层，轻量级并且高性能的文件系统，它支持对文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下。Union文件系统是Docker镜像的基础。这种文件系统特性:
+  就是一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录 。
 
 ### 9.3 Docker镜像原理
 
 > `docker的镜像实际是由一层一层的文件系统组成。`
 
-- bootfs（boot file system）主要包含bootloader和kernel，bootloader主要是引导加载kernel，Linux刚启动时会加载bootfs文件系统。在docker镜像的最底层就是bootfs。这一层与Linux/Unix 系统是一样的，包含boot加载器（bootloader）和内核（kernel）。当boot加载完,后整个内核就都在内存中了，此时内存的使用权已由bootfs转交给内核，此时会卸载bootfs。
+- bootfs（boot file
+  system）主要包含bootloader和kernel，bootloader主要是引导加载kernel，Linux刚启动时会加载bootfs文件系统。在docker镜像的最底层就是bootfs。这一层与Linux/Unix
+  系统是一样的，包含boot加载器（bootloader）和内核（kernel）。当boot加载完,后整个内核就都在内存中了，此时内存的使用权已由bootfs转交给内核，此时会卸载bootfs。
 
-- rootfs（root file system），在bootfs之上，包含的就是典型的linux系统中的/dev，/proc，/bin，/etc等标准的目录和文件。rootfs就是各种不同的操作系统发行版，比如Ubuntu/CentOS等等。
+- rootfs（root file
+  system），在bootfs之上，包含的就是典型的linux系统中的/dev，/proc，/bin，/etc等标准的目录和文件。rootfs就是各种不同的操作系统发行版，比如Ubuntu/CentOS等等。
 
-- 我们平时安装进虚拟机的centos都有1到几个GB，为什么docker这里才200MB？对于一个精简的OS，rootfs可以很小，只需要包括最基本的命令，工具，和程序库就可以了，因为底层直接使用Host的Kernal，自己只需要提供rootfs就行了。由此可见不同的linux发行版，他们的bootfs是一致的，rootfs会有差别。因此不同的发行版可以共用bootfs。
-
-
+-
+我们平时安装进虚拟机的centos都有1到几个GB，为什么docker这里才200MB？对于一个精简的OS，rootfs可以很小，只需要包括最基本的命令，工具，和程序库就可以了，因为底层直接使用Host的Kernal，自己只需要提供rootfs就行了。由此可见不同的linux发行版，他们的bootfs是一致的，rootfs会有差别。因此不同的发行版可以共用bootfs。
 
 ![](assets/1567585172(1).jpg)
 
@@ -459,7 +456,8 @@ For more examples and ideas, visit:
 
 > `最大的一个好处就是资源共享`
 
-- 比如：有多个镜像都是从相同的base镜像构建而来的，那么宿主机只需在磁盘中保存一份base镜像。同时内存中也只需要加载一份base镜像，就可以为所有容器服务了。而且镜像的每一层都可以被共享。Docker镜像都是只读的。当容器启动时，一个新的可写层被加载到镜像的顶部。这一层通常被称为容器层，容器层之下都叫镜像层。
+-
+比如：有多个镜像都是从相同的base镜像构建而来的，那么宿主机只需在磁盘中保存一份base镜像。同时内存中也只需要加载一份base镜像，就可以为所有容器服务了。而且镜像的每一层都可以被共享。Docker镜像都是只读的。当容器启动时，一个新的可写层被加载到镜像的顶部。这一层通常被称为容器层，容器层之下都叫镜像层。
 
 ---
 
@@ -626,7 +624,7 @@ For more examples and ideas, visit:
 	docker run -p 9200:9200 -p 9300:9300 elasticsearch:6.4.2
 ```
 
-启动出现如下错误: 
+启动出现如下错误:
 
 ![image-20200602184321790](assets/image-20200602184321790.png)
 
@@ -764,7 +762,7 @@ Dockerfile可以认为是**Docker镜像的描述文件，是由一系列命令�
   FROM  <image>[@<digest>]  使用摘要
   ```
 
-#### 12.3.2 MAINTAINER  命令
+#### 12.3.2 MAINTAINER 命令
 
 - 镜像维护者的姓名和邮箱地址[废弃]
 
@@ -885,8 +883,7 @@ Dockerfile可以认为是**Docker镜像的描述文件，是由一系列命令�
   ENTRYPOINT command param1 param2
   ```
 
-  ENTRYPOINT指令，往往用于设置容器启动后的**第一个命令**，这对一个容器来说往往是固定的。
-  CMD指令，往往用于设置容器启动的第一个命令的**默认参数**，这对一个容器来说可以是变化的。
+  ENTRYPOINT指令，往往用于设置容器启动后的**第一个命令**，这对一个容器来说往往是固定的。 CMD指令，往往用于设置容器启动的第一个命令的**默认参数**，这对一个容器来说可以是变化的。
 
 #### 12.3.11 ENTRYPOINT命令
 
@@ -939,9 +936,11 @@ http://10.15.0.8:8989/ems/login.html
 
 当 Docker 启动时，会自动在主机上创建一个 `docker0` 虚拟网桥，实际上是 Linux 的一个 bridge，可以理解为一个软件交换机。它会在挂载到它的网口之间进行转发。
 
-同时，Docker 随机分配一个本地未占用的私有网段（在 [RFC1918](https://tools.ietf.org/html/rfc1918) 中定义）中的一个地址给 `docker0` 接口。比如典型的 `172.17.42.1`，掩码为 `255.255.0.0`。此后启动的容器内的网口也会自动分配一个同一网段（`172.17.0.0/16`）的地址。
+同时，Docker 随机分配一个本地未占用的私有网段（在 [RFC1918](https://tools.ietf.org/html/rfc1918) 中定义）中的一个地址给 `docker0` 接口。比如典型的 `172.17.42.1`
+，掩码为 `255.255.0.0`。此后启动的容器内的网口也会自动分配一个同一网段（`172.17.0.0/16`）的地址。
 
-当创建一个 Docker 容器的时候，同时会创建了一对 `veth pair` 接口（当数据包发送到一个接口时，另外一个接口也可以收到相同的数据包）。这对接口一端在容器内，即 `eth0`；另一端在本地并被挂载到 `docker0` 网桥，名称以 `veth` 开头（例如 `vethAQI2QT`）。通过这种方式，主机可以跟容器通信，容器之间也可以相互通信。Docker 就创建了在主机和所有容器之间一个虚拟共享网络。
+当创建一个 Docker 容器的时候，同时会创建了一对 `veth pair` 接口（当数据包发送到一个接口时，另外一个接口也可以收到相同的数据包）。这对接口一端在容器内，即 `eth0`；另一端在本地并被挂载到 `docker0`
+网桥，名称以 `veth` 开头（例如 `vethAQI2QT`）。通过这种方式，主机可以跟容器通信，容器之间也可以相互通信。Docker 就创建了在主机和所有容器之间一个虚拟共享网络。
 
 ![image-20201125105847896](assets/image-20201125105847896.png)
 
@@ -1095,7 +1094,8 @@ docker volume rm my-vol
 
 `Compose` 定位是 「定义和运行多个 Docker 容器的应用（Defining and running multi-container Docker applications）」，其前身是开源项目 Fig。
 
-通过第一部分中的介绍，我们知道使用一个 `Dockerfile` 模板文件，可以让用户很方便的定义一个单独的应用容器。然而，在日常工作中，经常会碰到需要多个容器相互配合来完成某项任务的情况。例如要实现一个 Web 项目，除了 Web 服务容器本身，往往还需要再加上后端的数据库服务容器，甚至还包括负载均衡容器等。
+通过第一部分中的介绍，我们知道使用一个 `Dockerfile` 模板文件，可以让用户很方便的定义一个单独的应用容器。然而，在日常工作中，经常会碰到需要多个容器相互配合来完成某项任务的情况。例如要实现一个 Web 项目，除了 Web
+服务容器本身，往往还需要再加上后端的数据库服务容器，甚至还包括负载均衡容器等。
 
 `Compose` 恰好满足了这样的需求。它允许用户通过一个单独的 `docker-compose.yml` 模板文件（YAML 格式）来定义一组相关联的应用容器为一个项目（project）。
 
@@ -1121,7 +1121,8 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 
 #### 2.macos、window
 
-- Compose 可以通过 Python 的包管理工具 pip 进行安装，也可以直接下载编译好的二进制文件使用，甚至能够直接在 Docker 容器中运行。`Docker Desktop for Mac/Windows 自带 docker-compose 二进制文件，安装 Docker 之后可以直接使用`。
+- Compose 可以通过 Python 的包管理工具 pip 进行安装，也可以直接下载编译好的二进制文件使用，甚至能够直接在 Docker
+  容器中运行。`Docker Desktop for Mac/Windows 自带 docker-compose 二进制文件，安装 Docker 之后可以直接使用`。
 
 #### 3.bash命令补全
 
@@ -1353,7 +1354,8 @@ environment:
   - SESSION_SECRET
 ```
 
-如果变量名称或者值中用到 `true|false，yes|no` 等表达 [布尔](https://yaml.org/type/bool.html) 含义的词汇，最好放到引号里，避免 YAML 自动解析某些内容为对应的布尔语义。这些特定词汇，包括
+如果变量名称或者值中用到 `true|false，yes|no` 等表达 [布尔](https://yaml.org/type/bool.html) 含义的词汇，最好放到引号里，避免 YAML
+自动解析某些内容为对应的布尔语义。这些特定词汇，包括
 
 ```bash
 y|Y|yes|Yes|YES|n|N|no|No|NO|true|True|TRUE|false|False|FALSE|on|On|ON|off|Off|OFF
@@ -1413,7 +1415,8 @@ ports:
  - "127.0.0.1:8001:8001"
 ```
 
-*注意：当使用 `HOST:CONTAINER` 格式来映射端口时，如果你使用的容器端口小于 60 并且没放到引号里，可能会得到错误结果，因为 `YAML` 会自动解析 `xx:yy` 这种数字格式为 60 进制。为避免出现这种问题，建议数字串都采用引号包括起来的字符串格式。*
+*注意：当使用 `HOST:CONTAINER` 格式来映射端口时，如果你使用的容器端口小于 60 并且没放到引号里，可能会得到错误结果，因为 `YAML` 会自动解析 `xx:yy` 这种数字格式为 60
+进制。为避免出现这种问题，建议数字串都采用引号包括起来的字符串格式。*
 
 #### `sysctls`
 

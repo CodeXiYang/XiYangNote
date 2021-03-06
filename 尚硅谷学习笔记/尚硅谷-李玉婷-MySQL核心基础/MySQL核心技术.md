@@ -2,7 +2,7 @@
 
 > 课程名称: [尚硅谷MySQL数据库全套完整版（sql数据库优化)](https://www.bilibili.com/video/BV1xW411u7ax)
 >
-> 课程概述: 
+> 课程概述:
 >
 > - 本视频涵盖MySQL核心技术主要知识点，每节知识配套对应练习。
 > - 主要包含数据库和表的常用操作、约束、视图、存储过程和函数、流程控制结构以及综合运用各种命令实现数据的增删改查操作。
@@ -33,7 +33,7 @@ java中保存数据的容器有数组,集合,文件...
 
 ### 1.2 数据库的基础概念
 
-**DB** 
+**DB**
 
 DB指的是数据库（database）,用于存储数据的“仓库”,DB仓库它保存了一系列有组织的数据。
 
@@ -71,8 +71,6 @@ TCL: 事务控制语言
 DCL: 数据控制语言(控制权限的)
 ```
 
-
-
 ### 1.3 数据库存的特点
 
 1. 将数据放到表中，表再放到库中
@@ -80,8 +78,6 @@ DCL: 数据控制语言(控制权限的)
 3. 表具有一些特性，这些特性定义了数据在表中如何存储，类似java中“类”的设计。
 4. 表由列组成，我们也称为字段。所有表都是由一个或多个列组成的，每一列类似java中的"属性"
 5. 表中的数据是按行存储的，每一行类似于java中的“对象”
-
-
 
 ## 第 2 章:  MySQL安装与使用
 
@@ -104,8 +100,6 @@ MySQL提供两种版本
 
 - [社区版（免费）](http://dev.mysql.com/downloads/mysql)
 - 企业版（收费）
-
-
 
 ### 2.2 MySQL的卸载与安装
 
@@ -142,8 +136,6 @@ default-storage-engine=INNODB
 max_connection=100
 ```
 
-
-
 ### 2.4 MySQL服务的启动与停止
 
 *启动与停止mysql的服务有两种方式*
@@ -161,7 +153,7 @@ max_connection=100
 
 ![image-20201212125302758](assets/image-20201212125302758.png)
 
-####  方式二:命令行(推荐使用)
+#### 方式二:命令行(推荐使用)
 
 按住win+q输入cmd,然后 <u>以管理员身份打开</u> 进行开启服务
 
@@ -184,8 +176,6 @@ net start mysql
 ```
 
 ![image-20201212130024886](assets/image-20201212130024886.png)
-
-
 
 ### 2.5 MySQL服务的登录与退出
 
@@ -259,15 +249,11 @@ mysql -u用户名 -p密码
 
    ![image-20201212132144863](assets/image-20201212132144863.png)
 
-
-
 ### 2.6 MySQL环境变量的配置
 
 - 新建一个`MYSQL_HOME`的变量名,然后变量值配置成mysql的安装路径;例如`D:\environment\mysql-5.7.19-winx64`
 
 - 然后再到Path中添加`%MYSQL_HOME%\bin`
-
-
 
 ### 2.7 MySQL的常见命令
 
@@ -315,9 +301,7 @@ show tables from 库名;
 show tables from demo;
 ```
 
-
-
-*ps:下面这些命令后面会讲,现在只看看就好了* 
+*ps:下面这些命令后面会讲,现在只看看就好了*
 
 创建一个表
 
@@ -400,17 +384,13 @@ mysql -V
 2. 建议每条命令使用`;`结尾
 3. 每条命令根据需要,可以进行缩进或换行
 4. mysql注释
-   - 单行注释: `#注释文字`
-   - 单行注释:`-- 注释文字`
-   - 多行注释: `/*注释文字*/`
+    - 单行注释: `#注释文字`
+    - 单行注释:`-- 注释文字`
+    - 多行注释: `/*注释文字*/`
 
 ### 2.9 图形界面安装
 
 https://www.bilibili.com/video/BV1xW411u7ax?p=16
-
-
-
-
 
 ## 第 3 章: 数据处理之查询
 
@@ -562,8 +542,6 @@ SELECT 100+90;
 	SELECT '90'+NULL;
 ```
 
-
-
 **【案例】**
 
 ```sql
@@ -577,8 +555,6 @@ SELECT CONCAT(last_name,first_name) AS 姓名 FROM employees;
 ```
 
 ![image-20201212155154864](assets/image-20201212155154864.png)
-
-
 
 ### 3.2 条件查询-WHERE
 
@@ -607,8 +583,6 @@ SELECT 查询列表 FROM 表名 WHERE 筛选条件;
 */
 ```
 
-
-
 #### 3.2.1 按条件表达式筛选
 
 `条件运算符: > < = !=(<>) >= <=`
@@ -622,8 +596,6 @@ SELECT * FROM employees WHERE salary>12000;
 SELECT first_name,department_id FROM employees WHERE department_id!=90;
 SELECT first_name,department_id FROM employees WHERE department_id<>90;
 ```
-
-
 
 #### 3.2.2 按逻辑表达式筛选
 
@@ -639,11 +611,9 @@ SELECT * FROM employees WHERE department_id<90 OR department_id>110 OR salary>15
 SELECT * FROM employees WHERE NOT (department_id>=90 AND department_id<=110) OR salary>15000;
 ```
 
-
-
 #### 3.2.3 模糊查询
 
-##### like 
+##### like
 
 like一般和通配符搭配使用`%:任意多个字符` `_任意一个字符`
 
@@ -660,7 +630,7 @@ SELECT last_name FROM employees WHERE last_name like "_Z_%" ESCAPE 'Z'; -- 使�
 
 ##### between and
 
-`between 值1 and  值2`用于模糊查询范围的
+`between 值1 and 值2`用于模糊查询范围的
 
 使用between and是包含临界值的
 
@@ -671,8 +641,6 @@ between and之间值不可以调整顺序
 SELECT * FROM employees WHERE employee_id>=100 AND employee_id<=120;
 SELECT * FROM employees WHERE employee_id BETWEEN 100 AND 120;
 ```
-
-
 
 ##### in
 
@@ -688,8 +656,6 @@ SELECT last_name,job_id FROM employees WHERE job_id = "IT_PROG" OR job_id = "AD_
 SELECT last_name,job_id FROM employees WHERE job_id IN("IT_PROG","AD_VP","AD_PRES");
 ```
 
-
-
 ##### is null / is not null
 
 `=或<>`不能用于判断null值
@@ -703,7 +669,7 @@ SELECT last_name,commission_pct FROM employees WHERE commission_pct IS NULL;
 SELECT last_name,commission_pct FROM employees WHERE commission_pct IS NOT NULL;
 ```
 
-**补充: 安全等于`<=>`** 
+**补充: 安全等于`<=>`**
 
 可以用于判断null值
 
@@ -730,49 +696,23 @@ IS NULL: 仅仅可以判断null值,不可以判断具体的数值,例如不可�
 SELECT last_name,department_id,salary*12*(1+IFNULL(commission_pct,0)) AS 年薪 FROM employees WHERE employee_id <=> 176;
 ```
 
-
-
 ### 3.3 排序查询 🚩
-
-
 
 ### 3.4 常见函数
 
-
-
 ### 3.5 分组函数
-
-
 
 ### 3.6 连接查询
 
-
-
 ### 3.7 子查询
-
-
 
 ### 3.8 分页查询
 
-
-
 ### 3.9 union联合查询
-
-
-
-
-
-
 
 ---
 
-
-
-
-
 ## 第 4 章: 常见函数
-
-
 
 ### 4.1 字符函数
 
@@ -780,35 +720,19 @@ SELECT last_name,department_id,salary*12*(1+IFNULL(commission_pct,0)) AS 年薪 
 
 字符控制函数
 
-
-
-
-
 ### 4.2 数学函数
-
-
 
 ### 4.3 日期函数
 
-
-
 ### 4.4 其他函数(补充)
 
-
-
 ### 4.5 流程控制函数(补充)
-
-
 
 ---
 
 ## 第 5 章: 数据处理之增删改
 
-
-
 ### 5.1 数据操纵语言
-
-
 
 ### 5.2 插入数据
 
@@ -821,8 +745,6 @@ SELECT last_name,department_id,salary*12*(1+IFNULL(commission_pct,0)) AS 年薪 
 #### 插入指定的值
 
 #### 从其他表中拷贝数据
-
-
 
 ### 5.3 更新数据
 
@@ -840,91 +762,47 @@ SELECT last_name,department_id,salary*12*(1+IFNULL(commission_pct,0)) AS 年薪 
 
 #### 删除中的数据完整性
 
-
-
-
-
 ---
 
 ## 第 6 章:  子查询
 
-
-
 ### 6.1 子查询概念
 
-
-
 ### 6.2 子查询类型
-
-
 
 ### 6.3单行子查询
 
 ### 6.4 子查询语法
 
-
-
 ### 6.5 使用子查询解决问题
-
-
 
 ### 6.6 执行单行子查询
 
-
-
 ### 6.7 在子查询中使用组函数
-
-
 
 ### 6.8 子查询中使用HAVING子句
 
-
-
 ### 6.9 非法使用子查询
-
-
 
 ### 6.10 子查询中的空值问题
 
-
-
 ### 6.11 多行子查询
-
-
 
 ### 6.12 使用in操作符
 
-
-
 ### 6.13 在多行子查询中使用ANY操作符
-
-
 
 ### 6.14 在多行子查询中使用ALL操作符
 
-
-
 ### 6.15 子查询中的空值问题
-
-
-
-
 
 ---
 
 ## 第 7 章: 创建和管理表
 
-
-
-
-
 ### 7.1 创建数据库
 
-
-
 命名规则
-
-
 
 ### 7.2 创建表
 
@@ -956,11 +834,7 @@ ALTER TABLE 语句
 
 ---
 
-
-
 ## 第 8 章: 数据类型
-
-
 
 ### 8.1 数值类型
 
@@ -969,8 +843,6 @@ ALTER TABLE 语句
 小数
 
 位类型
-
-
 
 ### 8.2 字符类型
 
@@ -982,21 +854,13 @@ Enum类型
 
 Set类型
 
-
-
 ### 8.3 日期类型
 
 datetime和timestamp的区别
 
-
-
-
-
 ## 第 9 章: 约束和分页
 
 ### 9.1 什么是约束
-
-
 
 ### 9.2 约束
 
@@ -1014,99 +878,53 @@ datetime和timestamp的区别
 
 ---
 
-
-
 ## 第 10 章: 事务
 
 ### 10.1 事务
 
-
-
 ### 10.2 MySQL中的存储引擎
-
-
 
 ### 10.3 事务的特点
 
-
-
 ### 10.4 事务的使用
 
-
-
 ### 10.5 数据库的隔离级别
-
-
 
 ### 10.6 在MySQL中设置隔离级别
 
 ---
 
-
-
 ## 第 11 章: 视图
-
-
-
-
 
 ### 11.1 什么是视图
 
-
-
 ### 11.2 常见题目
-
-
 
 ### 11.3 视图的好处
 
-
-
 ### 11.4 创建或者修改视图
-
-
 
 ### 11.5 删除视图
 
-
-
 ### 11.6 查看视图
-
-
 
 ---
 
 ## 第 12 章: 存储过程和函数
 
-
-
 ### 12.1 什么是存储过程和函数
-
-
 
 ### 12.2 创建存储过程或函数
 
-
-
 ### 12.3 调用存储过程或函数
-
-
 
 ### 12.4 案例
 
-
-
 ### 12.5 修改储存过程或函数
-
-
 
 ### 12.6 删除存储过程或函数
 
-
-
 ### 12.7 查看存储过程或函数
-
-
 
 ## 第 13 章: 流程控制结构
 
@@ -1115,8 +933,6 @@ datetime和timestamp的区别
 #### 作为表达式
 
 #### 作为独立的语句
-
-
 
 ### 13.2 循环结构
 
@@ -1138,8 +954,6 @@ datetime和timestamp的区别
 | department_name | varchar | 部门名称           |
 | manager_id      | int     | 部门领导的员工编号 |
 | location_id     | int     | 位置编号           |
-
-
 
 ##### employees表(员工表)
 
@@ -1166,8 +980,6 @@ datetime和timestamp的区别
 | min_salary | int     | 最低工资 |
 | max_salary | int     | 最高工资 |
 
-
-
 ##### locations表(位置表)
 
 | 字段           | 类型    | 注释     |
@@ -1178,8 +990,6 @@ datetime和timestamp的区别
 | city           | varchar | 城市     |
 | state_province | varchar | 州/省    |
 | country_id     | varchar | 国家编号 |
-
-
 
 #### myemployees.sql执行脚本
 
@@ -1288,17 +1098,9 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 ```
 
-
-
-
-
-
-
 ## 附: SQL案例及练习
 
 *本教程中出现的案例和练习*
-
-
 
 ### 1. 基本SQL-SELECT语句
 
@@ -1309,15 +1111,11 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
   from employees; -- 答案: 可以执行
   ```
 
-  
-
-2. 下面的语句是否可以执行成功 
+2. 下面的语句是否可以执行成功
 
   ```sql
   select * from employees; -- 答案: 可以执行
   ```
-
-  
 
 3. 找出下面语句中的错误
 
@@ -1328,8 +1126,6 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
   -- 答案: 符号错误 ,注意中英文状态的符号就可以了
   ```
 
-  
-
 4. 显示表 departments 的结构，并查询其中的全部数据
 
    ```sql
@@ -1338,7 +1134,6 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
    SELECT * FROM departments; -- 查询全部数据
    ```
 
-   
 
 5. 显示出表 employees 中的全部 job_id（不能重复）
 
@@ -1347,7 +1142,6 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
    SELECT DISTINCT job_id FROM employees;
    ```
 
-   
 
 6. 显示出表 employees 的全部列，各个列之间用逗号连接，列头显示成 OUT_PUT
 
@@ -1355,8 +1149,6 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
    -- 答案
    SELECT CONCAT(last_name,",",first_name,",",job_id) AS "OUT PUT" FROM employees;
    ```
-
-   
 
 ### 2. 过滤数据
 
@@ -1366,7 +1158,6 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
    SELECT last_name,
    ```
 
-   
 
 2. 查询员工号为 176 的员工的姓名和部门号和年薪
 
@@ -1402,7 +1193,6 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
    
    ```
 
-   
 
 2. 查询员工号，姓名，工资，以及工资提高百分之 20%后的结果（new salary）
 
@@ -1410,7 +1200,6 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
    
    ```
 
-   
 
 3. 将员工的姓名按首字母排序，并写出姓名的长度（length）
 
@@ -1418,7 +1207,6 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
    
    ```
 
-   
 
 4. 做一个查询，产生下面的结果
 
@@ -1430,7 +1218,6 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
    
    ```
 
-   
 
 5. 使用 case-when，按照下面的条件：
 
@@ -1440,14 +1227,11 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
    
    ```
 
-   
-
 ### 5. 分组函数
 
 1. 查询各 job_id 的员工工资的最大值，最小值，平均值，总和，并按 job_id 升序
 2. 查询员工最高工资和最低工资的差距（DIFFERENCE）
-3. 查询各个管理者手下员工的最低工资，其中最低工资不能低于 6000，没有管理者的员
-工不计算在内
+3. 查询各个管理者手下员工的最低工资，其中最低工资不能低于 6000，没有管理者的员 工不计算在内
 4. 查询所有部门的编号，员工数量和工资平均值,并按平均工资降序
 5. 选择具有各个 job_id 的员工人数
 
@@ -1459,9 +1243,7 @@ insert  into `locations`(`location_id`,`street_address`,`postal_code`,`city`,`st
 
 ### 7. SQL99语法连接查询
 
-一、查询编号>3 的女神的男朋友信息，如果有则列出详细，如果没有，用 null 填充
-二、查询哪个城市没有部门
-三、查询部门名为 SAL 或 IT 的员工信息
+一、查询编号>3 的女神的男朋友信息，如果有则列出详细，如果没有，用 null 填充 二、查询哪个城市没有部门 三、查询部门名为 SAL 或 IT 的员工信息
 
 ### 8. SQL99语法连接查询
 
@@ -1514,7 +1296,7 @@ kochhar 101 king 100
 3. 向 my_employees 表中插入下列数据
 
    | ID   | FIRST_NAME | LAST_NAME | USERID   | SALARY |
-   | ---- | ---------- | --------- | -------- | ------ |
+      | ---- | ---------- | --------- | -------- | ------ |
    | 1    | patel      | Ralph     | Rpatel   | 895    |
    | 2    | Dancs      | Betty     | Bdancs   | 860    |
    | 3    | Biri       | Ben       | Bbiri    | 1100   |
@@ -1525,7 +1307,7 @@ kochhar 101 king 100
 4. 向 users 表中插入数据
 
    |      |          |      |
-   | ---- | -------- | ---- |
+      | ---- | -------- | ---- |
    | 1    | Rpatel   | 10   |
    | 2    | Bdancs   | 10   |
    | 3    | Bbiri    | 20   |
@@ -1545,7 +1327,7 @@ kochhar 101 king 100
 1. 创建表 dept1
 
    | name | Null? | type        |
-   | ---- | ----- | ----------- |
+      | ---- | ----- | ----------- |
    | id   |       | int(7)      |
    | name |       | varchar(25) |
 
@@ -1554,7 +1336,7 @@ kochhar 101 king 100
 3. 创建表 emp5
 
    | name       | Null? | type         |
-   | ---------- | ----- | ------------ |
+      | ---------- | ----- | ------------ |
    | id         |       | int(7)       |
    | First_name |       | Varchar (25) |
    | Last_name  |       | Varchar(25)  |
@@ -1566,7 +1348,7 @@ kochhar 101 king 100
 
 6. 删除表 emp5
 
-7. 将表 employees2 重命名为 emp5 
+7. 将表 employees2 重命名为 emp5
 
 8. 在表 dept 和 emp5 中添加新列 test_column，并检查所作的操作
 
@@ -1576,8 +1358,7 @@ kochhar 101 king 100
 
 1. 向表 emp2 的 id 列中添加 PRIMARY KEY 约束（my_emp_id_pk）
 2. 向表 dept2 的 id 列中添加 PRIMARY KEY 约束（my_dept_id_pk）
-3. 向表 emp2 中添加列 dept_id，并在其中定义 FOREIGN KEY 约束，与之相关联的列是
-dept2 表中的 id 列。
+3. 向表 emp2 中添加列 dept_id，并在其中定义 FOREIGN KEY 约束，与之相关联的列是 dept2 表中的 id 列。
 
 ### 13. 事务
 
@@ -1587,50 +1368,29 @@ dept2 表中的 id 列。
 
 ### 14. 视图
 
-一、创建视图 emp_v1,要求查询电话号码以‘011’开头的员工姓名和工资、邮箱
-二、要求将视图 emp_v1 修改为查询电话号码以‘011’开头的并且邮箱中包含 e 字符的员
-工姓名和邮箱、电话号码
-三、向 emp_v1 插入一条记录，是否可以？
-四、修改刚才记录中的电话号码为‘0119’
-五、删除刚才记录
-六、创建视图 emp_v2，要求查询部门的最高工资高于 12000 的部门信息
-七、向 emp_v2 中插入一条记录，是否可以？
-八、删除刚才的 emp_v2 和 emp_v1
+一、创建视图 emp_v1,要求查询电话号码以‘011’开头的员工姓名和工资、邮箱 二、要求将视图 emp_v1 修改为查询电话号码以‘011’开头的并且邮箱中包含 e 字符的员 工姓名和邮箱、电话号码 三、向 emp_v1
+插入一条记录，是否可以？ 四、修改刚才记录中的电话号码为‘0119’ 五、删除刚才记录 六、创建视图 emp_v2，要求查询部门的最高工资高于 12000 的部门信息 七、向 emp_v2 中插入一条记录，是否可以？ 八、删除刚才的
+emp_v2 和 emp_v1
 
 ### 15. 视图
 
-1、创建视图 emp_v1,要求查询电话号码以‘011’开头的员工姓名和工资、邮箱
-2、要求将视图 emp_v1 修改为查询电话号码以‘011’开头的并且邮箱中包含 e 字符的员工
-姓名和邮箱、电话号码
-3、向 emp_v1 插入一条记录，是否可以？
-4、修改刚才记录中的电话号码为‘0119’ 5、删除刚才记录
-6、创建视图 emp_v2，要求查询部门的最高工资高于 12000 的部门信息
-7、向 emp_v2 中插入一条记录，是否可以？
-8、删除刚才的 emp_v2 和 emp_v1
+1、创建视图 emp_v1,要求查询电话号码以‘011’开头的员工姓名和工资、邮箱 2、要求将视图 emp_v1 修改为查询电话号码以‘011’开头的并且邮箱中包含 e 字符的员工 姓名和邮箱、电话号码 3、向 emp_v1
+插入一条记录，是否可以？ 4、修改刚才记录中的电话号码为‘0119’ 5、删除刚才记录 6、创建视图 emp_v2，要求查询部门的最高工资高于 12000 的部门信息 7、向 emp_v2 中插入一条记录，是否可以？ 8、删除刚才的
+emp_v2 和 emp_v1
 
 ### 16. 存储过程
 
-1、创建存储过程或函数实现传入用户名和密码，插入到 admin 表中
-2、创建存储过程或函数实现传入女神编号，返回女神名称和女神电话
-3、创建存储存储过程或函数实现歘人两个女神生日，返回大小
-4、创建存储过程或函数实现传入一个日期，格式化成 xx 年 xx 月 xx 日并返回
-5、创建存储过程或函数实现传入女神名称，返回：女神 and 男神 格式的字符串
-如 传入 ：小昭
-返回： 小昭 and 张无忌
-6、创建存储过程或函数，根据传入的条目数和起始索引，查询 beauty 表的记录
+1、创建存储过程或函数实现传入用户名和密码，插入到 admin 表中 2、创建存储过程或函数实现传入女神编号，返回女神名称和女神电话 3、创建存储存储过程或函数实现歘人两个女神生日，返回大小 4、创建存储过程或函数实现传入一个日期，格式化成
+xx 年 xx 月 xx 日并返回 5、创建存储过程或函数实现传入女神名称，返回：女神 and 男神 格式的字符串 如 传入 ：小昭 返回： 小昭 and 张无忌 6、创建存储过程或函数，根据传入的条目数和起始索引，查询 beauty
+表的记录
 
 ### 17. 函数
 
-1、创建函数，实现传入两个 float，返回二者之和
-2、创建函数，实现传入工种名，返回该工种的员工人数
-3、创建函数，实现传入员工名，返回该员工的领导名
+1、创建函数，实现传入两个 float，返回二者之和 2、创建函数，实现传入工种名，返回该工种的员工人数 3、创建函数，实现传入员工名，返回该员工的领导名
 
 ### 18. 流程控制结构
 
-1、已知表 stringcontent
-其中字段：
-id 自增长
-content varchar(20)
+1、已知表 stringcontent 其中字段： id 自增长 content varchar(20)
 向该表插入指定个数的，随机的字符串
 
 ### 子查询经典案例题目
@@ -1646,17 +1406,8 @@ content varchar(20)
 
 ### 作业
 
-一、查询每个专业的学生人数
-二、查询参加考试的学生中，每个学生的平均分、最高分
-三、查询姓张的每个学生的最低分大于60的学号、姓名
-四、查询专业生日在“1988-1-1”后的学生姓名、专业名称
-五、查询每个专业的男生人数和女生人数分别是多少
-六、查询专业和张翠山一样的学生的最低分
-七、查询大于60分的学生的姓名、密码、专业名
-八、按邮箱位数分组，查询每组的学生个数
-九、查询学生名、专业名、分数
-十、查询哪个专业没有学生，分别用左连接和右连接实现
-十一、查询没有成绩的学生人数
+一、查询每个专业的学生人数 二、查询参加考试的学生中，每个学生的平均分、最高分 三、查询姓张的每个学生的最低分大于60的学号、姓名 四、查询专业生日在“1988-1-1”后的学生姓名、专业名称 五、查询每个专业的男生人数和女生人数分别是多少
+六、查询专业和张翠山一样的学生的最低分 七、查询大于60分的学生的姓名、密码、专业名 八、按邮箱位数分组，查询每组的学生个数 九、查询学生名、专业名、分数 十、查询哪个专业没有学生，分别用左连接和右连接实现 十一、查询没有成绩的学生人数
 
 
 

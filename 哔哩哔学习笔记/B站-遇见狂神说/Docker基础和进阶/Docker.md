@@ -2,7 +2,7 @@
 
 > 课程名称:  [【狂神说Java】Docker最新超详细版教程通俗易懂](https://www.bilibili.com/video/BV1og4y1q7M4)
 >
-> 课程概述: 
+> 课程概述:
 >
 > - 从Docker历史，概念，到命令的详解 从使用到深入原理和网络，大量的实战
 > - Docker Compose 、DockerSwarm及学习方法的分享。
@@ -26,7 +26,8 @@
 
 ---
 
-之前在服务器配置一个应用的运行环境，要安装各种软件，就拿一个基本的工程项目的环境来说吧，Java/Tomcat/MySQL/JDBC驱动包等。安装和配置这些东西有多麻烦就不说了，它还不能跨平台。假如我们是在 Windows 上安装的这些环境，到了 Linux 又得重新装。况且就算不跨操作系统，换另一台同样操作系统的服务器，要移植应用也是非常麻烦的。
+之前在服务器配置一个应用的运行环境，要安装各种软件，就拿一个基本的工程项目的环境来说吧，Java/Tomcat/MySQL/JDBC驱动包等。安装和配置这些东西有多麻烦就不说了，它还不能跨平台。假如我们是在 Windows
+上安装的这些环境，到了 Linux 又得重新装。况且就算不跨操作系统，换另一台同样操作系统的服务器，要移植应用也是非常麻烦的。
 
 ---
 
@@ -46,17 +47,19 @@ Docker镜像的设计，使得Docker得以打破过去「程序即应用」的�
 
 Docker的思想来自于集装箱，集装箱解决了什么问题？在一艘大船上，可以把货物规整的摆放起来。并且各种各样的货物被集装箱标准化了，集装箱和集装箱之间不会互相影响。那么我就不需要专门运送水果的船和专门运送化学品的船了。只要这些货物在集装箱里封装的好好的，那我就可以用一艘大船把他们都运走。Docker的思想来自于集装箱，集装箱解决了什么问题？在一艘大船上，可以把货物规整的摆放起来。并且各种各样的货物被集装箱标准化了，集装箱和集装箱之间不会互相影响。那么我就不需要专门运送水果的船和专门运送化学品的船了。只要这些货物在集装箱里封装的好好的，那我就可以用一艘大船把他们都运走。
 
-
-
 *本质: 所有的技术都是因为出了一些问题,我们需要去解决,才去学习!!*
 
 ### 1.2 Docker的历史
 
-2010年，几个搞IT的年轻人，在美国旧金山成立了一家名叫 **dotCloud** 的公司。这家公司主要提供基于PaaS的云计算技术服务。具体来说，是和LXC有关的容器技术。后来，dotCloud公司将自己的容器技术进行了简化和标准化，并命名为——**Docker**。Docker技术诞生之后，并没有引起行业的关注。而dotCloud公司，作为一家小型创业企业，在激烈的竞争之下，也步履维艰。正当他们快要坚持不下去的时候，脑子里蹦出了“开源”的想法。什么是“开源”？开源，就是开放源代码。也就是将原来内部保密的程序源代码开放给所有人，然后让大家一起参与进来，贡献代码和意见。有的软件是一开始就开源的。也有的软件，是混不下去，创造者又不想放弃，所以选择开源。自己养不活，就吃“百家饭”嘛。
+2010年，几个搞IT的年轻人，在美国旧金山成立了一家名叫 **dotCloud**
+的公司。这家公司主要提供基于PaaS的云计算技术服务。具体来说，是和LXC有关的容器技术。后来，dotCloud公司将自己的容器技术进行了简化和标准化，并命名为——**Docker**
+。Docker技术诞生之后，并没有引起行业的关注。而dotCloud公司，作为一家小型创业企业，在激烈的竞争之下，也步履维艰。正当他们快要坚持不下去的时候，脑子里蹦出了“开源”的想法。什么是“开源”？开源，就是开放源代码。也就是将原来内部保密的程序源代码开放给所有人，然后让大家一起参与进来，贡献代码和意见。有的软件是一开始就开源的。也有的软件，是混不下去，创造者又不想放弃，所以选择开源。自己养不活，就吃“百家饭”嘛。
 
 ---
 
-2013年3月，dotCloud公司的创始人之一，Docker之父，28岁的**Solomon Hykes**正式决定，将Docker项目开源。不开则已，一开惊人。越来越多的IT工程师发现了Docker的优点，然后蜂拥而至，加入Docker开源社区。Docker的人气迅速攀升，速度之快，令人瞠目结舌。开源当月，Docker 0.1 版本发布。此后的每一个月，Docker都会发布一个版本。到2014年6月9日，Docker 1.0 版本正式发布。
+2013年3月，dotCloud公司的创始人之一，Docker之父，28岁的**Solomon Hykes**
+正式决定，将Docker项目开源。不开则已，一开惊人。越来越多的IT工程师发现了Docker的优点，然后蜂拥而至，加入Docker开源社区。Docker的人气迅速攀升，速度之快，令人瞠目结舌。开源当月，Docker 0.1
+版本发布。此后的每一个月，Docker都会发布一个版本。到2014年6月9日，Docker 1.0 版本正式发布。
 
 ---
 
@@ -64,29 +67,33 @@ Docker的思想来自于集装箱，集装箱解决了什么问题？在一艘�
 
 ---
 
-在容器技术之前，业界的网红是**虚拟机**。虚拟机技术的代表，是**VMWare**和**OpenStack**。相信很多人都用过虚拟机。虚拟机，就是在你的操作系统里面，装一个软件，然后通过这个软件，再模拟一台甚至多台“子电脑”出来。在“子电脑”里，你可以和正常电脑一样运行程序，例如开QQ。如果你愿意，你可以变出好几个“子电脑”，里面都开上QQ。“子电脑”和“子电脑”之间，是**相互隔离**的，互不影响。
+在容器技术之前，业界的网红是**虚拟机**。虚拟机技术的代表，是**VMWare**和**OpenStack**
+。相信很多人都用过虚拟机。虚拟机，就是在你的操作系统里面，装一个软件，然后通过这个软件，再模拟一台甚至多台“子电脑”出来。在“子电脑”里，你可以和正常电脑一样运行程序，例如开QQ。如果你愿意，你可以变出好几个“子电脑”，里面都开上QQ。“子电脑”和“子电脑”之间，是**
+相互隔离**的，互不影响。
 
 ---
 
-Docker为什么这么火?虚拟机属于虚拟化技术。而Docker这样的容器技术，也是虚拟化技术，Docker属于**轻量级的虚拟化**。虚拟机虽然可以隔离出很多“子电脑”，但占用空间更大，启动更慢，虚拟机软件可能还要花钱（例如VMWare）。而容器技术恰好没有这些缺点。它不需要虚拟出整个操作系统，只需要虚拟一个小规模的环境（类似“沙 箱”）。
+Docker为什么这么火?虚拟机属于虚拟化技术。而Docker这样的容器技术，也是虚拟化技术，Docker属于**轻量级的虚拟化**
+。虚拟机虽然可以隔离出很多“子电脑”，但占用空间更大，启动更慢，虚拟机软件可能还要花钱（例如VMWare）。而容器技术恰好没有这些缺点。它不需要虚拟出整个操作系统，只需要虚拟一个小规模的环境（类似“沙 箱”）。
 
 ---
 
 它启动时间很快，几秒钟就能完成。而且，它对资源的利用率很高（一台主机可以同时运行几千个Docker容器）。此外，它占的空间很小，虚拟机一般要几GB到几十GB的空间，而容器只需要MB级甚至KB级。正因为如此，容器技术受到了热烈的欢迎和追捧，发展迅速。
 
-
-
 ### 1.3 Docker的理念
 
 **Docker是基于Go语言实现的云开源项目。**
 
-Docker的主要目标是“Build，Ship and Run Any App , Anywhere”，也就是通过对应用组件的封装、分发、部署、运行等生命周期的管理，使用户的APP（可以是一个WEB应用或数据库应用等等）及其运行环境能够做到“一次封装，到处运行”。Linux 容器技术的出现就解决了这样一个问题，而 Docker 就是在它的基础上发展过来的。将应用运行在Docker 容器上面，而 Docker 容器在任何操作系统上都是一致的，这就实现了跨平台、跨服务器。只需要一次配置好环境，换到别的机子上就可以一键部署好，大大简化了操作。
+Docker的主要目标是“Build，Ship and Run Any App ,
+Anywhere”，也就是通过对应用组件的封装、分发、部署、运行等生命周期的管理，使用户的APP（可以是一个WEB应用或数据库应用等等）及其运行环境能够做到“一次封装，到处运行”。Linux 容器技术的出现就解决了这样一个问题，而
+Docker 就是在它的基础上发展过来的。将应用运行在Docker 容器上面，而 Docker 容器在任何操作系统上都是一致的，这就实现了跨平台、跨服务器。只需要一次配置好环境，换到别的机子上就可以一键部署好，大大简化了操作。
 
 ### 1.4 Docker能干嘛
 
 #### 之前的虚拟机技术
 
-虚拟机（virtual machine）就是带环境安装的一种解决方案。它可以在一种操作系统里面运行另一种操作系统，比如在Windows 系统里面运行Linux 系统。应用程序对此毫无感知，因为虚拟机看上去跟真实系统一模一样，而对于底层系统来说，虚拟机就是一个普通文件，不需要了就删掉，对其他部分毫无影响。这类虚拟机完美的运行了另一套系统，能够使应用程序，操作系统和硬件三者之间的逻辑不变。
+虚拟机（virtual machine）就是带环境安装的一种解决方案。它可以在一种操作系统里面运行另一种操作系统，比如在Windows 系统里面运行Linux
+系统。应用程序对此毫无感知，因为虚拟机看上去跟真实系统一模一样，而对于底层系统来说，虚拟机就是一个普通文件，不需要了就删掉，对其他部分毫无影响。这类虚拟机完美的运行了另一套系统，能够使应用程序，操作系统和硬件三者之间的逻辑不变。
 
 ![image-20210121152305790](assets/image-20210121152305790.png)
 
@@ -96,7 +103,8 @@ Docker的主要目标是“Build，Ship and Run Any App , Anywhere”，也就�
 
 *容器化技术不是模拟的一个完整的操作系统!*
 
-由于前面虚拟机存在这些缺点，Linux 发展出了另一种虚拟化技术：Linux 容器（Linux Containers，缩写为 LXC）。Linux 容器不是模拟一个完整的操作系统，而是对进程进行隔离。有了容器，就可以将软件运行所需的所有资源打包到一个隔离的容器中。容器与虚拟机不同，不需要捆绑一整套操作系统，只需要软件工作所需的库资源和设置。系统因此而变得高效轻量并保证部署在任何环境中的软件都能始终如一地运行。
+由于前面虚拟机存在这些缺点，Linux 发展出了另一种虚拟化技术：Linux 容器（Linux Containers，缩写为 LXC）。Linux
+容器不是模拟一个完整的操作系统，而是对进程进行隔离。有了容器，就可以将软件运行所需的所有资源打包到一个隔离的容器中。容器与虚拟机不同，不需要捆绑一整套操作系统，只需要软件工作所需的库资源和设置。系统因此而变得高效轻量并保证部署在任何环境中的软件都能始终如一地运行。
 
 ![image-20210121152609682](assets/image-20210121152609682.png)
 
@@ -105,8 +113,6 @@ Docker的主要目标是“Build，Ship and Run Any App , Anywhere”，也就�
 1. 传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程；
 2. 而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。
 3. 每个容器之间互相隔离，<span style="color:red">每个容器有自己的文件系统 ，容器之间进程不会相互影响，能区分计算资源</span>。
-
-
 
 ### 1.5 开发/运维（DevOps）
 
@@ -136,8 +142,6 @@ Docker的主要目标是“Build，Ship and Run Any App , Anywhere”，也就�
 
 Docker是内核级虚拟化，其不像传统的虚拟化技术一样需要额外的Hypervisor [管理程序] 支持，所以在一台物理机上可以运行很多个容器实例，可大大提升物理服务器的CPU和内存的利用率。
 
-
-
 ### 1.6 Docker学习途径
 
 Docker官网：http://www.docker.com
@@ -166,13 +170,13 @@ docker由 镜像, 容器,仓库
 
 Docker 镜像（Image）就是一个**只读的模板**。
 
-镜像可以用来创建 Docker 容器，一个镜像可以创建很多容器。 
+镜像可以用来创建 Docker 容器，一个镜像可以创建很多容器。
 
 最终的服务运行或者项目运行就是在容器中进行的.
 
 #### 容器(container)
 
-Docker 利用容器（Container）独立运行的一个或一组应用。容器是用镜像创建的运行实例。 它可以被启动、开始、停止、删除。每个容器都是相互隔离的，保证安全的平台。 
+Docker 利用容器（Container）独立运行的一个或一组应用。容器是用镜像创建的运行实例。 它可以被启动、开始、停止、删除。每个容器都是相互隔离的，保证安全的平台。
 
 可以把容器看做是一个简易版的 Linux 环境（包括root用户权限、进程空间、用户空间和网络空间等） 和运行在其中的应用程序。 容器的定义和镜像几乎一模一样，也是一堆层的统一视角，唯一区别在于容器的最上面那一层是可读可写 的。
 
@@ -183,27 +187,22 @@ Docker 利用容器（Container）独立运行的一个或一组应用。容器�
 
 #### 仓库(repository)
 
-仓库（Repository）是集中存放镜像文件的场所。 
+仓库（Repository）是集中存放镜像文件的场所。
 
 仓库(Repository)和仓库注册服务器（Registry）是有区别的。
 
 仓库注册服务器上往往存放着多个仓 库，每个仓库中又包含了多个镜像，每个镜像有不同的标签（tag）。
 
-仓库分为公开仓库（Public）和私有仓库（Private）两种形式。 
+仓库分为公开仓库（Public）和私有仓库（Private）两种形式。
 
-最大的公开仓库是 Docker Hub(https://hub.docker.com/)，存放了数量庞大的镜像供用户下载。 
+最大的公开仓库是 Docker Hub(https://hub.docker.com/)，存放了数量庞大的镜像供用户下载。
 
 国内的公开仓库包括阿里云 、网易云 等
 
-
-
-
-
-
-
 #### 小结
 
-1. Docker 本身是一个容器运行载体或称之为管理引擎。我们把应用程序和配置依赖打包好形成一个可交付的运行环境，这个打包好的运行环境就似乎 image镜像文件。只有通过这个镜像文件才能生成 Docker 容器。image 文件可以看作是容器的模板。Docker 根据 image 文件生成容器的实例。同一个 image 文件，可以生成多个同时运行的容器实例。
+1. Docker 本身是一个容器运行载体或称之为管理引擎。我们把应用程序和配置依赖打包好形成一个可交付的运行环境，这个打包好的运行环境就似乎 image镜像文件。只有通过这个镜像文件才能生成 Docker 容器。image
+   文件可以看作是容器的模板。Docker 根据 image 文件生成容器的实例。同一个 image 文件，可以生成多个同时运行的容器实例。
 2. image 文件生成的容器实例，本身也是一个文件，称为镜像文件。
 3. 一个容器运行一种服务，当我们需要的时候，就可以通过docker客户端创建一个对应的运行实例，也就是我们的容器
 4. 至于仓库，就是放了一堆镜像的地方，我们可以把镜像发布到仓库中，需要的时候从仓库中拉下来就可以了。
@@ -247,8 +246,6 @@ REDHAT_SUPPORT_PRODUCT="centos"
 REDHAT_SUPPORT_PRODUCT_VERSION="7"
 ```
 
-
-
 ### 2.3 安装步骤
 
 #### 安装前准备
@@ -257,7 +254,7 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
 
 - 确定你是CentOS7及以上版本
 
-- yum安装gcc相关环境（需要确保 虚拟机可以上外网 ） 
+- yum安装gcc相关环境（需要确保 虚拟机可以上外网 ）
 
   ```shell
   yum -y install gcc 
@@ -369,10 +366,6 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
    rm -rf /var/lib/docker
    ```
 
-
-
-
-
 ### 2.4 阿里云镜像加速
 
 *阿里云控制台配置后更快*
@@ -400,12 +393,6 @@ REDHAT_SUPPORT_PRODUCT_VERSION="7"
    sudo systemctl restart docker
    ```
 
-   
-
-
-
-
-
 ### 2.5 镜像执行流程
 
 通过前面的docker image查看到了hello-world镜像,以此为例子,了解docker运行镜像的大致流程
@@ -416,11 +403,9 @@ docker run hello-world
 
 ![image-20210121160313397](assets/image-20210121160313397.png)
 
-docker运行镜像的流程分析图: 
+docker运行镜像的流程分析图:
 
 ![image-20201216160509314](assets/image-20201216160509314.png)
-
-
 
 ### 2.6 docker运行原理
 
@@ -441,22 +426,16 @@ DockerServer接收到Docker-Client的指令,就会执行这个命令
 2. docker利用的是宿主机的内核，vm需要是Guest OS.
 
    所以说，新建一个容器的时候，docker不需要想虚拟机一样重新加载一个操作系统内核，避免一些引导操作。
-   
+
    虚拟机是加载Guest OS，<u>分钟</u>级启动
-   
+
    而docker是利用宿主机的操作系统，省略了这个复杂的过程，<u>秒级</u>启动
-
-
 
 **docker与虚拟机对比**
 
 ![image-20210121162108520](assets/image-20210121162108520.png)
 
-
-
 ## 第 3 章: Docker常用命令
-
-
 
 ### 3.1 Docker帮助命令
 
@@ -516,8 +495,6 @@ docker images -aq
 docker images --digests
 ```
 
-
-
 #### docker search
 
 `docker search 镜像名` 根据镜像名搜索远程仓库对应的镜像
@@ -535,8 +512,6 @@ centos/mysql-57-centos7           MySQL 5.7 SQL database server                 
 ...
 ```
 
-
-
 `docker search [可选项]` 可以跟一些可选项
 
 ```shell
@@ -546,8 +521,6 @@ centos/mysql-57-centos7           MySQL 5.7 SQL database server                 
 NAME      DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
 mysql     MySQL is a widely used, open-source relation…   10269     [OK]  
 ```
-
-
 
 #### docker pull
 
@@ -576,8 +549,6 @@ docker.io/library/mysql:latest # 真实地址
 # docker pull mysql <==等价于==> docker pull docker.io/library/mysql:latest
 ```
 
-
-
 `docker pull 镜像名[:tag]` 指定版本下载镜像
 
 ```shell
@@ -599,8 +570,6 @@ Digest: sha256:d4ca82cee68dce98aa72a1c48b5ef5ce9f1538265831132187871b78e768aed1
 Status: Downloaded newer image for mysql:5.7
 docker.io/library/mysql:5.7
 ```
-
-
 
 #### docker rmi
 
@@ -645,18 +614,14 @@ hello-world   latest    bf756fb1ae65   11 months ago   13.3kB
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 ```
 
-
-
 ### 3.3 容器(对象)命令
 
- **说明**：有镜像才能创建容器，我们这里使用 centos 的镜像来测试，就是虚拟一个 centos ！
+**说明**：有镜像才能创建容器，我们这里使用 centos 的镜像来测试，就是虚拟一个 centos ！
 
 ```shell
 # 通过docker下载centos
 [root@xiyang ~]# docker pull centos
 ```
-
-
 
 #### docker run
 
@@ -697,8 +662,6 @@ bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  s
 exit
 ```
 
-
-
 #### docker ps
 
 `docker ps ` 列出所有正在运行中的容器
@@ -721,8 +684,6 @@ CONTAINER ID   IMAGE          COMMAND       CREATED          STATUS             
 3b82a54d32d7   centos         "/bin/bash"   2 minutes ago    Exited (0) About a minute ago             musing_bohr
 80b9e4bd54c9   bf756fb1ae65   "/hello"      2 hours ago      Exited (0) 2 hours ago                    admiring_noyce
 ```
-
-
 
 #### 退出容器
 
@@ -759,13 +720,11 @@ docker restart 容器id # 通过容器id 重启容器
 docker kill 容器id # 通过容器id 强制停止容器
 ```
 
-
-
 ### 3.4 常用其他命令
 
 #### 后台启动容器
 
-`docker run -d 镜像名 ` 表示镜像通过后台的方式启动; 一般通过`-d`可以用来部署项目 
+`docker run -d 镜像名 ` 表示镜像通过后台的方式启动; 一般通过`-d`可以用来部署项目
 
 ```shell
 # 例子 
@@ -786,11 +745,9 @@ CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 # 比如，你运行了nginx服务，但是docker前台没有运行应用，这种情况下，容器启动后，会立即自 杀，因为他觉得没有程序了，所以最好的情况是，将你的应用使用前台进程(-it)的方式运行启动。
 ```
 
-
-
 #### docker logs
 
-`docker logs`是用于查看日志的	
+`docker logs`是用于查看日志的
 
 ```shell
 # 命令 
@@ -816,8 +773,6 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS        
 2020-12-17T02:57:25.342643495Z xiyang
 ```
 
-
-
 #### docker top
 
 `docker top 容器id` 查看容器中运行的进程信息，
@@ -831,8 +786,6 @@ UID                 PID                 PPID                C                   
 root                16979               16960               0                   10:54               ?                   00:00:00            /bin/bash -c while true;do echo xiyang;sleep 3;done
 root                17209               16979               0                   11:01               ?                   00:00:00            /usr/bin/coreutils --coreutils-prog-shebang=sleep /usr/bin/sleep 3
 ```
-
-
 
 #### docker inspect
 
@@ -1044,7 +997,7 @@ root                17209               16979               0                   
 ]
 ```
 
-#### docker exec / attach 
+#### docker exec / attach
 
 `docker exec / attach 容器id`进入正在运行的容器
 
@@ -1056,7 +1009,7 @@ root                17209               16979               0                   
 
 **两种命令的区别:**
 
-`exec` 是在容器中打开新的终端，并且可以启动新的进程 
+`exec` 是在容器中打开新的终端，并且可以启动新的进程
 
 `attach` 进入容器正在执行的终端，不会启动新的进程
 
@@ -1084,12 +1037,6 @@ xiyang
 xiyang
 ...#正在执行的代码
 ```
-
-
-
-
-
-
 
 #### docker cp
 
@@ -1127,16 +1074,6 @@ dad1f67965a4   centos    "/bin/bash"   53 seconds ago   Up 52 seconds           
 [root@xiyang home]# ls
 SpringApplication.java
 ```
-
-
-
-
-
-
-
-
-
-
 
 ### 3.5 命令小结
 
@@ -1185,8 +1122,6 @@ unpause Unpause a paused container # 取消暂停容器
 version Show the docker version information # 查看 docker 版本号 
 wait 	Block until a container stops, then print its exit code # 截取容 器停止时的退出状态值
 ```
-
-
 
 ### 3.6 Docker安装实战
 
@@ -1347,8 +1282,6 @@ root@9ac377a8a379:/usr/local/tomcat
 	# 我们后面会将数据卷技术来进行挂载操作，也是一个核心内容，这 里大家先听听名词就好，我们很快就会讲到！-v 数据卷
 ```
 
-
-
 #### 使用docker 部署 es + kibana
 
 ```shell
@@ -1404,8 +1337,6 @@ docker run -d -p 8088:9000 \
 
 **访问测试**
 
-
-
 #### 7.2 Rancher
 
 ```shell
@@ -1425,8 +1356,6 @@ docker run -d -p 8088:9000 \
  http://[宿主机IP]
 ```
 
-
-
 ## 4. Docker镜像
 
 ### 1. 镜像是什么
@@ -1435,19 +1364,21 @@ docker run -d -p 8088:9000 \
 
 **所有的应用，直接打包docker镜像，就可以直接跑起来！**
 
-
-
 ### 2. Docker镜像加载原理
 
 #### 2.1 UnionFS （联合文件系统）
 
-UnionFS（联合文件系统）：Union文件系统（UnionFS）是一种分层、轻量级并且高性能的文件系统，它支持对文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下(unite several directories into a single virtual fifilesystem)。Union 文件系统是 Docker 镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。
+UnionFS（联合文件系统）：Union文件系统（UnionFS）是一种分层、轻量级并且高性能的文件系统，它支持对文件系统的修改作为一次提交来一层层的叠加，同时可以将不同目录挂载到同一个虚拟文件系统下(unite several
+directories into a single virtual fifilesystem)。Union 文件系统是 Docker 镜像的基础。镜像可以通过分层来进行继承，基于基础镜像（没有父镜像），可以制作各种具体的应用镜像。
 
 特性：一次同时加载多个文件系统，但从外面看起来，只能看到一个文件系统，联合加载会把各层文件系统叠加起来，这样最终的文件系统会包含所有底层的文件和目录
 
 #### 2.2 Docker镜像加载原理
 
-docker的镜像实际上由一层一层的文件系统组成，这种层级的文件系统UnionFS。bootfs(boot fifile system)主要包含bootloader和kernel, bootloader主要是引导加载kernel, Linux刚启动时会加载bootfs文件系统，在Docker镜像的最底层是bootfs。这一层与我们典型的Linux/Unix系统是一样的，包含boot加载器和内核。当boot加载完成之后整个内核就都在内存中了，此时内存的使用权已由bootfs转交给内核，此时系统也会卸载bootfs。 rootfs (root fifile system) ，在bootfs之上。包含的就是典型 Linux 系统中的 /dev, /proc, /bin, /etc 等标准目录和文件。rootfs就是各种不同的操作系统发行版，比如Ubuntu，Centos等等。
+docker的镜像实际上由一层一层的文件系统组成，这种层级的文件系统UnionFS。bootfs(boot fifile system)主要包含bootloader和kernel, bootloader主要是引导加载kernel,
+Linux刚启动时会加载bootfs文件系统，在Docker镜像的最底层是bootfs。这一层与我们典型的Linux/Unix系统是一样的，包含boot加载器和内核。当boot加载完成之后整个内核就都在内存中了，此时内存的使用权已由bootfs转交给内核，此时系统也会卸载bootfs。
+rootfs (root fifile system) ，在bootfs之上。包含的就是典型 Linux 系统中的 /dev, /proc, /bin, /etc
+等标准目录和文件。rootfs就是各种不同的操作系统发行版，比如Ubuntu，Centos等等。
 
 ![image-20201217145428960](assets/image-20201217145428960.png)
 
@@ -1455,7 +1386,8 @@ docker的镜像实际上由一层一层的文件系统组成，这种层级的�
 
 ![image-20201217145625268](assets/image-20201217145625268.png)
 
-对于一个精简的OS，rootfs 可以很小，只需要包含最基本的命令，工具和程序库就可以了，因为底层直接用Host的kernel，自己只需要提供rootfs就可以了。由此可见对于不同的linux发行版, bootfs基本是一致的, rootfs会有差别, 因此不同的发行版可以公用bootfs。 
+对于一个精简的OS，rootfs 可以很小，只需要包含最基本的命令，工具和程序库就可以了，因为底层直接用Host的kernel，自己只需要提供rootfs就可以了。由此可见对于不同的linux发行版, bootfs基本是一致的,
+rootfs会有差别, 因此不同的发行版可以公用bootfs。
 
 ### 3. 分层理解
 
@@ -1651,23 +1583,19 @@ docker commit -m="提交的描述信息" -a="作者" 容器id 要创建的目标
 
 ```
 
-
-
-
-
 ## 5. 容器数据卷
-
-
 
 ### 1. 什么是容器数据卷
 
 **docker的理念回顾：**
 
-将应用和运行的环境打包形成容器运行，运行可以伴随着容器，但是我们对于数据的要求，是希望能够持久化的！就好比，你安装一个MySQL，结果你把容器删了，就相当于删库跑路了，这TM也太扯了吧！所以我们希望容器之间有可能可以共享数据，Docker容器产生的数据，如果不通过docker commit 生成新的镜像，使得数据作为镜像的一部分保存下来，那么当容器删除后，数据自然也就没有了！这样是行不通的！为了能保存数据在Docker中我们就可以使用卷！让数据挂载到我们本地！这样数据就不会因为容器删除而丢失了！
+将应用和运行的环境打包形成容器运行，运行可以伴随着容器，但是我们对于数据的要求，是希望能够持久化的！就好比，你安装一个MySQL，结果你把容器删了，就相当于删库跑路了，这TM也太扯了吧！所以我们希望容器之间有可能可以共享数据，Docker容器产生的数据，如果不通过docker
+commit 生成新的镜像，使得数据作为镜像的一部分保存下来，那么当容器删除后，数据自然也就没有了！这样是行不通的！为了能保存数据在Docker中我们就可以使用卷！让数据挂载到我们本地！这样数据就不会因为容器删除而丢失了！
 
 **作用：**
 
-卷就是目录或者文件，存在一个或者多个容器中，由docker挂载到容器，但不属于联合文件系统，因此能够绕过 Union File System ， 提供一些用于持续存储或共享数据的特性：卷的设计目的就是数据的持久化，完全独立于容器的生存周期，因此Docker不会在容器删除时删除其挂载的数据卷。
+卷就是目录或者文件，存在一个或者多个容器中，由docker挂载到容器，但不属于联合文件系统，因此能够绕过 Union File System ，
+提供一些用于持续存储或共享数据的特性：卷的设计目的就是数据的持久化，完全独立于容器的生存周期，因此Docker不会在容器删除时删除其挂载的数据卷。
 
 **特点：**
 
@@ -1680,8 +1608,6 @@ docker commit -m="提交的描述信息" -a="作者" 容器id 要创建的目标
 4、数据卷的生命周期一直持续到没有容器使用它为止
 
 **所以总结一句话： 就是容器的持久化，以及容器间的继承和数据共享！**
-
-
 
 ### 2. 使用数据卷
 
@@ -1710,15 +1636,9 @@ docker inspect 容器id
 3. 启动刚才停止的容器
 4. 然后查看对应的文件，发现数据依旧同步！ok
 
-
-
-
-
 #### 2.2 方式二: 使用 docker 安装 mysql
 
 *mysql 数据持久化的问题！*
-
-
 
 #### 2.3 方式三: 通过Docker File 来添加（了解）
 
@@ -1733,8 +1653,6 @@ DockerFile 是用来构建Docker镜像的构建文件，是由一些列命令和
 注意：如果访问出现了 cannot open directory: Permission denied
 
 解决办法：在挂载目录后多加一个 --privileged=true参数即可
-
-
 
 ### 3. 匿名和具名挂载
 
@@ -1762,8 +1680,6 @@ docker run -d -P --name nginx02 -v nginxconfig:/etc/nginx:ro nginx
 docker run -d -P --name nginx02 -v nginxconfig:/etc/nginx:rw nginx
 ```
 
-
-
 ### 4. 数据卷容器
 
 命名的容器挂载数据卷，其他容器通过挂载这个（父容器）实现数据共享，挂载数据卷的容器，称之为数据卷容器。
@@ -1779,7 +1695,7 @@ docker run -d -P --name nginx02 -v nginxconfig:/etc/nginx:rw nginx
 
 1、先启动一个父容器docker01，然后在dataVolumeContainer2新增文件
 
-2、创建docker02，docker03 让他们继承docker01 --volumes-from 
+2、创建docker02，docker03 让他们继承docker01 --volumes-from
 
 3、回到docker01发现可以看到 02 和 03 添加的共享文件
 
@@ -1793,15 +1709,7 @@ docker run -d -P --name nginx02 -v nginxconfig:/etc/nginx:rw nginx
 
 容器之间配置信息的传递，数据卷的生命周期一直持续到没有容器使用它为止。存储在本机的文件则会一直保留！
 
-
-
-
-
-
-
 ## 6. DockerFile
-
-
 
 大家想想，Nginx，tomcat，mysql 这些镜像都是哪里来的？官方能写，我们不能写吗？
 
@@ -1828,10 +1736,6 @@ dockerfifile是用来构建Docker镜像的构建文件，是由一系列命令�
 dockerfifile文件我们刚才已经编写过了一次，这里我们继续使用 centos 来看！
 
 地址：https://hub.docker.com/_/centos
-
-
-
-
 
 ### 2. DockerFile构建过程
 
@@ -1871,7 +1775,9 @@ DockerFile 面向开发，Docker镜像成为交付标准，Docker容器则涉及
 
 ![image-20201217152756144](assets/image-20201217152756144.png)
 
-**DockerFile**：需要定义一个DockerFile，DockerFile定义了进程需要的一切东西。DockerFile涉及的内容包括执行代码或者是文件、环境变量、依赖包、运行时环境、动态链接库、操作系统的发行版、服务进程和内核进程（当引用进行需要和系统服务和内核进程打交道，这时需要考虑如何设计 namespace的权限控制）等等。
+**DockerFile**
+：需要定义一个DockerFile，DockerFile定义了进程需要的一切东西。DockerFile涉及的内容包括执行代码或者是文件、环境变量、依赖包、运行时环境、动态链接库、操作系统的发行版、服务进程和内核进程（当引用进行需要和系统服务和内核进程打交道，这时需要考虑如何设计
+namespace的权限控制）等等。
 
 **Docker镜像**：在DockerFile 定义了一个文件之后，Docker build 时会产生一个Docker镜像，当运行Docker 镜像时，会真正开始提供服务；
 
@@ -1894,10 +1800,6 @@ ENTRYPOINT # 指定一个容器启动时要运行的命令！和CMD一样
 ONBUILD # 当构建一个被继承的DockerFile时运行命令，父镜像在被子镜像继承后，父镜像的 ONBUILD被触发
 ```
 
-
-
-
-
 ### 4. 实战测试
 
 *Docker Hub 中99% 的镜像都是通过在base镜像（Scratch）中安装和配置需要的软件构建出来的*
@@ -1912,11 +1814,7 @@ ONBUILD # 当构建一个被继承的DockerFile时运行命令，父镜像在被
 
 #### 5.1 DockerHub
 
-
-
 #### 5.2 阿里云镜像服务
-
-
 
 ### 6. DockerFile总结
 
@@ -1924,33 +1822,17 @@ ONBUILD # 当构建一个被继承的DockerFile时运行命令，父镜像在被
 
 ## 7. Docker网络
 
-
-
 ### 1. 理解Docker0
-
-
 
 ### 2. --Link
 
-
-
-
-
 ### 3. 自定义网络
-
-
 
 ### 4. 网络连通
 
-
-
 ### 5. 实战-部署一个Redis集群
 
-
-
 ## 8. IDEA整合Docker
-
-
 
 ### 1. 创建项目
 

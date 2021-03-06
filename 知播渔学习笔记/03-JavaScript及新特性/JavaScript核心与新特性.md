@@ -47,8 +47,6 @@ JavaScript起源于Netscape公司的LiveScript语言
 
 [参考文献](http://www.w3school.com.cn/js/pro_js_history.asp)
 
-
-
 ### 1.4 JavaScript组成
 
 **ECMAScript** ：JavaScript的语法标准 *[ECMAScript起源](http://www.w3school.com.cn/js/pro_js_history.asp)*
@@ -63,13 +61,13 @@ JavaScript起源于Netscape公司的LiveScript语言
 
 ![image-20210108165912789](assets/image-20210108165912789.png)
 
-## 第 2 章: ECMAScript 
+## 第 2 章: ECMAScript
 
 ### 2.1 ECMAScript快速入门
 
 #### 2.1.1 书写格式
 
-css书写格式: 
+css书写格式:
 
 ```
 1. 行内样式: 写在标签内部
@@ -111,13 +109,12 @@ css书写格式:
 
 1. 不推荐直接将JavaScript代码书写到标签内部
 2. 默认情况下浏览器会从上至下的解析网页, 所以如果将JavaScript写到一对head标签中, 并且需要通过JavaScript代码操作界面上的元素, 那么就不能直接书写JavaScript代码, 否则无效
-   - 如果想将JavaScript写到一对head标签中, 并且需要在JavaScript代码中操作界面上的元素, 那么必须加上`window.onload = function(){操作界面元素的JavaScript}`
-   - window.onload的含义: 等到界面上所有的内容都加载完毕再执行{}中的代码
-   - 由于默认情况下浏览器会从上至下的解析网页, 所以如果想通过JavaScript操作界面上的元素只需要等到元素被加载解析之后操作就可以了, 所以我们还可以将JavaScript代码写到body结束标签的前面
-3. 如果通过外链式导入.js文件, 并且需要在.js文件中操作界面上的元素, 那么如果是在head标签中导入的, 必须在.js文件中加上window.onload. 如果是在body结束标签前面导入的, 那么就不用添加window.onload
+    - 如果想将JavaScript写到一对head标签中, 并且需要在JavaScript代码中操作界面上的元素, 那么必须加上`window.onload = function(){操作界面元素的JavaScript}`
+    - window.onload的含义: 等到界面上所有的内容都加载完毕再执行{}中的代码
+    - 由于默认情况下浏览器会从上至下的解析网页, 所以如果想通过JavaScript操作界面上的元素只需要等到元素被加载解析之后操作就可以了, 所以我们还可以将JavaScript代码写到body结束标签的前面
+3. 如果通过外链式导入.js文件, 并且需要在.js文件中操作界面上的元素, 那么如果是在head标签中导入的, 必须在.js文件中加上window.onload. 如果是在body结束标签前面导入的,
+   那么就不用添加window.onload
 4. 如果需要在一对script标签中编写JavaScript代码, 那么就不能同时通过script标签再导入其它的.js文件, 否则书写的JavaScript代码无效
-
-
 
 #### 2.1.2 常见输出方式
 
@@ -140,8 +137,6 @@ confirm("你好吗?");
 - 在JavaScript中是严格区分大小写的, alert()和ALERT()不是一回事
 - 在编写JavaScript代码的时候, 一定要记住每一句代码后面都需要添加一个分号, 并且这个分号必须是英文的分号
 - 我们会发现有时候不写分号程序也能够运行, 这里并不是因为不需要分号, 而是浏览器自动帮助我们添加了分号, 浏览器自动添加会消耗一定的性能, 并且有可能会添加错误
-
-
 
 ##### 页面中显示内容
 
@@ -211,9 +206,7 @@ console.warn("警告信息");
 
 布尔常量其实就是真或者假, 在JavaScript中通过true和false来表达
 
- 在JavaScript中布尔常量只有两个取值, 真(true)或者假(false)
-
-
+在JavaScript中布尔常量只有两个取值, 真(true)或者假(false)
 
 ###### 自定义常量
 
@@ -227,8 +220,6 @@ const NUM = 666;
 console.log(NUM);
 ```
 
-
-
 #### 2.1.4 变量
 
 ##### 什么是变量
@@ -236,8 +227,6 @@ console.log(NUM);
 变量表示一些可以被修改的数据
 
 在现实生活中超市的储物格就是变量, 在不同的时间段里面, 储物格中存储的数据也不一样
-
-
 
 ##### 如何定义一个变量
 
@@ -274,8 +263,6 @@ console.log(num);
 num = 666;
 console.log(num);
 ```
-
-
 
 ##### 变量的初始化
 
@@ -320,8 +307,6 @@ console.log(num);
   var num, value; // 同时定义两个变量
   var num, value, value2, value3; // 同时定义四个变量
   ```
-
-  
 
 ##### 初始化变量的其它格式
 
@@ -370,8 +355,8 @@ console.log(value);
    console.log(num);
    ```
 
-3. 在老版本的标准的(ES6之前)JavaScript中可以先使用变量, 再定义变量, 并不会报错
-   由于JavaScript是一门解释型的语言, 会边解析边执行, 浏览器在解析JavaScript代码之前还会进行一个操作"预解析(预处理)"
+3. 在老版本的标准的(ES6之前)JavaScript中可以先使用变量, 再定义变量, 并不会报错 由于JavaScript是一门解释型的语言, 会边解析边执行, 浏览器在解析JavaScript代码之前还会进行一个操作"预解析(
+   预处理)"
    预解析(预处理)步骤:
    将当前JavaScript代码中所有变量的定义和函数的定义放到所有代码的最前面
 
@@ -431,8 +416,6 @@ console.log(num);
 // var num = 123;
 ```
 
-
-
 #### 2.1.5 关键字和保留字
 
 什么是关键字？
@@ -466,7 +449,7 @@ console.log(num);
   //只需要记住一点: 在JavaScript中所有的关键字都是小写的
   ```
 
-保留字: 
+保留字:
 
 - 使用特点和关键字都差不多,只是保留下来的可能作为关键字使用
 
@@ -522,8 +505,6 @@ console.log(num);
   console.log(哈哈_text);
   ```
 
-  
-
 #### 2.1.7 注释
 
 **什么是JS的注释?** 和HTML/CSS的注释一样, 都是用来注解解释某一段程序的含义的, 都是用来提升代码的阅读性的, 都是为了方便程序员之间沟通的
@@ -534,7 +515,7 @@ console.log(num);
 
   注意点: 单行注释的有效范围是从第二个斜杠开始一直直到这一行的末尾, 也就是被注释的内容不能换行
 
-- 多行注释: `/* 被注释的内容 */` 
+- 多行注释: `/* 被注释的内容 */`
 
   多行注释的有效范围是从第一颗`*`开始直到第二颗`*`结束, 也就是说被注释的内容可以换行的
 
@@ -570,8 +551,6 @@ console.log(num);
   */
   */
   ```
-
-  
 
 ### 2.2 数据类型
 
@@ -638,8 +617,6 @@ console.log(res);
 let n = null;
 ```
 
-
-
 #### 引用数据类型
 
 Object 对象类型
@@ -651,16 +628,13 @@ Object 对象类型
 - 今天学习的数据类型就是猫科动物
 - 前面学习的常量就是狮子老虎豹子
 
-
-
 ### 2.3 数据类型转换
 
 javascript中的数据类型可以通过不同的手段来进行相互转换的
 
 #### 转换为字符串类型
 
-将`Number,Boolean,undefined,null`类型转换为字符串类型
-在JavaScript中如果想将以上的四种基本数据类型转换为字符串类型, 常用的方法有三种
+将`Number,Boolean,undefined,null`类型转换为字符串类型 在JavaScript中如果想将以上的四种基本数据类型转换为字符串类型, 常用的方法有三种
 
 1. 对于Number类型和Boolean类型来说, 可以通过 `变量名称.toString()`的方式来转换
 
@@ -735,7 +709,6 @@ javascript中的数据类型可以通过不同的手段来进行相互转换的
    console.log(typeof str);
    ```
 
-   
 
 3. 还可以通过 变量or常量 + `"" `/ 变量or常量 +` ''`转换为字符串
 
@@ -752,8 +725,6 @@ javascript中的数据类型可以通过不同的手段来进行相互转换的
    console.log(str);
    console.log(typeof str);
    ```
-
-   
 
 #### 转换为数值类型 🚩
 
@@ -856,34 +827,34 @@ javascript中的数据类型可以通过不同的手段来进行相互转换的
 
 1. 将String类型转换为数值类型
 
-   - 如果字符串中都是数值, 那么就正常转换
+    - 如果字符串中都是数值, 那么就正常转换
 
-     ```javascript
-     // 注意点: 如果字符串中没有数据, 那么转换的结果是0
-     // let str = "";
-     let str = "     ";
-     let num = Number(str);
-     console.log(num);
-     console.log(typeof num);
-     ```
+      ```javascript
+      // 注意点: 如果字符串中没有数据, 那么转换的结果是0
+      // let str = "";
+      let str = "     ";
+      let num = Number(str);
+      console.log(num);
+      console.log(typeof num);
+      ```
 
-   - 如果字符串是一个空串""/"   ", 那么转换之后是0
+    - 如果字符串是一个空串""/"   ", 那么转换之后是0
 
-   - 如果字符串中不仅仅是数字, 那么转换之后是NaN
+    - 如果字符串中不仅仅是数字, 那么转换之后是NaN
 
-     ```javascript
-     // 注意点: 如果字符串中的数据不仅仅是数值, 那么转换的结果是NaN
-     // NaN === Not a Number
-     let str = "12px";
-     let num = Number(str);
-     console.log(num);
-     console.log(typeof num);
-     ```
+      ```javascript
+      // 注意点: 如果字符串中的数据不仅仅是数值, 那么转换的结果是NaN
+      // NaN === Not a Number
+      let str = "12px";
+      let num = Number(str);
+      console.log(num);
+      console.log(typeof num);
+      ```
 
 2. 将Boolean类型转换为数值类型
 
-   - true转换之后是1
-   - false转换之后是0
+    - true转换之后是1
+    - false转换之后是0
 
    ```javascript
    // 如果是布尔类型的true, 那么转换之后的结果是1
@@ -897,35 +868,33 @@ javascript中的数据类型可以通过不同的手段来进行相互转换的
 
 3. 将undefined类型转换为数值类型
 
-   - 转换之后是NaN
+    - 转换之后是NaN
 
-     ```javascript
-     // 如果是未定义类型, 那么转换之后的结果是NaN
-     let value = undefined;
-     let num = Number(value);
-     console.log(num);
-     console.log(typeof num);
-     ```
+      ```javascript
+      // 如果是未定义类型, 那么转换之后的结果是NaN
+      let value = undefined;
+      let num = Number(value);
+      console.log(num);
+      console.log(typeof num);
+      ```
 
 4. 将null类型转换为数值类型
 
-   - 转换之后是0
+    - 转换之后是0
 
-     ```javascript
-     // 如果是空类型, 那么转换之后的结果是0
-     let value = null;
-     let num = Number(value);
-     console.log(num);
-     console.log(typeof num);
-     ```
+      ```javascript
+      // 如果是空类型, 那么转换之后的结果是0
+      let value = null;
+      let num = Number(value);
+      console.log(num);
+      console.log(typeof num);
+      ```
 
 **小结**
 
 - 空字符串/false/null转换之后都是0
--  字符串中不仅仅是数字/undefined转换之后是NaN
+- 字符串中不仅仅是数字/undefined转换之后是NaN
 - 其它的正常转换
-
-
 
 #### 转换为布尔类型
 
@@ -944,8 +913,7 @@ javascript中的数据类型可以通过不同的手段来进行相互转换的
 
 2. 将Number类型转换为布尔类型
 
-   只有数值是0才会转换为false, 其它的都会转换为true
-   如果是NaN也会转换为false
+   只有数值是0才会转换为false, 其它的都会转换为true 如果是NaN也会转换为false
 
    ```javascript
    // let num = 999; // true
@@ -966,8 +934,7 @@ javascript中的数据类型可以通过不同的手段来进行相互转换的
    console.log(typeof flag);
    ```
 
-3. 将undefined类型转换为布尔类型
-   undefined会转换为false
+3. 将undefined类型转换为布尔类型 undefined会转换为false
 
    ```javascript
    // let value = undefined; // false
@@ -977,8 +944,7 @@ javascript中的数据类型可以通过不同的手段来进行相互转换的
    console.log(typeof flag);
    ```
 
-4. 将null类型转换为布尔类型
-    null会转换为false
+4. 将null类型转换为布尔类型 null会转换为false
 
 ### 2.4 运算符
 
@@ -1002,8 +968,6 @@ console.log(result);
 let result = 10 / 5;
 console.log(result);
 ```
-
-
 
 **算术运算符的优先级和结合性** :
 
@@ -1030,43 +994,43 @@ console.log(result);
 
 1. 加法运算的注意点
 
-   - 任何非数值类型的数据在参与加法运算之前, 都会被自动的转换成数值类型之后, 再参与运算
+    - 任何非数值类型的数据在参与加法运算之前, 都会被自动的转换成数值类型之后, 再参与运算
 
-     ```javascript
-     // let res = 1 + true; // let res = 1 + 1;
-     // let res = 1 + null; // let res = 1 + 0;
-     // let res = 1 + NaN;
-     let res = 1 + "123"; // let res = "1" + "123";  字符串相加的本质就是字符串拼接 "1123"
-     console.log(res);
-     ```
+      ```javascript
+      // let res = 1 + true; // let res = 1 + 1;
+      // let res = 1 + null; // let res = 1 + 0;
+      // let res = 1 + NaN;
+      let res = 1 + "123"; // let res = "1" + "123";  字符串相加的本质就是字符串拼接 "1123"
+      console.log(res);
+      ```
 
-   - 任何数据和NaN进行运算, 结果都是NaN
+    - 任何数据和NaN进行运算, 结果都是NaN
 
-     ```javascript
-     // let res = 1 - true; // let res = 1 - 1;
-     // let res = 1 - NaN;
-     let res = 1 - "123";  // let res = 1 - 123;   -122
-     console.log(res);
-     ```
+      ```javascript
+      // let res = 1 - true; // let res = 1 - 1;
+      // let res = 1 - NaN;
+      let res = 1 - "123";  // let res = 1 - 123;   -122
+      console.log(res);
+      ```
 
-   - 任何数据和字符串相加, 都会被先转换成字符串之后再运算(字符串拼接)
+    - 任何数据和字符串相加, 都会被先转换成字符串之后再运算(字符串拼接)
 
 2. 减法运算的注意点
 
-   - 任何非数值类型的数据在参与加法运算之前, 都会被自动的转换成数值类型之后, 再参与运算
-   - 任何数据和NaN进行运算, 结果都是NaN
-   - 任何数据和字符串相减, 都会先把字符串转换成数值类型之后再运算
+    - 任何非数值类型的数据在参与加法运算之前, 都会被自动的转换成数值类型之后, 再参与运算
+    - 任何数据和NaN进行运算, 结果都是NaN
+    - 任何数据和字符串相减, 都会先把字符串转换成数值类型之后再运算
 
 3. 乘法和除法运算的注意点
 
-   - 和减法运算的注意点一模一样
+    - 和减法运算的注意点一模一样
 
 4. 取模(取余)运算注意点 `格式: m%n = 余数`
 
-   - 如果m>n的, 那么就正常取余
-   - 如果m<n的, 那么结果就是m
-   - 如果n是0, 那么结果就是NaN
-   - 取余运算结果的正负性, 取决于m而不是n
+    - 如果m>n的, 那么就正常取余
+    - 如果m<n的, 那么结果就是m
+    - 如果n是0, 那么结果就是NaN
+    - 取余运算结果的正负性, 取决于m而不是n
 
    ```javascript
    // let res = 3 % 10;
@@ -1092,7 +1056,7 @@ res -= 5; // 相当于 res = res - 5;
 console.log(res);
 ```
 
-**赋值运算符的优先级和结合性** 
+**赋值运算符的优先级和结合性**
 
 - 赋值运算符的优先级低于算数运算符
 
@@ -1158,12 +1122,12 @@ console.log(res); // 2  3
 
 1. 自增自减运算符只能出现在变量的前面或者后面, 不能出现在常量或者表达式的前面或者后面
 
-   - 什么是表达式? 表达式就是用运算符连接在一起有意义有结果的语句, 我们就称之为表达式
+    - 什么是表达式? 表达式就是用运算符连接在一起有意义有结果的语句, 我们就称之为表达式
 
-     ```javascript
-     1 + 1;  表达式
-     a * 5;  表达式
-     ```
+      ```javascript
+      1 + 1;  表达式
+      a * 5;  表达式
+      ```
 
    ```javascript
    let num = 1;
@@ -1195,7 +1159,7 @@ console.log(res); // 2  3
 
 **什么是关系运算符?** `> < >= <= == != === !==`
 
-**关系运算符的返回值** 
+**关系运算符的返回值**
 
 - 只有两个, 要么是true, 要么是false
 - 如果关系成立, 就返回true
@@ -1205,8 +1169,6 @@ console.log(res); // 2  3
 let res = 10 != 5;
 console.log(res);
 ```
-
-
 
 **关系运算符的注意点**
 
@@ -1355,9 +1317,7 @@ console.log(res);
 
 2. 在逻辑与运算中, 如果参与运算的不是布尔类型, 返回值有一个特点
 
-   格式: 条件A && 条件B
-   如果条件A不成立, 那么就返回条件A
-   如果条件A成立, 无论条件B是否成立, 都会返回条件B
+   格式: 条件A && 条件B 如果条件A不成立, 那么就返回条件A 如果条件A成立, 无论条件B是否成立, 都会返回条件B
 
    ```javascript
    // 如果条件A不成立, 那么就返回条件A
@@ -1372,9 +1332,7 @@ console.log(res);
 
 3. 在逻辑或运算中, 如果参与运算的不是布尔类型, 返回值有一个特点
 
-   格式: 条件A || 条件B
-   如果条件A成立, 那么就返回条件A
-   如果条件A不成立, 无论条件B是否成立, 都会返回条件B
+   格式: 条件A || 条件B 如果条件A成立, 那么就返回条件A 如果条件A不成立, 无论条件B是否成立, 都会返回条件B
 
    ```javascript
    // 如果条件A成立, 那么就返回条件A
@@ -1387,13 +1345,11 @@ console.log(res);
 
 4. 在逻辑与运算中,有一个逻辑短路现象
 
-    格式: 条件A && 条件B
-   由于逻辑与运算的规则是一假则假, 所以只要条件A是假, 那么条件B就不会运算
+   格式: 条件A && 条件B 由于逻辑与运算的规则是一假则假, 所以只要条件A是假, 那么条件B就不会运算
 
 5. 在逻辑或运算中,有一个逻辑短路现象
 
-   格式: 条件A || 条件B
-   由于逻辑或运算的规则是一真则真, 所以只要条件A是真, 那么条件B就不会运算
+   格式: 条件A || 条件B 由于逻辑或运算的规则是一真则真, 所以只要条件A是真, 那么条件B就不会运算
 
    ```javascript
    let num = 1;
@@ -1409,7 +1365,7 @@ console.log(res);
 
 **逗号运算符** 在JavaScript中逗号运算符一般用于简化代码
 
-**逗号运算符优先级和结合性** 
+**逗号运算符优先级和结合性**
 
 - 逗号运算符的结合性是左结合性(从左至右的运算)
 - 逗号运算符的优先级是所有运算符中最低的
@@ -1602,8 +1558,6 @@ b = a - b;
 a = a - b;
 console.log(a, b);
 ```
-
-
 
 ### 2.5 流程控制
 
@@ -1924,8 +1878,6 @@ if(a > b){
 console.log(a, b, c);
 ```
 
-
-
 ##### switch
 
 ###### switch格式
@@ -1947,7 +1899,8 @@ switch(表达式){
 
 ###### switch特点
 
-会从上至下的依次判断每一个case是否和()中表达式的结果相等, 如果相等就执行对应case后面的代码, 如果前面所有的case都不匹配, 那么就会执行default后面的代码并且所有的case和default只有一个会被执行, 并且只会被执行一次
+会从上至下的依次判断每一个case是否和()中表达式的结果相等, 如果相等就执行对应case后面的代码, 如果前面所有的case都不匹配, 那么就会执行default后面的代码并且所有的case和default只有一个会被执行,
+并且只会被执行一次
 
 ```javascript
 let day = 7;
@@ -2163,8 +2116,6 @@ switch (num) {
 }
 ```
 
-
-
 #### 2.5.3 循环结构
 
 ##### while
@@ -2172,8 +2123,6 @@ switch (num) {
 ##### dowhile
 
 ##### for
-
-
 
 ### 2.6 数组
 
@@ -2188,8 +2137,6 @@ switch (num) {
 #### 6.5 数组常用方法
 
 #### 6.6 二维数组
-
-
 
 ### 2.7 函数
 
@@ -2217,13 +2164,7 @@ switch (num) {
 
 #### 2.7.12 预解析
 
-
-
 ### 2.8 面向对象
-
-
-
-
 
 ## 第 3 章: DOM及特效
 

@@ -1,9 +1,11 @@
 # CSS补充说明
 
 ## 1. 利用伪元素选择器修改checkbox的样式
+
 ```html
 <label><input type="checkbox">身份证</label>
 ```
+
 ```css
         input[type="checkbox"] {
             width: 13px;

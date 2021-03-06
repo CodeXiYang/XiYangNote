@@ -1,24 +1,12 @@
 # ElasticSearch7.6.x搜索引擎
 
-
-
 ## 1. ElasticSearch基础入门
-
-
 
 ## 2. ES基础操作
 
-
-
 ## 3. ES实战-防京东搜索
 
-
-
 ## 4. ES集群
-
-
-
-
 
 ## 参考
 

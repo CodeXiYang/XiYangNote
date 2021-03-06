@@ -12,15 +12,9 @@
 
 ### 1.1 前言
 
-
-
 ### 1.2 web应用程序
 
-
-
 ### 1.3 静态WEB
-
-
 
 ### 1.4 动态WEB
 
@@ -28,23 +22,15 @@
 
 ### 2.1 技术讲解
 
-
-
 ### 2.2 WEB服务器
 
 ## 3. Tomcat
 
 ### 3.1 安装Tomcat
 
-
-
 ### 3.2 Tomcat启动和配置
 
-
-
 ### 3.3 配置
-
-
 
 ### 3.4 发布一个web网站
 
@@ -52,19 +38,9 @@
 
 ### 4.1 什么是HTTP
 
-
-
 ### 4.2 两个时代
 
-
-
-
-
 ### 4.3 Http请求
-
-
-
-
 
 ### 4.4 Htpp响应
 
@@ -73,8 +49,7 @@
 **我为什么要学习这个技术？**
 
 1. 在Javaweb开发中，需要使用大量的jar包，我们手动去导入；
-2. 如何能够让一个东西自动帮我导入和配置这个jar包。
-由此，Maven诞生了！
+2. 如何能够让一个东西自动帮我导入和配置这个jar包。 由此，Maven诞生了！
 
 *可以引入一小段的依赖来使用需要的外部jar包,解决了传统将jar包放到lib目录下的繁琐步骤*
 
@@ -82,7 +57,7 @@
 
 我们目前用来就是方便导入jar包的！
 
-Maven的核心思想：**约定大于配置** 
+Maven的核心思想：**约定大于配置**
 
 - 有约束，不要去违反。
 - Maven会规定好你该如何去编写我们的Java代码，必须要按照这个规范来；
@@ -113,8 +88,6 @@ MAVEN_HOME //maven的目录
 
 ![image-20210107001428665](assets/image-20210107001428665.png)
 
-
-
 ### 5.4 配置阿里云镜像
 
 *为了maven下载依赖更快,我们需要使用阿里云镜像源,我们需要在下载的maven中的conf目录中的settings.xml进行配置*
@@ -134,8 +107,6 @@ MAVEN_HOME //maven的目录
 </mirror>
 ```
 
-
-
 ### 5.5 配置本地仓库
 
 在本地的仓库，远程仓库；
@@ -146,48 +117,30 @@ MAVEN_HOME //maven的目录
 <localRepository>D:\environment\apache-maven-3.6.3\maven-repo</localRepository>
 ```
 
-
-
 ### 5.6 在IDEA中使用Maven
-
-
 
 ### 5.7 创建一个普通的Maven项目
 
-
-
 ### 5.8 标记文件夹功能
-
-
 
 ### 5.9 在IDEA中配置Tomcat
 
-
-
 ### 5.10 pom.xml文件
 
-
-
 ### 5.11 IDEA操作
-
-
 
 ### 5.12 解决遇到的问题
 
 ## 6. Servlet
 
-
-
 ### 6.1 Servlet简介
 
 - Servlet就是sun公司开发动态web的一门技术
 - Sun在这些API中提供一个接口叫做：Servlet，如果你想开发一个Servlet程序，只需完成两个小步骤：
-  - 编写一个类，实现Servlet接口
-  - 把开发好的Java类部署到web服务器中。
+    - 编写一个类，实现Servlet接口
+    - 把开发好的Java类部署到web服务器中。
 
 **把实现了Servlet接口的Java程序叫做，Servlet**
-
-
 
 ### 6.2 HelloServlet
 
@@ -219,33 +172,33 @@ MAVEN_HOME //maven的目录
 
 3. Maven环境优化
 
-   - 修改web.xml为最新的
-   - 将maven的结构搭建完整
+    - 修改web.xml为最新的
+    - 将maven的结构搭建完整
 
 4. 编写一个Servlet程序
 
    ![image-20201219161509040](assets/image-20201219161509040.png)
 
-   - 编写一个普通类
+    - 编写一个普通类
 
-   - 实现Servlet接口，这里我们直接继承HttpServlet
+    - 实现Servlet接口，这里我们直接继承HttpServlet
 
-     ```java
-     public class HelloServlet extends HttpServlet { 
-         //由于get或者post只是请求实现的不同的方式，可以相互调用，业务逻辑都一样；
-         @Override
-         protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { 
-             //ServletOutputStream outputStream = resp.getOutputStream(); 
-             PrintWriter writer = resp.getWriter(); 
-             //响应流 
-             writer.print("Hello,Serlvet");
-         }
-         @Override 
-         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { 
-             doGet(req, resp); 
-         } 
-     }
-     ```
+      ```java
+      public class HelloServlet extends HttpServlet { 
+          //由于get或者post只是请求实现的不同的方式，可以相互调用，业务逻辑都一样；
+          @Override
+          protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { 
+              //ServletOutputStream outputStream = resp.getOutputStream(); 
+              PrintWriter writer = resp.getWriter(); 
+              //响应流 
+              writer.print("Hello,Serlvet");
+          }
+          @Override 
+          protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { 
+              doGet(req, resp); 
+          } 
+      }
+      ```
 
 5. 编写Servlet的映射
 
@@ -268,7 +221,7 @@ MAVEN_HOME //maven的目录
 
    注意：配置项目发布的路径就可以了
 
-7. 启动测试，OK！ 
+7. 启动测试，OK！
 
 ### 6.3 Servlet原理
 
@@ -356,13 +309,9 @@ MAVEN_HOME //maven的目录
    </servlet-mapping>
    ```
 
-   
-
 ### 6.5 ServletContext
 
 *web容器在启动的时候，它会为每个web程序都创建一个对应的ServletContext对象，它代表了当前的web应用；*
-
-
 
 #### 6.5.1 共享数据
 
@@ -420,8 +369,6 @@ public class GetServlet extends HttpServlet {
 
 测试访问结果；
 
-
-
 #### 6.5.2 获取初始化参数
 
 ```xml
@@ -439,8 +386,6 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
     resp.getWriter().print(url);
 }
 ```
-
-
 
 #### 6.5.3 请求转发
 
@@ -492,7 +437,7 @@ public class ServletDemo05 extends HttpServlet {
 }
 ```
 
-访问测试即可ok； 
+访问测试即可ok；
 
 ### 6.6 HttpServletResponse
 
@@ -570,22 +515,20 @@ int SC_GATEWAY_TIMEOUT = 504;
 int SC_HTTP_VERSION_NOT_SUPPORTED = 505;
 ```
 
-
-
 #### 6.6.2 下载文件
 
 1. 向浏览器输出消息 （一直在讲，就不说了）
 
 2. 下载文件
 
-   1. 要获取下载文件的路径
-   2. 下载的文件名是啥？
-   3. 设置想办法让浏览器能够支持下载我们需要的东西
-   4. 获取下载文件的输入流
-   5. 创建缓冲区
-   6. 获取OutputStream对象
-   7. 将FileOutputStream流写入到buffer缓冲区
-   8. 使用OutputStream将缓冲区中的数据输出到客户端！
+    1. 要获取下载文件的路径
+    2. 下载的文件名是啥？
+    3. 设置想办法让浏览器能够支持下载我们需要的东西
+    4. 获取下载文件的输入流
+    5. 创建缓冲区
+    6. 获取OutputStream对象
+    7. 将FileOutputStream流写入到buffer缓冲区
+    8. 使用OutputStream将缓冲区中的数据输出到客户端！
 
    ```java
    @Override 
@@ -611,8 +554,6 @@ int SC_HTTP_VERSION_NOT_SUPPORTED = 505;
        out.close(); 
    }
    ```
-
-   
 
 #### 6.6.3 验证码功能
 
@@ -665,8 +606,6 @@ int SC_HTTP_VERSION_NOT_SUPPORTED = 505;
       } 
   }
   ```
-
-  
 
 #### 6.6.4 实现重定向
 
@@ -741,8 +680,6 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 </servlet-mapping>
 ```
 
-
-
 ```html
 <%@ page contentType="text/html;charset=UTF-8" language="java" %> 
     <html>
@@ -754,8 +691,6 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
         </body>
     </html>
 ```
-
-
 
 ### 6.7 HttpServeltRequest
 
@@ -796,8 +731,6 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 
 ## 7. Cookie和Session
 
-
-
 ### 7.1 会话
 
 **会话**：用户打开一个浏览器，点击了很多超链接，访问多个web资源，关闭浏览器，这个过程可以称之为会话；
@@ -811,8 +744,6 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 1. 发票 西开给你发票
 
 2. 学校登记 西开标记你来过了
-
-
 
 **一个网站，怎么证明你来过？**
 
@@ -873,20 +804,12 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 - 不设置有效期，关闭浏览器，自动失效；
 - 设置有效期时间为 0 ；
 
-
-
 **编码解码：**
 
 ```java
 URLEncoder.encode("秦疆","utf-8") 
 URLDecoder.decode(cookie.getValue(),"UTF-8")
 ```
-
-
-
-
-
-
 
 ### 7.4 Session(重难点)
 
@@ -898,15 +821,11 @@ URLDecoder.decode(cookie.getValue(),"UTF-8")
 - 一个Seesion独占一个浏览器，只要浏览器没有关闭，这个Session就存在；
 - 用户登录之后，整个网站它都可以访问！--> 保存用户的信息；保存购物车的信息…..
 
-
-
 **Session和cookie的区别：**
 
 - Cookie是把用户的数据写给用户的浏览器，浏览器保存 （可以保存多个）
 - Session把用户的数据写到用户独占Session中，服务器端保存 （保存重要的信息，减少服务器资源的浪费）
 - Session对象由服务创建；
-
-
 
 **使用场景：**
 
@@ -914,7 +833,7 @@ URLDecoder.decode(cookie.getValue(),"UTF-8")
 - 购物车信息；
 - 在整个网站中经常会使用的数据，我们将它保存在Session中；
 
-**使用Session：** 
+**使用Session：**
 
 ```java
 public class SessionDemo01 extends HttpServlet {
@@ -967,11 +886,7 @@ session.invalidate();
 
 ![image-20201219164249846](assets/image-20201219164249846.png)
 
-
-
 ## 8. JSP
-
-
 
 ### 8.1 什么是JSP
 
@@ -981,12 +896,10 @@ Java Server Pages ： Java服务器端页面，也和Servlet一样，用于动�
 
 - 写JSP就像在写HTML
 - 区别：
-  - HTML只给用户提供静态的数据
-  - JSP页面中可以嵌入JAVA代码，为用户提供动态数据；
+    - HTML只给用户提供静态的数据
+    - JSP页面中可以嵌入JAVA代码，为用户提供动态数据；
 
 ### 8.2 JSP原理
-
-
 
 ### 8.3 JSP基础语法
 
@@ -998,17 +911,11 @@ Java Server Pages ： Java服务器端页面，也和Servlet一样，用于动�
 
 ### 8.4 JSP指令
 
-
-
 ### 8.5. 九大内置对象
-
-
 
 ### 8.6. JSP标签丶JSTL标签丶EL表达式
 
 ## 9. JavaBean
-
-
 
 **实体类**
 
@@ -1025,8 +932,6 @@ ORM ：对象关系映射
 - 表--->类
 - 字段-->属性
 - 行记录---->对象
-
-
 
 **people表**
 
@@ -1050,11 +955,7 @@ class A{
 }
 ```
 
-
-
 ## 10. MVC三层架构
-
-
 
 *什么是MVC： Model view Controller 模型、视图、控制器*
 
@@ -1077,8 +978,6 @@ JDBC
 Mysql Oracle SqlServer ....
 ```
 
-
-
 ### 10.2 MVC三层架构
 
 ![image-20201219160219557](assets/image-20201219160219557.png)
@@ -1098,17 +997,13 @@ Mysql Oracle SqlServer ....
 
 - 交给业务层处理对应的代码
 
-- 控制视图的跳转 
+- 控制视图的跳转
 
   ```
   登录--->接收用户的登录请求--->处理用户的请求（获取用户登录的参数，username， password）---->交给业务层处理登录业务（判断用户名密码是否正确：事务）--->Dao层查询用 户名和密码是否正确-->数据库
   ```
 
-  
-
 ## 11. Filter过滤器
-
-
 
 ### 11.1 Filter作用
 
@@ -1119,43 +1014,41 @@ Filter：过滤器 ，用来过滤网站的数据；
 
 ![image-20201219155633649](assets/image-20201219155633649.png)
 
-
-
 ### 11.2 Filter开发步骤
 
 1. 导包
 
 2. 编写过滤器
 
-   - 导包不要错
+    - 导包不要错
 
-     实现Filter接口，重写对应的方法即可
+      实现Filter接口，重写对应的方法即可
 
-     ```java
-     public class CharacterEncodingFilter implements Filter { 
-         //初始化：web服务器启动，就以及初始化了，随时等待过滤对象出现！
-         public void init(FilterConfig filterConfig) throws ServletException {
-             System.out.println("CharacterEncodingFilter初始化"); 
-         }
-         //Chain : 链 
-         /*
-         1. 过滤中的所有代码，在过滤特定请求的时候都会执行
-         2. 必须要让过滤器继续同行
-         chain.doFilter(request,response);
-         */ 
-         public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-             request.setCharacterEncoding("utf-8"); 
-             response.setCharacterEncoding("utf-8"); 
-             response.setContentType("text/html;charset=UTF-8"); 
-             System.out.println("CharacterEncodingFilter执行前....");
-             chain.doFilter(request,response);//让我们的请求继续走，如果不 写，程序到这里就被拦截停止！ 
-             System.out.println("CharacterEncodingFilter执行后...."); }
-         //销毁：web服务器关闭的时候，过滤会销毁 
-         public void destroy() { 
-             System.out.println("CharacterEncodingFilter销毁");
-         } 
-     }
-     ```
+      ```java
+      public class CharacterEncodingFilter implements Filter { 
+          //初始化：web服务器启动，就以及初始化了，随时等待过滤对象出现！
+          public void init(FilterConfig filterConfig) throws ServletException {
+              System.out.println("CharacterEncodingFilter初始化"); 
+          }
+          //Chain : 链 
+          /*
+          1. 过滤中的所有代码，在过滤特定请求的时候都会执行
+          2. 必须要让过滤器继续同行
+          chain.doFilter(request,response);
+          */ 
+          public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+              request.setCharacterEncoding("utf-8"); 
+              response.setCharacterEncoding("utf-8"); 
+              response.setContentType("text/html;charset=UTF-8"); 
+              System.out.println("CharacterEncodingFilter执行前....");
+              chain.doFilter(request,response);//让我们的请求继续走，如果不 写，程序到这里就被拦截停止！ 
+              System.out.println("CharacterEncodingFilter执行后...."); }
+          //销毁：web服务器关闭的时候，过滤会销毁 
+          public void destroy() { 
+              System.out.println("CharacterEncodingFilter销毁");
+          } 
+      }
+      ```
 
 3. 在web.xml中配置 Filter
 
@@ -1172,17 +1065,13 @@ Filter：过滤器 ，用来过滤网站的数据；
    </filter-mapping>
    ```
 
-   
-
 ## 12. Listener监听器
-
-
 
 *实现一个监听器的接口；（有N种）*
 
 1. 编写一个监听器
 
-   实现监听器的接口… 
+   实现监听器的接口…
 
    ```java
    //统计网站在线人数 ： 统计session 
@@ -1232,8 +1121,6 @@ Filter：过滤器 ，用来过滤网站的数据；
 
 ## 13. 过滤器 & 监听器常见应用
 
-
-
 监听器：GUI编程中经常使用；
 
 ```java
@@ -1264,8 +1151,6 @@ public class TestPanel {
 }
 ```
 
-
-
 用户登录之后才能进入主页！用户注销后就不能进入主页了！
 
 1. 用户登录之后，向Sesison中放入用户的数据
@@ -1281,11 +1166,7 @@ public class TestPanel {
    chain.doFilter(request,response);
    ```
 
-   
-
 ## 14. JDBC
-
-
 
 ### 14.1 什么是JDBC
 
@@ -1330,13 +1211,7 @@ SELECT * FROM users;
 
 2.3 IDEA中连接数据库
 
-
-
-
-
 ### 14.3. JDBC相关操作
-
-
 
 #### 14.3.1 JDBC固定步骤
 
@@ -1378,8 +1253,6 @@ public class TestJdbc {
     } 
 }
 ```
-
-
 
 #### 14.3.2 预编译SQL
 
@@ -1437,8 +1310,6 @@ rollback() 关闭事务
 	A(900) --100--> B(1100)
 ```
 
-
-
 ### 14.4 junit单元测试
 
 #### 14.4.1 依赖
@@ -1476,8 +1347,6 @@ INSERT INTO account(`name`,money) VALUES('A',1000);
 INSERT INTO account(`name`,money) VALUES('B',1000);
 INSERT INTO account(`name`,money) VALUES('C',1000);
 ```
-
-
 
 #### 14.4.4 测试
 

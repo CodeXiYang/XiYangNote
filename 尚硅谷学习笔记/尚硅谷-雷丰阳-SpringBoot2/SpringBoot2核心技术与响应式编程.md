@@ -1,8 +1,8 @@
 # SpringBoot2.X核心技术与响应式编程
 
-> 视频: https://www.bilibili.com/video/BV19K4y1L7MT 
+> 视频: https://www.bilibili.com/video/BV19K4y1L7MT
 >
-> 文档: https://www.yuque.com/atguigu/springboot 
+> 文档: https://www.yuque.com/atguigu/springboot
 >
 > 代码:https://gitee.com/leifengyang/springboot2
 
@@ -19,7 +19,8 @@
 
   ![image-20201222145149652](assets/image-20201222145149652.png)
 
-- Maven 3.3及以上：https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started-system-requirements
+- Maven
+  3.3及以上：https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started-system-requirements
 
   ![image-20201222145208298](assets/image-20201222145208298.png)
 
@@ -74,7 +75,7 @@ Spring覆盖了：
 
 > Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
 >
-> 
+>
 >
 > - SpirngBoot简化的Spring的配置操作,让我们不再关注配置,而只关注于业务的开发
 > - SpringBoot能快速创建出生产级别的Spring应用,让我们以后的开发变得简单
@@ -83,29 +84,33 @@ Spring覆盖了：
 
 - Create stand-alone Spring applications
 
-- - 创建独立Spring应用
+-
+    - 创建独立Spring应用
 
 - Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)
 
-- - 内嵌web服务器
+-
+    - 内嵌web服务器
 
 - Provide opinionated 'starter' dependencies to simplify your build configuration
 
-- - 自动starter依赖，简化构建配置
+-
+    - 自动starter依赖，简化构建配置
 
 - Automatically configure Spring and 3rd party libraries whenever possible
 
-- - 自动配置Spring以及第三方功能
+-
+    - 自动配置Spring以及第三方功能
 
 - Provide production-ready features such as metrics, health checks, and externalized configuration
 
-- - 提供生产级别的监控、健康检查及外部化配置
+-
+    - 提供生产级别的监控、健康检查及外部化配置
 
 - Absolutely no code generation and no requirement for XML configuration
 
-- - 无代码生成、无需编写XML
-
-
+-
+    - 无代码生成、无需编写XML
 
 > SpringBoot是整合Spring技术栈的一站式框架
 >
@@ -121,7 +126,8 @@ Spring覆盖了：
 
 ##### 3.1 微服务
 
-[James Lewis and Martin Fowler (2014)](https://martinfowler.com/articles/microservices.html)  提出微服务完整概念。https://martinfowler.com/microservices/
+[James Lewis and Martin Fowler (2014)](https://martinfowler.com/articles/microservices.html)
+提出微服务完整概念。https://martinfowler.com/microservices/
 
 > In short, the **microservice architectural style** is an approach to developing a single application as a **suite of small services**, each **running in its own process** and communicating with **lightweight** mechanisms, often an **HTTP** resource API. These services are **built around business capabilities** and **independently deployable** by fully **automated deployment** machinery. There is a **bare minimum of centralized management** of these services, which may be **written in different programming languages** and use different data storage technologies.-- [James Lewis and Martin Fowler (2014)](https://martinfowler.com/articles/microservices.html)
 
@@ -160,8 +166,6 @@ Spring覆盖了：
 
 原生应用如何上云。 Cloud Native
 
-
-
 **上云的困难**
 
 - 服务自愈
@@ -195,8 +199,6 @@ https://github.com/spring-projects/spring-boot/wiki#release-notes
 ---
 
 ## 第 2 章: SpringBoot2入门
-
-
 
 ### 1. 系统要求
 
@@ -238,11 +240,9 @@ maven的*setting.xml*配置
 </profiles>
 ```
 
-
-
 ### 2. HelloWorld
 
-**【需求】**：浏览发送`http://localhost:8888/hello`请求，响应 Hello，Spring Boot 2 
+**【需求】**：浏览发送`http://localhost:8888/hello`请求，响应 Hello，Spring Boot 2
 
 #### 2.1 创建maven工程
 
@@ -307,23 +307,17 @@ public class HelloController {
 }
 ```
 
-
-
-
-
 #### 2.5 测试
 
 *直接运行主程序类的main方法即可*
 
-服务运行端口: 
+服务运行端口:
 
 ![image-20201222165654978](assets/image-20201222165654978.png)
 
 测试结果:
 
 ![image-20201222165621019](assets/image-20201222165621019.png)
-
-
 
 #### 2.6 简化配置
 
@@ -344,17 +338,16 @@ server.port=8888
 
 官方文档的配置: https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties
 
-
-
 #### 2.7 简化部署
 
 *将编写的项目打包成一个jar包*
 
-*官方文档: https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started-first-application-executable-jar*
+*
+官方文档: https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started-first-application-executable-jar*
 
 把项目打成jar包，直接在目标服务器执行即可。
 
-jar包的依赖: 
+jar包的依赖:
 
 ```xml
 <build>
@@ -371,8 +364,6 @@ jar包的依赖:
 idea打jar包操作:
 
 ![image-20201222170548939](assets/image-20201222170548939.png)
-
-
 
 执行结果:
 
@@ -624,61 +615,53 @@ idea打jar包操作:
   </properties>
   ```
 
-  
 
 - 开发导入starter场景启动器
 
-  - 1、见到很多` spring-boot-starter-* ` ： *就某种场景
+    - 1、见到很多` spring-boot-starter-* ` ： *就某种场景
 
-  - 2、只要引入starter，这个场景的所有常规需要的依赖我们都自动引入
+    - 2、只要引入starter，这个场景的所有常规需要的依赖我们都自动引入
 
-  - 3、SpringBoot所有支持的场景启动器
-    https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-starter
+    - 3、SpringBoot所有支持的场景启动器
+      https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-starter
 
-  - 4、见到的  `*-spring-boot-starter`： 第三方为我们提供的简化开发的场景启动器。
+    - 4、见到的  `*-spring-boot-starter`： 第三方为我们提供的简化开发的场景启动器。
 
-  - 5、所有场景启动器最底层的依赖
+    - 5、所有场景启动器最底层的依赖
 
-    ```xml
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-      <version>2.3.4.RELEASE</version>
-      <scope>compile</scope>
-    </dependency>
-    ```
+      ```xml
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+        <version>2.3.4.RELEASE</version>
+        <scope>compile</scope>
+      </dependency>
+      ```
 
-    
 
 - 无需关注版本号，自动版本仲裁
 
-  - 1、引入依赖默认都可以不写版本
-  - 2、引入非版本仲裁的jar，要写版本号。
+    - 1、引入依赖默认都可以不写版本
+    - 2、引入非版本仲裁的jar，要写版本号。
 
 - 可以修改默认版本号
 
-  - 1、查看spring-boot-dependencies里面规定当前依赖的版本 用的 key。
+    - 1、查看spring-boot-dependencies里面规定当前依赖的版本 用的 key。
 
-  - 2、在当前项目里面重写配置
+    - 2、在当前项目里面重写配置
 
-    ```xml
-    <!--非springboot自动仲裁的jar的版本配置-->
-    <properties>
-        <mysql.version>5.1.43</mysql.version>
-    </properties>
-    ```
+      ```xml
+      <!--非springboot自动仲裁的jar的版本配置-->
+      <properties>
+          <mysql.version>5.1.43</mysql.version>
+      </properties>
+      ```
 
 - idea中的依赖分析
 
   ![image-20201222182237359](assets/image-20201222182237359.png)
 
   ![image-20201222182256595](assets/image-20201222182256595.png)
-
-  
-
-  
-
-  
 
 #### 1.2 自动配置
 
@@ -701,38 +684,43 @@ public class MainApplaction {
 
 - 自动配好Tomcat
 
-  - 引入Tomcat依赖。
+    - 引入Tomcat依赖。
 
-    ```xml
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-tomcat</artifactId>
-        <version>2.3.4.RELEASE</version>
-        <scope>compile</scope>
-    </dependency>
-    ```
+      ```xml
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-tomcat</artifactId>
+          <version>2.3.4.RELEASE</version>
+          <scope>compile</scope>
+      </dependency>
+      ```
 
-  - 配置Tomcat
+    - 配置Tomcat
 
 - 自动配好SpringMVC
 
-- - 引入SpringMVC全套组件
-  - 自动配好SpringMVC常用组件（功能）
+-
+    - 引入SpringMVC全套组件
+    - 自动配好SpringMVC常用组件（功能）
 
 - 自动配好Web常见功能，如：字符编码问题
 
-- - SpringBoot帮我们配置好了所有web开发的常见场景
+-
+    - SpringBoot帮我们配置好了所有web开发的常见场景
 
 - 默认的包结构 *无法在主程序外面编写请求接口的原因*
 
-- - 主程序所在包及其下面的所有子包里面的组件都会被默认扫描进来
-  - 无需以前的包扫描配置
-  - 想要改变扫描路径
-    - `@SpringBootApplication(scanBasePackages="com.atguigu")`
+-
+    - 主程序所在包及其下面的所有子包里面的组件都会被默认扫描进来
+    - 无需以前的包扫描配置
+    - 想要改变扫描路径
+        - `@SpringBootApplication(scanBasePackages="com.atguigu")`
 
-- - - 或者`@ComponentScan` 指定扫描路径
+-
+    -
+        - 或者`@ComponentScan` 指定扫描路径
 
-  - ```java
+    - ```java
     @SpringBootApplication
     // 等同于
     	@SpringBootConfiguration
@@ -742,14 +730,16 @@ public class MainApplaction {
 
 - 各种配置拥有默认值
 
-- - 默认配置最终都是映射到某个类上，如：MultipartProperties
-  - 配置文件的值最终会绑定每个类上，这个类会在容器中创建对象
+-
+    - 默认配置最终都是映射到某个类上，如：MultipartProperties
+    - 配置文件的值最终会绑定每个类上，这个类会在容器中创建对象
 
 - 按需加载所有自动配置项
 
-- - 非常多的starter
-  - 引入了哪些场景这个场景的自动配置才会开启
-  - SpringBoot所有的**自动配置**功能都在 `spring-boot-autoconfigure` 包里面 
+-
+    - 非常多的starter
+    - 引入了哪些场景这个场景的自动配置才会开启
+    - SpringBoot所有的**自动配置**功能都在 `spring-boot-autoconfigure` 包里面
 
 - ......
 
@@ -880,8 +870,8 @@ public class MainApplaction {
 
    最佳实践
 
-   - 配置 类组件之间无依赖关系用Lite模式加速容器启动过程，减少判断
-   - 配置类组件之间有依赖关系，方法会被调用得到之前单实例组件，用Full模式
+    - 配置 类组件之间无依赖关系用Lite模式加速容器启动过程，减少判断
+    - 配置类组件之间有依赖关系，方法会被调用得到之前单实例组件，用Full模式
 
 - ```java
   #############################Configuration使用示例######################################################
@@ -985,7 +975,7 @@ public class MainApplaction {
 
 ###### 1. @Import
 
- *给容器中自动创建出这两个类型的组件、默认组件的名字就是全类名*
+*给容器中自动创建出这两个类型的组件、默认组件的名字就是全类名*
 
 ```java
  * 4、@Import({User.class, DBHelper.class})
@@ -1004,8 +994,6 @@ public class MyConfig {
 @Import 高级用法： https://www.bilibili.com/video/BV1gW411W7wy?p=8
 
 ###### 2. @ComponentScan
-
-
 
 ##### 2.2.4 @Conditional
 
@@ -1067,8 +1055,6 @@ public static void main(String[] args) {
     }
 ```
 
-
-
 #### 2.2 原生配置文件引入
 
 ##### 2.2.1 @ImportResource
@@ -1125,8 +1111,6 @@ public class MainApplaction {
 }
 ```
 
-
-
 ```java
 @ImportResource("classpath:beans.xml")
 public class MyConfig {}
@@ -1137,8 +1121,6 @@ public class MyConfig {}
         System.out.println("haha："+haha);//true
         System.out.println("hehe："+hehe);//true
 ```
-
-
 
 #### 2.3 配置绑定
 
@@ -1244,7 +1226,7 @@ public class HelloController {
 
 *也可用于将properties中配置的属性和javabean进行绑定;需要搭配@Configuration三者一起使用;和上面的方式区别在于不需要借助@Conmment放在容器中*
 
-@EnableConfigurationProperties有两个作用: 
+@EnableConfigurationProperties有两个作用:
 
 1. 开启配置绑定功能
 
@@ -1315,15 +1297,9 @@ public class HelloController {
 }
 ```
 
-
-
-
-
 测试结果:
 
 ![image-20201222212238274](assets/image-20201222212238274.png)
-
-
 
 ##### 2.3.3 @Component + @ConfigurationProperties
 
@@ -1334,8 +1310,6 @@ public class HelloController {
 public class MyConfig {
 }
 ```
-
-
 
 ### 3. 自动配置原理入门
 
@@ -1366,8 +1340,6 @@ public @interface SpringBootConfiguration {}
 ##### 3.1.2 @ComponentScan
 
 指定扫描哪些，Spring注解；
-
-
 
 ##### 3.1.3 @EnableAutoConfiguration
 
@@ -1535,16 +1507,10 @@ org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration,
 org.springframework.boot.autoconfigure.webservices.client.WebServiceTemplateAutoConfiguration
 ```
 
-
-
-
-
 #### 3.2 按需开启自动配置项
 
 - 虽然我们127个场景的所有自动配置启动的时候默认全部加载。xxxxAutoConfiguration
 - 按照条件装配规则（@Conditional），最终会按需配置。
-
-
 
 #### 3.3 修改默认配置
 
@@ -1572,16 +1538,16 @@ SpringBoot默认会在底层配好所有的组件。但是如果用户自己配�
 
 总结：
 
-- SpringBoot先加载所有的自动配置类  xxxxxAutoConfiguration
+- SpringBoot先加载所有的自动配置类 xxxxxAutoConfiguration
 - 每个自动配置类按照条件进行生效，默认都会绑定配置文件指定的值。xxxxProperties里面拿。xxxProperties和配置文件进行了绑定
 - 生效的配置类就会给容器中装配很多组件
 - 只要容器中有这些组件，相当于这些功能就有了
 - 定制化配置
 
-  - 用户直接自己@Bean替换底层的组件
-  - 用户去看这个组件是获取的配置文件什么值就去修改。
+    - 用户直接自己@Bean替换底层的组件
+    - 用户去看这个组件是获取的配置文件什么值就去修改。
 
-<u>**xxxxxAutoConfiguration ---> 组件  --->** **xxxxProperties里面拿值  ----> application.properties**</u>
+<u>**xxxxxAutoConfiguration ---> 组件 --->** **xxxxProperties里面拿值 ----> application.properties**</u>
 
 #### 3.4 最佳实践
 
@@ -1589,32 +1555,32 @@ SpringBoot默认会在底层配好所有的组件。但是如果用户自己配�
 
 - 引入场景依赖
 
-  - https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-starter
+    - https://docs.spring.io/spring-boot/docs/current/reference/html/using-spring-boot.html#using-boot-starter
 
 - 查看自动配置了哪些（选做）
 
-  - 自己分析，引入场景对应的自动配置一般都生效了
-  - 配置文件中debug=true开启自动配置报告。Negative（不生效）\Positive（生效）
+    - 自己分析，引入场景对应的自动配置一般都生效了
+    - 配置文件中debug=true开启自动配置报告。Negative（不生效）\Positive（生效）
 
 - 是否需要修改
 
-  - 参照文档修改配置项
+    - 参照文档修改配置项
 
-    - https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties
-  - 自己分析。xxxxProperties绑定了配置文件的哪些。
+        - https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties
+    - 自己分析。xxxxProperties绑定了配置文件的哪些。
 
-  - 自定义加入或者替换组件
+    - 自定义加入或者替换组件
 
-    - @Bean、@Component。。。
+        - @Bean、@Component。。。
 
-  - 自定义器  **XXXXXCustomizer**；
-  - ......
+    - 自定义器  **XXXXXCustomizer**；
+    - ......
 
 ### 4. 开发小技巧
 
 #### 4.1 Lombok
 
-*Lombok可以简化JavaBean开发,使用lombok后添加几个注解就可以省略get/set/...等方法* 
+*Lombok可以简化JavaBean开发,使用lombok后添加几个注解就可以省略get/set/...等方法*
 
 首先需要导入lombok的依赖
 
@@ -1671,8 +1637,6 @@ public class HelloController {
 
 - 后台![image-20201222221201730](assets/image-20201222221201730.png)
 
-
-
 #### 4.2 dev-tools
 
 *web开发热更新,不用每次重启项目实现代码修改自动更新;其原理就是一个重新启动的过程*
@@ -1702,7 +1666,6 @@ ps:
 
    ![image-20201222222923380](assets/image-20201222222923380.png)
 
-   
 
 2. 选择我们需要的开发场景
 
@@ -1724,8 +1687,6 @@ ps:
 
 ## 第 4 章:  配置文件 🚩
 
-
-
 *springboot应有除了使用application.properties文件,还可以使用application.yml文件*
 
 *这种文件的好处在于结构更加的清楚~*
@@ -1740,7 +1701,7 @@ ps:
 
 ##### 1.2.1 简介
 
-YAML 是 "YAML Ain't Markup Language"（YAML 不是一种标记语言）的递归缩写。在开发的这种语言时，YAML 的意思其实是："Yet Another Markup Language"（仍是一种标记语言）。 
+YAML 是 "YAML Ain't Markup Language"（YAML 不是一种标记语言）的递归缩写。在开发的这种语言时，YAML 的意思其实是："Yet Another Markup Language"（仍是一种标记语言）。
 
 非常适合用来做以数据为中心的配置文件
 
@@ -1762,7 +1723,7 @@ YAML 是 "YAML Ain't Markup Language"（YAML 不是一种标记语言）的递�
   k: v
   ```
 
-- 对象：键值对的集合。map、hash、set、object 
+- 对象：键值对的集合。map、hash、set、object
 
   ```yaml
   # 行内写法： 
@@ -1791,8 +1752,6 @@ YAML 是 "YAML Ain't Markup Language"（YAML 不是一种标记语言）的递�
    - v2
    - v3
   ```
-
-  
 
 ##### 1.2.4 yaml编写示例
 
@@ -1828,8 +1787,6 @@ public class Pet {
     private Double weight;
 }
 ```
-
-
 
 applcation.xml
 
@@ -1879,8 +1836,6 @@ person:
 
 *在使用原生的spring相关的配置的时候是有提示的,但是我们自定义的类和配置文件绑定一般没有提示。可以引入一些依赖,编写的时候就有提示了*
 
-
-
 导入依赖
 
 ```xml
@@ -1921,11 +1876,7 @@ person:
 
 ## 第 5 章: Web开发
 
-
-
 ### 1. SpringMVC自动配置概览
-
-
 
 ### 2. 简单功能分析
 
@@ -2067,8 +2018,6 @@ person:
 
 #### 11.2 原理分析套路
 
-
-
 ---
 
 ## 第 6 章: 数据访问
@@ -2087,69 +2036,37 @@ person:
 
 #### 2.1 Redis自动配置
 
-
-
 #### 2.2 RedisTemplate与Lettuce
 
-
-
 #### 2.3 切换至jedis
-
-
 
 ---
 
 ## 第 7 章: 单元测试
 
-
-
 ### 1. JUnit5的变化
-
-
 
 ### 2. JUnit5的常用注解
 
-
-
 ### 3. 断言(assertions)
-
-
 
 #### 3.1 简单断言
 
-
-
 #### 3.2 数组断言
-
-
 
 #### 3.3 组合断言
 
-
-
 #### 3.4 异常断言
-
-
 
 #### 3.5 超时断言
 
-
-
 #### 3.6 快速失败
-
-
 
 ### 4. 前置条件(assumpitions)
 
-
-
 ### 5. 嵌套测试
 
-
-
 ### 6. 参数化测试
-
-
 
 ### 7. 迁移指南
 
@@ -2159,21 +2076,13 @@ person:
 
 ### 1. SpringBoot Actuator
 
-
-
 ### 2. Actuator Endpoint
 
-
-
 ### 3. 定制Endpoint
-
-
 
 ---
 
 ## 第 9 章: 原理解析
-
-
 
 ### 1. Profile功能
 
@@ -2197,19 +2106,13 @@ person:
 
 #### 3.1 starter启动原理
 
-
-
 #### 3.2 自定义starter
 
 ### 4. SpringBoot原理
 
 #### 4.1 SpringBoot启动过程
 
-
-
 #### 4.2 Application Events and Listeners
-
-
 
 #### 4.3 ApplicationRunner 与 CommandLineRunner
 

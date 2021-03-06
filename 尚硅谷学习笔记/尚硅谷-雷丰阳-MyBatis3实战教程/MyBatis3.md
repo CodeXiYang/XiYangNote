@@ -2,10 +2,10 @@
 
 > 课程名称: [尚硅谷MyBatis实战教程全套完整版](https://www.bilibili.com/video/BV1mW411M737)
 >
-> 课程概述: 
+> 课程概述:
 >
 > - MyBatis配置文件编写，MyBatis动态SQL，MyBatis缓存机制，MyBatis-Spring整合，MyBatis逆向工程，
-> - MyBatis高级内容（MyBatis源码解析，MyBatis单/多插件运行机制，MyBatis四大对象工作原理，自定义TypeHandler、MyBatis存储过程&游标处理等）。 
+> - MyBatis高级内容（MyBatis源码解析，MyBatis单/多插件运行机制，MyBatis四大对象工作原理，自定义TypeHandler、MyBatis存储过程&游标处理等）。
 > - 视频中会在重要的地方对比MyBatis操作MySQL以及Oracle之间的差异性。
 >
 > 讲述人: 尚硅谷-雷丰阳
@@ -16,27 +16,15 @@
 
 ## 第 2 章: MyBatis-HelloWorld
 
-
-
 ## 第 3 章: MyBatis-全局配置文件
-
-
 
 ## 第 4 章:MyBatis-映射文件
 
-
-
 ## 第 5 章: MyBatis-动态SQL
-
-
 
 ## 第 6 章: MyBatis-缓存机制
 
-
-
 ## 第 7 章: MyBatis-Spring整合
-
-
 
 ## 第 8 章: MyBatis-逆向工程
 
@@ -46,9 +34,10 @@
 
 ### 8.1 MBG简介
 
-MBG是MyBatis Generator的缩写，是一个专门为MyBatis框架使用者定制的代码生成器，可以快速的根据表生成对应的映射文件，接口，以及bean类。支持基本的增删改查，以及QBC风格的条件查询。但是表连接、存储过程等这些复杂sql的定义需要我们手工编写
+MBG是MyBatis
+Generator的缩写，是一个专门为MyBatis框架使用者定制的代码生成器，可以快速的根据表生成对应的映射文件，接口，以及bean类。支持基本的增删改查，以及QBC风格的条件查询。但是表连接、存储过程等这些复杂sql的定义需要我们手工编写
 
-MBG官方文档地址: http://www.mybatis.org/generator/ 
+MBG官方文档地址: http://www.mybatis.org/generator/
 
 MBG官方工程地址: https://github.com/mybatis/generator/releases
 
@@ -79,21 +68,17 @@ MBG官方工程地址: https://github.com/mybatis/generator/releases
 </dependencies>
 ```
 
-
-
 **使用步骤:**
 
 1. 编写MBG的配置文件(重要几处配置 )
-   - `jdbcConnection`配置数据库连接信息
-   - `javaModelGenerator`配置javaBean的生成策略
-   - `sqlMapGenerator` 配置sql映射文件生成策略
-   - `javaClientGenerator`配置Mapper接口的生成策略
-   - `table` 配置要逆向解析的数据表
-   	- `tableName`：表名
-   	- `domainObjectName`：对应的javaBean名
+    - `jdbcConnection`配置数据库连接信息
+    - `javaModelGenerator`配置javaBean的生成策略
+    - `sqlMapGenerator` 配置sql映射文件生成策略
+    - `javaClientGenerator`配置Mapper接口的生成策略
+    - `table` 配置要逆向解析的数据表
+        - `tableName`：表名
+        - `domainObjectName`：对应的javaBean名
 2. 运行代码生成器生成代码
-
-
 
 **注意:**
 
@@ -145,8 +130,6 @@ public static void main(String[] args) throws Exception {
 }
 ```
 
-
-
 ### 8.5 测试查询
 
 测试查询：QBC风格的带条件查询
@@ -170,10 +153,6 @@ public void test01(){
 }
 ```
 
-
-
 ## 第 9 章: MyBaits-工作原理
-
-
 
 ## 第 10 章: MyBatis-插件开发

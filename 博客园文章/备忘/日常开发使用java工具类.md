@@ -6,16 +6,72 @@
 
 ## 工具类-Util
 
-### ResultDto
+### ResultBo
 
-> ResultDto类的作用是返回通用的DTO传输对象
+> ResultBo类的作用是返回通用的BO传输对象; bo数据是业务层数据,与持久成无关
 
 ```java
+public class ResultBo {
+    private Integer code; //返回代码
+    private String msg; //返回消息
+    private Object obj; //返回对象
 
+    public ResultBo() {
+    }
+
+    public ResultBo(Integer code, String msg, Object obj) {
+        this.code = code;
+        this.msg = msg;
+        this.obj = obj;
+    }
+
+    public ResultBo(String msg, Object obj) {
+        this.msg = msg;
+        this.obj = obj;
+    }
+
+    public ResultBo(String msg) {
+        this.msg = msg;
+    }
+
+    public ResultBo(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public Integer getCode() {
+        return code;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public Object getObj() {
+        return obj;
+    }
+
+    public ResultBo setCode(Integer code) {
+        this.code = code;
+        return this;
+    }
+
+    public ResultBo setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+
+    public ResultBo setObj(Object obj) {
+        this.obj = obj;
+        return this;
+    }
+
+    public static ResultBo newResultBo(){
+        return new ResultBo();
+    }
+}
 
 ```
-
-
 
 ### CodeGenertorUtil
 
@@ -147,8 +203,6 @@ public class CodeGeneratorUtil {
 
 ```
 
-
-
 ### JwtUtil
 
 > 封装的jwt工具类
@@ -157,8 +211,6 @@ public class CodeGeneratorUtil {
 
 
 ```
-
-
 
 ### LogsUtil
 
@@ -169,8 +221,6 @@ public class CodeGeneratorUtil {
 
 
 ```
-
-
 
 ### HuTool
 

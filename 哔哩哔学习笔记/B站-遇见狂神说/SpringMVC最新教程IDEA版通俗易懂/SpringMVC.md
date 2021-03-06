@@ -6,11 +6,7 @@
 >
 > 讲述人: B站-遇见狂神说
 
-
-
 ## 第 1 章: 回顾MVC
-
-
 
 ### 1. 1什么是MVC
 
@@ -19,7 +15,8 @@
 - MVC主要作用是**降低了视图与业务逻辑间的双向偶合**。
 - MVC不是一种设计模式，**MVC是一种架构模式**。当然不同的MVC存在差异。
 
-**Model（模型）：**数据模型，提供要展示的数据，因此包含数据和行为，可以认为是领域模型或JavaBean组件（包含数据和行为），不过现在一般都分离开来：Value Object（数据Dao） 和 服务层（行为Service）。也就是模型提供了模型数据查询和模型数据的状态更新等功能，包括数据和业务。
+**Model（模型）：**数据模型，提供要展示的数据，因此包含数据和行为，可以认为是领域模型或JavaBean组件（包含数据和行为），不过现在一般都分离开来：Value Object（数据Dao） 和
+服务层（行为Service）。也就是模型提供了模型数据查询和模型数据的状态更新等功能，包括数据和业务。
 
 **View（视图）：**负责进行模型的展示，一般就是我们见到的用户界面，客户想看到的东西。
 
@@ -28,8 +25,6 @@
 **最典型的MVC就是JSP + servlet + javabean的模式。**
 
 ![image-20201218220051576](assets/image-20201218220051576.png)
-
-
 
 ### 1.2 Model1时代
 
@@ -57,18 +52,17 @@ Model2把一个项目分成三部分，包括**视图、控制、模型。**
 **职责分析：**
 
 - **Controller：控制器**
-  1. 取得表单数据
-  2. 调用业务逻辑
-  3. 转向指定的页面
+    1. 取得表单数据
+    2. 调用业务逻辑
+    3. 转向指定的页面
 - **Model：模型**
-  1. 业务逻辑
-  2. 保存数据的状态
+    1. 业务逻辑
+    2. 保存数据的状态
 - **View：视图**
-  1. 显示页面
+    1. 显示页面
 
-Model2这样不仅提高的代码的复用率与项目的扩展性，且大大降低了项目的维护成本。Model 1模式的实现比较简单，适用于快速开发小规模项目，Model1中JSP页面身兼View和Controller两种角色，将控制逻辑和表现逻辑混杂在一起，从而导致代码的重用性非常低，增加了应用的扩展性和维护的难度。Model2消除了Model1的缺点。
-
-
+Model2这样不仅提高的代码的复用率与项目的扩展性，且大大降低了项目的维护成本。Model
+1模式的实现比较简单，适用于快速开发小规模项目，Model1中JSP页面身兼View和Controller两种角色，将控制逻辑和表现逻辑混杂在一起，从而导致代码的重用性非常低，增加了应用的扩展性和维护的难度。Model2消除了Model1的缺点。
 
 ### 1.4 回顾Servlet
 
@@ -183,10 +177,8 @@ Model2这样不仅提高的代码的复用率与项目的扩展性，且大大�
 
 7. 配置Tomcat，并启动测试
 
-   - localhost:8080/user?method=add
-   - localhost:8080/user?method=delete
-
-
+    - localhost:8080/user?method=add
+    - localhost:8080/user?method=delete
 
 **MVC框架要做哪些事情**
 
@@ -197,7 +189,8 @@ Model2这样不仅提高的代码的复用率与项目的扩展性，且大大�
 
 **说明：**
 
-常见的服务器端MVC框架有：Struts、Spring MVC、ASP.NET MVC、Zend Framework、JSF；常见前端MVC框架：vue、angularjs、react、backbone；由MVC演化出了另外一些模式如：MVP、MVVM等等....
+常见的服务器端MVC框架有：Struts、Spring MVC、ASP.NET MVC、Zend
+Framework、JSF；常见前端MVC框架：vue、angularjs、react、backbone；由MVC演化出了另外一些模式如：MVP、MVVM等等....
 
 
 
@@ -209,8 +202,6 @@ Model2这样不仅提高的代码的复用率与项目的扩展性，且大大�
 
 ## 第 2 章: 什么是SpringMVC
 
-
-
 ### 1. 概述
 
 ![image-20201218220927635](assets/image-20201218220927635.png)
@@ -221,7 +212,7 @@ Model2这样不仅提高的代码的复用率与项目的扩展性，且大大�
 
 我们为什么要学习SpringMVC呢?
 
- **Spring MVC的特点：**
+**Spring MVC的特点：**
 
 1. 轻量级，简单易学
 2. 高效 , 基于请求响应的MVC框架
@@ -234,13 +225,15 @@ Spring的web框架围绕**DispatcherServlet** [ 调度Servlet ] 设计。
 
 DispatcherServlet的作用是将请求分发到不同的处理器。从Spring 2.5开始，使用Java 5或者以上版本的用户可以采用基于注解形式进行开发，十分简洁；
 
-正因为SpringMVC好 , 简单 , 便捷 , 易学 , 天生和Spring无缝集成(使用SpringIoC和Aop) , 使用约定优于配置 . 能够进行简单的junit测试 . 支持Restful风格 .异常处理 , 本地化 , 国际化 , 数据验证 , 类型转换 , 拦截器 等等......所以我们要学习 .
+正因为SpringMVC好 , 简单 , 便捷 , 易学 , 天生和Spring无缝集成(使用SpringIoC和Aop) , 使用约定优于配置 . 能够进行简单的junit测试 . 支持Restful风格 .异常处理 , 本地化 ,
+国际化 , 数据验证 , 类型转换 , 拦截器 等等......所以我们要学习 .
 
 <u>最重要的一点还是用的人多 , 使用的公司多 .</u>
 
 ### 2. 中心控制器
 
-Spring的web框架围绕DispatcherServlet设计。 DispatcherServlet的作用是将请求分发到不同的处理器。从Spring 2.5开始，使用Java 5或者以上版本的用户可以采用基于注解的controller声明方式。
+Spring的web框架围绕DispatcherServlet设计。 DispatcherServlet的作用是将请求分发到不同的处理器。从Spring 2.5开始，使用Java
+5或者以上版本的用户可以采用基于注解的controller声明方式。
 
 Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一个中心Servlet分派请求及提供其他功能，DispatcherServlet是一个实际的Servlet (它继承自HttpServlet 基类)**。
 
@@ -251,8 +244,6 @@ Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一
 当发起请求时被前置的控制器拦截到请求，根据请求参数生成代理请求，找到请求对应的实际控制器，控制器处理请求，创建数据模型，访问数据库，将模型响应给中心控制器，控制器使用模型与视图渲染视图结果，将结果返回给中心控制器，再将结果返回给请求者。
 
 ![image-20201218221237664](assets/image-20201218221237664.png)
-
-
 
 ### 3. SpringMVC执行原理
 
@@ -268,25 +259,25 @@ Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一
 
    如上url拆分成三部分：
 
-   - http://localhost:8080服务器域名
-   - SpringMVC部署在服务器上的web站点
-   - hello表示控制器
+    - http://localhost:8080服务器域名
+    - SpringMVC部署在服务器上的web站点
+    - hello表示控制器
 
    通过分析，如上url表示为：请求位于服务器localhost:8080上的SpringMVC站点的hello控制器。
 
-2. **HandlerMapping为处理器映射**。DispatcherServlet调用HandlerMapping,HandlerMapping根据请求url查找Handler。 
+2. **HandlerMapping为处理器映射**。DispatcherServlet调用HandlerMapping,HandlerMapping根据请求url查找Handler。
 
 3. **HandlerExecution表示具体的Handler**,其主要作用是根据url查找控制器，如上url被查找控制器为：hello。
 
 4. HandlerExecution将解析后的信息传递给DispatcherServlet,如解析控制器映射等。
 
-5. **HandlerAdapter表示处理器适配器**，其按照特定的规则去执行Handler。 
+5. **HandlerAdapter表示处理器适配器**，其按照特定的规则去执行Handler。
 
 6. Handler让具体的Controller执行。
 
-7. Controller将具体的执行信息返回给HandlerAdapter,如ModelAndView。 
+7. Controller将具体的执行信息返回给HandlerAdapter,如ModelAndView。
 
-8. HandlerAdapter将视图逻辑名或模型传递给DispatcherServlet。 
+8. HandlerAdapter将视图逻辑名或模型传递给DispatcherServlet。
 
 9. DispatcherServlet调用视图解析器(ViewResolver)来解析HandlerAdapter传递的逻辑视图名。
 
@@ -295,8 +286,6 @@ Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一
 11. DispatcherServlet根据视图解析器解析的视图结果，调用具体的视图。
 
 12. 最终视图呈现给用户。
-
-
 
 *在这里先听一遍原理，不理解没有关系，我们马上来写一个对应的代码实现大家就明白了，如果不明白，那就写10遍，没有笨人，只有懒人！*
 
@@ -309,8 +298,6 @@ Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一
 ---
 
 ## 第 3 章: Hello SpringMVC
-
-
 
 ### 1. 配置版
 
@@ -422,8 +409,6 @@ Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一
 
 11. 配置Tomcat 启动测试！
 
-
-
 **可能遇到的问题：访问出现404，排查步骤：**
 
 1. 查看控制台输出，看一下是不是缺少了什么jar包。
@@ -431,12 +416,6 @@ Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一
 3. 重启Tomcat 即可解决！
 
 **小结**：看这个估计大部分同学都能理解其中的原理了，但是我们实际开发才不会这么写，不然就疯了，还学这个玩意干嘛！我们来看个注解版实现，这才是SpringMVC的精髓
-
-
-
-
-
-
 
 ### 2. 注解版
 
@@ -475,15 +454,15 @@ Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一
 
    注意点：
 
-   - 注意web.xml版本问题，要最新版！
+    - 注意web.xml版本问题，要最新版！
 
-   - 注册DispatcherServlet
+    - 注册DispatcherServlet
 
-   - 关联SpringMVC的配置文件
+    - 关联SpringMVC的配置文件
 
-   - 启动级别为1
+    - 启动级别为1
 
-   - 映射路径为 / 【不要用/*，会404】 
+    - 映射路径为 / 【不要用/*，会404】
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?> 
@@ -514,20 +493,20 @@ Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一
 
    **/ 和 /* 的区别：**
 
-   - < url-pattern > / </ url-pattern > 不会匹配到.jsp， 只针对我们编写的请求；
+    - < url-pattern > / </ url-pattern > 不会匹配到.jsp， 只针对我们编写的请求；
 
-     即：.jsp 不会进入spring的 DispatcherServlet类 。
+      即：.jsp 不会进入spring的 DispatcherServlet类 。
 
-   - < url-pattern > /* </ url-pattern > 会匹配 *.jsp，
+    - < url-pattern > /* </ url-pattern > 会匹配 *.jsp，
 
-     会出现返回 jsp视图 时再次进入spring的DispatcherServlet 类，导致找不到对应的controller所以报404错。
+      会出现返回 jsp视图 时再次进入spring的DispatcherServlet 类，导致找不到对应的controller所以报404错。
 
 5. **添加Spring MVC配置文件**
 
-   - 让IOC的注解生效
-   - 静态资源过滤 ：HTML . JS . CSS . 图片 ， 视频 .....
-   - MVC的注解驱动
-   - 配置视图解析器
+    - 让IOC的注解生效
+    - 静态资源过滤 ：HTML . JS . CSS . 图片 ， 视频 .....
+    - MVC的注解驱动
+    - 配置视图解析器
 
    在resource目录下添加springmvc-servlet.xml配置文件，配置的形式与Spring容器配置基本类似，为了支持基于注解的IOC，设置了自动扫描包的功能，具体配置信息如下：
 
@@ -585,10 +564,10 @@ Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一
    }
    ```
 
-   - @Controller是为了让Spring IOC容器初始化时自动扫描到；
-   - @RequestMapping是为了映射请求路径，这里因为类与方法上都有映射所以访问时应该是/HelloController/hello；
-   - 方法中声明Model类型的参数是为了把Action中的数据带到视图中；
-   - 方法返回的结果是视图的名称hello，加上配置文件中的前后缀变成WEB-INF/jsp/**hello**.jsp。 
+    - @Controller是为了让Spring IOC容器初始化时自动扫描到；
+    - @RequestMapping是为了映射请求路径，这里因为类与方法上都有映射所以访问时应该是/HelloController/hello；
+    - 方法中声明Model类型的参数是为了把Action中的数据带到视图中；
+    - 方法返回的结果是视图的名称hello，加上配置文件中的前后缀变成WEB-INF/jsp/**hello**.jsp。
 
 7. 创建视图层
 
@@ -609,12 +588,6 @@ Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一
 8. 配置Tomcat运行
 
    配置Tomcat ， 开启服务器 ， 访问 对应的请求路径！
-
-
-
-
-
-
 
 ### 3. 小结
 
@@ -647,12 +620,6 @@ Spring MVC框架像许多其他MVC框架一样, **以请求为驱动 , 围绕一
 
 ## 第 4 章: Controller及RestFul
 
-
-
-
-
-
-
 ### 1. 控制器Controller
 
 控制器复杂提供访问应用程序的行为，通常通过接口定义或注解定义两种方法实现。
@@ -681,8 +648,8 @@ public interface Controller {
 
 1. 新建一个Moudle，springmvc-04-controller 。 将刚才的03 拷贝一份, 我们进行操作！
 
-   - 删掉HelloController
-   - mvc的配置文件只留下 视图解析器！
+    - 删掉HelloController
+    - mvc的配置文件只留下 视图解析器！
 
 2. 编写一个Controller类，ControllerTest1
 
@@ -756,8 +723,6 @@ public interface Controller {
 
 - 运行tomcat测试
 
-
-
 注解方式是平时使用的最多的方式！除了这两种之外还有其他的方式，大家想要自己研究的话，可以参考我的博客：https://www.cnblogs.com/hellokuangshen/p/11270742.html
 
 ### 4. RequestMapping
@@ -801,8 +766,7 @@ public interface Controller {
 
 **概念**
 
-- Restful就是一个资源定位及资源操作的风格。不是标准也不是协议，只是一种风格。基于这个风格设
-  计的软件可以更简洁，更有层次，更易于实现缓存等机制。
+- Restful就是一个资源定位及资源操作的风格。不是标准也不是协议，只是一种风格。基于这个风格设 计的软件可以更简洁，更有层次，更易于实现缓存等机制。
 
 **功能**
 
@@ -859,10 +823,10 @@ http://127.0.0.1/item/1 删除,DELETE
 
    思考：使用路径变量的好处？
 
-   - 使路径变得更加简洁；
+    - 使路径变得更加简洁；
 
-   - 获得参数更加方便，框架会自动进行类型转换。
-   - 通过路 径变量的类型可以约束访问参数，如果类型不一样，则访问不到对应的请求方法，如这里访问是的路径是/commit/1/a，则路径与方法不匹配，而不会是参数转换失败。
+    - 获得参数更加方便，框架会自动进行类型转换。
+    - 通过路 径变量的类型可以约束访问参数，如果类型不一样，则访问不到对应的请求方法，如这里访问是的路径是/commit/1/a，则路径与方法不匹配，而不会是参数转换失败。
 
 4. 我们来修改下对应的参数类型，再次测试
 
@@ -910,33 +874,27 @@ http://127.0.0.1/item/1 删除,DELETE
 
   **小结：**
 
-  - Spring MVC 的 @RequestMapping 注解能够处理 HTTP 请求的方法, 比如 GET, PUT, POST, DELETE 以 及 PATCH。
+    - Spring MVC 的 @RequestMapping 注解能够处理 HTTP 请求的方法, 比如 GET, PUT, POST, DELETE 以 及 PATCH。
 
-  - **所有的地址栏请求默认都会是** **HTTP GET** **类型的。**
+    - **所有的地址栏请求默认都会是** **HTTP GET** **类型的。**
 
-  - 方法级别的注解变体有如下几个： 组合注解
+    - 方法级别的注解变体有如下几个： 组合注解
 
-    ```java
-    @GetMapping 
-    @PostMapping 
-    @PutMapping 
-    @DeleteMapping 
-    @PatchMapping
-    ```
+      ```java
+      @GetMapping 
+      @PostMapping 
+      @PutMapping 
+      @DeleteMapping 
+      @PatchMapping
+      ```
 
-    @GetMapping 是一个组合注解
+      @GetMapping 是一个组合注解
 
-    它所扮演的是 @RequestMapping(method =RequestMethod.GET) 的一个快捷方式。平时使用的会比较多！
-
-    
+      它所扮演的是 @RequestMapping(method =RequestMethod.GET) 的一个快捷方式。平时使用的会比较多！
 
 ---
 
-
-
 ## 第 5 章: 结果跳转方式
-
-
 
 ### 1. ModelAndView
 
@@ -954,7 +912,7 @@ http://127.0.0.1/item/1 删除,DELETE
 </bean>
 ```
 
-对应的controller类 
+对应的controller类
 
 ```java
 public class ControllerTest1 implements Controller { 
@@ -967,8 +925,6 @@ public class ControllerTest1 implements Controller {
     } 
 }
 ```
-
-
 
 ### 2. SerlvetAPI
 
@@ -997,10 +953,6 @@ public class ResultGo {
     }
 }
 ```
-
-
-
-
 
 ### 3. SpringMVC
 
@@ -1033,7 +985,7 @@ public class ResultSpringMVC {
 
 重定向 , 不需要视图解析器 , 本质就是重新请求一个新地方嘛 , 所以注意路径问题.
 
-可以重定向到另外一个请求实现 
+可以重定向到另外一个请求实现
 
 ```java
 @Controller
@@ -1051,19 +1003,9 @@ public class ResultSpringMVC2 {
 }
 ```
 
-
-
-
-
-
-
-
-
 ---
 
 ## 第 6 章: 数据处理
-
-
 
 ### 1. 处理提交数据
 
@@ -1131,12 +1073,6 @@ public String hello(@RequestParam("username") String name){
 
    说明：如果使用对象的话，前端传递的参数名和对象名必须一致，否则就是null.
 
-
-
-
-
-
-
 ### 2. 数据显示到前端
 
 #### 2.1 方式一: 通过ModelAndView
@@ -1155,8 +1091,6 @@ public class ControllerTest1 implements Controller {
 }
 ```
 
-
-
 #### 2.2 方式二: 通过ModelMap
 
 ModelMap
@@ -1171,8 +1105,6 @@ public String hello(@RequestParam("username") String name, ModelMap model){
     return "hello";
 }
 ```
-
-
 
 #### 2.3 方式三: 通过Model
 
@@ -1189,8 +1121,6 @@ public String hello(@RequestParam("username") String name, Model model){
 }
 ```
 
-
-
 ### 3. 对比
 
 就对于新手而言简单来说使用区别就是：
@@ -1204,10 +1134,6 @@ ModelAndView 可以在储存数据的同时，可以进行设置返回的逻辑�
 当然更多的以后开发考虑的更多的是性能和优化，就不能单单仅限于此的了解。
 
 <u>ps: 请使用80%的时间打好扎实的基础，剩下18%的时间研究框架，2%的时间去学点英文，框架的官方文档永远是最好的教程。</u>
-
-
-
-
 
 ### 4. 乱码问题
 
@@ -1238,11 +1164,9 @@ ModelAndView 可以在储存数据的同时，可以进行设置返回的逻辑�
 
 3. 输入中文测试，发现乱码
 
-
-
 不得不说，乱码问题是在我们开发中十分常见的问题，也是让我们程序猿比较头大的问题！
 
-以前乱码问题通过过滤器解决 , 而SpringMVC给我们提供了一个过滤器 , 可以在web.xml中配置 
+以前乱码问题通过过滤器解决 , 而SpringMVC给我们提供了一个过滤器 , 可以在web.xml中配置
 
 修改了xml文件需要重启服务器！
 
@@ -1357,15 +1281,9 @@ ModelAndView 可以在储存数据的同时，可以进行设置返回的逻辑�
 
    **然后在web.xml中配置这个过滤器即可！**
 
-   乱码问题，需要平时多注意，在尽可能能设置编码的地方，都设置为统一编码 UTF-8！ 
-
-   
-
-
+   乱码问题，需要平时多注意，在尽可能能设置编码的地方，都设置为统一编码 UTF-8！
 
 ## 第 7 章: 整合SSM
-
-
 
 ### 1. 环境要求
 
@@ -1402,8 +1320,6 @@ INSERT INTO `books`(`bookID`,`bookName`,`bookCounts`,`detail`)VALUES
 (2,'MySQL',10,'从删库到跑路'), 
 (3,'Linux',5,'从进门到进牢');
 ```
-
-
 
 ### 3. 基本环境搭建
 
@@ -1499,39 +1415,35 @@ INSERT INTO `books`(`bookID`,`bookName`,`bookCounts`,`detail`)VALUES
 
 4. 建立基本结构和配置框架！
 
-   - com.kuang.pojo
+    - com.kuang.pojo
 
-   - com.kuang.dao
+    - com.kuang.dao
 
-   - com.kuang.service
+    - com.kuang.service
 
-   - com.kuang.controller
+    - com.kuang.controller
 
-   - mybatis-confifig.xml
+    - mybatis-confifig.xml
 
-     ```xml
-     <?xml version="1.0" encoding="UTF-8" ?>
-     <!DOCTYPE configuration 
-     	PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
-     	"http://mybatis.org/dtd/mybatis-3-config.dtd">
-     <configuration> 
-     
-     </configuration>
-     ```
+      ```xml
+      <?xml version="1.0" encoding="UTF-8" ?>
+      <!DOCTYPE configuration 
+          PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+          "http://mybatis.org/dtd/mybatis-3-config.dtd">
+      <configuration> 
+      
+      </configuration>
+      ```
 
-   - applicationContext.xml
+    - applicationContext.xml
 
-     ```xml
-     <?xml version="1.0" encoding="UTF-8"?>
-     <beans xmlns="http://www.springframework.org/schema/beans" 
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-            xsi:schemaLocation="http://www.springframework.org/schema/beans 
-                                http://www.springframework.org/schema/beans/spring- beans.xsd"> </beans>
-     ```
-
-     
-
-   
+      ```xml
+      <?xml version="1.0" encoding="UTF-8"?>
+      <beans xmlns="http://www.springframework.org/schema/beans" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                                 http://www.springframework.org/schema/beans/spring- beans.xsd"> </beans>
+      ```
 
 ### 4. MyBatis层编写
 
@@ -1676,8 +1588,6 @@ INSERT INTO `books`(`bookID`,`bookName`,`bookCounts`,`detail`)VALUES
 
 **OK，到此，底层需求操作编写完毕！**
 
-
-
 ### 5. Spring层
 
 1. 配置Spring整合MyBatis，我们这里数据源使用c3p0连接池；
@@ -1756,8 +1666,6 @@ INSERT INTO `books`(`bookID`,`bookName`,`bookCounts`,`detail`)VALUES
        </bean> 
    </beans>
    ```
-
-
 
 **Spring层搞定！再次理解一下，Spring就是一个大杂烩，一个容器！对吧！**
 
@@ -1850,8 +1758,6 @@ INSERT INTO `books`(`bookID`,`bookName`,`bookCounts`,`detail`)VALUES
        <import resource="spring-mvc.xml"/> 
    </beans>
    ```
-
-   
 
 **配置文件，暂时结束！Controller 和 视图层编写**
 
@@ -2034,7 +1940,6 @@ INSERT INTO `books`(`bookID`,`bookName`,`bookCounts`,`detail`)VALUES
    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <%@ page contentType="text/html;charset=UTF-8" language="java" %> <html> <head><title>修改信息</title> <meta name="viewport" content="width=device-width, initial- scale=1.0"> <!-- 引入 Bootstrap --> <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> </head> <body> <div class="container"> <div class="row clearfix"> <div class="col-md-12 column"> <div class="page-header"> <h1><small>修改信息</small> </h1> </div> </div> </div> <form action="${pageContext.request.contextPath}/book/updateBook" method="post"> <input type="hidden" name="bookID" value="${book.getBookID()}"/> 书籍名称：<input type="text" name="bookName" value="${book.getBookName()}"/> 书籍数量：<input type="text" name="bookCounts" value="${book.getBookCounts()}"/> 书籍详情：<input type="text" name="detail" value="${book.getDetail() }"/> <input type="submit" value="提交"/> </form> </div>
    ```
 
-   
 
 8. BookController 类编写 ， 方法四：删除书籍
 
@@ -2052,8 +1957,6 @@ INSERT INTO `books`(`bookID`,`bookName`,`bookCounts`,`detail`)VALUES
 到目前为止，这个SSM项目整合已经完全的OK了，可以直接运行进行测试！这个练习十分的重要，大家需要保证，不看任何东西，自己也可以完整的实现出来！
 
 **项目结构图**
-
-
 
 ### 7. 小结和展望
 
@@ -2169,24 +2072,18 @@ SpringBoot、SpringCloud开发！
       <div class="row"> <div class="col-md-4 column"> <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/toAddBook">新增</a> <a class="btn btn-primary" href="${pageContext.request.contextPath}/book/allBook">显示全部书籍 </a></div> <div class="col-md-8 column"> <form class="form-inline" action="/book/queryBook" method="post" style="float: right"> <span style="color:red;font-weight: bold">${error} </span> <input type="text" name="queryBookName" class="form- control" placeholder="输入查询书名" required> <input type="submit" value="查询" class="btn btn- primary"></form> </div> </div>
       ```
 
-      
-
 ## 第 8 章: JSON
-
-
 
 ### 1. 什么是JSON
 
 - JSON(JavaScript Object Notation, JS 对象标记) 是一种轻量级的数据交换格式，目前使用特别广泛。
 - 采用完全独立于编程语言的文本格式来存储和表示数据。
 - 简洁和清晰的层次结构使得 JSON 成为理想的数据交换语言。
-- 易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。
-  在 JavaScript 语言中，一切都是对象。因此，任何JavaScript 支持的类型都可以通过 JSON 来表示，例如字符串、数字、对象、数组等。看看他的要求和语法格式：
+- 易于人阅读和编写，同时也易于机器解析和生成，并有效地提升网络传输效率。 在 JavaScript 语言中，一切都是对象。因此，任何JavaScript 支持的类型都可以通过 JSON
+  来表示，例如字符串、数字、对象、数组等。看看他的要求和语法格式：
 - 对象表示为键值对，数据由逗号分隔
 - 花括号保存对象
 - 方括号保存数组
-
-
 
 **JSON** **键值对**是用来保存 JavaScript 对象的一种方式，和 JavaScript 对象的写法也大同小异，键/值对组合中的键名写在前面并用双引号 "" 包裹，使用冒号 : 分隔，然后紧接着值：
 
@@ -2335,7 +2232,7 @@ SpringBoot、SpringCloud开发！
   </beans>
   ```
 
-- 我们随便编写一个User的实体类，然后我们去编写我们的测试Controller； 
+- 我们随便编写一个User的实体类，然后我们去编写我们的测试Controller；
 
   ```java
   //需要导入lombok
@@ -2384,11 +2281,7 @@ SpringBoot、SpringCloud开发！
 
 - 再次测试， http://localhost:8080/json1 ， 乱码问题OK！
 
-
-
 **【注意：使用json记得处理乱码问题】**
-
-
 
 ### 3. 代码优化
 
@@ -2437,8 +2330,6 @@ public class UserController {
 ```
 
 启动tomcat测试，结果都正常输出！
-
-
 
 ### 4. 测试集合输出
 
@@ -2508,8 +2399,6 @@ public String json4() throws JsonProcessingException {
 
 运行结果 : 成功的输出了时间！
 
-
-
 ### 6. 抽取工具类
 
 **如果要经常使用的话，这样是比较麻烦的，我们可以将这些代码封装到一个工具类中；我们去编写下**
@@ -2567,15 +2456,14 @@ fastjson 的 pom依赖！
 fastjson 三个主要的类：
 
 - 【JSONObject 代表 json 对象 】
-  - JSONObject实现了Map接口, 猜想 JSONObject底层操作是由Map实现的。
-  - JSONObject对应json对象，通过各种形式的get()方法可以获取json对象中的数据，也可利用诸如size()，isEmpty()等方法获取"键：值"对的个数和判断是否为空。其本质是通过实现Map接口并调用接口中的方法完成的。
+    - JSONObject实现了Map接口, 猜想 JSONObject底层操作是由Map实现的。
+    - JSONObject对应json对象，通过各种形式的get()方法可以获取json对象中的数据，也可利用诸如size()，isEmpty()等方法获取"键：值"
+      对的个数和判断是否为空。其本质是通过实现Map接口并调用接口中的方法完成的。
 - 【JSONArray 代表 json 对象数组】
-  - 内部是有List接口中的方法来完成操作的
+    - 内部是有List接口中的方法来完成操作的
 - 【JSON 代表 JSONObject和JSONArray的转化】
-  - JSON类源码分析与使用
-  - 仔细观察这些方法，主要是实现json对象，json对象数组，javabean对象，json字符串之间的相互转化。
-
-
+    - JSON类源码分析与使用
+    - 仔细观察这些方法，主要是实现json对象，json对象数组，javabean对象，json字符串之间的相互转化。
 
 **代码测试，我们新建一个FastJsonDemo 类**
 
@@ -2612,11 +2500,7 @@ public class FastJsonDemo {
 
 这种工具类，我们只需要掌握使用就好了，在使用的时候在根据具体的业务去找对应的实现。和以前的commons-io那种工具包一样，拿来用就好了！
 
-
-
 ## 第 9 章: Ajax
-
-
 
 ### 1. 简介
 
@@ -2629,8 +2513,6 @@ public class FastJsonDemo {
 - 传统的网页(即不用ajax技术的网页)，想要更新内容或者提交一个表单，都需要重新加载整个网页。
 - 使用ajax技术的网页，通过在后台服务器进行少量的数据交换，就可以实现异步局部更新。
 - 使用Ajax，用户可以创建接近本地桌面应用的直接、高可用、更丰富、更动态的Web用户界面。
-
-
 
 ### 2. 伪造Ajax
 
@@ -2652,10 +2534,6 @@ public class FastJsonDemo {
 - 登陆时，提示用户名密码错误
 - 删除数据行时，将行ID发送到后台，后台在数据库中删除，数据库删除成功后，在页面DOM中将数据行也删除。
 - ....等等
-
-
-
-
 
 ### 3. Jquery.ajax
 
@@ -2838,13 +2716,7 @@ public List<User> ajax2(){
     </html>
 ```
 
-
-
 **成功实现了数据回显！可以体会一下Ajax的好处！**
-
-
-
-
 
 ### 4. 注册提示效果
 
@@ -3010,15 +2882,9 @@ public String ajax3(String name,String pwd){
 </html>
 ```
 
-
-
 ---
 
 ## 第 10 章: 拦截器
-
-
-
-
 
 ### 1. 概述
 
@@ -3106,16 +2972,13 @@ SpringMVC的处理器拦截器类似于Servlet开发中的过滤器Filter,用于
 
 7. 启动tomcat 测试一下！
 
-
-
 ### 3. 验证用户是否登录(认证用户)
 
 **实现思路**
 
 - 有一个登陆页面，需要写一个controller访问页面。
-- 登陆页面有一提交表单的动作。需要在controller中处理。判断用户名密码是否正确。如果正确，向session中写入用户信息。返回登陆成功。 
+- 登陆页面有一提交表单的动作。需要在controller中处理。判断用户名密码是否正确。如果正确，向session中写入用户信息。返回登陆成功。
 - 拦截用户请求，判断用户是否登陆。如果用户已经登陆。放行， 如果用户未登陆，跳转到登陆页面
-
 
 
 1. 编写一个登陆页面 login.jsp
@@ -3248,27 +3111,14 @@ SpringMVC的处理器拦截器类似于Servlet开发中的过滤器Filter,用于
 
    **OK，测试登录拦截功能无误.**
 
-   
-
-   
-
-   
-
-   
-
-
-
 ---
 
 ## 第 11 章: 文件上传和下载
 
-
-
-
-
 ### 1. 准备工作
 
-文件上传是项目开发中最常见的功能之一 ,springMVC 可以很好的支持文件上传，但是SpringMVC上下文中默认没有装配MultipartResolver，因此默认情况下其不能处理文件上传工作。如果想使用Spring的文件上传功能，则需要在上下文中配置MultipartResolver。
+文件上传是项目开发中最常见的功能之一 ,springMVC
+可以很好的支持文件上传，但是SpringMVC上下文中默认没有装配MultipartResolver，因此默认情况下其不能处理文件上传工作。如果想使用Spring的文件上传功能，则需要在上下文中配置MultipartResolver。
 
 前端表单要求：为了能上传文件，必须将表单的method设置为POST，并将enctype设置为multipart/form-data。只有在这样的情况下，浏览器才会把用户选择的文件以二进制数据发送给服务器；
 
@@ -3287,13 +3137,15 @@ SpringMVC的处理器拦截器类似于Servlet开发中的过滤器Filter,用于
   </form>
   ```
 
-  一旦设置了enctype为multipart/form-data，浏览器即会采用二进制流的方式来处理表单数据，而对于文件上传的处理则涉及在服务器端解析原始的HTTP响应。在2003年，Apache Software Foundation发布了开源的Commons FileUpload组件，其很快成为Servlet/JSP程序员上传文件的最佳选择。
+  一旦设置了enctype为multipart/form-data，浏览器即会采用二进制流的方式来处理表单数据，而对于文件上传的处理则涉及在服务器端解析原始的HTTP响应。在2003年，Apache Software
+  Foundation发布了开源的Commons FileUpload组件，其很快成为Servlet/JSP程序员上传文件的最佳选择。
 
-- Servlet3.0规范已经提供方法来处理文件上传，但这种上传需要在Servlet中完成。而Spring MVC则提供了更简单的封装。Spring MVC为文件上传提供了直接的支持，这种支持是用即插即用的MultipartResolver实现的。
+- Servlet3.0规范已经提供方法来处理文件上传，但这种上传需要在Servlet中完成。而Spring MVC则提供了更简单的封装。Spring
+  MVC为文件上传提供了直接的支持，这种支持是用即插即用的MultipartResolver实现的。
 
 - Spring MVC使用Apache Commons FileUpload技术实现了一个MultipartResolver实现类：
 
-  CommonsMultipartResolver。因此，SpringMVC的文件上传还需要依赖Apache CommonsFileUpload的组件。 
+  CommonsMultipartResolver。因此，SpringMVC的文件上传还需要依赖Apache CommonsFileUpload的组件。
 
 ### 2. 文件上传
 
@@ -3332,9 +3184,9 @@ SpringMVC的处理器拦截器类似于Servlet开发中的过滤器Filter,用于
 
    CommonsMultipartFile 的 常用方法：
 
-   - String getOriginalFilename()：获取上传文件的原名
-   - InputStream getInputStream()：获取文件流
-   - void transferTo(File dest)：将上传文件保存到一个目录文件中
+    - String getOriginalFilename()：获取上传文件的原名
+    - InputStream getInputStream()：获取文件流
+    - void transferTo(File dest)：将上传文件保存到一个目录文件中
 
    我们去实际测试一下
 
@@ -3389,8 +3241,6 @@ SpringMVC的处理器拦截器类似于Servlet开发中的过滤器Filter,用于
 
 5. 测试上传文件，OK！
 
-
-
 **采用file.Transto 来保存上传的文件**
 
 1. 编写Controller
@@ -3416,13 +3266,7 @@ SpringMVC的处理器拦截器类似于Servlet开发中的过滤器Filter,用于
 
 2. 前端表单提交地址修改
 
-3. 访问提交测试，OK！ 
-
-
-
-
-
-
+3. 访问提交测试，OK！
 
 ### 3. 文件下载
 
@@ -3468,8 +3312,6 @@ public String downloads(HttpServletResponse response ,HttpServletRequest request
     return null;
 }
 ```
-
-
 
 前端
 

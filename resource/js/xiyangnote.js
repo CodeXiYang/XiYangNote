@@ -5,7 +5,7 @@
  * */
 
 
-window.onload=function (){
+window.onload = function () {
     //1. 点击button按钮显示折叠代码
 
     //2.

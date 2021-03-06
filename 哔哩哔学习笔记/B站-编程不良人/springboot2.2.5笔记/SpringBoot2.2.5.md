@@ -6,15 +6,14 @@
 >
 > 讲述人: B站-编程不良人
 
-
-
 ## 1. springboot的引言
 
-Spring Boot是由`Pivotal团队提供的全新框架`，其设计目的是用来`简化Spring应用的 初始搭建以及开发过程`。该框架使用了`特定的方式来进行配置`，从而使开发人员不 再需要定义样板化的配置。通过这种方式，Spring Boot致力于在蓬勃发展的快速应 用开发领域(rapid application development)成为领导者。
+Spring Boot是由`Pivotal团队提供的全新框架`，其设计目的是用来`简化Spring应用的 初始搭建以及开发过程`。该框架使用了`特定的方式来进行配置`，从而使开发人员不 再需要定义样板化的配置。通过这种方式，Spring
+Boot致力于在蓬勃发展的快速应 用开发领域(rapid application development)成为领导者。
 
 `springboot(微框架) = springmvc(控制器) + spring core(项目管理)`
 
-SSM Spring springmvc  mybatis    <----   SSM Spring  stauts2|struts1  mybatis  <--- SSH Spring Struts  Hibernate 
+SSM Spring springmvc mybatis    <---- SSM Spring stauts2|struts1 mybatis  <--- SSH Spring Struts Hibernate
 
 ---
 
@@ -33,7 +32,7 @@ SSM Spring springmvc  mybatis    <----   SSM Spring  stauts2|struts1  mybatis  <
 
 ![image-20200321091519423](assets/image-20200321091519423.png)
 
-- `springboot 项目中必须在src/main/resources中放入application.yml(.properties)核心配置文件  名字必须为:application`
+- `springboot 项目中必须在src/main/resources中放入application.yml(.properties)核心配置文件 名字必须为:application`
 - `springboot 项目中必须在src/main/java中所有子包之外构建全局入口类型,xxApplication,入口类一个springboot项目只能有一个`
 
 ## 4. springboot的环境搭建
@@ -56,7 +55,7 @@ SSM Spring springmvc  mybatis    <----   SSM Spring  stauts2|struts1  mybatis  <
 		Eclipse 版本  17版本之后
 ```
 
-### 	4.1 项目中引入依赖
+### 4.1 项目中引入依赖
 
 ```xml
     <!--继承springboot的父项目-->
@@ -75,11 +74,11 @@ SSM Spring springmvc  mybatis    <----   SSM Spring  stauts2|struts1  mybatis  <
     </dependencies>
 ```
 
-### 	4.2 引入配置文件
+### 4.2 引入配置文件
 
-​		`项目中src/main/resources/application.yml`
+​        `项目中src/main/resources/application.yml`
 
-### 	4.3 建包并创建控制器
+### 4.3 建包并创建控制器
 
 ```java
 //在项目中创建指定的包结构
@@ -100,7 +99,7 @@ SSM Spring springmvc  mybatis    <----   SSM Spring  stauts2|struts1  mybatis  <
                	    		  		
 ```
 
-### 	4.4 编写入口类
+### 4.4 编写入口类
 
 ```java
 //在项目中如下的包结构中创建入口类 Application
@@ -115,7 +114,7 @@ SSM Spring springmvc  mybatis    <----   SSM Spring  stauts2|struts1  mybatis  <
             }
 ```
 
-### 	4.5 运行main启动项目
+### 4.5 运行main启动项目
 
 ```java
 o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
@@ -125,7 +124,7 @@ com.baizhi.Application : Started Application in 2.152 seconds (JVM running for 2
 //说明:  出现以上日志说明启动成功
 ```
 
-### 	4.6 访问项目 
+### 4.6 访问项目
 
 ```java
 //注意: springboot的项目默认没有项目名
@@ -267,7 +266,7 @@ public class HelloController {
 
 ## 9.springboot中注入
 
-> ​	springboot中提供了三种注入方式: `注入基本属性`,`对象注入`
+> ​ springboot中提供了三种注入方式: `注入基本属性`,`对象注入`
 
 ### 9.1 基本属性注入
 
@@ -342,7 +341,7 @@ user:
 
 ### 10.1 集成jsp模板
 
-#### 	10.1.1 引入jsp的集成jar包
+#### 10.1.1 引入jsp的集成jar包
 
 ```xml
 <dependency>
@@ -357,7 +356,7 @@ user:
 </dependency>
 ```
 
-#### 	10.1.2 引入jsp运行插件
+#### 10.1.2 引入jsp运行插件
 
 ```xml
 <build>
@@ -372,7 +371,7 @@ user:
 </build>
 ```
 
-#### 	10.1.3 配置视图解析器
+#### 10.1.3 配置视图解析器
 
 ```yml
 #在配置文件中引入视图解析器
@@ -385,33 +384,13 @@ spring:
 
 #### 10.1.4 第一种方式使用插件启动
 
- ![image-20191129124602959](assets/image-20191129124602959.png)
-
-
+![image-20191129124602959](assets/image-20191129124602959.png)
 
 #### 10.1.5 第二种方式使用idea中指定工作目录启动  [推荐]
 
- ![image-20191129124727562](assets/image-20191129124727562.png)
+![image-20191129124727562](assets/image-20191129124727562.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#### 	10.1.6 启动访问jsp页面
+#### 10.1.6 启动访问jsp页面
 
 ```markdown
 http://localhost:8989/cmfz/index.jsp
@@ -425,9 +404,10 @@ server.servlet.jsp.init-parameters.development=true
 
 ### 10.2 集成thymelaf模板
 
-> Thymeleaf是一个用于web和独立环境的现代服务器端Java模板引擎。  --摘自官网https://www.thymeleaf.org/
+> Thymeleaf是一个用于web和独立环境的现代服务器端Java模板引擎。 --摘自官网https://www.thymeleaf.org/
 
-`Thymeleaf`是跟Velocity、FreeMarker类似的模板引擎，它可以完全替代JSP，相较与其他的模板引擎相比, Thymeleaf在有网络和无网络的环境下皆可运行，即它可以让美工在浏览器查看页面的静态效果，也可以让程序员在服务器查看带数据的动态页面效果。
+`Thymeleaf`是跟Velocity、FreeMarker类似的模板引擎，它可以完全替代JSP，相较与其他的模板引擎相比,
+Thymeleaf在有网络和无网络的环境下皆可运行，即它可以让美工在浏览器查看页面的静态效果，也可以让程序员在服务器查看带数据的动态页面效果。
 
 #### 10.2.1 引入依赖
 
@@ -551,8 +531,6 @@ model.addAttribute("username","小陈");
 
   ![image-20200323103452620](assets/image-20200323103452620.png)
 
-  
-
 ```markdown
 # 总结
 	1.使用 th:text="${属性名}"  获取对应数据,获取数据时会将对应标签中数据清空,因此最好是空标签
@@ -638,11 +616,9 @@ bir: <span th:text="${user.bir}"></span>  ====  <span th:text="${#dates.format(u
    <script th:src="@{/js/jquery-min.js}"></script>
   ```
 
-  
-
 ## 11. springboot集成mybatis
 
-### 	11.1 引入依赖
+### 11.1 引入依赖
 
 ```markdown
 <!--整合mybatis-->
@@ -667,7 +643,7 @@ bir: <span th:text="${user.bir}"></span>  ====  <span th:text="${#dates.format(u
 >说明:由于springboot整合mybatis版本中默认依赖mybatis 因此不需要额外引入mybati版本,否则会出现冲突
 ```
 
-### 	11.2 配置配置文件
+### 11.2 配置配置文件
 
 ```yml
 spring:
@@ -683,7 +659,7 @@ spring:
     password: root								 	#指定密码
 ```
 
-### 	11.3 加入mybatis配置
+### 11.3 加入mybatis配置
 
 ```yml
 #配置文件中加入如下配置:
@@ -704,9 +680,7 @@ public class Application {
 }
 ```
 
-
-
-### 	11.4 建表
+### 11.4 建表
 
 ```sql
 CREATE TABLE `t_clazz` (
@@ -717,7 +691,7 @@ CREATE TABLE `t_clazz` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
-### 	11.5 开发实体类
+### 11.5 开发实体类
 
 ```java
 public class Clazz {
@@ -728,7 +702,7 @@ public class Clazz {
 }
 ```
 
-### 	11.6 开发DAO接口以及Mapper
+### 11.6 开发DAO接口以及Mapper
 
 ```java
 public interface ClazzDAO {
@@ -746,7 +720,7 @@ public interface ClazzDAO {
 </mapper>
 ```
 
-### 	11.7 开发Service以及实现
+### 11.7 开发Service以及实现
 
 ```java
 //接口
@@ -768,7 +742,7 @@ public class ClazzServiceImpl implements  ClazzService {
 }
 ```
 
-### 	11.8 引入测试依赖
+### 11.8 引入测试依赖
 
 ```xml
  <dependency>
@@ -778,7 +752,7 @@ public class ClazzServiceImpl implements  ClazzService {
 </dependency>
 ```
 
-### 	11.9 编写测试类
+### 11.9 编写测试类
 
 ```java
 @RunWith(SpringRunner.class)
@@ -819,13 +793,13 @@ server:
 
 ## 13.springboot中devtools热部署
 
-### 13.1  引言
+### 13.1 引言
 
-> ​	`为了进一步提高开发效率,springboot为我们提供了全局项目热部署,日后在开发过程中修改了部分代码以及相关配置文件后,不需要每次重启使修改生效,在项目中开启了springboot全局热部署之后只需要在修改之后等待几秒即可使修改生效。`
+> ​    `为了进一步提高开发效率,springboot为我们提供了全局项目热部署,日后在开发过程中修改了部分代码以及相关配置文件后,不需要每次重启使修改生效,在项目中开启了springboot全局热部署之后只需要在修改之后等待几秒即可使修改生效。`
 
 ### 13.2 开启热部署
 
-#### 	13.2.1 项目中引入依赖
+#### 13.2.1 项目中引入依赖
 
 ```xml
 <dependency>
@@ -835,7 +809,7 @@ server:
 </dependency>
 ```
 
-#### 	13.2.2 设置idea中支持自动编译
+#### 13.2.2 设置idea中支持自动编译
 
 ```markdown
 # 1.开启自动编译
@@ -864,19 +838,19 @@ server:
 
 > `注意:日志出现restartedMain代表已经生效,在使用热部署时如果遇到修改之后不能生效,请重试重启项目在试`
 
-##  14. logback日志的集成
+## 14. logback日志的集成
 
-### 	14.1 logback简介
+### 14.1 logback简介
 
 > Logback是由[log4j](https://baike.baidu.com/item/log4j/480673)创始人设计的又一个开源日志组件。目前，logback分为三个模块：logback-core，logback-classic和logback-access。是对log4j日志展示进一步改进
 
-### 	14.2 日志的级别
+### 14.2 日志的级别
 
 	> DEBUG < INFO < WARN < ERROR < OFF
 	>
 	> 日志级别由低到高:  `日志级别越高输出的日志信息越少`
 
-### 	14.3 项目中日志分类
+### 14.3 项目中日志分类
 
 	> 日志分为两类
 	>
@@ -884,7 +858,7 @@ server:
 	>
 	>  一种是logger :         用来监听项目中指定包中的日志信息
 
-### 	14.4 java项目中使用
+### 14.4 java项目中使用
 
 #### 14.4.1 logback配置文件
 
@@ -912,7 +886,7 @@ server:
 </configuration>
 ```
 
-#### 		14.4.2 具体类中使用日志
+#### 14.4.2 具体类中使用日志
 
 ```java
 @Controller
@@ -948,15 +922,15 @@ logging:
 
 ## 15. 切面编程
 
-### 	15.1 引言
+### 15.1 引言
 
 > springboot是对原有项目中spring框架和springmvc的进一步封装,因此在springboot中同样支持spring框架中AOP切面编程,不过在springboot中为了快速开发仅仅提供了注解方式的切面编程.
 
 ![image-20200327115039033](assets/image-20200327115039033.png)
 
-### 	15.2 使用
+### 15.2 使用
 
-#### 		15.2.1 引入依赖
+#### 15.2.1 引入依赖
 
 ```xml
 <dependency>
@@ -965,7 +939,7 @@ logging:
 </dependency>
 ```
 
-#### 		15.2.2 相关注解
+#### 15.2.2 相关注解
 
 ```java
 /**
@@ -976,7 +950,7 @@ logging:
 **/
 ```
 
-#### 		15.2.3 前置切面
+#### 15.2.3 前置切面
 
 ```java
 @Aspect
@@ -992,7 +966,7 @@ public class MyAspect {
 }
 ```
 
-#### 		15.2.4 后置切面
+#### 15.2.4 后置切面
 
 ```java
 @Aspect
@@ -1010,7 +984,7 @@ public class MyAspect {
 
 	> **注意: 前置通知和后置通知都没有返回值,方法参数都为joinpoint**
 
-#### 	15.2.5 环绕切面
+#### 15.2.5 环绕切面
 
 ```java
 @Aspect
@@ -1039,7 +1013,7 @@ public class MyAspect {
 
 定义:`用户访问当前系统,将自己本地计算机中文件通过浏览器上传到当前系统所在的服务器过程中称之为文件的上传`
 
-#### 	13.1.1 准备上传页面
+#### 13.1.1 准备上传页面
 
 ```html
 <form action="路径...." method="post" enctype="multipart/form-data">
@@ -1053,7 +1027,7 @@ public class MyAspect {
 -->
 ```
 
-#### 	13.1.2 编写控制器
+#### 13.1.2 编写控制器
 
 ```java
 @Controller
@@ -1068,7 +1042,7 @@ public class FileController {
 }
 ```
 
-#### 	13.1.3 修改文件上传大小
+#### 13.1.3 修改文件上传大小
 
 ```yml
 
@@ -1085,17 +1059,15 @@ spring.servlet.multipart.max-file-size=500MB
 spring.servlet.multipart.max-request-size=500MB
 ```
 
+#### 13.2 文件下载
 
-
-#### 	13.2 文件下载
-
-##### 		13.2.1 提供下载文件链接
+##### 13.2.1 提供下载文件链接
 
 ```html
 <a href="../file/download?fileName=corejava.txt">corejava.txt</a>
 ```
 
-##### 		13.2.2 开发控制器
+##### 13.2.2 开发控制器
 
 ```java
 @RequestMapping("/download")
@@ -1114,7 +1086,7 @@ public void download(String fileName, HttpServletRequest request, HttpServletRes
 
 ## 14. 拦截器
 
-### 	14.1 开发拦截器
+### 14.1 开发拦截器
 
 ```java
 public class MyInterceptor implements HandlerInterceptor {
@@ -1136,7 +1108,7 @@ public class MyInterceptor implements HandlerInterceptor {
 }
 ```
 
-### 	14.2 配置拦截器
+### 14.2 配置拦截器
 
 ```java
 //1.x中拦截器配置
@@ -1186,17 +1158,15 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
 }
 ```
 
-
-
 ------
 
 ## 15. war包部署
 
-### 	15.1 设置打包方式为war
+### 15.1 设置打包方式为war
 
-> ​	**<packaging>war</packaging>**
+> ​    **<packaging>war</packaging>**
 
-### 	15.2 在插件中指定入口类
+### 15.2 在插件中指定入口类
 
 ```xml
 <build>
@@ -1217,7 +1187,7 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
 </build>	
 ```
 
-### 	15.3 排除内嵌的tomcat
+### 15.3 排除内嵌的tomcat
 
 ```xml
 <dependency>
@@ -1233,7 +1203,7 @@ public class InterceptorConfig extends WebMvcConfigurationSupport {
 </dependency>
 ```
 
-### 	15.4 配置入口类
+### 15.4 配置入口类
 
 ```java
 //1.继承SpringBootServletInitializer
@@ -1249,7 +1219,7 @@ public class Application extends SpringBootServletInitializer{
 }
 ```
 
-### 	15.5 打包测试
+### 15.5 打包测试
 
 ```java
 /* 一旦使用war包部署注意:

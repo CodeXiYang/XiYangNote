@@ -1,7 +1,5 @@
 # Typora主题
 
-
-
 ## Pie主题
 
 github地址: https://github.com/kevinzhao2233/typora-theme-pie

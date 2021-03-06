@@ -1,14 +1,12 @@
 # SpringBoot2.2.5
 
-> 课程名称: [Springboot2.2.5](https://www.bilibili.com/video/BV1PE411i7CV?from=search&seid=6853131319374438557) 
+> 课程名称: [Springboot2.2.5](https://www.bilibili.com/video/BV1PE411i7CV?from=search&seid=6853131319374438557)
 >
 > 课程概述: 从初识SpringBoot，然后进入web开发，原理探究，再到数据库连接，然后集成一些常用的框架，由易到难，层层递进
 >
 > 讲述人:B站-遇见狂神说
 
 ## 第 1 章: 微服务阶段学习路线及说明
-
-
 
 ### 1.1 微服务前的网站开发技术栈
 
@@ -20,11 +18,9 @@
 
 需要注意的是: 之前的项目需要打成war包在tomcat容器上面运行,然而SpringBoot可以直接打包成jar运行,SpringBoot中内嵌了Tomcat,所以也可以打包成war运行
 
-
-
 ### 1.2 微服务网站开发技术栈
 
->  微服务阶段需要学习的大体方向有两个框架,一个是SpringBoot,本比较使用的SpringBoot版本是`2.2.5` ;SpringBoot框架是用来做后端web开发的,每个SrpingBoot项目就是一个服务,当服务太多不好管理的时,SpringCloud应运而生,也就是说SpringCloud就是专门用来管理SpringBoot编写的独立的项目,就是大家常说的微服务开发
+> 微服务阶段需要学习的大体方向有两个框架,一个是SpringBoot,本比较使用的SpringBoot版本是`2.2.5` ;SpringBoot框架是用来做后端web开发的,每个SrpingBoot项目就是一个服务,当服务太多不好管理的时,SpringCloud应运而生,也就是说SpringCloud就是专门用来管理SpringBoot编写的独立的项目,就是大家常说的微服务开发
 
 #### 1.2.1 SpringBoot学习目标
 
@@ -64,13 +60,7 @@
 
 9.SpringCloud Config
 
-
-
-
-
 ## 第 2 章 : SpringBoot如门及原理
-
-
 
 ### 2.1 SpringBoot简介
 
@@ -80,13 +70,11 @@ Spring是一个开源框架，2003 年兴起的一个轻量级的Java 开发框�
 
 **Spring是为了解决企业级应用开发的复杂性而创建的，简化开发。**
 
-
-
 #### 2.1.2 Spring如何简化开发的
 
 *为了降低Java开发的复杂性，Spring采用了以下4种关键策略：*
 
-1、基于POJO的轻量级和最小侵入性编程，所有东西都是bean； 
+1、基于POJO的轻量级和最小侵入性编程，所有东西都是bean；
 
 2、通过IOC，依赖注入（DI）和面向接口实现松耦合；
 
@@ -96,15 +84,18 @@ Spring是一个开源框架，2003 年兴起的一个轻量级的Java 开发框�
 
 #### 2.1.3 什么是SpringBoot
 
-学过javaweb的同学就知道，开发一个web应用，从最初开始接触Servlet结合Tomcat, 跑出一个HelloWolrld程序，是要经历特别多的步骤； 后来就用了框架Struts，再后来是SpringMVC，到了现在的SpringBoot，过一两年又会有其他web框架出现；你们有经历过框架不断的演进，然后自己开发项目所有的技术也再不断的变化、改造吗？建议都可以去经历一遍；
+学过javaweb的同学就知道，开发一个web应用，从最初开始接触Servlet结合Tomcat, 跑出一个HelloWolrld程序，是要经历特别多的步骤；
+后来就用了框架Struts，再后来是SpringMVC，到了现在的SpringBoot，过一两年又会有其他web框架出现；你们有经历过框架不断的演进，然后自己开发项目所有的技术也再不断的变化、改造吗？建议都可以去经历一遍；
 
 ---
 
-言归正传，什么是SpringBoot呢，就是一个javaweb的开发框架，和SpringMVC类似，对比其他javaweb框架的好处，官方说是简化开发，约定大于配置， you can "just run"，能迅速的开发web应用，几行代码开发一个http接口。
+言归正传，什么是SpringBoot呢，就是一个javaweb的开发框架，和SpringMVC类似，对比其他javaweb框架的好处，官方说是简化开发，约定大于配置， you can "just run"
+，能迅速的开发web应用，几行代码开发一个http接口。
 
 ---
 
-所有的技术框架的发展似乎都遵循了一条主线规律：从一个复杂应用场景 衍生 一种规范框架，人们只需要进行各种配置而不需要自己去实现它，这时候强大的配置功能成了优点；发展到一定程度之后，人们根据实际生产应用情况，选取其中实用功能和设计精华，重构出一些轻量级的框架；之后为了提高开发效率，嫌弃原先的各类配置过于麻烦，于是开始提倡“约定大于配置”，进而衍生出一些一站式的解决方案。
+所有的技术框架的发展似乎都遵循了一条主线规律：从一个复杂应用场景 衍生
+一种规范框架，人们只需要进行各种配置而不需要自己去实现它，这时候强大的配置功能成了优点；发展到一定程度之后，人们根据实际生产应用情况，选取其中实用功能和设计精华，重构出一些轻量级的框架；之后为了提高开发效率，嫌弃原先的各类配置过于麻烦，于是开始提倡“约定大于配置”，进而衍生出一些一站式的解决方案。
 
 ---
 
@@ -112,11 +103,14 @@ Spring是一个开源框架，2003 年兴起的一个轻量级的Java 开发框�
 
 ---
 
-随着 Spring 不断的发展，涉及的领域越来越多，项目整合开发需要配合各种各样的文件，慢慢变得不那么易用简单，违背了最初的理念，甚至人称配置地狱。Spring Boot 正是在这样的一个背景下被抽象出来的开发框架，目的为了让大家更容易的使用 Spring 、更容易的集成各种常用的中间件、开源软件；
+随着 Spring 不断的发展，涉及的领域越来越多，项目整合开发需要配合各种各样的文件，慢慢变得不那么易用简单，违背了最初的理念，甚至人称配置地狱。Spring Boot
+正是在这样的一个背景下被抽象出来的开发框架，目的为了让大家更容易的使用 Spring 、更容易的集成各种常用的中间件、开源软件；
 
 ---
 
-Spring Boot 基于 Spring 开发，Spirng Boot 本身并不提供 Spring 框架的核心特性以及扩展功能，只是用于快速、敏捷地开发新一代基于 Spring 框架的应用程序。也就是说，它并不是用来替代 Spring 的解决方案，而是和 Spring 框架紧密结合用于提升 Spring 开发者体验的工具。Spring Boot 以**约定大于配**置的核心思想，默认帮我们进行了很多设置，多数 Spring Boot 应用只需要很少的 Spring 配置。同时它集成了大量常用的第三方库配置（例如 Redis、MongoDB、Jpa、RabbitMQ、Quartz 等等），SpringBoot 应用中这些第三方库几乎可以零配置的开箱即用。
+Spring Boot 基于 Spring 开发，Spirng Boot 本身并不提供 Spring 框架的核心特性以及扩展功能，只是用于快速、敏捷地开发新一代基于 Spring 框架的应用程序。也就是说，它并不是用来替代 Spring
+的解决方案，而是和 Spring 框架紧密结合用于提升 Spring 开发者体验的工具。Spring Boot 以**约定大于配**置的核心思想，默认帮我们进行了很多设置，多数 Spring Boot 应用只需要很少的 Spring
+配置。同时它集成了大量常用的第三方库配置（例如 Redis、MongoDB、Jpa、RabbitMQ、Quartz 等等），SpringBoot 应用中这些第三方库几乎可以零配置的开箱即用。
 
 ---
 
@@ -134,8 +128,6 @@ Spring Boot的主要优点：
 - 开箱即用，提供各种默认配置来简化项目配置
 - 内嵌式容器简化Web项目
 - 没有冗余代码生成和XML配置的要求
-
-
 
 ### 2.2 SpringBoot-HelloWorld
 
@@ -185,7 +177,7 @@ Spring Boot的主要优点：
 
 6、等待项目构建成功
 
- **项目结构分析：**
+**项目结构分析：**
 
 通过上面步骤完成了基础项目的创建。就会自动生成以下文件。
 
@@ -205,13 +197,11 @@ Spring Boot的主要优点：
 <!-- 父依赖 --> <parent> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-parent</artifactId> <version>2.2.5.RELEASE</version> <relativePath/> </parent> <dependencies> <!-- web场景启动器 --> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-web</artifactId> </dependency> <!-- springboot单元测试 --> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-test</artifactId> <scope>test</scope> <!-- 剔除依赖 --> <exclusions> <exclusion> <groupId>org.junit.vintage</groupId> <artifactId>junit-vintage-engine</artifactId></exclusion> </exclusions> </dependency> </dependencies> <build> <plugins> <!-- 打包插件 --> <plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> </plugin> </plugins> </build>
 ```
 
-
-
 #### 2.2.4 编写HTTP接口
 
 1、在主程序的同级目录下，新建一个controller包，<u>一定要在同级目录下，否则识别不到</u>
 
-2、在包中新建一个HelloController类 
+2、在包中新建一个HelloController类
 
 ```java
 @RestController public class HelloController { @RequestMapping("/hello") public String hello() { return "Hello World"; } }
@@ -219,15 +209,11 @@ Spring Boot的主要优点：
 
 3、编写完毕后，从主程序启动项目，浏览器发起请求，看页面返回；控制台输出了 Tomcat 访问的端口号！
 
-
-
 *简单几步，就完成了一个web接口的开发，SpringBoot就是这么简单。所以我们常用它来建立我们的微服务项目！*
 
 #### 2.2.5 将项目打成jar包
 
 *将项目打成jar包，点击 maven的 package*
-
-
 
 如果遇到以上错误，可以配置打包时 跳过项目运行测试用例
 
@@ -237,9 +223,7 @@ Spring Boot的主要优点：
 
 如果打包成功，则会在target目录下生成一个 jar 包
 
-打成了jar包后，就可以在任何地方运行了！OK `java -jar xxx.jar` 
-
-
+打成了jar包后，就可以在任何地方运行了！OK `java -jar xxx.jar`
 
 #### 2.2.6 SpringBoot彩蛋
 
@@ -249,17 +233,11 @@ Spring Boot的主要优点：
 
 图案可以到：https://www.bootschool.net/ascii 这个网站生成，然后拷贝到文件中即可！
 
-
-
 **SpringBoot这么简单的东西背后一定有故事，我们之后去进行一波源码分析！**
-
-
 
 ### 2.3 运行原理探究
 
 *我们之前写的HelloSpringBoot，到底是怎么运行的呢，Maven项目，我们一般从pom.xml文件探究起;*
-
-
 
 #### 2.3.1 SpringBoot依赖
 
@@ -289,11 +267,8 @@ Spring Boot的主要优点：
 
 **spring-boot-starter-web**：帮我们导入了web模块正常运行所依赖的组件；
 
-SpringBoot将所有的功能场景都抽取出来，做成一个个的starter （启动器），只需要在项目中引入这些starter即可，所有相关的依赖都会导入进来 ， 我们要用什么功能就导入什么样的场景启动器即可 ；我们未来也可以自己自定义 starter； 
-
-
-
-
+SpringBoot将所有的功能场景都抽取出来，做成一个个的starter （启动器），只需要在项目中引入这些starter即可，所有相关的依赖都会导入进来 ， 我们要用什么功能就导入什么样的场景启动器即可 ；我们未来也可以自己自定义
+starter；
 
 #### 2.3.2 主启动类程序分析
 
@@ -305,29 +280,19 @@ SpringBoot将所有的功能场景都抽取出来，做成一个个的starter �
 
 ##### run()方法干了什么
 
-
-
 #### 2.3.3 SpringBoot运行原理小结
 
 1. SpringBoot在启动的时候从类路径下的META-INF/spring.factories中获取EnableAutoConfifiguration指定的值
 2. 将这些值作为自动配置类导入容器 ， 自动配置类就生效 ， 帮我们进行自动配置工作；
 3. 整个J2EE的整体解决方案和自动配置都在springboot-autoconfifigure的jar包中；
-4. 它会给容器中导入非常多的自动配置类 （xxxAutoConfifiguration）, 就是给容器中导入这个场景需要的所有组件 ， 并配置好这些组件 ； 
+4. 它会给容器中导入非常多的自动配置类 （xxxAutoConfifiguration）, 就是给容器中导入这个场景需要的所有组件 ， 并配置好这些组件 ；
 5. 有了自动配置类 ， 免去了我们手动编写配置注入功能组件等的工作；
 
 ### 2.4 Yaml语法学习
 
-
-
 #### 2.4.1 SpringBoot的两种配置文件
 
-
-
 #### 2.4.2 yaml概述
-
-
-
-
 
 #### 2.4.3 yaml基础语法
 
@@ -335,29 +300,17 @@ SpringBoot将所有的功能场景都抽取出来，做成一个个的starter �
 
 #### yaml注入配置文件
 
-
-
 #### 加载指定配置文件
-
-
 
 #### 回顾properties配置文件
 
-
-
 #### properties和yaml的对比
 
-
-
 #### JSR303数据校验
-
-
 
 ### 2.2.6 多环境切换
 
 #### yml的多文档块
-
-
 
 #### 配置文件加载位置
 
@@ -365,11 +318,7 @@ SpringBoot将所有的功能场景都抽取出来，做成一个个的starter �
 
 #### 分析自动装配原理
 
-
-
 #### 自动装配的精髓
-
-
 
 #### @Conditional
 
@@ -377,23 +326,15 @@ SpringBoot将所有的功能场景都抽取出来，做成一个个的starter �
 
 #### 说明
 
-
-
 #### 编写启动器
 
-
-
 #### 新建项目测试手写的启动器
-
-
 
 ---
 
 ## 第 3 章 : SpringBoot操作数据库
 
-
-
-###  3.1 SpringData简介
+### 3.1 SpringData简介
 
 对于数据访问层，无论是 SQL(关系型数据库) 还是 NOSQL(非关系型数据库)，Spring Boot 底层都是采用 Spring Data 的方式进行统一处理。
 
@@ -407,7 +348,7 @@ Sping Data 官网：https://spring.io/projects/spring-data
 
 ---
 
-###  3.2 集成JDBC
+### 3.2 集成JDBC
 
 #### 3.2.1 导入测试数据库
 
@@ -435,8 +376,6 @@ CREATE TABLE `employee` (
 /*Data for the table `employee` */ 
 insert into `employee`(`id`,`last_name`,`email`,`gender`,`department`,`birth`) values (1001,'张三','24736743@qq.com',1,101,'2020-03-06 15:04:33'),(1002,'李 四','24736743@qq.com',1,102,'2020-03-06 15:04:36'),(1003,'王 五','24736743@qq.com',0,103,'2020-03-06 15:04:37'),(1004,'赵 六','24736743@qq.com',1,104,'2020-03-06 15:04:39'),(1005,'孙 七','24736743@qq.com',0,105,'2020-03-06 15:04:45');
 ```
-
-
 
 #### 3.2.2 创建测试项目测试数据源
 
@@ -503,7 +442,8 @@ insert into `employee`(`id`,`last_name`,`email`,`gender`,`department`,`birth`) v
    }
    ```
 
-   这里导入的类都在 DataSourceConfifiguration 配置类下，可以看出 Spring Boot 2.2.5 默认使用HikariDataSource 数据源，而以前版本，如 Spring Boot 1.5 默认使用org.apache.tomcat.jdbc.pool.DataSource 作为数据源；
+   这里导入的类都在 DataSourceConfifiguration 配置类下，可以看出 Spring Boot 2.2.5 默认使用HikariDataSource 数据源，而以前版本，如 Spring Boot 1.5
+   默认使用org.apache.tomcat.jdbc.pool.DataSource 作为数据源；
 
    HikariDataSource 号称 Java WEB 当前速度最快的数据源，相比于传统的 C3P0 、DBCP、Tomcatjdbc 等连接池更加优秀；
 
@@ -514,7 +454,7 @@ insert into `employee`(`id`,`last_name`,`email`,`gender`,`department`,`birth`) v
 #### 3.2.3 JdbcTemplate
 
 1. 有了数据源(com.zaxxer.hikari.HikariDataSource)，然后可以拿到数据库连接(java.sql.Connection)，有了连接，就可以使用原生的 JDBC 语句来操作数据库；
-2. 即使不使用第三方第数据库操作框架，如 MyBatis等，Spring 本身也对原生的JDBC 做了轻量级的封装，即 JdbcTemplate 。 
+2. 即使不使用第三方第数据库操作框架，如 MyBatis等，Spring 本身也对原生的JDBC 做了轻量级的封装，即 JdbcTemplate 。
 3. 数据库操作的所有 CRUD 方法都在 JdbcTemplate 中。
 4. Spring Boot 不仅提供了默认的数据源，同时默认已经配置好了 JdbcTemplate 放在了容器中，程序员只需自己注入即可使用
 5. JdbcTemplate 的自动配置是依赖 org.springframework.boot.autoconfifigure.jdbc 包下的JdbcTemplateConfifiguration 类
@@ -528,8 +468,6 @@ insert into `employee`(`id`,`last_name`,`email`,`gender`,`department`,`birth`) v
 - query方法及queryForXXX方法：用于执行查询相关语句；
 
 - call方法：用于执行存储过程、函数相关语句。
-
-
 
 #### 3.2.4 测试
 
@@ -602,7 +540,7 @@ public class JdbcController {
 
 ---
 
-###  3.3 集成Druid
+### 3.3 集成Druid
 
 #### 3.3.1 Druid 简介
 
@@ -614,7 +552,8 @@ Druid 可以很好的监控 DB 池连接和 SQL 的执行情况，天生就是�
 
 Druid已经在阿里巴巴部署了超过600个应用，经过一年多生产环境大规模部署的严苛考验。
 
-Spring Boot 2.0 以上默认使用 Hikari 数据源，可以说 Hikari 与 Driud 都是当前 Java Web 上最优秀的数据源，我们来重点介绍 Spring Boot 如何集成 Druid 数据源，如何实现数据库监控。
+Spring Boot 2.0 以上默认使用 Hikari 数据源，可以说 Hikari 与 Driud 都是当前 Java Web 上最优秀的数据源，我们来重点介绍 Spring Boot 如何集成 Druid
+数据源，如何实现数据库监控。
 
 Github地址：https://github.com/alibaba/druid/
 
@@ -646,8 +585,6 @@ Github地址：https://github.com/alibaba/druid/
 | exceptionSorter               | 根据dbType自动识别 | 当数据库抛出一些不可恢复的异常时，抛弃连接                   |
 | fifilters                     |                    | 属性类型是字符串，通过别名的方式配置扩展插件，常用 的插件有： 监控统计用的filter:stat 日志用的filter:log4j 防御sql注入的filter:wall |
 | proxyFilters                  |                    | 类型是List<com.alibaba.druid.filter.Filter>，如果同时配 置了filters和proxyFilters，是组合关系，并非替换关系 |
-
-
 
 #### 3.3.2 配置数据源
 
@@ -765,8 +702,6 @@ Github地址：https://github.com/alibaba/druid/
 
    输出结果 ：可见配置参数已经生效！
 
-   
-
 #### 3.3.3 配置 Druid 数据源监控
 
 Druid 数据源具有监控的功能，并提供了一个 web 界面方便用户查看，类似安装 路由器 时，人家也提供了一个默认的 web 页面。
@@ -798,11 +733,7 @@ public ServletRegistrationBean statViewServlet() {
 
 配置完毕后，我们可以选择访问 ： http://localhost:8080/druid/login.html
 
-
-
 进入之后
-
-
 
 **配置** **Druid web** **监控** **fifilter** **过滤器**
 
@@ -827,7 +758,7 @@ public FilterRegistrationBean webStatFilter() {
 
 ---
 
-###  3.4 集成MyBatis
+### 3.4 集成MyBatis
 
 > 官方文档：http://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfifigure/
 >
@@ -974,11 +905,9 @@ public class DepartmentController {
 
 启动项目访问进行测试！
 
-
-
 **我们增加一个员工类再测试下，为之后做准备**
 
-1. 新建一个pojo类 Employee ； 
+1. 新建一个pojo类 Employee ；
 
    ```java
    @Data 
@@ -1083,19 +1012,11 @@ public class DepartmentController {
 
    测试结果完成，搞定收工
 
-
-
-
-
-
-
 ---
 
 ## 第 4 章 : SpringBoot开发单体应用
 
-
-
-###  4.1 Web开发探究
+### 4.1 Web开发探究
 
 **简介**
 
@@ -1122,9 +1043,7 @@ public class DepartmentController {
 
 我们之后来进行一个单体项目的小项目测试，让大家能够快速上手开发！
 
-
-
-###  4.2 静态资源处理
+### 4.2 静态资源处理
 
 #### 4.2.1 静态资源映射规则
 
@@ -1147,8 +1066,6 @@ SpringBoot中，SpringMVC的web配置都在 WebMvcAutoConfifiguration 这个配�
 ```
 
 读一下源代码：比如所有的 /webjars/** ， 都需要去 classpath:/META-INF/resources/webjars/ 找对应的资源；
-
-
 
 #### 4.2.2 那什么是webjars呢？
 
@@ -1200,7 +1117,7 @@ spring.resources.static-locations=classpath:/coding/,classpath:/kuang/
 
 一旦自己定义了静态文件夹的路径，原来的自动配置就都会失效了！
 
-###  4.3 首页处理
+### 4.3 首页处理
 
 静态资源文件夹说完后，我们继续向下看源码！可以看到一个欢迎页的映射，就是我们的首页！
 
@@ -1222,7 +1139,7 @@ private Optional<Resource> getWelcomePage() { String[] locations = getResourceLo
 
 **关于网站图标说明**：
 
-与其他静态资源一样，Spring Boot在配置的静态内容位置中查找 favicon.ico。如果存在这样的文件，它将自动用作应用程序的favicon。 
+与其他静态资源一样，Spring Boot在配置的静态内容位置中查找 favicon.ico。如果存在这样的文件，它将自动用作应用程序的favicon。
 
 1. 关闭SpringBoot默认图标
 
@@ -1234,7 +1151,7 @@ private Optional<Resource> getWelcomePage() { String[] locations = getResourceLo
 
 3. 清除浏览器缓存！刷新网页，发现图标已经变成自己的了！
 
-###  4.4 Thymeleaf
+### 4.4 Thymeleaf
 
 #### 4.4.1 模板引擎
 
@@ -1330,8 +1247,6 @@ xmlns:th="http://www.thymeleaf.org"
 
 4、启动测试！
 
-
-
 OK，入门搞定，我们来认真研习一下Thymeleaf的使用语法！
 
 1、我们可以使用任意的 th:attr 来替换Html中原生属性的值！参考官网文档#10； th语法
@@ -1363,17 +1278,7 @@ Simple expressions:（表达式语法） Variable Expressions: ${...}：获取�
 
 **我们看完语法，很多样式，我们即使现在学习了，也会忘记，所以我们在学习过程中，需要使用什么，根据官方文档来查询，才是最重要的，要熟练使用官方文档！**
 
-
-
-
-
-
-
-
-
-
-
-###  4.5 MVC自动配置原理
+### 4.5 MVC自动配置原理
 
 #### 4.5.1 官网阅读
 
@@ -1385,11 +1290,9 @@ Simple expressions:（表达式语法） Variable Expressions: ${...}：获取�
 
 #### 4.5.5 全面接管SpringMVC
 
-
-
 ### 4.6 员工管理系统
 
-####  4.6.1 配置项目环境及首页
+#### 4.6.1 配置项目环境及首页
 
 把昨天的 mybatis 整合代码拿过来
 
@@ -1397,7 +1300,7 @@ Simple expressions:（表达式语法） Variable Expressions: ${...}：获取�
 
 首页实现
 
-####  4.6.2 页面国际化
+#### 4.6.2 页面国际化
 
 准备工作
 
@@ -1409,7 +1312,7 @@ Simple expressions:（表达式语法） Variable Expressions: ${...}：获取�
 
 配置国际化解析
 
-####  4.6.3 登录和拦截器
+#### 4.6.3 登录和拦截器
 
 禁用模板缓存
 
@@ -1417,7 +1320,7 @@ Simple expressions:（表达式语法） Variable Expressions: ${...}：获取�
 
 登录拦截器
 
-####  4.6.4 员工列表实现
+#### 4.6.4 员工列表实现
 
 RestFul 风格
 
@@ -1427,11 +1330,7 @@ Thymeleaf 公共页面元素抽取
 
 员工信息页面展示
 
-
-
-
-
-####  4.6.5 添加员工实现
+#### 4.6.5 添加员工实现
 
 表单及细节优化
 
@@ -1439,35 +1338,29 @@ Thymeleaf 公共页面元素抽取
 
 启动测试，前端填写数据，注意时间问题：
 
-
-
-####  4.6.6 员工信息修改
+#### 4.6.6 员工信息修改
 
 实现
 
-####  4.6.7 删除员工实现
+#### 4.6.7 删除员工实现
 
-####  4.6.8 404及注销
+#### 4.6.8 404及注销
 
- 404
+404
 
 注销
 
-
-
-####  4.6.9 定制错误数据
+#### 4.6.9 定制错误数据
 
 SpringBoot 默认的错误处理机制
 
 错误处理原理分析
 
-
-
 ## 第 5 章: SpringBootWeb开发提升
 
 ### 5.1 集成Swagger
 
-> 学习目标: 
+> 学习目标:
 >
 > - 了解Swagger的概念及作用
 >
@@ -1489,7 +1382,7 @@ SpringBoot 默认的错误处理机制
 - 伪造数据: 前后端通过json数据来进行交互的,前端在开发的时候不需要后端提供的后台接口,前端工程也可以动起来
 - 前后端交互: 前后端交互是通过后端提供的api进行交互的
 
-前后端分离的优势: 
+前后端分离的优势:
 
 - 前后端优势: 相对独立;松耦合
 - 前后端项目可以部署在不同的服务器上
@@ -1500,11 +1393,9 @@ SpringBoot 默认的错误处理机制
 
 - 解决方案:
 
-  - 首先定义schema [ 计划的提纲 ]，并实时跟踪最新的API，降低集成风险
+    - 首先定义schema [ 计划的提纲 ]，并实时跟踪最新的API，降低集成风险
 
-  - swagger接口文档
-
-    
+    - swagger接口文档
 
 **Swagger**
 
@@ -1515,8 +1406,6 @@ SpringBoot 默认的错误处理机制
 - 官网：https://swagger.io/
 
 *牛逼吹了这么多,最终目的是将swagger用在项目上才是王道!!~,下面将介绍如何把Swagger集成到SpringBoot项目中去!*
-
-
 
 #### 5.1.2 SpringBoot集成Swagger
 
@@ -1570,7 +1459,7 @@ public class SwaggerController {
 
 在项目的config的包下创建一个`Swagger.java`
 
-1.  Swagger实例Bean是Docket，所以通过配置Docket实例来配置Swaggger。 
+1. Swagger实例Bean是Docket，所以通过配置Docket实例来配置Swaggger。
 
    ```java
    @Bean 
@@ -1609,36 +1498,54 @@ public class SwaggerController {
 
 4. 重启项目，访问测试 http://localhost:8080/swagger-ui.html 看下效果；
 
-
-
 ##### 配置扫描接口
 
 1. 构建Docket时通过select()方法配置怎么扫描接口。
 
    ```java
-   @Bean public Docket docket() { return new Docket(DocumentationType.SWAGGER_2) .apiInfo(apiInfo()) .select()// 通过.select()方法，去配置扫描接口,RequestHandlerSelectors 配置如何扫描接口 .apis(RequestHandlerSelectors.basePackage("com.kuang.swagger.controller") ) .build(); }
+   @Bean 
+   public Docket docket() { 
+       return new Docket(DocumentationType.SWAGGER_2) 
+           .apiInfo(apiInfo()) 
+           .select()// 通过.select()方法，去配置扫描接口,RequestHandlerSelectors 配置如何扫描接口 
+           .apis(RequestHandlerSelectors.basePackage("com.kuang.swagger.controller") ) 
+           .build(); 
+   }
    ```
 
 2. 重启项目测试，由于我们配置根据包的路径扫描接口，所以我们只能看到一个类
 
-3.  除了通过包路径配置扫描接口外，还可以通过配置其他方式扫描接口，这里注释一下所有的配置方
+3. 除了通过包路径配置扫描接口外，还可以通过配置其他方式扫描接口，这里注释一下所有的配置方
 
-   式：
+式：
 
-   ```java
-   any() // 扫描所有，项目中的所有接口都会被扫描到 none() // 不扫描接口 // 通过方法上的注解扫描，如withMethodAnnotation(GetMapping.class)只扫描get请求 withMethodAnnotation(final Class<? extends Annotation> annotation) // 通过类上的注解扫描，如.withClassAnnotation(Controller.class)只扫描有 controller注解的类中的接口 withClassAnnotation(final Class<? extends Annotation> annotation) basePackage(final String basePackage) // 根据包路径扫描接口
-   ```
+```java
+any() // 扫描所有，项目中的所有接口都会被扫描到 
+none() // 不扫描接口 // 通过方法上的注解扫描，如withMethodAnnotation(GetMapping.class)只扫描get请求 
+withMethodAnnotation(final Class<? extends Annotation> annotation) // 通过类上的注解扫描，如.withClassAnnotation(Controller.class)只扫描有 controller注解的类中的接口 
+withClassAnnotation(final Class<? extends Annotation> annotation) basePackage(final String basePackage) // 根据包路径扫描接口
+```
 
 4. 除此之外，我们还可以配置接口扫描过滤：
 
    ```java
-   @Bean public Docket docket() { return new Docket(DocumentationType.SWAGGER_2) .apiInfo(apiInfo()) .select()// 通过.select()方法，去配置扫描接 口,RequestHandlerSelectors配置如何扫描接口 .apis(RequestHandlerSelectors.basePackage("com.kuang.swagger.controller" )) // 配置如何通过path过滤,即这里只扫描请求以/kuang开头的接口 .paths(PathSelectors.ant("/kuang/**")) .build(); }
+   @Bean 
+   public Docket docket() {
+       return new Docket(DocumentationType.SWAGGER_2) 
+           .apiInfo(apiInfo()) 
+           .select()// 通过.select()方法，去配置扫描接 口,RequestHandlerSelectors配置如何扫描接口 
+           .apis(RequestHandlerSelectors.basePackage("com.kuang.swagger.controller" )) // 配置如何通过path过滤,即这里只扫描请求以/kuang开头的接口 
+           .paths(PathSelectors.ant("/kuang/**")) .build();
+   }
    ```
 
 5. 这里的可选值还有
 
    ```java
-   any() // 任何请求都扫描 none() // 任何请求都不扫描 regex(final String pathRegex) // 通过正则表达式控制 ant(final String antPattern) // 通过ant()控制
+   any() // 任何请求都扫描 
+   none() // 任何请求都不扫描
+   regex(final String pathRegex) // 通过正则表达式控制 
+   ant(final String antPattern) // 通过ant()控制
    ```
 
 ##### 配置swagger开关
@@ -1646,13 +1553,37 @@ public class SwaggerController {
 1. 通过enable()方法配置是否启用swagger，如果是false，swagger将不能在浏览器中访问了
 
    ```java
-   @Bean public Docket docket() { return new Docket(DocumentationType.SWAGGER_2) .apiInfo(apiInfo()) .enable(false) //配置是否启用Swagger，如果是false，在浏览器将无法访问 .select()// 通过.select()方法，去配置扫描接 口,RequestHandlerSelectors配置如何扫描接口 .apis(RequestHandlerSelectors.basePackage("com.kuang.swagger.controller" )) // 配置如何通过path过滤,即这里只扫描请求以/kuang开头的接口 .paths(PathSelectors.ant("/kuang/**")) .build(); }
+   @Bean 
+   public Docket docket() { 
+       return new Docket(DocumentationType.SWAGGER_2) 
+           .apiInfo(apiInfo()) 
+           .enable(false) //配置是否启用Swagger，如果是false，在浏览器将无法访问 
+           .select()// 通过.select()方法，去配置扫描接 口,RequestHandlerSelectors配置如何扫描接口 
+           .apis(RequestHandlerSelectors.basePackage("com.kuang.swagger.controller" )) // 配置如何通过path过滤,即这里只扫描请求以/kuang开头的接口 
+           .paths(PathSelectors.ant("/kuang/**")) 
+           .build(); 
+   }
    ```
 
 2. 如何动态配置当项目处于test、dev环境时显示swagger，处于prod时不显示？
 
    ```java
-   @Bean public Docket docket(Environment environment) { // 设置要显示swagger的环境 Profiles of = Profiles.of("dev", "test"); // 判断当前是否处于该环境 // 通过 enable() 接收此参数判断是否要显示 boolean b = environment.acceptsProfiles(of); return new Docket(DocumentationType.SWAGGER_2) .apiInfo(apiInfo()) .enable(b) //配置是否启用Swagger，如果是false，在浏览器将无法访问 .select()// 通过.select()方法，去配置扫描接 口,RequestHandlerSelectors配置如何扫描接口.apis(RequestHandlerSelectors.basePackage("com.kuang.swagger.controller" )) // 配置如何通过path过滤,即这里只扫描请求以/kuang开头的接口 .paths(PathSelectors.ant("/kuang/**")) .build(); }
+   @Bean 
+   public Docket docket(Environment environment) { 
+       // 设置要显示swagger的环境 
+       Profiles of = Profiles.of("dev", "test"); 
+       // 判断当前是否处于该环境 
+       // 通过 enable() 接收此参数判断是否要显示
+       boolean b = environment.acceptsProfiles(of);
+       return new Docket(DocumentationType.SWAGGER_2) 
+           .apiInfo(apiInfo())
+           .enable(b) //配置是否启用Swagger，如果是false，在浏览器将无法访问
+           .select()// 通过.select()方法，去配置扫描接 口,RequestHandlerSelectors配置如何扫描接口
+           .apis(RequestHandlerSelectors.basePackage("com.kuang.swagger.controller" )) 
+           // 配置如何通过path过滤,即这里只扫描请求以/kuang开头的接口 
+           .paths(PathSelectors.ant("/kuang/**")) 
+           .build();
+   }
    ```
 
 3. 可以在项目中增加一个dev的配置文件查看效果！
@@ -1662,7 +1593,12 @@ public class SwaggerController {
 1. 如果没有配置分组，默认是default。通过groupName()方法即可配置分组：
 
    ```java
-   @Bean public Docket docket(Environment environment) { return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo()) .groupName("hello") // 配置分组 // 省略配置.... }
+   @Bean 
+   public Docket docket(Environment environment) {
+       return new Docket(DocumentationType.SWAGGER_2)
+           .apiInfo(apiInfo()) 
+           .groupName("hello") // 配置分组 // 省略配置.... 
+   }
    ```
 
 2. 重启项目查看分组
@@ -1670,10 +1606,24 @@ public class SwaggerController {
 3. 如何配置多个分组？配置多个分组只需要配置多个docket即可：
 
    ```java
-   @Bean public Docket docket1() { return new Docket(DocumentationType.SWAGGER_2).groupName("group1"); }@Bean public Docket docket2() { return new Docket(DocumentationType.SWAGGER_2).groupName("group2"); }@Bean public Docket docket3() { return new Docket(DocumentationType.SWAGGER_2).groupName("group3"); }
+   @Bean 
+   public Docket docket1() { 
+       return new Docket(DocumentationType.SWAGGER_2)
+           .groupName("group1"); 
+   }
+   @Bean 
+   public Docket docket2() { 
+       return new Docket(DocumentationType.SWAGGER_2)
+           .groupName("group2");
+   }
+   @Bean 
+   public Docket docket3() {
+       return new Docket(DocumentationType.SWAGGER_2)
+           .groupName("group3"); 
+   }
    ```
 
-4.  重启项目查看
+4. 重启项目查看
 
 ##### 实体配置
 
@@ -1681,16 +1631,24 @@ public class SwaggerController {
 
    ```java
    @ApiModel("用户实体") 
-   public class User { @ApiModelProperty("用户名") public String username; @ApiModelProperty("密码") public String password; }
+   public class User { 
+       @ApiModelProperty("用户名") 
+       public String username;
+       @ApiModelProperty("密码") 
+       public String password;
+   }
    ```
 
 2. 只要这个实体在**请求接口**的返回值上（即使是泛型），都能映射到实体项中：
 
    ```java
-   @RequestMapping("/getUser") public User getUser(){ return new User(); }
+   @RequestMapping("/getUser") 
+   public User getUser(){
+       return new User();
+   }
    ```
 
-3.  重启查看测试
+3. 重启查看测试
 
 注：并不是因为@ApiModel这个注解让实体显示在这里了，而是只要出现在接口方法的返回值上的实体
 
@@ -1714,8 +1672,6 @@ Swagger的所有注解定义在io.swagger.annotations包下
 | `@ApiModelProperty(value = "xxx属性说明",hidden = true)` | 作用在类方法和属性上，hidden设置为true可以隐藏该属性 |
 | `@ApiParam("xxx参数说明")`                               | 作用在参数、方法和字段上，类似@ApiModelProperty      |
 
-
-
 我们也可以给请求的接口配置一些注释
 
 ```java
@@ -1735,15 +1691,11 @@ public String kuang(@ApiParam("这个名字会被返回")String username){
 
 可以说基本就不需要人为操作了。
 
-
-
 Swagger是个优秀的工具，现在国内已经有很多的中小型互联网公司都在使用它，相较于传统的要先出
 
 Word接口文档再测试的方式，显然这样也更符合现在的快速迭代开发行情。当然了，提醒下大家在正式
 
 环境要记得关闭Swagger，一来出于安全考虑二来也可以节省运行时内存。
-
-
 
 ##### Swagger其他皮肤
 
@@ -1792,55 +1744,37 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
    </dependency>
    ```
 
-   
+### 5.2 异步任务
 
+### 5.3 定时任务
 
+### 5.4 邮件任务
 
-###  5.2 异步任务
-
-
-
-###  5.3 定时任务
-
-
-
-###  5.4 邮件任务
-
-
-
-###  5.5 富文本编辑器
-
-
+### 5.5 富文本编辑器
 
 ## 第 6 章: SprringSecurity权限控制
 
-###  6.1 SpringSecurity简介
+### 6.1 SpringSecurity简介
 
-###  6.2 SpringSecurity实战测试
+### 6.2 SpringSecurity实战测试
 
-###  6.3 完整配置代码
-
-
+### 6.3 完整配置代码
 
 ---
 
 ## 第 7 章: 整合Dubbo+Zookeeper
 
-###  7.1 分布式基础知识
+### 7.1 分布式基础知识
 
-###  7.2 Dubbo
+### 7.2 Dubbo
 
-###  7.3 SpringBoot丶Dubbo丶zookeeper
-
-
+### 7.3 SpringBoot丶Dubbo丶zookeeper
 
 ---
 
 ## 第 8 章 : Shiro
 
-
-
-###  8.1 Shiro简介
+### 8.1 Shiro简介
 
 #### 8.1.1 什么是Shiro
 
@@ -1881,16 +1815,21 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 
 ![image-20201224103031106](assets/image-20201224103031106.png)
 
-- **subject**： 应用代码直接交互的对象是Subject，也就是说Shiro的对外API核心就是Subject，Subject代表了当前的用户，这个用户不一定是一个具体的人，与当前应用交互的任何东西都是Subject，如网络爬虫，机器人等，与Subject的所有交互都会委托给SecurityManager；Subject其实是一个门面，SecurityManageer 才是实际的执行者
-- **SecurityManager**：安全管理器，即所有与安全有关的操作都会与SercurityManager交互，并且它管理着所有的Subject，可以看出它是Shiro的核心，它负责与Shiro的其他组件进行交互，它相当于SpringMVC的DispatcherServlet的角色
-- **Realm**：Shiro从Realm获取安全数据（如用户，角色，权限），就是说SecurityManager 要验证用户身份，那么它需要从Realm 获取相应的用户进行比较，来确定用户的身份是否合法；也需要从Realm得到用户相应的角色、权限，进行验证用户的操作是否能够进行，可以把Realm看成DataSource； 
+- **subject**：
+  应用代码直接交互的对象是Subject，也就是说Shiro的对外API核心就是Subject，Subject代表了当前的用户，这个用户不一定是一个具体的人，与当前应用交互的任何东西都是Subject，如网络爬虫，机器人等，与Subject的所有交互都会委托给SecurityManager；Subject其实是一个门面，SecurityManageer
+  才是实际的执行者
+- **SecurityManager**
+  ：安全管理器，即所有与安全有关的操作都会与SercurityManager交互，并且它管理着所有的Subject，可以看出它是Shiro的核心，它负责与Shiro的其他组件进行交互，它相当于SpringMVC的DispatcherServlet的角色
+- **Realm**：Shiro从Realm获取安全数据（如用户，角色，权限），就是说SecurityManager 要验证用户身份，那么它需要从Realm
+  获取相应的用户进行比较，来确定用户的身份是否合法；也需要从Realm得到用户相应的角色、权限，进行验证用户的操作是否能够进行，可以把Realm看成DataSource；
 
 #### 8.1.4 Shiro架构(内部)
 
 ![image-20201224103201977](assets/image-20201224103201977.png)
 
 - **Subject**：任何可以与应用交互的 ‘用户’；
-- **Security Manager**：相当于SpringMVC中的DispatcherServlet；是Shiro的心脏，所有具体的交互都通过Security Manager进行控制，它管理者所有的Subject，且负责进行认证，授权，会话，及缓存的管理。
+- **Security Manager**：相当于SpringMVC中的DispatcherServlet；是Shiro的心脏，所有具体的交互都通过Security
+  Manager进行控制，它管理者所有的Subject，且负责进行认证，授权，会话，及缓存的管理。
 - **Authenticator**：负责Subject认证，是一个扩展点，可以自定义实现；可以使用认证策略（Authentication Strategy），即什么情况下算用户认证通过了；
 - **Authorizer**：授权器，即访问控制器，用来决定主体是否有权限进行相应的操作；即控制着用户能访问应用中的那些功能；
 - **Realm**：可以有一个或者多个的realm，可以认为是安全实体数据源，即用于获取安全实体的，可以用JDBC实现，也可以是内存实现等等，由用户提供；所以一般在应用中都需要实现自己的realm
@@ -1898,7 +1837,7 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 - **CacheManager**：缓存控制器，来管理如用户，角色，权限等缓存的；因为这些数据基本上很少改变，放到缓存中后可以提高访问的性能；
 - **Cryptography**：密码模块，Shiro 提高了一些常见的加密组件用于密码加密，解密等
 
-###  8.2 Shiro-HelloWorld
+### 8.2 Shiro-HelloWorld
 
 #### 8.2.1 快速实践
 
@@ -2083,20 +2022,20 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 
 6. 测试运行运行
 
-   - 报错，则导入一下 `commons-logging` 的依赖
+    - 报错，则导入一下 `commons-logging` 的依赖
 
-     ```xml
-     <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
-     <dependency> 
-         <groupId>commons-logging</groupId> 
-         <artifactId>commons-logging</artifactId> 
-         <version>1.2</version> 
-     </dependency>
-     ```
+      ```xml
+      <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+      <dependency> 
+          <groupId>commons-logging</groupId> 
+          <artifactId>commons-logging</artifactId> 
+          <version>1.2</version> 
+      </dependency>
+      ```
 
-   - 发现，执行完毕什么都没有，可能是maven依赖中的作用域问题，我们需要将scope作用域删掉，默认是在test，然后重启，那么我们的quickstart就结束了，默认的日志消息！
+    - 发现，执行完毕什么都没有，可能是maven依赖中的作用域问题，我们需要将scope作用域删掉，默认是在test，然后重启，那么我们的quickstart就结束了，默认的日志消息！
 
-     ![image-20201224153236216](assets/image-20201224153236216.png)
+      ![image-20201224153236216](assets/image-20201224153236216.png)
 
 **代码解释如下:**
 
@@ -2115,7 +2054,6 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
    import org.slf4j.Logger; import org.slf4j.LoggerFactory;
    ```
 
-   
 
 2. 类的描述
 
@@ -2250,8 +2188,6 @@ Word接口文档再测试的方式，显然这样也更符合现在的快速迭�
 
 *OK，一个简单的Shiro程序体验，我们就在官方的带领下初步认识了！*
 
-
-
 #### 8.2.3 官方shiro示例代码完整解释
 
 ```java
@@ -2341,9 +2277,7 @@ currentUser.isPermitted("lightsaber:wield");
 currentUser.logout();
 ```
 
-
-
-###  8.3 SpringBoot集成Shiro
+### 8.3 SpringBoot集成Shiro
 
 #### 8.3.1 准备工作
 
@@ -2398,7 +2332,7 @@ currentUser.logout();
 
 #### 8.3.2 整合Shiro
 
-**回顾核心API：** 
+**回顾核心API：**
 
 1. Subject：用户主体
 2. SecurityManager：安全管理器
@@ -2416,7 +2350,7 @@ currentUser.logout();
    </dependency>
    ```
 
-2. 编写Shiro 配置类 config包 
+2. 编写Shiro 配置类 config包
 
    ```java
    //声明为配置类 
@@ -2450,7 +2384,7 @@ currentUser.logout();
    }
    ```
 
-5. 将这个类注册到我们的Bean中！ ShiroConfig 
+5. 将这个类注册到我们的Bean中！ ShiroConfig
 
    ```java
    @Configuration 
@@ -2465,7 +2399,7 @@ currentUser.logout();
    }
    ```
 
-6. 接下来我们该去创建 DefaultWebSecurityManager 了 
+6. 接下来我们该去创建 DefaultWebSecurityManager 了
 
    ```java
    //创建 DefaultWebSecurityManager 
@@ -2517,13 +2451,9 @@ currentUser.logout();
    }
    ```
 
-   
-
-
-
 #### 8.3.3 页面拦截实现
 
-1. 编写两个页面、在templates目录下新建一个 user 目录 add.html update.html 
+1. 编写两个页面、在templates目录下新建一个 user 目录 add.html update.html
 
    ```html
    <body> 
@@ -2630,7 +2560,7 @@ currentUser.logout();
     shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
     ```
 
-12. 测试，完全OK！ 
+12. 测试，完全OK！
 
 #### 8.3.4 登录认证操作
 
@@ -2735,13 +2665,13 @@ currentUser.logout();
    </dependency>
    ```
 
-2. 编写配置文件-连接配置 application.yml 
+2. 编写配置文件-连接配置 application.yml
 
    ```yaml
    spring:datasource: username: root password: 123456 #?serverTimezone=UTC解决时区的报错 url: jdbc:mysql://localhost:3306/mybatis? serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8 driver-class-name: com.mysql.jdbc.Driver type: com.alibaba.druid.pool.DruidDataSource #Spring Boot 默认是不注入这些属性值的，需要自己绑定 #druid 数据源专有配置 initialSize: 5 minIdle: 5maxActive: 20 maxWait: 60000 timeBetweenEvictionRunsMillis: 60000 minEvictableIdleTimeMillis: 300000 validationQuery: SELECT 1 FROM DUAL testWhileIdle: true testOnBorrow: false testOnReturn: false poolPreparedStatements: true #配置监控统计拦截的filters，stat:监控统计、log4j：日志记录、wall：防御sql注入 #如果允许时报错 java.lang.ClassNotFoundException: org.apache.log4j.Priority #则导入 log4j 依赖即可，Maven 地址： https://mvnrepository.com/artifact/log4j/log4j filters: stat,wall,log4j maxPoolPreparedStatementPerConnectionSize: 20 useGlobalDataSourceStat: true connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
    ```
 
-3. 编写mybatis的配置 application.properties 
+3. 编写mybatis的配置 application.properties
 
    ```properties
    #别名配置 
@@ -2793,7 +2723,7 @@ currentUser.logout();
    </mapper>
    ```
 
-7. 编写UserService 层 
+7. 编写UserService 层
 
    ```java
    public interface UserService { 
@@ -2941,26 +2871,26 @@ protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal
 
 2. 我们现在需要再自定义的授权认证中，获取登录的用户，从而实现动态认证授权操作！
 
-   - 在用户登录授权的时候，将用户放在 Principal 中，改造下之前的代码
+    - 在用户登录授权的时候，将用户放在 Principal 中，改造下之前的代码
 
-     ```java
-     return new SimpleAuthenticationInfo(user, user.getPwd(), "");
-     ```
+      ```java
+      return new SimpleAuthenticationInfo(user, user.getPwd(), "");
+      ```
 
-   - 然后再授权的地方获得这个用户，从而获得它的权限
+    - 然后再授权的地方获得这个用户，从而获得它的权限
 
-     ```java
-     //执行授权逻辑 
-     @Override 
-     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) { 
-         System.out.println("执行了=>授权逻辑PrincipalCollection"); //给资源进行授权 
-         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo(); //添加资源的授权字符串 
-         //info.addStringPermission("user:add"); 
-         Subject subject = SecurityUtils.getSubject(); //获得当前对象
-         User currentUser = (User) subject.getPrincipal(); //拿到User对象 
-         info.addStringPermission(currentUser.getPerms()); //设置权限 return info;
-     }
-     ```
+      ```java
+      //执行授权逻辑 
+      @Override 
+      protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) { 
+          System.out.println("执行了=>授权逻辑PrincipalCollection"); //给资源进行授权 
+          SimpleAuthorizationInfo info = new SimpleAuthorizationInfo(); //添加资源的授权字符串 
+          //info.addStringPermission("user:add"); 
+          Subject subject = SecurityUtils.getSubject(); //获得当前对象
+          User currentUser = (User) subject.getPrincipal(); //拿到User对象 
+          info.addStringPermission(currentUser.getPerms()); //设置权限 return info;
+      }
+      ```
 
 3. 我们给数据库中的用户增加一些权限
 
@@ -2974,7 +2904,7 @@ protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal
 
 5. 我们启动项目，登录不同的账户，进行测试一下！
 
-6. 测试完美通过OK！ 
+6. 测试完美通过OK！
 
 #### 8.3.9 整合Thymeleaf
 
@@ -3029,10 +2959,9 @@ protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principal
    </p>
    ```
 
-7. 测试，效果完美~ 
-
-
+7. 测试，效果完美~
 
 #### 8.3.10 小结
 
-今天花了一天时间给大家讲解了SpringSecurity 和 Shiro 两个安全的框架，主要是想让大家多一些思路，其实什么都不用，我们靠拦截器也可以实现这些功能对吧，但是可能需要花费大量的时间和代码，还有就是Bug多，思考不全，而现在，我们两个框架都会使用了，也给大家对比的进行学习了，当然真实的工作中，可能代码会更加的复杂。需要大家在工作中再多去练习和使用，将这些框架可以运用到自己的项目中才是王道，不然学了也是白学对吧，几天就忘记了，没有什么用，关于底层的实现原理，也希望大家下去可以多看源码学习，后面的学习中已经带大家看了很多源码了，希望大家能够自己多去总结和吸收！
+今天花了一天时间给大家讲解了SpringSecurity 和 Shiro
+两个安全的框架，主要是想让大家多一些思路，其实什么都不用，我们靠拦截器也可以实现这些功能对吧，但是可能需要花费大量的时间和代码，还有就是Bug多，思考不全，而现在，我们两个框架都会使用了，也给大家对比的进行学习了，当然真实的工作中，可能代码会更加的复杂。需要大家在工作中再多去练习和使用，将这些框架可以运用到自己的项目中才是王道，不然学了也是白学对吧，几天就忘记了，没有什么用，关于底层的实现原理，也希望大家下去可以多看源码学习，后面的学习中已经带大家看了很多源码了，希望大家能够自己多去总结和吸收！

@@ -43,13 +43,9 @@
 
 - http://www.redis.cn redis中文网
 
-
-
-
-
 ### 2. Windows安装Redis(了解)
 
-2.1 下载地址：https://github.com/dmajkic/redis/downloads 
+2.1 下载地址：https://github.com/dmajkic/redis/downloads
 
 2.2 解压
 
@@ -62,8 +58,6 @@
 2.4 双击redis-cli.ext 客户端去访问(注意:服务端不能关闭)
 
 ![image-20200804163015961](assets/image-20200804163015961.png)
-
-
 
 ### 3. Linux安装Redis(重点)
 
@@ -86,7 +80,7 @@
 redis需要基础的gcc环境所以需要安装gcc
 
 - ` yum install gcc-c++ `
-- 查看gcc版本`gcc-v` 
+- 查看gcc版本`gcc-v`
 - ps: 如果出现了问题可以升级gcc版本
 
 #### 3.3 执行make
@@ -105,8 +99,8 @@ redis需要基础的gcc环境所以需要安装gcc
 
 - redis程序在usr/local/bin里面
 
-  - redis-server ==> 服务端 
-  - redis-cli==>客户端
+    - redis-server ==> 服务端
+    - redis-cli==>客户端
 
   ![image-20200804173153898](assets/image-20200804173153898.png)
 
@@ -159,7 +153,8 @@ redis默认不是后台启动的,需要修改配置文件,值为yes就是以后�
 
 daemonize:yes和daemonize:no
 
-- redis采用的是单进程多线程的模式。当redis.conf中选项daemonize设置成yes时，代表开启守护进程模式。在该模式下，redis会在后台运行，并将进程pid号写入redis.conf选项pidfifile设置的文件中，此时redis将一直运行，除非手动kill该进程。
+-
+redis采用的是单进程多线程的模式。当redis.conf中选项daemonize设置成yes时，代表开启守护进程模式。在该模式下，redis会在后台运行，并将进程pid号写入redis.conf选项pidfifile设置的文件中，此时redis将一直运行，除非手动kill该进程。
 - 当daemonize选项设置成no时，当前界面将进入redis的命令行界面，exit强制退出或者关闭连接工具(putty,xshell等)都会导致redis进程退出。
 
 ##### 3.6.3 启动reids服务端
@@ -210,8 +205,6 @@ root     22706 21693  0 19:09 pts/0    00:00:00 grep --color=auto redis
 not connected> exit
 [root@iZwz964jzdqku9gecmp58bZ ~]#
 ```
-
-
 
 ### 4. Redis-banchmark
 
@@ -309,7 +302,7 @@ cloud-init  easy_install-3.6  jsonpatch         myconfig     redis-check-rdb  re
 
 select进行数据库切换
 
-`select 数据库索引` 
+`select 数据库索引`
 
 ![image-20200804200707670](assets/image-20200804200707670.png)
 
@@ -339,7 +332,7 @@ OK
 
 #### 5.2 redis是单线程
 
-**5.2.1redis为什么是单线程的?** 
+**5.2.1redis为什么是单线程的?**
 
 - 我们首先要明白，Redis很快！官方表示，因为Redis是基于内存的操作，CPU不是Redis的瓶颈，Redis的瓶颈最有可能是机器内存的大小或者网络带宽。既然单线程容易实现，而且CPU不会成为瓶颈，那就顺理成章地采用单线程的方案了！
 - Redis采用的是基于内存的采用的是单进程单线程模型的 KV 数据库，由C语言编写，官方提供的数据是可以达到100000+的QPS（每秒内查询次数）。这个数据不比采用单进程多线程的同样基于内存的 KV数据库 Memcached 差！
@@ -356,45 +349,23 @@ OK
 
 - 误区2: 多线程一定比单线程效率高(不一定) [比如redis是单线程的效率就特别高,执行效率基于内存]
 
-
-
 ## 3. 五大基本数据类型
-
-
-
-
 
 ## 4. 三种特殊数据类型
 
-
-
 ## 5. 配置文件
-
-
 
 ## 6. Redis持久化
 
-
-
 ## 7. Redis事务
-
-
 
 ## 8. Redis发布订阅
 
-
-
 ## 9. Redis主重复制
-
-
 
 ## 10. 缓存穿透和雪崩
 
-
-
 ## 11. Jedis
-
-
 
 ## 12. SpringBoot整合Redis
 

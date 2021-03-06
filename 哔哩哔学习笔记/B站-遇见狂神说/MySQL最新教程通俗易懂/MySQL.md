@@ -2,8 +2,6 @@
 
 ## 1. 初识MySQL
 
-
-
 **JavaEE：** 企业级Java开发Web
 
 **前端:** 页面,用于展示数据
@@ -35,16 +33,15 @@
 **数据库总览:**
 
 - <u>关系型数据库</u>（SQL）
-  - MySQL，Oracle，SQL Server，SQLite，DB2，.…
-  - 关系型数据库通过外键关联来建立表与表之间的关系
+    - MySQL，Oracle，SQL Server，SQLite，DB2，.…
+    - 关系型数据库通过外键关联来建立表与表之间的关系
 - <u>非关系型数据库</u>（NOSQL）Not only SQL
-  - Redis，MongoDB，…
-  - 非关系型数据库通常指数据以对象的形式存储在数据库中，而对象之间的关系通过每个对象自身的属性来决定 
+    - Redis，MongoDB，…
+    - 非关系型数据库通常指数据以对象的形式存储在数据库中，而对象之间的关系通过每个对象自身的属性来决定
 
 ### 3. 什么是DBMS
 
-数据库管理系统（**D**ata**B**ase **M**anagement **S**ystem）
-数据库管理软件，科学组织和存储数据，高效地获取和维护数据,MySQL应该算是一个数据库管理系统
+数据库管理系统（**D**ata**B**ase **M**anagement **S**ystem） 数据库管理软件，科学组织和存储数据，高效地获取和维护数据,MySQL应该算是一个数据库管理系统
 
 ![image-20201027101955645](assets/image-20201027101955645.png)
 
@@ -74,12 +71,12 @@ mysql5.7 64位下载地址: https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-
 
 #### 5.2 安装步骤
 
-1. 下载后得到zip压缩包. 
+1. 下载后得到zip压缩包.
 
 2. 解压到自己想要安装到的目录
 
-   - 例如: 解压到的是D:\environment\mysql-5.7.19
-   - 友情提示: 最好将所有的开发环境都装到非系统盘的自建环境文件夹下方便管理
+    - 例如: 解压到的是D:\environment\mysql-5.7.19
+    - 友情提示: 最好将所有的开发环境都装到非系统盘的自建环境文件夹下方便管理
 
    ![image-20201027105223872](assets/image-20201027105223872.png)
 
@@ -89,13 +86,13 @@ mysql5.7 64位下载地址: https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-
    >
    > 可设置环境变量，设置了环境变量，可以在任意目录打开！
 
-   - 创建`MYSQL_HOME`
+    - 创建`MYSQL_HOME`
 
-     ![image-20201027105557980](assets/image-20201027105557980.png)
+      ![image-20201027105557980](assets/image-20201027105557980.png)
 
-   - 配置`path` ,配置mysql的bin
+    - 配置`path` ,配置mysql的bin
 
-     ![image-20201027104750190](assets/image-20201027104750190.png)
+      ![image-20201027104750190](assets/image-20201027104750190.png)
 
 4. mysql安装目录下新建mysql配置文件my.ini添加如下内容
 
@@ -122,7 +119,6 @@ mysql5.7 64位下载地址: https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-
 
    ![image-20201027111835935](assets/image-20201027111835935.png)
 
-   
 
 8. 然后再次启动mysql 然后用命令 mysql –u root –p 进入mysql管理界面（密码为空,直接回车）
 
@@ -155,12 +151,6 @@ mysql5.7 64位下载地址: https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-
 
     ![image-20201027114529673](assets/image-20201027114529673.png)
 
-
-
-
-
-
-
 ### 6. SQLyog
 
 可手动操作,管理MySQL数据库的软件工具
@@ -173,7 +163,7 @@ mysql5.7 64位下载地址: https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-
 
 *ps: 课程用的是sqlyog,我自己用的是navicate15,操作都差不多 ;[Navicate15安装教程]()*
 
-使用~~SQLyog~~ **Navicate15** 管理工具自己完成以下操作 : 
+使用~~SQLyog~~ **Navicate15** 管理工具自己完成以下操作 :
 
 1. 连接本地MySQL数据库
 
@@ -207,11 +197,9 @@ mysql5.7 64位下载地址: https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-
    GradeName : varchar(50)
    ```
 
-4. 在历史记录中可以看到相对应的数据库操作的语句 
+4. 在历史记录中可以看到相对应的数据库操作的语句
 
-
-
-### 7.  MySQL基本常用命令
+### 7. MySQL基本常用命令
 
 ```sql
 -- 1. 查看MySQL版本
@@ -241,13 +229,7 @@ exit;
 -- (sql只有单行注释) 其他编辑器中可以使用 # /**/
 ```
 
-
-
-
-
 ## 2. 操作数据库
-
-
 
 本章的本质就是对数据库的CRUD(增,删,改,查)操作
 
@@ -260,8 +242,6 @@ exit;
 | DQL （数据查询语言） | 用于**查询**数据库数据                     | SELECT                  |
 | DCL （数据控制语言） | 用于管理数据库的语言，包括管理权限及数     | GRANT、commit、rollback |
 
-
-
 ### 2. 数据库操作
 
 *操作数据库>操作数据库中的表>操作数据库中表的数据*
@@ -272,8 +252,6 @@ exit;
 -- 创建一个westos数据库
 CREATE DATABASE IF NOT EXISTS westos;
 ```
-
-
 
 删除数据库：`drop database [if exists]数据库名;`
 
@@ -319,8 +297,6 @@ SHOW DATABASES;
 
 不要用NULL进行算术运算 , 结果仍为NULL
 
-
-
 ### 4. 数据字段属性(约束)
 
 *用于约束数据的*
@@ -328,7 +304,7 @@ SHOW DATABASES;
 **UnSigned**
 
 - 无符号的
-- 声明该数据列不允许负数 
+- 声明该数据列不允许负数
 
 **ZEROFILL**
 
@@ -340,8 +316,8 @@ SHOW DATABASES;
 - 自动增长的 , 每添加一条数据 , 自动在上一个记录数上加 1(默认)
 - 通常用于设置**主键** , 且为整数类型
 - 可定义起始值和步长
-  - 当前表设置步长(AUTO_INCREMENT=100) : 只影响当前表
-  - SET @@auto_increment_increment=5 ; 影响所有使用自增的表(全局)
+    - 当前表设置步长(AUTO_INCREMENT=100) : 只影响当前表
+    - SET @@auto_increment_increment=5 ; 影响所有使用自增的表(全局)
 
 **NULL** **和** **NOT NULL**
 
@@ -409,8 +385,6 @@ create table [if not exists] `表名`(
 )[表类型] [表字符集] [注释];
 ```
 
-
-
 ### 6. 数据表的类型(引擎)
 
 Mysql有多种数据存储引擎: **MyISAM** , **InnoDB** , HEAP , BOB , CSV
@@ -427,8 +401,6 @@ CREATE TABLE 表名(
 -- 查看mysql所支持的引擎类型 (表类型) 
 SHOW ENGINES;
 ```
-
-
 
 #### 6.1 INNODB和MYISM区别
 
@@ -457,15 +429,11 @@ MySQL数据表本质上还是以文件方式存放在磁盘中
 
   ![image-20201027164646090](assets/image-20201027164646090.png)
 
-  
-
 #### 6.3 InnoDB和MyISAM文件类型
 
 **InnoDB类型数据表只有一个 *.frm文件 , 以及上一级目录的ibdata1文件**
 
 ![image-20201027164936982](assets/image-20201027164936982.png)
-
-
 
 **MyISAM类型数据表对应三个文件 **
 
@@ -490,7 +458,7 @@ CREATE TABLE IF NOT EXISTS `teacher`(
 
 设定方法 :
 
-1. 创建时通过命令来设置 , 如 : 
+1. 创建时通过命令来设置 , 如 :
 
    ```sql
    CREATE TABLE 表名(
@@ -504,10 +472,6 @@ CREATE TABLE IF NOT EXISTS `teacher`(
    # 配置编码
    character-set-server=utf8
    ```
-
-   
-
-
 
 ### 7. 修改删除表以及字段
 
@@ -555,11 +519,7 @@ ALTER TABLE teacher1 DROP newage;
 DROP TABLES IF EXISTS teacher1;
 ```
 
-
-
 ## 3. MySQL数据管理
-
-
 
 ### 1. 外键
 
@@ -640,8 +600,6 @@ CREATE TABLE `student` (
 ALTER TABLE `student` ADD CONSTRAINT `FK_gradeid` FOREIGN KEY (`gradeid`) REFERENCES `grade` (`gradeid`);
 ```
 
-
-
 #### 1.4 删除外键
 
 ```sql
@@ -658,14 +616,12 @@ ALTER TABLE student DROP INDEX FK_gradeid;
 
    最佳实践
 
-   - 数据库就是单纯的表，只用来存数据，只有行（数据）和列（字段）
-   - 我们想使用多张表的数据，想使用外键（程序去实现）
+    - 数据库就是单纯的表，只用来存数据，只有行（数据）和列（字段）
+    - 我们想使用多张表的数据，想使用外键（程序去实现）
 
 2. 删除具有主外键关系的表时 , 要先删从表(引用别人的表) , 后删主表(被应用的表),顺序反了会报错
 
    ![image-20201027175704242](assets/image-20201027175704242.png)
-
-
 
 ### 2. DML语言
 
@@ -681,8 +637,6 @@ ALTER TABLE student DROP INDEX FK_gradeid;
 - 用于操作数据库对象中所包含的数据
 - 包括 :`INSERT (添加数据语句)` `UPDATE (更新数据语句) ` `DELETE (删除数据语句) `
 
-
-
 #### 2.1 添加数据(INSERT)
 
 **语法**: `INSERT INTO 表名[(字段1,字段2,字段3,...)] VALUES('值1'),('值2'),('值3');`
@@ -696,7 +650,7 @@ INSERT INTO `grade` (`gradename`) VALUES ('大四');
 
 1. 字段或值之间用英文逗号隔开 .
 
-2. `' 字段1,字段2...' `该部分可省略 , 但添加的值务必与表结构,数据列,顺序相对应,且数量一致 
+2. `' 字段1,字段2...' `该部分可省略 , 但添加的值务必与表结构,数据列,顺序相对应,且数量一致
 
    ```sql
    -- 向年级表grade中插入一条数据
@@ -717,8 +671,6 @@ INSERT INTO `grade` (`gradename`) VALUES ('大四');
    (004,'王五','codexiyang@mail.com','重庆观音桥','13332321142');
    ```
 
-   
-
 #### 2.2 修改数据
 
 **语法:** `UPDATE 表名 SET column_name=value,[column_name2=value2,...] [WHERE condition]; `
@@ -729,8 +681,6 @@ UPDATE `grade` SET `gradename`='大大四' WHERE `gradename` = '大四';
 -- 将学生表student中的学号studentno为4的名字修改为王五他爹
 UPDATE `student` SET `studentname`='王五他爹' WHERE `studentno` = '4';
 ```
-
-
 
 **注意点:**
 
@@ -746,8 +696,6 @@ UPDATE `student` SET `studentname`='王五他爹' WHERE `studentno` = '4';
    -- 将学生表student中的学号studentno为4的名字修改为王五他爹,address改为红旗河沟
    UPDATE `student` SET `studentname`='王五他爹',`address`='红旗河沟' WHERE `studentno` = '4';
    ```
-
-   
 
 **where条件子句**
 
@@ -796,15 +744,11 @@ DELETE FROM student;
 TRUNCATE grade;
 ```
 
-
-
 **注意: **
 
 删除整表数据的时候不要使用delete,应该使用truncate
 
-- `TRUNCATE` 用于完全清空表数据 , 但表结构 , 索引 , 约束等不变 
-
-
+- `TRUNCATE` 用于完全清空表数据 , 但表结构 , 索引 , 约束等不变
 
 ##### 2.3.3 DELETE和TRUNCATE区别
 
@@ -838,14 +782,10 @@ TRUNCATE grade;
 
 3. 使用DELETE清空不同引擎的数据库表数据.重启数据库服务后(~8.0后修复~)
 
-   - InnoDB : 自增列从初始值重新开始 (因为是存储在内存中,断电即失) 
-   - MyISAM : 自增列依然从上一个自增数据基础上开始 (存在文件中,不会丢失) 
-
-
+    - InnoDB : 自增列从初始值重新开始 (因为是存储在内存中,断电即失)
+    - MyISAM : 自增列依然从上一个自增数据基础上开始 (存在文件中,不会丢失)
 
 ## 4. 使用DQL查询数据
-
-
 
 ### 1. DQL查询语句
 
@@ -884,7 +824,7 @@ SELECT studentname,sex FROM student;
 
 #### 2.3 AS起别名
 
-由于查询出来的结果集的列是数据库中的列,不利于查看,可以通过`AS`	取一个别名;
+由于查询出来的结果集的列是数据库中的列,不利于查看,可以通过`AS`    取一个别名;
 
 as不仅仅可以给字段取别名,也可以给表取别名
 
@@ -930,7 +870,7 @@ SELECT DISTINCT studentno FROM result;
 
 **语法:** `SELECT 表达式 FROM 表名;`
 
-**应用场景 :** 
+**应用场景 :**
 
 1. SELECT语句返回结果列中使用
 
@@ -949,9 +889,9 @@ SELECT DISTINCT studentno FROM result;
    SELECT studentno,StudentResult+1 AS '提分后' FROM result;
    ```
 
-**注意:** 
+**注意:**
 
-避免SQL返回结果中包含 ' . ' , ' * ' 和括号等干扰开发语言程序. 
+避免SQL返回结果中包含 ' . ' , ' * ' 和括号等干扰开发语言程序.
 
 ### 3. where条件语句
 
@@ -984,9 +924,7 @@ SELECT studentno,studentresult FROM result WHERE studentno!=1001;
 SELECT studentno,studentresult FROM result WHERE NOT studentno=1001;
 ```
 
-
-
-#### 3.2  模糊查询
+#### 3.2 模糊查询
 
 <span style="color:red">模糊查询的本质其实就是比较操作符</span>
 
@@ -997,8 +935,6 @@ SELECT studentno,studentresult FROM result WHERE NOT studentno=1001;
 | BETWEEN     | `a BETWEEN b AND c`         | 若 a 范围在 b 与 c 之间，则结果为真         |
 | LIKE        | `a LIKE b`                  | SQL 模式匹配，若a匹配b，则结果为真          |
 | IN          | `a IN (a1，a2，a3，......)` | 若 a 等于 a1,a2..... 中的某一个，则结果为真 |
-
-
 
 **注意点:**
 
@@ -1052,8 +988,6 @@ SELECT studentname FROM student WHERE BornDate IS NOT NULL;
 SELECT studentname FROM student WHERE Address='' OR Address IS NULL;
 ```
 
-
-
 ### 4. 连接查询
 
 **连接查询的关键字是join,连接查询分为 内连接,左连接,右连接**
@@ -1104,11 +1038,10 @@ SELECT s.studentno,studentname,subjectname,StudentResult FROM student s INNER JO
 当我们使用连接操作，关联两张或多张表来返回记录时，数据库都会生成一张临时表，最后将这张临时表返回给用户。以 LEFT JOIN 为例：在使用 LEFT JOIN 时，ON 和 WHERE 过滤条件的区别如下：
 
 - <span style="color:red">ON 条件是在生成临时表时使用的条件</span>，它不管 ON 中的条件是否为真，都会返回左边表中的记录；
-- WHERE 条件是在临时表已经生成后，对<span style="color:red">临时表进行的过滤条件</span>。因为此时已经没有 LEFT JOIN 的含义（必须返回左侧表的记录）了，所以如果 WHERE 条件不为真的记录就会被过滤掉。
+- WHERE 条件是在临时表已经生成后，对<span style="color:red">临时表进行的过滤条件</span>。因为此时已经没有 LEFT JOIN 的含义（必须返回左侧表的记录）了，所以如果 WHERE
+  条件不为真的记录就会被过滤掉。
 
 参考博客: https://blog.csdn.net/liitdar/article/details/80817957
-
-
 
 #### 4.2 自连接
 
@@ -1133,23 +1066,15 @@ SELECT subjectname AS 科目名称,gradename AS 年级名称 FROM SUBJECT sub IN
 SELECT s.studentno,studentname,subjectname,StudentResult FROM student s INNER JOIN result r ON r.studentno = s.studentno INNER JOIN `subject` sub ON r.subjectno = sub.subjectno WHERE subjectname='数据库结构-1'
 ```
 
-
-
 #### 4.3 扩展七种JOIN理论
 
 ![image-20201028170425077](assets/image-20201028170425077.png)
 
 ### 排序和分页
 
-
-
 ### 子查询
 
-
-
 ### SELECT完整语法
-
-
 
 ### 附录: sql参考文件
 
@@ -1301,43 +1226,17 @@ INSERT INTO `subject` VALUES (17, 'C#基础', 130, 1);
 SET FOREIGN_KEY_CHECKS = 1;
 ```
 
-
-
-
-
-
-
 ## 5. MySQL函数
-
-
 
 ## 6. 事务
 
-
-
 ## 7. 索引
-
-
 
 ## 8. 权限管理
 
-
-
 ## 9. 规范化数据库设计
 
-
-
 ## 10. JDBC
-
-
-
-
-
-
-
-
-
-
 
 > 学习地址: https://www.bilibili.com/video/BV1NJ411J79W
 >
