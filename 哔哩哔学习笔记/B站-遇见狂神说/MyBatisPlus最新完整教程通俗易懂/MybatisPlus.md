@@ -4,7 +4,7 @@
 >
 > 课程概述:深入浅出的讲解了MyBatisPlus使用的全流程以及实战教学！
 >
-> 讲述人: B站-遇见狂神说
+> 讲述人: B站-遇见狂神说(秦疆)
 
 ## 1. MybatisPlus概述
 
@@ -105,25 +105,29 @@ MyBatis是什么？ MyBatis 本来就是简化 JDBC 操作的！
        <groupId>org.projectlombok</groupId> 
        <artifactId>lombok</artifactId> 
    </dependency> 
-   <!-- mybatis-plus -->
-   <!-- mybatis-plus 是自己开发，并非官方的！ --> 
-   <dependency> <groupId>com.baomidou</groupId> 
+   <!-- mybatis-plus  mybatis-plus 是自己开发，并非官方的！-->
+   <dependency> 
+       <groupId>com.baomidou</groupId> 
        <artifactId>mybatis-plus-boot-starter</artifactId> 
        <version>3.0.5</version> 
    </dependency>
    ```
 
-   说明：我们使用 mybatis-plus 可以节省我们大量的代码，尽量不要同时导入 mybatis 和 mybatis-plus！会有版本的差异！
+   <span style="color:red">说明：我们使用 mybatis-plus 可以节省我们大量的代码，尽量不要同时导入 mybatis 和 mybatis-plus！会有版本的差异！</span>
 
 5. 连接数据库！这一步和 mybatis 相同！
 
    ```properties
-   # mysql 5 驱动不同 com.mysql.jdbc.Driver 
-   # mysql 8 驱动不同com.mysql.cj.jdbc.Driver、需要增加时区的配置 serverTimezone=GMT%2B8 
-   spring.datasource.username=root 
-   spring.datasource.password=123456 
-   spring.datasource.url=jdbc:mysql://localhost:3306/mybatis_plususeSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8 
-   spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+   server:
+     port: 8081
+   spring:
+     datasource:
+       username: root
+       password: 1234
+       # mysql 5 驱动不同 com.mysql.jdbc.Driver 
+       # mysql 8 驱动不同com.mysql.cj.jdbc.Driver、需要增加时区的配置 ==> serverTimezone=GMT%2B8 
+       url: jdbc:mysql://localhost:3306/qinjiang-mybatisplus-code?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8 #
+       driver-class-name: com.mysql.cj.jdbc.Driver
    ```
 
    ps: 传统方式pojo-dao（连接mybatis，配置mapper.xml文件）-service-controller
@@ -133,35 +137,55 @@ MyBatis是什么？ MyBatis 本来就是简化 JDBC 操作的！
    POJO
 
    ```java
-   @Data 
-   @AllArgsConstructor 
-   @NoArgsConstructor public class User { 
-       private Long id; 
-       private String name; 
-       private Integer age; 
-       private String email; 
+   package cn.codexiyang.mybatisplus01base.entity;
+   
+   import lombok.Data;
+   
+   @Data
+   public class User {
+       private Long id;
+       private String name;
+       private Integer age;
+    private String email;
    }
-   ```
 
+   ```
+   
    mapper接口
-
+   
    ```java
-   package com.kuang.mapper; 
-   import com.baomidou.mybatisplus.core.mapper.BaseMapper; 
-   import com.kuang.pojo.User; 
-   import org.springframework.stereotype.Repository; 
-   // 在对应的Mapper上面继承基本的类 BaseMapper 
-   @Repository // 代表持久层 
-   public interface UserMapper extends BaseMapper<User> { 
-       // 所有的CRUD操作都已经编写完成了 
-       // 你不需要像以前的配置一大堆文件了！ 
+   package cn.codexiyang.mybatisplus01base.mapper;
+   
+   import cn.codexiyang.mybatisplus01base.entity.User;
+   import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+   import org.springframework.stereotype.Repository;
+   
+   // 在对应的Mapper上面继承基本的类 BaseMapper
+@Repository // 代表持久层
+   public interface UserMapper extends BaseMapper<User> { //注意: 这里继承了MyBatisPlus中的 BaseMapper接口
+    // 所有的CRUD操作都已经编写完成了
+       // 你不需要像以前的配置一大堆文件了！
+}
+   ```
+   
+   注意点，我们需要在**主启动类**上去扫描我们的mapper包下的所有接口`@MapperScan("mapper接口的路径")`
+   
+   ```java
+   @SpringBootApplication
+   @MapperScan("cn.codexiyang.mybatisplus01base.mapper") //这是我的mapper接口的路径
+   public class Mybatisplus01BaseApplication {
+   
+       public static void main(String[] args) {
+           SpringApplication.run(Mybatisplus01BaseApplication.class, args);
+       }
+   
    }
    ```
 
-   注意点，我们需要在主启动类上去扫描我们的mapper包下的所有接口`@MapperScan("com.kuang.mapper")`
+   
 
    测试类中测试
-
+   
    ```java
    @SpringBootTest 
    class MybatisPlusApplicationTests { 
@@ -169,7 +193,9 @@ MyBatis是什么？ MyBatis 本来就是简化 JDBC 操作的！
        // 我们也可以编写自己的扩展方法！
        @Autowired 
        private UserMapper userMapper;
-       @Test void contextLoads() { 
+       @Test 
+       void 
+           contextLoads() { 
            // 参数是一个 Wrapper ，条件构造器，这里我们先不用 null 
            // 查询全部用户 
            List<User> users = userMapper.selectList(null); 
@@ -177,9 +203,9 @@ MyBatis是什么？ MyBatis 本来就是简化 JDBC 操作的！
        }
    }
    ```
-
+   
    测试结果
-
+   
    ![image-20201218160853578](assets/image-20201218160853578.png)
 
 ### 2.2 思考
@@ -555,9 +581,11 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
        List<User> users = userMapper.selectList(null); 
        users.forEach(System.out::println); 
    }
+   ```
 
-```
-   
+
+
+
    使用性能分析插件，可以帮助我们提高效率！
 
 ### 3.6 条件构造器
@@ -578,6 +606,10 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
        // 和我们刚才学习 的map对比一下 
    }
    ```
+
+
+
+
 
 2. 测试二，记住查看输出的SQL进行分析
 
@@ -647,10 +679,18 @@ MP也提供性能分析插件，如果超过这个时间就停止运行！
        List<User> users = userMapper.selectList(wrapper); 
        users.forEach(System.out::println); 
    }
+   ```
 
-```
+
+
+
+
+
+
+
+
    
-   
+
 
 ### 3.7 代码自动生成器
 
