@@ -87,7 +87,7 @@ MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的�
 
 #### 2.1 创建数据库
 
-`mybatis_plus`
+数据库名: `mybatis_plus`
 
 ![image-20210311145039465](assets/image-20210311145039465.png)
 
@@ -149,15 +149,15 @@ INSERT INTO user (id, name, age, email)VALUES
 
 使用 Spring Initializr 快速初始化一个 Spring Boot 工程
 
-Group：com.atguigu
+Group：`com.atguigu`
 
-Artifact：mybatis_plus
+Artifact：`mybatis_plus`
 
-版本：2.2.1.RELEASE
+版本：`2.2.1.RELEASE`
 
 #### 4.2 引入依赖
 
-注意：引入 MyBatis-Plus 之后请不要再次引入 MyBatis，以避免因版本差异导致的问题。
+注意：<span style="color:blue">引入 MyBatis-Plus 之后请不要再次引入 MyBatis，以避免因版本差异导致的问题。</span>
 
 ```xml
     <dependencies>
@@ -217,7 +217,7 @@ ps: idea2020内置了lombok插件
 
 在 application.properties 配置文件中添加 MySQL 数据库的相关配置：
 
-在 application.properties 配置文件中添加 MySQL 数据库的相关配置：
+spring boot 2.0（内置jdbc5驱动）
 
 ```properties
 #mysql数据库连接
