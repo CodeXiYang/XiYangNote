@@ -56,7 +56,7 @@
 |                                         | 尚硅谷ShardingSphere教程              |                                             | 王泽   |
 |                                         | 尚硅谷RBAC权限实战教程                |                                             |        |
 |                                         | 尚硅谷Oracle视频教程                  |                                             |        |
-|                                         | 尚硅谷Netty核心技术教程               |                                             | 韩顺平 |
+|                                         | [尚硅谷Netty核心技术教程](尚硅谷学习笔记/尚硅谷Java学科/05-选学技术/尚硅谷Netty核心技术教程/README.md) | https://www.bilibili.com/video/BV1DJ411m7NR | 韩顺平 |
 |                                         | 尚硅谷jQuery教程                      |                                             |        |
 |                                         | 尚硅谷JPA视频                         |                                             | 佟刚   |
 |                                         | 尚硅谷Jenkins视频                     |                                             |        |
